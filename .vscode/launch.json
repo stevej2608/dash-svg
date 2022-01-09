@@ -5,7 +5,39 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "1. usage.py",
+      "name": "1a. extract-attributes",
+      "program": "extract-attributes.js",
+      "cwd": "${workspaceFolder}/scripts",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "pwa-node"
+    },
+    {
+      "name": "1b. extract-elements",
+      "program": "extract-elements.js",
+      "cwd": "${workspaceFolder}/scripts",
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "pwa-node"
+    },
+    {
+      "name": "1c. generate-components",
+      "program": "generate-components.js",
+      "cwd": "${workspaceFolder}/scripts",
+      "args": ["data/elements.txt"],
+      "request": "launch",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "pwa-node"
+    },
+
+    {
+      "name": "2a. usage.py",
       "type": "python",
       "request": "launch",
       "cwd": "${workspaceRoot}",
@@ -24,7 +56,7 @@
       }
     },
     {
-      "name": "2. Python: Current File",
+      "name": "2b. Python: Current File",
       "type": "python",
       "request": "launch",
       "program": "${file}",
