@@ -95,8 +95,19 @@ const getElementDetails = async function(href) {
   try {
     const html = await fetchPage(pageURL)
     const $ = cheerio.load(html);
-    const desc = $('p', 'article').text()
-    return desc.split('.')[0]
+    const desc = $('p', 'article').text().split('.')[0]
+
+    const usedByElements = $('ul', 'article').find('code')
+
+    const elements= []
+
+    usedByElements.each((idx, el) => {
+      const text = $(el).text().replace(/[<>]/, '');
+      elements.push(text)
+    });
+
+    return {desc, elements}
+
   } catch (error) {
     console.log("Error loading %s", pageURL)
     return "?????"
@@ -135,8 +146,9 @@ const extractAttributes = async function($) {
 
   for (const i in attributeList) {
     const attr = attributeList[i]
-    const description = await getElementDetails(attr.pageUrl)
-    console.log("[%s]\n%s\n", attr.svgAttribute, description)
+    const details = await getElementDetails(attr.pageUrl)
+    console.log("[%s]\n%s\n", attr.svgAttribute, details.desc)
+    attributeList.push(details)
   }
 
   return attributeList;
