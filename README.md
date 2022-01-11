@@ -106,6 +106,7 @@ I'm hoping to do the same with dash-svg [SVG@developer.mozilla.org]
 
     compares content of "./data/elements.txt" with download.
         if number of elements is different an error is thrown
+        writes ./data/elements.txt
 
 ```
 

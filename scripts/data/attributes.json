@@ -1,1164 +1,3265 @@
 {
     "attributes": {
-        "accept": {
+        "accentHeight": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
             "elements": [
-                "form",
-                "input"
-            ],
-            "description": "List of types the server accepts, typically a file type."
+                "font-face"
+            ]
         },
-        "acceptCharset": {
+        "accumulate": {
+            "description": "The accumulate attribute controls whether or not an animation is cumulative",
+            "depreciated": false,
             "elements": [
-                "form"
-            ],
-            "description": "List of supported charsets."
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform"
+            ]
         },
-        "accessKey": {
+        "additive": {
+            "description": "The additive attribute controls whether or not an animation is additive",
+            "depreciated": false,
             "elements": [
-                "Globalattribute"
-            ],
-            "description": "Keyboard shortcut to activate or add focus to the element."
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform"
+            ]
         },
-        "action": {
+        "alignmentBaseline": {
+            "description": "The alignment-baseline attribute specifies how an object is aligned with respect to its parent",
+            "depreciated": false,
             "elements": [
-                "form"
-            ],
-            "description": "The URI of a program that processes the information submitted via the form."
+                "tspan",
+                "tref",
+                "altGlyph",
+                "textPath"
+            ]
         },
-        "allow": {
+        "alphabetic": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
             "elements": [
-                "iframe"
-            ],
-            "description": "Specifies a feature-policy for the iframe."
+                "font-face"
+            ]
         },
-        "alt": {
+        "amplitude": {
+            "description": "The amplitude attribute controls the amplitude of the gamma function of a component transfer element when its type attribute is gamma",
+            "depreciated": false,
             "elements": [
-                "applet",
-                "area",
-                "img",
-                "input"
-            ],
-            "description": "Alternative text in case an image can't be displayed."
+                "feFuncA",
+                "feFuncB",
+                "feFuncG",
+                "feFuncR"
+            ]
         },
-        "async": {
+        "arabicForm": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
             "elements": [
-                "script"
-            ],
-            "description": "Executes the script asynchronously."
+                "glyph"
+            ]
         },
-        "autoComplete": {
+        "ascent": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
             "elements": [
-                "form",
-                "input",
-                "select",
-                "textarea"
-            ],
-            "description": "Indicates whether controls in this form can by default have their values automatically completed by the browser."
+                "font-face"
+            ]
         },
-        "autoFocus": {
+        "attributeName": {
+            "description": "The attributeName attribute indicates the name of the CSS property or attribute of the target element that is going to be changed during an animation",
+            "depreciated": false,
             "elements": [
-                "button",
-                "input",
-                "keygen",
-                "select",
-                "textarea"
-            ],
-            "description": "The element should be automatically focused after the page loaded."
+                "animate",
+                "animateColor",
+                "animateTransform",
+                "set"
+            ]
         },
-        "autoPlay": {
+        "attributeType": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
             "elements": [
-                "audio",
-                "video"
-            ],
-            "description": "The audio or video should play as soon as possible."
+                "animate",
+                "animateColor",
+                "animateTransform",
+                "set"
+            ]
         },
-        "capture": {
+        "azimuth": {
+            "description": "The azimuth attribute specifies the direction angle for the light source on the XY plane (clockwise), in degrees from the x axis",
+            "depreciated": false,
             "elements": [
-                "input"
-            ],
-            "description": "From the Media Capture specification, specifies a new file can be captured."
+                "feDistantLight"
+            ]
         },
-        "challenge": {
+        "baseFrequency": {
+            "description": "The baseFrequency attribute represents the base frequency parameter for the noise function of the <feTurbulence> filter primitive",
+            "depreciated": false,
             "elements": [
-                "keygen"
-            ],
-            "description": "A challenge string that is submitted along with the public key."
+                "feTurbulence"
+            ]
         },
-        "charSet": {
+        "baselineShift": {
+            "description": "The baseline-shift attribute allows repositioning of the dominant-baseline relative to the dominant-baseline of the parent text content element",
+            "depreciated": false,
             "elements": [
-                "meta",
-                "script"
-            ],
-            "description": "Declares the character encoding of the page or script."
+                "altGlyph",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
         },
-        "checked": {
+        "baseProfile": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
             "elements": [
-                "command",
-                "input"
-            ],
-            "description": "Indicates whether the element should be checked on page load."
+                "svg"
+            ]
         },
-        "cite": {
+        "bbox": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
             "elements": [
-                "blockquote",
-                "del",
-                "ins",
-                "q"
-            ],
-            "description": "Contains a URI which points to the source of the quote or change."
+                "font-face"
+            ]
         },
-        "className": {
+        "begin": {
+            "description": "The begin attribute defines when an animation should begin or when an element should be discarded",
+            "depreciated": false,
             "elements": [
-                "Globalattribute"
-            ],
-            "description": "Often used with CSS to style elements with common properties."
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform",
+                "discard",
+                "set"
+            ]
         },
-        "cols": {
+        "bias": {
+            "description": "The bias attribute shifts the range of the filter",
+            "depreciated": false,
             "elements": [
-                "textarea"
-            ],
-            "description": "Defines the number of columns in a textarea."
+                "feConvolveMatrix"
+            ]
         },
-        "colSpan": {
+        "by": {
+            "description": "The by attribute specifies a relative offset value for an attribute that will be modified during an animation",
+            "depreciated": false,
             "elements": [
-                "td",
-                "th"
-            ],
-            "description": "The colspan attribute defines the number of columns a cell should span."
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform"
+            ]
         },
-        "content": {
+        "calcMode": {
+            "description": "The calcMode attribute specifies the interpolation mode for the animation",
+            "depreciated": false,
             "elements": [
-                "meta"
-            ],
-            "description": "A value associated with http-equiv or name depending on the context."
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform"
+            ]
         },
-        "contentEditable": {
+        "capHeight": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
             "elements": [
-                "Globalattribute"
-            ],
-            "description": "Indicates whether the element's content is editable."
+                "font-face"
+            ]
         },
-        "contextMenu": {
+        "clip": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
             "elements": [
-                "Globalattribute"
-            ],
-            "description": "Defines the ID of a <menu> element which will serve as the element's context menu."
+                "svg",
+                "symbol",
+                "image",
+                "foreignObject",
+                "pattern",
+                "marker"
+            ]
         },
-        "controls": {
+        "clipPathUnits": {
+            "description": "The clipPathUnits attribute indicates which coordinate system to use for the contents of the <clipPath> element",
+            "depreciated": false,
             "elements": [
-                "audio",
-                "video"
-            ],
-            "description": "Indicates whether the browser should show playback controls to the user."
+                "clipPath"
+            ]
         },
-        "coords": {
-            "elements": [
-                "area"
-            ],
-            "description": "A set of values specifying the coordinates of the hot-spot region."
-        },
-        "crossOrigin": {
-            "elements": [
-                "audio",
-                "img",
-                "link",
-                "script",
-                "video"
-            ],
-            "description": "How the element handles cross-origin requests"
-        },
-        "data": {
-            "elements": [
-                "object"
-            ],
-            "description": "Specifies the URL of the resource."
-        },
-        "dateTime": {
-            "elements": [
-                "del",
-                "ins",
-                "time"
-            ],
-            "description": "Indicates the date and time associated with the element."
-        },
-        "default": {
-            "elements": [
-                "track"
-            ],
-            "description": "Indicates that the track should be enabled unless the user's preferences indicate something different."
-        },
-        "defer": {
-            "elements": [
-                "script"
-            ],
-            "description": "Indicates that the script should be executed after the page has been parsed."
-        },
-        "dir": {
-            "elements": [
-                "Globalattribute"
-            ],
-            "description": "Defines the text direction. Allowed values are ltr (Left-To-Right) or rtl (Right-To-Left)"
-        },
-        "disabled": {
-            "elements": [
-                "button",
-                "command",
-                "fieldset",
-                "input",
-                "keygen",
-                "optgroup",
-                "option",
-                "select",
-                "textarea"
-            ],
-            "description": "Indicates whether the user can interact with the element."
-        },
-        "download": {
+        "clipPath": {
+            "description": "The clip-path presentation attribute defines or associates a clipping path with the element it is related to",
+            "depreciated": false,
             "elements": [
                 "a",
-                "area"
-            ],
-            "description": "Indicates that the hyperlink is to be used for downloading a resource."
+                "circle",
+                "clipPath",
+                "ellipse",
+                "g",
+                "glyph",
+                "image",
+                "line",
+                "marker",
+                "mask",
+                "path",
+                "pattern",
+                "polygon",
+                "polyline",
+                "rect",
+                "svg",
+                "symbol",
+                "text",
+                "use"
+            ]
         },
-        "draggable": {
-            "elements": [
-                "Globalattribute"
-            ],
-            "description": "Defines whether the element can be dragged."
+        "clipRule": {
+            "description": "« SVG Attribute reference homeThe clip-rule attribute only applies to graphics elements that are contained within a <clipPath> element",
+            "depreciated": false,
+            "elements": []
         },
-        "encType": {
+        "colorInterpolation": {
+            "description": "The color-interpolation attribute specifies the color space for gradient interpolations, color animations, and alpha compositing",
+            "depreciated": false,
             "elements": [
-                "form"
-            ],
-            "description": "Defines the content type of the form data when the method is POST."
+                "a",
+                "animate",
+                "animateColor",
+                "circle",
+                "clipPath",
+                "defs",
+                "ellipse",
+                "foreignObject",
+                "g",
+                "glyph",
+                "image",
+                "line",
+                "linearGradient",
+                "marker",
+                "mask",
+                "missing-glyph",
+                "path",
+                "pattern",
+                "polygon",
+                "polyline",
+                "radialGradient",
+                "rect",
+                "svg",
+                "switch",
+                "symbol",
+                "text",
+                "textPath",
+                "tspan",
+                "use"
+            ]
         },
-        "htmlFor": {
+        "colorInterpolationFilters": {
+            "description": "The color-interpolation-filters attribute specifies the color space for imaging operations performed via filter effects",
+            "depreciated": false,
             "elements": [
-                "label",
-                "output"
-            ],
-            "description": "Describes elements which belongs to this one."
+                "feSpotLight",
+                "feBlend",
+                "feColorMatrix",
+                "feComponentTransfer",
+                "feComposite",
+                "feConvolveMatrix",
+                "feDiffuseLighting",
+                "feDisplacementMap",
+                "feDropShadow",
+                "feFlood",
+                "feGaussianBlur",
+                "feImage",
+                "feMerge",
+                "feMorphology",
+                "feOffset",
+                "feSpecularLighting",
+                "feTile",
+                "feTurbulence"
+            ]
         },
-        "form": {
+        "colorProfile": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
             "elements": [
-                "button",
-                "fieldset",
-                "input",
-                "keygen",
-                "label",
-                "meter",
-                "object",
-                "output",
-                "progress",
-                "select",
-                "textarea"
-            ],
-            "description": "Indicates the form that is the owner of the element."
+                "image"
+            ]
         },
-        "formAction": {
+        "colorRendering": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
             "elements": [
-                "input",
-                "button"
-            ],
-            "description": "Indicates the action of the element, overriding the action defined in the <form>."
+                "a",
+                "animate",
+                "animateColor",
+                "circle",
+                "clipPath",
+                "defs",
+                "ellipse",
+                "foreignObject",
+                "g",
+                "glyph",
+                "image",
+                "line",
+                "linearGradient",
+                "marker",
+                "mask",
+                "missing-glyph",
+                "path",
+                "pattern",
+                "polygon",
+                "polyline",
+                "radialGradient",
+                "rect",
+                "svg",
+                "switch",
+                "symbol",
+                "text",
+                "textPath",
+                "tspan",
+                "use"
+            ]
         },
-        "formEncType": {
-            "elements": [
-                "button",
-                "input"
-            ],
-            "description": "If the button/input is a submit button (type=\"submit\"), this attribute sets the encoding type to use during form submission. If this attribute is specified, it overrides the enctype attribute of the button's form owner."
+        "contentScriptType": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": []
         },
-        "formMethod": {
-            "elements": [
-                "button",
-                "input"
-            ],
-            "description": "If the button/input is a submit button (type=\"submit\"), this attribute sets the submission method to use during form submission (GET, POST, etc.). If this attribute is specified, it overrides the method attribute of the button's form owner."
+        "contentStyleType": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": []
         },
-        "formNoValidate": {
-            "elements": [
-                "button",
-                "input"
-            ],
-            "description": "If the button/input is a submit button (type=\"submit\"), this boolean attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the novalidate attribute of the button's form owner."
+        "cursor": {
+            "description": "« SVG Attribute reference homeThe cursor attribute specifies the mouse cursor displayed when the mouse pointer is over an element",
+            "depreciated": false,
+            "elements": []
         },
-        "formTarget": {
+        "cx": {
+            "description": "The cx attribute define the x-axis coordinate of a center point",
+            "depreciated": false,
             "elements": [
-                "button",
-                "input"
-            ],
-            "description": "If the button/input is a submit button (type=\"submit\"), this attribute specifies the browsing context (for example, tab, window, or inline frame) in which to display the response that is received after submitting the form. If this attribute is specified, it overrides the target attribute of the button's form owner."
+                "circle",
+                "ellipse",
+                "radialGradient"
+            ]
         },
-        "headers": {
+        "cy": {
+            "description": "The cy attribute define the y-axis coordinate of a center point",
+            "depreciated": false,
             "elements": [
-                "td",
-                "th"
-            ],
-            "description": "IDs of the <th> elements which applies to this element."
+                "circle",
+                "ellipse",
+                "radialGradient"
+            ]
         },
-        "height": {
+        "d": {
+            "description": "The d attribute defines a path to be drawn",
+            "depreciated": false,
             "elements": [
+                "path",
+                "glyph",
+                "missing-glyph"
+            ]
+        },
+        "decelerate": {
+            "description": "?????",
+            "depreciated": false,
+            "elements": []
+        },
+        "descent": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "diffuseConstant": {
+            "description": "The diffuseConstant attribute represents the kd value in the Phong lighting model",
+            "depreciated": false,
+            "elements": [
+                "feDiffuseLighting"
+            ]
+        },
+        "direction": {
+            "description": "The direction attribute specifies the inline-base direction of a <text> or <tspan> element",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "textPath",
+                "text",
+                "tref",
+                "tspan"
+            ]
+        },
+        "display": {
+            "description": "The display attribute lets you control the rendering of graphical or container elements",
+            "depreciated": false,
+            "elements": []
+        },
+        "divisor": {
+            "description": "The divisor attribute specifies the value by which the resulting number of applying the kernelMatrix of a <feConvolveMatrix> element to the input image color value is divided to yield the destination color value",
+            "depreciated": false,
+            "elements": [
+                "feConvolveMatrix"
+            ]
+        },
+        "dominantBaseline": {
+            "description": "The dominant-baseline attribute specifies the dominant baseline, which is the baseline used to align the box’s text and inline-level contents",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "dur": {
+            "description": "The dur attribute indicates the simple duration of an animation",
+            "depreciated": false,
+            "elements": [
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform",
+                "set"
+            ]
+        },
+        "dx": {
+            "description": "The dx attribute indicates a shift along the x-axis on the position of an element or its content",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "feDropShadow",
+                "feOffset",
+                "glyphRef",
+                "text",
+                "tref",
+                "tspan"
+            ]
+        },
+        "dy": {
+            "description": "The dy attribute indicates a shift along the y-axis on the position of an element or its content",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "feDropShadow",
+                "feOffset",
+                "glyphRef",
+                "text",
+                "tref",
+                "tspan"
+            ]
+        },
+        "edgeMode": {
+            "description": "The edgeMode attribute determines how to extend the input image as necessary with color values so that the matrix operations can be applied when the kernel is positioned at or near the edge of the input image",
+            "depreciated": false,
+            "elements": [
+                "feConvolveMatrix",
+                "feGaussianBlur"
+            ]
+        },
+        "elevation": {
+            "description": "The elevation attribute specifies the direction angle for the light source from the XY plane towards the Z-axis, in degrees",
+            "depreciated": false,
+            "elements": [
+                "feDistantLight"
+            ]
+        },
+        "enableBackground": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "a",
+                "defs",
+                "glyph",
+                "g",
+                "marker",
+                "mask",
+                "missing-glyph",
+                "pattern",
+                "svg",
+                "switch",
+                "symbol"
+            ]
+        },
+        "end": {
+            "description": "The end attribute defines an end value for the animation that can constrain the active duration",
+            "depreciated": false,
+            "elements": [
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform",
+                "set"
+            ]
+        },
+        "exponent": {
+            "description": "The exponent attribute defines the exponent of the gamma function",
+            "depreciated": false,
+            "elements": [
+                "feFuncA",
+                "feFuncB",
+                "feFuncG",
+                "feFuncR"
+            ]
+        },
+        "fill": {
+            "description": "The fill attribute has two different meanings",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "circle",
+                "ellipse",
+                "path",
+                "polygon",
+                "polyline",
+                "rect",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "fillOpacity": {
+            "description": "The fill-opacity attribute is a presentation attribute defining the opacity of the paint server (color, gradient, pattern, etc) applied to a shape",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "circle",
+                "ellipse",
+                "path",
+                "polygon",
+                "polyline",
+                "rect",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "fillRule": {
+            "description": "The fill-rule attribute is a presentation attribute defining the algorithm to use to determine the inside part of a shape",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "path",
+                "polygon",
+                "polyline",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "filter": {
+            "description": "The filter attribute specifies the filter effects defined by the <filter> element that shall be applied to its element",
+            "depreciated": false,
+            "elements": []
+        },
+        "filterRes": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "filter"
+            ]
+        },
+        "filterUnits": {
+            "description": "The filterUnits attribute defines the coordinate system for the attributes x, y, width and height",
+            "depreciated": false,
+            "elements": [
+                "filter"
+            ]
+        },
+        "floodColor": {
+            "description": "The flood-color attribute indicates what color to use to flood the current filter primitive subregion",
+            "depreciated": false,
+            "elements": [
+                "feFlood",
+                "feDropShadow"
+            ]
+        },
+        "floodOpacity": {
+            "description": "The flood-opacity attribute indicates the opacity value to use across the current filter primitive subregion",
+            "depreciated": false,
+            "elements": [
+                "feFlood",
+                "feDropShadow"
+            ]
+        },
+        "fontFamily": {
+            "description": "The font-family attribute indicates which font family will be used to render the text, specified as a prioritized list of font family names and/or generic family names",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "fontSize": {
+            "description": "The font-size attribute refers to the size of the font from baseline to baseline when multiple lines of text are set solid in a multiline layout environment",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "fontSizeAdjust": {
+            "description": "The font-size-adjust attribute allows authors to specify an aspect value for an element that will preserve the x-height of the first choice font in a substitute font",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "fontStretch": {
+            "description": "The font-stretch attribute indicates the desired amount of condensing or expansion in the glyphs used to render the text",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "fontStyle": {
+            "description": "The font-style attribute specifies whether the text is to be rendered using a normal, italic, or oblique face",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "fontVariant": {
+            "description": "The font-variant attribute indicates whether the text is to be rendered using variations of the font's glyphs",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "fontWeight": {
+            "description": "The font-weight attribute refers to the boldness or lightness of the glyphs used to render the text, relative to other fonts in the same font family",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "format": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "altGlyph",
+                "glyphRef"
+            ]
+        },
+        "from": {
+            "description": "The from attribute indicates the initial value of the attribute that will be modified during the animation",
+            "depreciated": false,
+            "elements": [
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform"
+            ]
+        },
+        "fx": {
+            "description": "The fx attribute defines the x-axis coordinate of the focal point for a radial gradient",
+            "depreciated": false,
+            "elements": [
+                "radialGradient"
+            ]
+        },
+        "fy": {
+            "description": "The fy attribute defines the y-axis coordinate of the focal point for a radial gradient",
+            "depreciated": false,
+            "elements": [
+                "radialGradient"
+            ]
+        },
+        "g1": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "hkern",
+                "vkern"
+            ]
+        },
+        "g2": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "hkern",
+                "vkern"
+            ]
+        },
+        "glyphName": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "glyph"
+            ]
+        },
+        "glyphOrientationHorizontal": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "altGlyph",
+                "textPath",
+                "text",
+                "tref",
+                "tspan"
+            ]
+        },
+        "glyphOrientationVertical": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "altGlyph",
+                "textPath",
+                "text",
+                "tref",
+                "tspan"
+            ]
+        },
+        "glyphRef": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "altGlyph",
+                "glyphRef"
+            ]
+        },
+        "gradientTransform": {
+            "description": "The gradientTransform attribute contains the definition of an optional additional transformation from the gradient coordinate system onto the target coordinate system (i",
+            "depreciated": false,
+            "elements": [
+                "linearGradient",
+                "radialGradient"
+            ]
+        },
+        "gradientUnits": {
+            "description": "The gradientUnits attribute defines the coordinate system used for attributes specified on the gradient elements",
+            "depreciated": false,
+            "elements": [
+                "linearGradient",
+                "radialGradient"
+            ]
+        },
+        "hanging": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "horizAdvX": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font",
+                "glyph",
+                "missing-glyph"
+            ]
+        },
+        "horizOriginX": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font"
+            ]
+        },
+        "ideographic": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "imageRendering": {
+            "description": "The image-rendering attribute provides a hint to the browser about how to make speed vs",
+            "depreciated": false,
+            "elements": [
+                "image"
+            ]
+        },
+        "in": {
+            "description": "The in attribute identifies input for the given filter primitive",
+            "depreciated": false,
+            "elements": [
+                "feBlend",
+                "feColorMatrix",
+                "feComponentTransfer",
+                "feComposite",
+                "feConvolveMatrix",
+                "feDiffuseLighting",
+                "feDisplacementMap",
+                "feDropShadow",
+                "feGaussianBlur",
+                "feMergeNode",
+                "feMorphology",
+                "feOffset",
+                "feSpecularLighting",
+                "feTile"
+            ]
+        },
+        "in2": {
+            "description": "The in2 attribute identifies the second input for the given filter primitive",
+            "depreciated": false,
+            "elements": [
+                "feBlend",
+                "feComposite",
+                "feDisplacementMap"
+            ]
+        },
+        "intercept": {
+            "description": "The intercept attribute defines the intercept of the linear function of color component transfers when the type attribute is set to linear",
+            "depreciated": false,
+            "elements": [
+                "feFuncA",
+                "feFuncB",
+                "feFuncG",
+                "feFuncR"
+            ]
+        },
+        "k": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "hkern",
+                "vkern"
+            ]
+        },
+        "k1": {
+            "description": "The k1 attribute defines one of the values to be used within the arithmetic operation of the <feComposite> filter primitive",
+            "depreciated": false,
+            "elements": [
+                "feComposite"
+            ]
+        },
+        "k2": {
+            "description": "The k2 attribute defines one of the values to be used within the arithmetic operation of the <feComposite> filter primitive",
+            "depreciated": false,
+            "elements": [
+                "feComposite"
+            ]
+        },
+        "k3": {
+            "description": "The k3 attribute defines one of the values to be used within the arithmetic operation of the <feComposite> filter primitive",
+            "depreciated": false,
+            "elements": [
+                "feComposite"
+            ]
+        },
+        "k4": {
+            "description": "The k4 attribute defines one of the values to be used within the arithmetic operation of the <feComposite> filter primitive",
+            "depreciated": false,
+            "elements": [
+                "feComposite"
+            ]
+        },
+        "kernelMatrix": {
+            "description": "The kernelMatrix attribute defines the list of numbers that make up the kernel matrix for the <feConvolveMatrix> element",
+            "depreciated": false,
+            "elements": [
+                "feConvolveMatrix"
+            ]
+        },
+        "kernelUnitLength": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "feConvolveMatrix",
+                "feDiffuseLighting",
+                "feSpecularLighting"
+            ]
+        },
+        "kerning": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "altGlyph",
+                "textPath",
+                "text",
+                "tref",
+                "tspan"
+            ]
+        },
+        "keyPoints": {
+            "description": "The keyPoints attribute indicates the simple duration of an animation",
+            "depreciated": false,
+            "elements": [
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform",
+                "set"
+            ]
+        },
+        "keySplines": {
+            "description": "The keySplines attribute defines a set of Bézier curve control points associated with the keyTimes list, defining a cubic Bézier function that controls interval pacing",
+            "depreciated": false,
+            "elements": [
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform"
+            ]
+        },
+        "keyTimes": {
+            "description": "The keyTimes attribute represents a list of time values used to control the pacing of the animation",
+            "depreciated": false,
+            "elements": [
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform"
+            ]
+        },
+        "lengthAdjust": {
+            "description": "The lengthAdjust attribute controls how the text is stretched into the length defined by the textLength attribute",
+            "depreciated": false,
+            "elements": [
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "letterSpacing": {
+            "description": "The letter-spacing attribute controls spacing between text characters, in addition to any spacing from the kerning attribute",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "lightingColor": {
+            "description": "The lighting-color attribute defines the color of the light source for lighting filter primitives",
+            "depreciated": false,
+            "elements": [
+                "feDiffuseLighting",
+                "feSpecularLighting"
+            ]
+        },
+        "limitingConeAngle": {
+            "description": "The limitingConeAngle attribute represents the angle in degrees between the spot light axis (i",
+            "depreciated": false,
+            "elements": [
+                "feSpotLight"
+            ]
+        },
+        "local": {
+            "description": "?????",
+            "depreciated": false,
+            "elements": []
+        },
+        "markerEnd": {
+            "description": "The marker-end attribute defines the arrowhead or polymarker that will be drawn at the final vertex of the given shape",
+            "depreciated": false,
+            "elements": [
+                "circle",
+                "ellipse",
+                "line",
+                "path",
+                "polygon",
+                "polyline",
+                "rect"
+            ]
+        },
+        "markerMid": {
+            "description": "The marker-mid attribute defines the arrowhead or polymarker that will be drawn at all interior vertices of the given shape",
+            "depreciated": false,
+            "elements": [
+                "circle",
+                "ellipse",
+                "line",
+                "path",
+                "polygon",
+                "polyline",
+                "rect"
+            ]
+        },
+        "markerStart": {
+            "description": "The marker-start attribute defines the arrowhead or polymarker that will be drawn at the first vertex of the given shape",
+            "depreciated": false,
+            "elements": [
+                "circle",
+                "ellipse",
+                "line",
+                "path",
+                "polygon",
+                "polyline",
+                "rect"
+            ]
+        },
+        "markerHeight": {
+            "description": "The markerHeight attribute represents the height of the viewport into which the <marker> is to be fitted when it is rendered according to the viewBox and preserveAspectRatio attributes",
+            "depreciated": false,
+            "elements": [
+                "marker"
+            ]
+        },
+        "markerUnits": {
+            "description": "The markerUnits attribute defines the coordinate system for the markerWidth and markerHeight attributes and the contents of the <marker>",
+            "depreciated": false,
+            "elements": [
+                "marker"
+            ]
+        },
+        "markerWidth": {
+            "description": "The markerWidth attribute represents the width of the viewport into which the <marker> is to be fitted when it is rendered according to the viewBox and preserveAspectRatio attributes",
+            "depreciated": false,
+            "elements": [
+                "marker"
+            ]
+        },
+        "mask": {
+            "description": "The mask attribute is a presentation attribute mainly used to bind a given <mask> element with the element the attribute belongs to",
+            "depreciated": false,
+            "elements": [
+                "a",
+                "circle",
+                "clipPath",
+                "ellipse",
+                "g",
+                "glyph",
+                "image",
+                "line",
+                "marker",
+                "mask",
+                "path",
+                "pattern",
+                "polygon",
+                "polyline",
+                "rect",
+                "svg",
+                "symbol",
+                "text",
+                "use"
+            ]
+        },
+        "maskContentUnits": {
+            "description": "The maskContentUnits attribute indicates which coordinate system to use for the contents of the <mask> element",
+            "depreciated": false,
+            "elements": [
+                "mask"
+            ]
+        },
+        "maskUnits": {
+            "description": "The maskUnits attribute indicates which coordinate system to use for the geometry properties of the <mask> element",
+            "depreciated": false,
+            "elements": [
+                "mask"
+            ]
+        },
+        "mathematical": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "mode": {
+            "description": "The mode attribute defines the blending mode on the <feBlend> filter primitive",
+            "depreciated": false,
+            "elements": [
+                "feBlend"
+            ]
+        },
+        "numOctaves": {
+            "description": "The numOctaves attribute defines the number of octaves for the noise function of the <feTurbulence> primitive",
+            "depreciated": false,
+            "elements": [
+                "feTurbulence"
+            ]
+        },
+        "offset": {
+            "description": "?????",
+            "depreciated": false,
+            "elements": []
+        },
+        "opacity": {
+            "description": "The opacity attribute specifies the transparency of an object or of a group of objects, that is, the degree to which the background behind the element is overlaid",
+            "depreciated": false,
+            "elements": [
+                "a",
+                "audio",
                 "canvas",
-                "embed",
+                "circle",
+                "ellipse",
+                "foreignObject",
+                "g",
                 "iframe",
-                "img",
-                "input",
-                "object",
+                "image",
+                "line",
+                "marker",
+                "path",
+                "polygon",
+                "polyline",
+                "rect",
+                "svg",
+                "switch",
+                "symbol",
+                "text",
+                "textPath",
+                "tspan",
+                "use",
+                "unknown",
                 "video"
-            ],
-            "description": "Specifies the height of elements listed here. For all other elements, use the CSS height property. Note: In some instances, such as <div>, this is a legacy attribute, in which case the CSS height property should be used instead."
+            ]
         },
-        "hidden": {
+        "operator": {
+            "description": "The operator attribute has two meanings based on the context it's used in",
+            "depreciated": false,
             "elements": [
-                "Globalattribute"
-            ],
-            "description": "Prevents rendering of given element, while keeping child elements, e.g. script elements, active."
+                "feComposite",
+                "feMorphology"
+            ]
         },
-        "high": {
+        "order": {
+            "description": "The order attribute indicates the size of the matrix to be used by a <feConvolveMatrix> element",
+            "depreciated": false,
             "elements": [
-                "meter"
-            ],
-            "description": "Indicates the lower bound of the upper range."
+                "feConvolveMatrix"
+            ]
         },
-        "href": {
+        "orient": {
+            "description": "The orient attribute indicates how a marker is rotated when it is placed at its position on the shape",
+            "depreciated": false,
             "elements": [
-                "a",
-                "area",
-                "base",
-                "link"
-            ],
-            "description": "The URL of a linked resource."
+                "marker"
+            ]
         },
-        "hrefLang": {
+        "orientation": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
             "elements": [
-                "a",
-                "area",
-                "link"
-            ],
-            "description": "Specifies the language of the linked resource."
+                "glyph"
+            ]
         },
-        "httpEquiv": {
+        "origin": {
+            "description": "The origin attribute specifies the origin of motion for an animation",
+            "depreciated": false,
             "elements": [
-                "meta"
-            ],
-            "description": "Defines a pragma directive."
+                "animateMotion"
+            ]
         },
-        "icon": {
+        "overflow": {
+            "description": "The overflow attribute sets what to do when an element's content is too big to fit in its block formatting context",
+            "depreciated": false,
             "elements": [
-                "command"
-            ],
-            "description": "Specifies a picture which represents the command."
-        },
-        "id": {
-            "elements": [
-                "Globalattribute"
-            ],
-            "description": "Often used with CSS to style a specific element. The value of this attribute must be unique."
-        },
-        "integrity": {
-            "elements": [
-                "link",
-                "script"
-            ],
-            "description": "Specifies a Subresource Integrity value that allows browsers to verify what they fetch."
-        },
-        "inputMode": {
-            "elements": [
-                "textarea",
-                "contenteditable"
-            ],
-            "description": "Provides a hint as to the type of data that might be entered by the user while editing the element or its contents. The attribute can be used with form controls (such as the value of textarea elements), or in elements in an editing host (e.g., using contenteditable attribute)."
-        },
-        "keyType": {
-            "elements": [
-                "keygen"
-            ],
-            "description": "Specifies the type of key generated."
-        },
-        "kind": {
-            "elements": [
-                "track"
-            ],
-            "description": "Specifies the kind of text track."
-        },
-        "label": {
-            "elements": [
-                "optgroup",
-                "option",
-                "track"
-            ],
-            "description": "Specifies a user-readable title of the element."
-        },
-        "lang": {
-            "elements": [
-                "Globalattribute"
-            ],
-            "description": "Defines the language used in the element."
-        },
-        "list": {
-            "elements": [
-                "input"
-            ],
-            "description": "Identifies a list of pre-defined options to suggest to the user."
-        },
-        "loop": {
-            "elements": [
-                "audio",
-                "bgsound",
-                "marquee",
-                "video"
-            ],
-            "description": "Indicates whether the media should start playing from the start when it's finished."
-        },
-        "low": {
-            "elements": [
-                "meter"
-            ],
-            "description": "Indicates the upper bound of the lower range."
-        },
-        "manifest": {
-            "elements": [
-                "html"
-            ],
-            "description": "Specifies the URL of the document's cache manifest. Note: This attribute is obsolete, use <link rel=\"manifest\"> instead."
-        },
-        "max": {
-            "elements": [
-                "input",
-                "meter",
-                "progress"
-            ],
-            "description": "Indicates the maximum value allowed."
-        },
-        "maxLength": {
-            "elements": [
-                "input",
-                "textarea"
-            ],
-            "description": "Defines the maximum number of characters allowed in the element."
-        },
-        "minLength": {
-            "elements": [
-                "input",
-                "textarea"
-            ],
-            "description": "Defines the minimum number of characters allowed in the element."
-        },
-        "media": {
-            "elements": [
-                "a",
-                "area",
-                "link",
-                "source",
-                "style"
-            ],
-            "description": "Specifies a hint of the media for which the linked resource was designed."
-        },
-        "method": {
-            "elements": [
-                "form"
-            ],
-            "description": "Defines which HTTP method to use when submitting the form. Can be GET (default) or POST."
-        },
-        "min": {
-            "elements": [
-                "input",
-                "meter"
-            ],
-            "description": "Indicates the minimum value allowed."
-        },
-        "multiple": {
-            "elements": [
-                "input",
-                "select"
-            ],
-            "description": "Indicates whether multiple values can be entered in an input of the type email or file."
-        },
-        "muted": {
-            "elements": [
-                "audio",
-                "video"
-            ],
-            "description": "Indicates whether the audio will be initially silenced on page load."
-        },
-        "name": {
-            "elements": [
-                "button",
-                "form",
-                "fieldset",
+                "foreignObject",
                 "iframe",
-                "input",
-                "keygen",
-                "object",
-                "output",
-                "select",
-                "textarea",
-                "map",
-                "meta",
-                "param"
-            ],
-            "description": "Name of the element. For example used by the server to identify the fields in form submits."
+                "image",
+                "marker",
+                "pattern",
+                "symbol",
+                "svg",
+                "text"
+            ]
         },
-        "noValidate": {
+        "overlinePosition": {
+            "description": "The overline-position attribute represents the ideal vertical position of the overline",
+            "depreciated": false,
             "elements": [
-                "form"
-            ],
-            "description": "This attribute indicates that the form shouldn't be validated when submitted."
+                "font-face"
+            ]
         },
-        "open": {
+        "overlineThickness": {
+            "description": "The overline-thickness attribute represents the ideal thickness of the overline",
+            "depreciated": false,
             "elements": [
-                "details",
-                "dialog"
-            ],
-            "description": "Indicates whether the the contents are currently visible (in the case of a <details> element) or whether the dialog is active and can be interacted with (in the case of a <dialog> element)."
+                "font-face"
+            ]
         },
-        "optimum": {
+        "panose1": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
             "elements": [
-                "meter"
-            ],
-            "description": "Indicates the optimal numeric value."
+                "font-face"
+            ]
         },
-        "pattern": {
+        "paintOrder": {
+            "description": "The paint-order attribute specifies the order that the fill, stroke, and markers of a given shape or text element are painted",
+            "depreciated": false,
             "elements": [
-                "input"
-            ],
-            "description": "Defines a regular expression which the element's value will be validated against."
+                "circle",
+                "ellipse",
+                "line",
+                "path",
+                "polygon",
+                "polyline",
+                "rect",
+                "text",
+                "textPath",
+                "tspan"
+            ]
         },
-        "placeholder": {
+        "pathLength": {
+            "description": "The pathLength attribute lets authors specify a total length for the path, in user units",
+            "depreciated": false,
             "elements": [
-                "input",
-                "textarea"
-            ],
-            "description": "Provides a hint to the user of what can be entered in the field."
+                "circle",
+                "ellipse",
+                "line",
+                "path",
+                "polygon",
+                "polyline",
+                "rect"
+            ]
         },
-        "poster": {
+        "patternContentUnits": {
+            "description": "The patternContentUnits attribute indicates which coordinate system to use for the contents of the <pattern> element",
+            "depreciated": false,
             "elements": [
-                "video"
-            ],
-            "description": "A URL indicating a poster frame to show until the user plays or seeks."
+                "pattern"
+            ]
         },
-        "preload": {
+        "patternTransform": {
+            "description": "The patternTransform attribute defines a list of transform definitions that are applied to a pattern tile",
+            "depreciated": false,
             "elements": [
+                "pattern"
+            ]
+        },
+        "patternUnits": {
+            "description": "The patternUnits attribute indicates which coordinate system to use for the geometry properties of the <pattern> element",
+            "depreciated": false,
+            "elements": [
+                "pattern"
+            ]
+        },
+        "pointerEvents": {
+            "description": "The pointer-events attribute is a presentation attribute that allows defining whether or when an element may be the target of a mouse event",
+            "depreciated": false,
+            "elements": [
+                "a",
+                "circle",
+                "clipPath",
+                "defs",
+                "ellipse",
+                "foreignObject",
+                "g",
+                "image",
+                "line",
+                "marker",
+                "mask",
+                "path",
+                "pattern",
+                "polygon",
+                "polyline",
+                "rect",
+                "svg",
+                "switch",
+                "symbol",
+                "text",
+                "textPath",
+                "tspan",
+                "use"
+            ]
+        },
+        "points": {
+            "description": "The points attribute defines a list of points",
+            "depreciated": false,
+            "elements": [
+                "polyline",
+                "polygon"
+            ]
+        },
+        "pointsAtX": {
+            "description": "The pointsAtX attribute represents the x location in the coordinate system established by attribute primitiveUnits on the <filter> element of the point at which the light source is pointing",
+            "depreciated": false,
+            "elements": [
+                "feSpotLight"
+            ]
+        },
+        "pointsAtY": {
+            "description": "The pointsAtY attribute represents the y location in the coordinate system established by attribute primitiveUnits on the <filter> element of the point at which the light source is pointing",
+            "depreciated": false,
+            "elements": [
+                "feSpotLight"
+            ]
+        },
+        "pointsAtZ": {
+            "description": "The pointsAtZ attribute represents the y location in the coordinate system established by attribute primitiveUnits on the <filter> element of the point at which the light source is pointing, assuming that, in the initial local coordinate system, the positive z-axis comes out towards the person viewing the content and assuming that one unit along the z-axis equals one unit in x and y",
+            "depreciated": false,
+            "elements": [
+                "feSpotLight"
+            ]
+        },
+        "preserveAlpha": {
+            "description": "the preserveAlpha attribute indicates how a <feConvolveMatrix> element handled alpha transparency",
+            "depreciated": false,
+            "elements": [
+                "feConvolveMatrix"
+            ]
+        },
+        "preserveAspectRatio": {
+            "description": "The preserveAspectRatio attribute indicates how an element with a viewBox providing a given aspect ratio must fit into a viewport with a different aspect ratio",
+            "depreciated": false,
+            "elements": [
+                "svg",
+                "symbol",
+                "image",
+                "feImage",
+                "marker",
+                "pattern",
+                "view"
+            ]
+        },
+        "primitiveUnits": {
+            "description": "The primitiveUnits attribute specifies the coordinate system for the various length values within the filter primitives and for the attributes that define the filter primitive subregion",
+            "depreciated": false,
+            "elements": [
+                "filter"
+            ]
+        },
+        "r": {
+            "description": "The r attribute defines the radius of a circle",
+            "depreciated": false,
+            "elements": [
+                "circle",
+                "radialGradient"
+            ]
+        },
+        "radius": {
+            "description": "The radius attribute represents the radius (or radii) for the operation on a given <feMorphology> filter primitive",
+            "depreciated": false,
+            "elements": [
+                "feMorphology"
+            ]
+        },
+        "refX": {
+            "description": "The refX attribute defines the x coordinate of an element’s reference point",
+            "depreciated": false,
+            "elements": [
+                "marker",
+                "symbol"
+            ]
+        },
+        "refY": {
+            "description": "The refY attribute defines the y coordinate of an element’s reference point",
+            "depreciated": false,
+            "elements": [
+                "marker",
+                "symbol"
+            ]
+        },
+        "renderingIntent": {
+            "description": "?????",
+            "depreciated": false,
+            "elements": []
+        },
+        "repeatCount": {
+            "description": "The repeatCount attribute indicates the number of times an animation will take place",
+            "depreciated": false,
+            "elements": [
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform",
+                "set"
+            ]
+        },
+        "repeatDur": {
+            "description": "The repeatDur attribute specifies the total duration for repeating an animation",
+            "depreciated": false,
+            "elements": [
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform",
+                "set"
+            ]
+        },
+        "requiredExtensions": {
+            "description": "?????",
+            "depreciated": false,
+            "elements": []
+        },
+        "requiredFeatures": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "a",
+                "altGlyph",
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform",
+                "circle",
+                "clipPath",
+                "cursor",
+                "defs",
+                "ellipse",
+                "foreignObject",
+                "g",
+                "image",
+                "line",
+                "mask",
+                "path",
+                "pattern",
+                "polygon",
+                "polyline",
+                "rect",
+                "set",
+                "svg",
+                "switch",
+                "text",
+                "textPath",
+                "tref",
+                "tspan",
+                "use"
+            ]
+        },
+        "restart": {
+            "description": "The restart attribute specifies whether or not an animation can restart",
+            "depreciated": false,
+            "elements": [
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform",
+                "set"
+            ]
+        },
+        "result": {
+            "description": "The result attribute defines the assigned name for this filter primitive",
+            "depreciated": false,
+            "elements": [
+                "feBlend",
+                "feColorMatrix",
+                "feComponentTransfer",
+                "feComposite",
+                "feConvolveMatrix",
+                "feDiffuseLighting",
+                "feDisplacementMap",
+                "feDropShadow",
+                "feFlood",
+                "feGaussianBlur",
+                "feImage",
+                "feMerge",
+                "feMorphology",
+                "feOffset",
+                "feSpecularLighting",
+                "feTile",
+                "feTurbulence"
+            ]
+        },
+        "rotate": {
+            "description": "The rotate attribute specifies how the animated element rotates as it travels along a path specified in an <animateMotion> element",
+            "depreciated": false,
+            "elements": [
+                "animateMotion"
+            ]
+        },
+        "rx": {
+            "description": "The rx attribute defines a radius on the x-axis",
+            "depreciated": false,
+            "elements": [
+                "ellipse",
+                "rect"
+            ]
+        },
+        "ry": {
+            "description": "The ry attribute defines a radius on the y-axis",
+            "depreciated": false,
+            "elements": [
+                "ellipse",
+                "rect"
+            ]
+        },
+        "scale": {
+            "description": "The scale attribute defines the displacement scale factor to be used on a <feDisplacementMap> filter primitive",
+            "depreciated": false,
+            "elements": [
+                "feDisplacementMap"
+            ]
+        },
+        "seed": {
+            "description": "The seed attribute represents the starting number for the pseudo random number generator of the <feTurbulence> filter primitive",
+            "depreciated": false,
+            "elements": [
+                "feTurbulence"
+            ]
+        },
+        "shapeRendering": {
+            "description": "The shape-rendering attribute provides hints to the renderer about what tradeoffs to make when rendering shapes like paths, circles, or rectangles",
+            "depreciated": false,
+            "elements": [
+                "circle",
+                "ellipse",
+                "line",
+                "path",
+                "polygon",
+                "polyline",
+                "rect"
+            ]
+        },
+        "slope": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "spacing": {
+            "description": "The spacing attribute indicates how the user agent should determine the spacing between typographic characters that are to be rendered along a path",
+            "depreciated": false,
+            "elements": [
+                "textPath"
+            ]
+        },
+        "specularConstant": {
+            "description": "The specularConstant attribute controls the ratio of reflection of the specular lighting",
+            "depreciated": false,
+            "elements": [
+                "feSpecularLighting"
+            ]
+        },
+        "specularExponent": {
+            "description": "The specularExponent attribute controls the focus for the light source",
+            "depreciated": false,
+            "elements": [
+                "feSpecularLighting",
+                "feSpotLight"
+            ]
+        },
+        "speed": {
+            "description": "?????",
+            "depreciated": false,
+            "elements": []
+        },
+        "spreadMethod": {
+            "description": "The spreadMethod attribute determines how a shape is filled beyond the defined edges of a gradient",
+            "depreciated": false,
+            "elements": [
+                "linearGradient",
+                "radialGradient"
+            ]
+        },
+        "startOffset": {
+            "description": "The startOffset attribute defines an offset from the start of the path for the initial current text position along the path after converting the path to the <textPath> element's coordinate system",
+            "depreciated": false,
+            "elements": [
+                "textPath"
+            ]
+        },
+        "stdDeviation": {
+            "description": "The stdDeviation attribute defines the standard deviation for the blur operation",
+            "depreciated": false,
+            "elements": [
+                "feGaussianBlur"
+            ]
+        },
+        "stemh": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "stemv": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "stitchTiles": {
+            "description": "The stitchTiles attribute defines how the Perlin Noise tiles behave at the border",
+            "depreciated": false,
+            "elements": [
+                "feTurbulence"
+            ]
+        },
+        "stopColor": {
+            "description": "The stop-color attribute indicates what color to use at a gradient stop",
+            "depreciated": false,
+            "elements": [
+                "stop"
+            ]
+        },
+        "stopOpacity": {
+            "description": "The stop-opacity attribute defines the opacity of a given color gradient stop",
+            "depreciated": false,
+            "elements": [
+                "stop"
+            ]
+        },
+        "strikethroughPosition": {
+            "description": "« SVG Attribute reference homeThe strikethrough-position attribute represents the ideal vertical position of the strikethrough",
+            "depreciated": false,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "strikethroughThickness": {
+            "description": "« SVG Attribute reference homeThe strikethrough-thickness attribute represents the ideal thickness of the strikethrough",
+            "depreciated": false,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "string": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font-face-format"
+            ]
+        },
+        "stroke": {
+            "description": "The stroke attribute is a presentation attribute defining the color (or any SVG paint servers like gradients or patterns) used to paint the outline of the shape;Note: As a presentation attribute stroke can be used as a CSS property",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "circle",
+                "ellipse",
+                "line",
+                "path",
+                "polygon",
+                "polyline",
+                "rect",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "strokeDasharray": {
+            "description": "The stroke-dasharray attribute is a presentation attribute defining the pattern of dashes and gaps used to paint the outline of the shape;Note: As a presentation attribute, stroke-dasharray can be used as a CSS property",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "circle",
+                "ellipse",
+                "path",
+                "line",
+                "polygon",
+                "polyline",
+                "rect",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "strokeDashoffset": {
+            "description": "The stroke-dashoffset attribute is a presentation attribute defining an offset on the rendering of the associated dash array",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "circle",
+                "ellipse",
+                "path",
+                "line",
+                "polygon",
+                "polyline",
+                "rect",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "strokeLinecap": {
+            "description": "The stroke-linecap attribute is a presentation attribute defining the shape to be used at the end of open subpaths when they are stroked",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "path",
+                "polyline",
+                "line",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "strokeLinejoin": {
+            "description": "The stroke-linejoin attribute is a presentation attribute defining the shape to be used at the corners of paths when they are stroked",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "path",
+                "polygon",
+                "polyline",
+                "rect",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "strokeMiterlimit": {
+            "description": "The stroke-miterlimit attribute is a presentation attribute defining a limit on the ratio of the miter length to the stroke-width used to draw a miter join",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "path",
+                "polygon",
+                "polyline",
+                "rect",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "strokeOpacity": {
+            "description": "The stroke-opacity attribute is a presentation attribute defining the opacity of the paint server (color, gradient, pattern, etc) applied to the stroke of a shape",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "circle",
+                "ellipse",
+                "path",
+                "line",
+                "polygon",
+                "polyline",
+                "rect",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "strokeWidth": {
+            "description": "The stroke-width attribute is a presentation attribute defining the width of the stroke to be applied to the shape",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "circle",
+                "ellipse",
+                "line",
+                "path",
+                "polygon",
+                "polyline",
+                "rect",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "surfaceScale": {
+            "description": "The surfaceScale attribute represents the height of the surface for a light filter primitive",
+            "depreciated": false,
+            "elements": [
+                "feDiffuseLighting",
+                "feSpecularLighting"
+            ]
+        },
+        "systemLanguage": {
+            "description": "The systemLanguage attribute represents a list of supported language tags",
+            "depreciated": false,
+            "elements": [
+                "a",
+                "altGlyph",
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform",
                 "audio",
-                "video"
-            ],
-            "description": "Indicates whether the whole resource, parts of it or nothing should be preloaded."
-        },
-        "radioGroup": {
-            "elements": [
-                "command"
-            ],
-            "description": ""
-        },
-        "readOnly": {
-            "elements": [
-                "input",
-                "textarea"
-            ],
-            "description": "Indicates whether the element can be edited."
-        },
-        "referrerPolicy": {
-            "elements": [
-                "a",
-                "area",
-                "iframe",
-                "img",
-                "link",
-                "script"
-            ],
-            "description": "Specifies which referrer is sent when fetching the resource."
-        },
-        "rel": {
-            "elements": [
-                "a",
-                "area",
-                "link"
-            ],
-            "description": "Specifies the relationship of the target object to the link object."
-        },
-        "required": {
-            "elements": [
-                "input",
-                "select",
-                "textarea"
-            ],
-            "description": "Indicates whether this element is required to fill out or not."
-        },
-        "reversed": {
-            "elements": [
-                "ol"
-            ],
-            "description": "Indicates whether the list should be displayed in a descending order instead of a ascending."
-        },
-        "rows": {
-            "elements": [
-                "textarea"
-            ],
-            "description": "Defines the number of rows in a text area."
-        },
-        "rowSpan": {
-            "elements": [
-                "td",
-                "th"
-            ],
-            "description": "Defines the number of rows a table cell should span over."
-        },
-        "sandbox": {
-            "elements": [
-                "iframe"
-            ],
-            "description": "Stops a document loaded in an iframe from using certain features (such as submitting forms or opening new windows)."
-        },
-        "scope": {
-            "elements": [
-                "th"
-            ],
-            "description": "Defines the cells that the header test (defined in the th element) relates to."
-        },
-        "scoped": {
-            "elements": [
-                "style"
-            ],
-            "description": ""
-        },
-        "selected": {
-            "elements": [
-                "option"
-            ],
-            "description": "Defines a value which will be selected on page load."
-        },
-        "shape": {
-            "elements": [
-                "a",
-                "area"
-            ],
-            "description": ""
-        },
-        "size": {
-            "elements": [
-                "input",
-                "select"
-            ],
-            "description": "Defines the width of the element (in pixels). If the element's type attribute is text or password then it's the number of characters."
-        },
-        "sizes": {
-            "elements": [
-                "link",
-                "img",
-                "source"
-            ],
-            "description": ""
-        },
-        "span": {
-            "elements": [
-                "col",
-                "colgroup"
-            ],
-            "description": ""
-        },
-        "spellCheck": {
-            "elements": [
-                "Globalattribute"
-            ],
-            "description": "Indicates whether spell checking is allowed for the element."
-        },
-        "src": {
-            "elements": [
-                "audio",
-                "embed",
-                "iframe",
-                "img",
-                "input",
-                "script",
-                "source",
-                "track",
-                "video"
-            ],
-            "description": "The URL of the embeddable content."
-        },
-        "srcDoc": {
-            "elements": [
-                "iframe"
-            ],
-            "description": ""
-        },
-        "srcLang": {
-            "elements": [
-                "track"
-            ],
-            "description": ""
-        },
-        "srcSet": {
-            "elements": [
-                "img",
-                "source"
-            ],
-            "description": "One or more responsive image candidates."
-        },
-        "start": {
-            "elements": [
-                "ol"
-            ],
-            "description": "Defines the first number if other than 1."
-        },
-        "step": {
-            "elements": [
-                "input"
-            ],
-            "description": ""
-        },
-        "style": {
-            "elements": [
-                "Globalattribute"
-            ],
-            "description": "Defines CSS styles which will override styles previously set."
-        },
-        "summary": {
-            "elements": [
-                "table"
-            ],
-            "description": ""
-        },
-        "tabIndex": {
-            "elements": [
-                "Globalattribute"
-            ],
-            "description": "Overrides the browser's default tab order and follows the one specified instead."
-        },
-        "target": {
-            "elements": [
-                "a",
-                "area",
-                "base",
-                "form"
-            ],
-            "description": "Specifies where to open the linked document (in the case of an <a> element) or where to display the response received (in the case of a <form> element)"
-        },
-        "title": {
-            "elements": [
-                "Globalattribute"
-            ],
-            "description": "Text to be displayed in a tooltip when hovering over the element."
-        },
-        "type": {
-            "elements": [
-                "button",
-                "input",
-                "command",
-                "embed",
-                "object",
-                "script",
-                "source",
-                "style",
-                "menu",
-                "link"
-            ],
-            "description": "Defines the type of the element."
-        },
-        "useMap": {
-            "elements": [
-                "img",
-                "input",
-                "object"
-            ],
-            "description": ""
-        },
-        "value": {
-            "elements": [
-                "button",
-                "data",
-                "input",
-                "li",
-                "meter",
-                "option",
-                "progress",
-                "param"
-            ],
-            "description": "Defines a default value which will be displayed in the element on page load."
-        },
-        "width": {
-            "elements": [
                 "canvas",
-                "embed",
+                "circle",
+                "clipPath",
+                "cursor",
+                "defs",
+                "discard",
+                "ellipse",
+                "foreignObject",
+                "g",
                 "iframe",
-                "img",
-                "input",
-                "object",
+                "image",
+                "line",
+                "mask",
+                "path",
+                "pattern",
+                "polygon",
+                "polyline",
+                "rect",
+                "set",
+                "svg",
+                "switch",
+                "text",
+                "textPath",
+                "tref",
+                "tspan",
+                "unknown",
+                "use",
                 "video"
-            ],
-            "description": "For the elements listed here, this establishes the element's width. Note: For all other instances, such as <div>, this is a legacy attribute, in which case the CSS width property should be used instead."
+            ]
         },
-        "wrap": {
+        "tableValues": {
+            "description": "The tableValues attribute defines a list of numbers defining a lookup table of values for a for a color component transfer function",
+            "depreciated": false,
             "elements": [
-                "textarea"
-            ],
-            "description": "Indicates whether the text should be wrapped."
+                "feFuncA",
+                "feFuncB",
+                "feFuncG",
+                "feFuncR"
+            ]
+        },
+        "targetX": {
+            "description": "The targetX attribute determines the positioning in horizontal direction of the convolution matrix relative to a given target pixel in the input image",
+            "depreciated": false,
+            "elements": [
+                "feConvolveMatrix"
+            ]
+        },
+        "targetY": {
+            "description": "The targetY attribute determines the positioning in vertical direction of the convolution matrix relative to a given target pixel in the input image",
+            "depreciated": false,
+            "elements": [
+                "feConvolveMatrix"
+            ]
+        },
+        "textAnchor": {
+            "description": "The text-anchor attribute is used to align (start-, middle- or end-alignment) a string of pre-formatted text or auto-wrapped text where the wrapping area is determined from the inline-size property relative to a given point",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "textDecoration": {
+            "description": "The text-decoration attribute defines whether text is decorated with an underline, overline and/or strike-through",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "textRendering": {
+            "description": "The text-rendering attribute provides hints to the renderer about what tradeoffs to make when rendering text",
+            "depreciated": false,
+            "elements": [
+                "text"
+            ]
+        },
+        "textLength": {
+            "description": "The textLength attribute, available on SVG <text> and <tspan> elements, lets you specify the width of the space into which the text will draw",
+            "depreciated": false,
+            "elements": [
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "to": {
+            "description": "The to attribute indicates the final value of the attribute that will be modified during the animation",
+            "depreciated": false,
+            "elements": [
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform",
+                "set"
+            ]
+        },
+        "transform": {
+            "description": "The transform attribute defines a list of transform definitions that are applied to an element and the element's children",
+            "depreciated": false,
+            "elements": []
+        },
+        "u1": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "hkern",
+                "vkern"
+            ]
+        },
+        "u2": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "hkern",
+                "vkern"
+            ]
+        },
+        "underlinePosition": {
+            "description": "« SVG Attribute reference homeThe underline-position attribute represents the ideal vertical position of the underline",
+            "depreciated": false,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "underlineThickness": {
+            "description": "« SVG Attribute reference homeThe underline-thickness attribute represents the ideal thickness of the underline",
+            "depreciated": false,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "unicode": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "glyph"
+            ]
+        },
+        "unicodeBidi": {
+            "description": "The unicode-bidi attribute specifies how the accumulation of the background image is managed",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "textPath",
+                "text",
+                "tref",
+                "tspan"
+            ]
+        },
+        "unicodeRange": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "unitsPerEm": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "vAlphabetic": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "vHanging": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "vIdeographic": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "vMathematical": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "values": {
+            "description": "The values attribute has different meanings, depending upon the context where it's used, either it defines a sequence of values used over the course of an animation, or it's a list of numbers for a color matrix, which is interpreted differently depending on the type of color change to be performed",
+            "depreciated": false,
+            "elements": [
+                "animate",
+                "animateColor",
+                "animateMotion",
+                "animateTransform",
+                "feColorMatrix"
+            ]
+        },
+        "vectorEffect": {
+            "description": "The vector-effect property specifies the vector effect to use when drawing an object",
+            "depreciated": false,
+            "elements": [
+                "circle",
+                "ellipse",
+                "foreignObject",
+                "image",
+                "line",
+                "path",
+                "polygon",
+                "polyline",
+                "rect",
+                "text",
+                "textPath",
+                "tspan",
+                "use"
+            ]
+        },
+        "version": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "svg"
+            ]
+        },
+        "vertAdvY": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font",
+                "glyph",
+                "missing-glyph"
+            ]
+        },
+        "vertOriginX": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font"
+            ]
+        },
+        "vertOriginY": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font"
+            ]
+        },
+        "viewBox": {
+            "description": "The viewBox attribute defines the position and dimension, in user space, of an SVG viewport",
+            "depreciated": false,
+            "elements": [
+                "marker",
+                "pattern",
+                "svg",
+                "symbol",
+                "view"
+            ]
+        },
+        "viewTarget": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "view"
+            ]
+        },
+        "visibility": {
+            "description": "The visibility attribute lets you control the visibility of graphical elements",
+            "depreciated": false,
+            "elements": [
+                "a",
+                "altGlyph",
+                "audio",
+                "canvas",
+                "circle",
+                "ellipse",
+                "foreignObject",
+                "iframe",
+                "image",
+                "line",
+                "path",
+                "polygon",
+                "polyline",
+                "rect",
+                "text",
+                "textPath",
+                "tref",
+                "tspan",
+                "video"
+            ]
+        },
+        "widths": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "font-face"
+            ]
+        },
+        "wordSpacing": {
+            "description": "The word-spacing attribute specifies spacing behavior between words",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "writingMode": {
+            "description": "The writing-mode attribute specifies whether the initial inline-progression-direction for a <text> element shall be left-to-right, right-to-left, or top-to-bottom",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "text",
+                "textPath",
+                "tref",
+                "tspan"
+            ]
+        },
+        "z": {
+            "description": "The z attribute defines the location along the z-axis for a light source in the coordinate system established by the primitiveUnits attribute on the <filter> element, assuming that, in the initial coordinate system, the positive z-axis comes out towards the person viewing the content and assuming that one unit along the z-axis equals one unit in x and y",
+            "depreciated": false,
+            "elements": [
+                "fePointLight",
+                "feSpotLight"
+            ]
+        },
+        "zoomAndPan": {
+            "description": "Deprecated: This feature is no longer recommended",
+            "depreciated": true,
+            "elements": [
+                "svg",
+                "view"
+            ]
+        },
+        "y": {
+            "description": "The y attribute defines a y-axis coordinate in the user coordinate system",
+            "depreciated": false,
+            "elements": [
+                "altGlyph",
+                "cursor",
+                "feBlend",
+                "feColorMatrix",
+                "feComponentTransfer",
+                "feComposite",
+                "feConvolveMatrix",
+                "feDiffuseLighting",
+                "feDisplacementMap",
+                "feDropShadow",
+                "feFlood",
+                "feFuncA",
+                "feFuncB",
+                "feFuncG",
+                "feFuncR",
+                "feGaussianBlur",
+                "feImage",
+                "feMerge",
+                "feMergeNode",
+                "feMorphology",
+                "feOffset",
+                "fePointLight",
+                "feSpecularLighting",
+                "feSpotLight",
+                "feTile",
+                "feTurbulence",
+                "filter",
+                "foreignObject",
+                "glyphRef",
+                "image",
+                "mask",
+                "pattern",
+                "rect",
+                "svg",
+                "symbol",
+                "text",
+                "tref",
+                "tspan",
+                "use"
+            ]
+        },
+        "y1": {
+            "description": "The y1 attribute is used to specify the first y-coordinate for drawing an SVG element that requires more than one coordinate",
+            "depreciated": false,
+            "elements": [
+                "line",
+                "linearGradient"
+            ]
+        },
+        "y2": {
+            "description": "The y2 attribute is used to specify the second y-coordinate for drawing an SVG element that requires more than one coordinate",
+            "depreciated": false,
+            "elements": [
+                "line",
+                "linearGradient"
+            ]
+        },
+        "yChannelSelector": {
+            "description": "The yChannelSelector attribute indicates which color channel from in2 to use to displace the pixels in in along the y-axis",
+            "depreciated": false,
+            "elements": [
+                "feDisplacementMap"
+            ]
         }
     },
     "elements": {
-        "form": [
-            "accept",
-            "acceptCharset",
-            "action",
-            "autoComplete",
-            "encType",
-            "method",
-            "name",
-            "noValidate",
-            "target"
+        "font-face": [
+            "accentHeight",
+            "alphabetic",
+            "ascent",
+            "bbox",
+            "capHeight",
+            "descent",
+            "hanging",
+            "ideographic",
+            "mathematical",
+            "overlinePosition",
+            "overlineThickness",
+            "panose1",
+            "slope",
+            "stemh",
+            "stemv",
+            "strikethroughPosition",
+            "strikethroughThickness",
+            "underlinePosition",
+            "underlineThickness",
+            "unicodeRange",
+            "unitsPerEm",
+            "vAlphabetic",
+            "vHanging",
+            "vIdeographic",
+            "vMathematical",
+            "widths"
         ],
-        "input": [
-            "accept",
-            "alt",
-            "autoComplete",
-            "autoFocus",
-            "capture",
-            "checked",
-            "disabled",
-            "form",
-            "formAction",
-            "formEncType",
-            "formMethod",
-            "formNoValidate",
-            "formTarget",
-            "height",
-            "list",
-            "max",
-            "maxLength",
-            "minLength",
-            "min",
-            "multiple",
-            "name",
-            "pattern",
-            "placeholder",
-            "readOnly",
-            "required",
-            "size",
-            "src",
-            "step",
-            "type",
-            "useMap",
-            "value",
-            "width"
+        "animate": [
+            "accumulate",
+            "additive",
+            "attributeName",
+            "attributeType",
+            "begin",
+            "by",
+            "calcMode",
+            "colorInterpolation",
+            "colorRendering",
+            "dur",
+            "end",
+            "from",
+            "keyPoints",
+            "keySplines",
+            "keyTimes",
+            "repeatCount",
+            "repeatDur",
+            "requiredFeatures",
+            "restart",
+            "systemLanguage",
+            "to",
+            "values"
         ],
-        "Globalattribute": [
-            "accessKey",
-            "className",
-            "contentEditable",
-            "contextMenu",
-            "dir",
-            "draggable",
-            "hidden",
-            "id",
-            "lang",
-            "spellCheck",
-            "style",
-            "tabIndex",
-            "title"
+        "animateColor": [
+            "accumulate",
+            "additive",
+            "attributeName",
+            "attributeType",
+            "begin",
+            "by",
+            "calcMode",
+            "colorInterpolation",
+            "colorRendering",
+            "dur",
+            "end",
+            "from",
+            "keyPoints",
+            "keySplines",
+            "keyTimes",
+            "repeatCount",
+            "repeatDur",
+            "requiredFeatures",
+            "restart",
+            "systemLanguage",
+            "to",
+            "values"
         ],
-        "iframe": [
-            "allow",
-            "height",
-            "name",
-            "referrerPolicy",
-            "sandbox",
-            "src",
-            "srcDoc",
-            "width"
+        "animateMotion": [
+            "accumulate",
+            "additive",
+            "begin",
+            "by",
+            "calcMode",
+            "dur",
+            "end",
+            "from",
+            "keyPoints",
+            "keySplines",
+            "keyTimes",
+            "origin",
+            "repeatCount",
+            "repeatDur",
+            "requiredFeatures",
+            "restart",
+            "rotate",
+            "systemLanguage",
+            "to",
+            "values"
         ],
-        "applet": [
-            "alt"
+        "animateTransform": [
+            "accumulate",
+            "additive",
+            "attributeName",
+            "attributeType",
+            "begin",
+            "by",
+            "calcMode",
+            "dur",
+            "end",
+            "from",
+            "keyPoints",
+            "keySplines",
+            "keyTimes",
+            "repeatCount",
+            "repeatDur",
+            "requiredFeatures",
+            "restart",
+            "systemLanguage",
+            "to",
+            "values"
         ],
-        "area": [
-            "alt",
-            "coords",
-            "download",
-            "href",
-            "hrefLang",
-            "media",
-            "referrerPolicy",
-            "rel",
-            "shape",
-            "target"
+        "tspan": [
+            "alignmentBaseline",
+            "baselineShift",
+            "colorInterpolation",
+            "colorRendering",
+            "direction",
+            "dominantBaseline",
+            "dx",
+            "dy",
+            "fill",
+            "fillOpacity",
+            "fillRule",
+            "fontFamily",
+            "fontSize",
+            "fontSizeAdjust",
+            "fontStretch",
+            "fontStyle",
+            "fontVariant",
+            "fontWeight",
+            "glyphOrientationHorizontal",
+            "glyphOrientationVertical",
+            "kerning",
+            "lengthAdjust",
+            "letterSpacing",
+            "opacity",
+            "paintOrder",
+            "pointerEvents",
+            "requiredFeatures",
+            "stroke",
+            "strokeDasharray",
+            "strokeDashoffset",
+            "strokeLinecap",
+            "strokeLinejoin",
+            "strokeMiterlimit",
+            "strokeOpacity",
+            "strokeWidth",
+            "systemLanguage",
+            "textAnchor",
+            "textDecoration",
+            "textLength",
+            "unicodeBidi",
+            "vectorEffect",
+            "visibility",
+            "wordSpacing",
+            "writingMode",
+            "y"
         ],
-        "img": [
-            "alt",
-            "crossOrigin",
-            "height",
-            "referrerPolicy",
-            "sizes",
-            "src",
-            "srcSet",
-            "useMap",
-            "width"
+        "tref": [
+            "alignmentBaseline",
+            "baselineShift",
+            "direction",
+            "dominantBaseline",
+            "dx",
+            "dy",
+            "fill",
+            "fillOpacity",
+            "fillRule",
+            "fontFamily",
+            "fontSize",
+            "fontSizeAdjust",
+            "fontStretch",
+            "fontStyle",
+            "fontVariant",
+            "fontWeight",
+            "glyphOrientationHorizontal",
+            "glyphOrientationVertical",
+            "kerning",
+            "lengthAdjust",
+            "letterSpacing",
+            "requiredFeatures",
+            "stroke",
+            "strokeDasharray",
+            "strokeDashoffset",
+            "strokeLinecap",
+            "strokeLinejoin",
+            "strokeMiterlimit",
+            "strokeOpacity",
+            "strokeWidth",
+            "systemLanguage",
+            "textAnchor",
+            "textDecoration",
+            "textLength",
+            "unicodeBidi",
+            "visibility",
+            "wordSpacing",
+            "writingMode",
+            "y"
         ],
-        "script": [
-            "async",
-            "charSet",
-            "crossOrigin",
-            "defer",
-            "integrity",
-            "referrerPolicy",
-            "src",
-            "type"
+        "altGlyph": [
+            "alignmentBaseline",
+            "baselineShift",
+            "direction",
+            "dominantBaseline",
+            "dx",
+            "dy",
+            "fill",
+            "fillOpacity",
+            "fillRule",
+            "fontFamily",
+            "fontSize",
+            "fontSizeAdjust",
+            "fontStretch",
+            "fontStyle",
+            "fontVariant",
+            "fontWeight",
+            "format",
+            "glyphOrientationHorizontal",
+            "glyphOrientationVertical",
+            "glyphRef",
+            "kerning",
+            "letterSpacing",
+            "requiredFeatures",
+            "stroke",
+            "strokeDasharray",
+            "strokeDashoffset",
+            "strokeLinecap",
+            "strokeLinejoin",
+            "strokeMiterlimit",
+            "strokeOpacity",
+            "strokeWidth",
+            "systemLanguage",
+            "textAnchor",
+            "textDecoration",
+            "unicodeBidi",
+            "visibility",
+            "wordSpacing",
+            "writingMode",
+            "y"
         ],
-        "select": [
-            "autoComplete",
-            "autoFocus",
-            "disabled",
-            "form",
-            "multiple",
-            "name",
-            "required",
-            "size"
+        "textPath": [
+            "alignmentBaseline",
+            "baselineShift",
+            "colorInterpolation",
+            "colorRendering",
+            "direction",
+            "dominantBaseline",
+            "fill",
+            "fillOpacity",
+            "fillRule",
+            "fontFamily",
+            "fontSize",
+            "fontSizeAdjust",
+            "fontStretch",
+            "fontStyle",
+            "fontVariant",
+            "fontWeight",
+            "glyphOrientationHorizontal",
+            "glyphOrientationVertical",
+            "kerning",
+            "lengthAdjust",
+            "letterSpacing",
+            "opacity",
+            "paintOrder",
+            "pointerEvents",
+            "requiredFeatures",
+            "spacing",
+            "startOffset",
+            "stroke",
+            "strokeDasharray",
+            "strokeDashoffset",
+            "strokeLinecap",
+            "strokeLinejoin",
+            "strokeMiterlimit",
+            "strokeOpacity",
+            "strokeWidth",
+            "systemLanguage",
+            "textAnchor",
+            "textDecoration",
+            "textLength",
+            "unicodeBidi",
+            "vectorEffect",
+            "visibility",
+            "wordSpacing",
+            "writingMode"
         ],
-        "textarea": [
-            "autoComplete",
-            "autoFocus",
-            "cols",
-            "disabled",
-            "form",
-            "inputMode",
-            "maxLength",
-            "minLength",
-            "name",
-            "placeholder",
-            "readOnly",
-            "required",
-            "rows",
-            "wrap"
+        "feFuncA": [
+            "amplitude",
+            "exponent",
+            "intercept",
+            "tableValues",
+            "y"
         ],
-        "button": [
-            "autoFocus",
-            "disabled",
-            "form",
-            "formAction",
-            "formEncType",
-            "formMethod",
-            "formNoValidate",
-            "formTarget",
-            "name",
-            "type",
-            "value"
+        "feFuncB": [
+            "amplitude",
+            "exponent",
+            "intercept",
+            "tableValues",
+            "y"
         ],
-        "keygen": [
-            "autoFocus",
-            "challenge",
-            "disabled",
-            "form",
-            "keyType",
-            "name"
+        "feFuncG": [
+            "amplitude",
+            "exponent",
+            "intercept",
+            "tableValues",
+            "y"
         ],
-        "audio": [
-            "autoPlay",
-            "controls",
-            "crossOrigin",
-            "loop",
-            "muted",
-            "preload",
-            "src"
+        "feFuncR": [
+            "amplitude",
+            "exponent",
+            "intercept",
+            "tableValues",
+            "y"
         ],
-        "video": [
-            "autoPlay",
-            "controls",
-            "crossOrigin",
-            "height",
-            "loop",
-            "muted",
-            "poster",
-            "preload",
-            "src",
-            "width"
+        "glyph": [
+            "arabicForm",
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "d",
+            "enableBackground",
+            "glyphName",
+            "horizAdvX",
+            "mask",
+            "orientation",
+            "unicode",
+            "vertAdvY"
         ],
-        "meta": [
-            "charSet",
-            "content",
-            "httpEquiv",
-            "name"
+        "set": [
+            "attributeName",
+            "attributeType",
+            "begin",
+            "dur",
+            "end",
+            "keyPoints",
+            "repeatCount",
+            "repeatDur",
+            "requiredFeatures",
+            "restart",
+            "systemLanguage",
+            "to"
         ],
-        "command": [
-            "checked",
-            "disabled",
-            "icon",
-            "radioGroup",
-            "type"
+        "feDistantLight": [
+            "azimuth",
+            "elevation"
         ],
-        "blockquote": [
-            "cite"
+        "feTurbulence": [
+            "baseFrequency",
+            "colorInterpolationFilters",
+            "numOctaves",
+            "result",
+            "seed",
+            "stitchTiles",
+            "y"
         ],
-        "del": [
-            "cite",
-            "dateTime"
+        "svg": [
+            "baseProfile",
+            "clip",
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "enableBackground",
+            "mask",
+            "opacity",
+            "overflow",
+            "pointerEvents",
+            "preserveAspectRatio",
+            "requiredFeatures",
+            "systemLanguage",
+            "version",
+            "viewBox",
+            "zoomAndPan",
+            "y"
         ],
-        "ins": [
-            "cite",
-            "dateTime"
+        "discard": [
+            "begin",
+            "systemLanguage"
         ],
-        "q": [
-            "cite"
+        "feConvolveMatrix": [
+            "bias",
+            "colorInterpolationFilters",
+            "divisor",
+            "edgeMode",
+            "in",
+            "kernelMatrix",
+            "kernelUnitLength",
+            "order",
+            "preserveAlpha",
+            "result",
+            "targetX",
+            "targetY",
+            "y"
         ],
-        "td": [
-            "colSpan",
-            "headers",
-            "rowSpan"
+        "symbol": [
+            "clip",
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "enableBackground",
+            "mask",
+            "opacity",
+            "overflow",
+            "pointerEvents",
+            "preserveAspectRatio",
+            "refX",
+            "refY",
+            "viewBox",
+            "y"
         ],
-        "th": [
-            "colSpan",
-            "headers",
-            "rowSpan",
-            "scope"
+        "image": [
+            "clip",
+            "clipPath",
+            "colorInterpolation",
+            "colorProfile",
+            "colorRendering",
+            "imageRendering",
+            "mask",
+            "opacity",
+            "overflow",
+            "pointerEvents",
+            "preserveAspectRatio",
+            "requiredFeatures",
+            "systemLanguage",
+            "vectorEffect",
+            "visibility",
+            "y"
         ],
-        "link": [
-            "crossOrigin",
-            "href",
-            "hrefLang",
-            "integrity",
-            "media",
-            "referrerPolicy",
-            "rel",
-            "sizes",
-            "type"
+        "foreignObject": [
+            "clip",
+            "colorInterpolation",
+            "colorRendering",
+            "opacity",
+            "overflow",
+            "pointerEvents",
+            "requiredFeatures",
+            "systemLanguage",
+            "vectorEffect",
+            "visibility",
+            "y"
         ],
-        "object": [
-            "data",
-            "form",
-            "height",
-            "name",
-            "type",
-            "useMap",
-            "width"
+        "pattern": [
+            "clip",
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "enableBackground",
+            "mask",
+            "overflow",
+            "patternContentUnits",
+            "patternTransform",
+            "patternUnits",
+            "pointerEvents",
+            "preserveAspectRatio",
+            "requiredFeatures",
+            "systemLanguage",
+            "viewBox",
+            "y"
         ],
-        "time": [
-            "dateTime"
+        "marker": [
+            "clip",
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "enableBackground",
+            "markerHeight",
+            "markerUnits",
+            "markerWidth",
+            "mask",
+            "opacity",
+            "orient",
+            "overflow",
+            "pointerEvents",
+            "preserveAspectRatio",
+            "refX",
+            "refY",
+            "viewBox"
         ],
-        "track": [
-            "default",
-            "kind",
-            "label",
-            "src",
-            "srcLang"
-        ],
-        "fieldset": [
-            "disabled",
-            "form",
-            "name"
-        ],
-        "optgroup": [
-            "disabled",
-            "label"
-        ],
-        "option": [
-            "disabled",
-            "label",
-            "selected",
-            "value"
+        "clipPath": [
+            "clipPathUnits",
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "mask",
+            "pointerEvents",
+            "requiredFeatures",
+            "systemLanguage"
         ],
         "a": [
-            "download",
-            "href",
-            "hrefLang",
-            "media",
-            "referrerPolicy",
-            "rel",
-            "shape",
-            "target"
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "enableBackground",
+            "mask",
+            "opacity",
+            "pointerEvents",
+            "requiredFeatures",
+            "systemLanguage",
+            "visibility"
         ],
-        "label": [
-            "htmlFor",
-            "form"
+        "circle": [
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "cx",
+            "cy",
+            "fill",
+            "fillOpacity",
+            "markerEnd",
+            "markerMid",
+            "markerStart",
+            "mask",
+            "opacity",
+            "paintOrder",
+            "pathLength",
+            "pointerEvents",
+            "r",
+            "requiredFeatures",
+            "shapeRendering",
+            "stroke",
+            "strokeDasharray",
+            "strokeDashoffset",
+            "strokeOpacity",
+            "strokeWidth",
+            "systemLanguage",
+            "vectorEffect",
+            "visibility"
         ],
-        "output": [
-            "htmlFor",
-            "form",
-            "name"
+        "ellipse": [
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "cx",
+            "cy",
+            "fill",
+            "fillOpacity",
+            "markerEnd",
+            "markerMid",
+            "markerStart",
+            "mask",
+            "opacity",
+            "paintOrder",
+            "pathLength",
+            "pointerEvents",
+            "requiredFeatures",
+            "rx",
+            "ry",
+            "shapeRendering",
+            "stroke",
+            "strokeDasharray",
+            "strokeDashoffset",
+            "strokeOpacity",
+            "strokeWidth",
+            "systemLanguage",
+            "vectorEffect",
+            "visibility"
         ],
-        "meter": [
-            "form",
-            "high",
-            "low",
-            "max",
-            "min",
-            "optimum",
-            "value"
+        "g": [
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "enableBackground",
+            "mask",
+            "opacity",
+            "pointerEvents",
+            "requiredFeatures",
+            "systemLanguage"
         ],
-        "progress": [
-            "form",
-            "max",
-            "value"
+        "line": [
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "markerEnd",
+            "markerMid",
+            "markerStart",
+            "mask",
+            "opacity",
+            "paintOrder",
+            "pathLength",
+            "pointerEvents",
+            "requiredFeatures",
+            "shapeRendering",
+            "stroke",
+            "strokeDasharray",
+            "strokeDashoffset",
+            "strokeLinecap",
+            "strokeOpacity",
+            "strokeWidth",
+            "systemLanguage",
+            "vectorEffect",
+            "visibility",
+            "y1",
+            "y2"
+        ],
+        "mask": [
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "enableBackground",
+            "mask",
+            "maskContentUnits",
+            "maskUnits",
+            "pointerEvents",
+            "requiredFeatures",
+            "systemLanguage",
+            "y"
+        ],
+        "path": [
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "d",
+            "fill",
+            "fillOpacity",
+            "fillRule",
+            "markerEnd",
+            "markerMid",
+            "markerStart",
+            "mask",
+            "opacity",
+            "paintOrder",
+            "pathLength",
+            "pointerEvents",
+            "requiredFeatures",
+            "shapeRendering",
+            "stroke",
+            "strokeDasharray",
+            "strokeDashoffset",
+            "strokeLinecap",
+            "strokeLinejoin",
+            "strokeMiterlimit",
+            "strokeOpacity",
+            "strokeWidth",
+            "systemLanguage",
+            "vectorEffect",
+            "visibility"
+        ],
+        "polygon": [
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "fill",
+            "fillOpacity",
+            "fillRule",
+            "markerEnd",
+            "markerMid",
+            "markerStart",
+            "mask",
+            "opacity",
+            "paintOrder",
+            "pathLength",
+            "pointerEvents",
+            "points",
+            "requiredFeatures",
+            "shapeRendering",
+            "stroke",
+            "strokeDasharray",
+            "strokeDashoffset",
+            "strokeLinejoin",
+            "strokeMiterlimit",
+            "strokeOpacity",
+            "strokeWidth",
+            "systemLanguage",
+            "vectorEffect",
+            "visibility"
+        ],
+        "polyline": [
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "fill",
+            "fillOpacity",
+            "fillRule",
+            "markerEnd",
+            "markerMid",
+            "markerStart",
+            "mask",
+            "opacity",
+            "paintOrder",
+            "pathLength",
+            "pointerEvents",
+            "points",
+            "requiredFeatures",
+            "shapeRendering",
+            "stroke",
+            "strokeDasharray",
+            "strokeDashoffset",
+            "strokeLinecap",
+            "strokeLinejoin",
+            "strokeMiterlimit",
+            "strokeOpacity",
+            "strokeWidth",
+            "systemLanguage",
+            "vectorEffect",
+            "visibility"
+        ],
+        "rect": [
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "fill",
+            "fillOpacity",
+            "markerEnd",
+            "markerMid",
+            "markerStart",
+            "mask",
+            "opacity",
+            "paintOrder",
+            "pathLength",
+            "pointerEvents",
+            "requiredFeatures",
+            "rx",
+            "ry",
+            "shapeRendering",
+            "stroke",
+            "strokeDasharray",
+            "strokeDashoffset",
+            "strokeLinejoin",
+            "strokeMiterlimit",
+            "strokeOpacity",
+            "strokeWidth",
+            "systemLanguage",
+            "vectorEffect",
+            "visibility",
+            "y"
+        ],
+        "text": [
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "direction",
+            "dominantBaseline",
+            "dx",
+            "dy",
+            "fill",
+            "fillOpacity",
+            "fillRule",
+            "fontFamily",
+            "fontSize",
+            "fontSizeAdjust",
+            "fontStretch",
+            "fontStyle",
+            "fontVariant",
+            "fontWeight",
+            "glyphOrientationHorizontal",
+            "glyphOrientationVertical",
+            "kerning",
+            "lengthAdjust",
+            "letterSpacing",
+            "mask",
+            "opacity",
+            "overflow",
+            "paintOrder",
+            "pointerEvents",
+            "requiredFeatures",
+            "stroke",
+            "strokeDasharray",
+            "strokeDashoffset",
+            "strokeLinecap",
+            "strokeLinejoin",
+            "strokeMiterlimit",
+            "strokeOpacity",
+            "strokeWidth",
+            "systemLanguage",
+            "textAnchor",
+            "textDecoration",
+            "textRendering",
+            "textLength",
+            "unicodeBidi",
+            "vectorEffect",
+            "visibility",
+            "wordSpacing",
+            "writingMode",
+            "y"
+        ],
+        "use": [
+            "clipPath",
+            "colorInterpolation",
+            "colorRendering",
+            "mask",
+            "opacity",
+            "pointerEvents",
+            "requiredFeatures",
+            "systemLanguage",
+            "vectorEffect",
+            "y"
+        ],
+        "defs": [
+            "colorInterpolation",
+            "colorRendering",
+            "enableBackground",
+            "pointerEvents",
+            "requiredFeatures",
+            "systemLanguage"
+        ],
+        "linearGradient": [
+            "colorInterpolation",
+            "colorRendering",
+            "gradientTransform",
+            "gradientUnits",
+            "spreadMethod",
+            "y1",
+            "y2"
+        ],
+        "missing-glyph": [
+            "colorInterpolation",
+            "colorRendering",
+            "d",
+            "enableBackground",
+            "horizAdvX",
+            "vertAdvY"
+        ],
+        "radialGradient": [
+            "colorInterpolation",
+            "colorRendering",
+            "cx",
+            "cy",
+            "fx",
+            "fy",
+            "gradientTransform",
+            "gradientUnits",
+            "r",
+            "spreadMethod"
+        ],
+        "switch": [
+            "colorInterpolation",
+            "colorRendering",
+            "enableBackground",
+            "opacity",
+            "pointerEvents",
+            "requiredFeatures",
+            "systemLanguage"
+        ],
+        "feSpotLight": [
+            "colorInterpolationFilters",
+            "limitingConeAngle",
+            "pointsAtX",
+            "pointsAtY",
+            "pointsAtZ",
+            "specularExponent",
+            "z",
+            "y"
+        ],
+        "feBlend": [
+            "colorInterpolationFilters",
+            "in",
+            "in2",
+            "mode",
+            "result",
+            "y"
+        ],
+        "feColorMatrix": [
+            "colorInterpolationFilters",
+            "in",
+            "result",
+            "values",
+            "y"
+        ],
+        "feComponentTransfer": [
+            "colorInterpolationFilters",
+            "in",
+            "result",
+            "y"
+        ],
+        "feComposite": [
+            "colorInterpolationFilters",
+            "in",
+            "in2",
+            "k1",
+            "k2",
+            "k3",
+            "k4",
+            "operator",
+            "result",
+            "y"
+        ],
+        "feDiffuseLighting": [
+            "colorInterpolationFilters",
+            "diffuseConstant",
+            "in",
+            "kernelUnitLength",
+            "lightingColor",
+            "result",
+            "surfaceScale",
+            "y"
+        ],
+        "feDisplacementMap": [
+            "colorInterpolationFilters",
+            "in",
+            "in2",
+            "result",
+            "scale",
+            "y",
+            "yChannelSelector"
+        ],
+        "feDropShadow": [
+            "colorInterpolationFilters",
+            "dx",
+            "dy",
+            "floodColor",
+            "floodOpacity",
+            "in",
+            "result",
+            "y"
+        ],
+        "feFlood": [
+            "colorInterpolationFilters",
+            "floodColor",
+            "floodOpacity",
+            "result",
+            "y"
+        ],
+        "feGaussianBlur": [
+            "colorInterpolationFilters",
+            "edgeMode",
+            "in",
+            "result",
+            "stdDeviation",
+            "y"
+        ],
+        "feImage": [
+            "colorInterpolationFilters",
+            "preserveAspectRatio",
+            "result",
+            "y"
+        ],
+        "feMerge": [
+            "colorInterpolationFilters",
+            "result",
+            "y"
+        ],
+        "feMorphology": [
+            "colorInterpolationFilters",
+            "in",
+            "operator",
+            "radius",
+            "result",
+            "y"
+        ],
+        "feOffset": [
+            "colorInterpolationFilters",
+            "dx",
+            "dy",
+            "in",
+            "result",
+            "y"
+        ],
+        "feSpecularLighting": [
+            "colorInterpolationFilters",
+            "in",
+            "kernelUnitLength",
+            "lightingColor",
+            "result",
+            "specularConstant",
+            "specularExponent",
+            "surfaceScale",
+            "y"
+        ],
+        "feTile": [
+            "colorInterpolationFilters",
+            "in",
+            "result",
+            "y"
+        ],
+        "glyphRef": [
+            "dx",
+            "dy",
+            "format",
+            "glyphRef",
+            "y"
+        ],
+        "filter": [
+            "filterRes",
+            "filterUnits",
+            "primitiveUnits",
+            "y"
+        ],
+        "hkern": [
+            "g1",
+            "g2",
+            "k",
+            "u1",
+            "u2"
+        ],
+        "vkern": [
+            "g1",
+            "g2",
+            "k",
+            "u1",
+            "u2"
+        ],
+        "font": [
+            "horizAdvX",
+            "horizOriginX",
+            "vertAdvY",
+            "vertOriginX",
+            "vertOriginY"
+        ],
+        "feMergeNode": [
+            "in",
+            "y"
+        ],
+        "audio": [
+            "opacity",
+            "systemLanguage",
+            "visibility"
         ],
         "canvas": [
-            "height",
-            "width"
+            "opacity",
+            "systemLanguage",
+            "visibility"
         ],
-        "embed": [
-            "height",
-            "src",
-            "type",
-            "width"
+        "iframe": [
+            "opacity",
+            "overflow",
+            "systemLanguage",
+            "visibility"
         ],
-        "base": [
-            "href",
-            "target"
+        "unknown": [
+            "opacity",
+            "systemLanguage"
         ],
-        "contenteditable": [
-            "inputMode"
+        "video": [
+            "opacity",
+            "systemLanguage",
+            "visibility"
         ],
-        "bgsound": [
-            "loop"
+        "view": [
+            "preserveAspectRatio",
+            "viewBox",
+            "viewTarget",
+            "zoomAndPan"
         ],
-        "marquee": [
-            "loop"
+        "cursor": [
+            "requiredFeatures",
+            "systemLanguage",
+            "y"
         ],
-        "html": [
-            "manifest"
+        "stop": [
+            "stopColor",
+            "stopOpacity"
         ],
-        "source": [
-            "media",
-            "sizes",
-            "src",
-            "srcSet",
-            "type"
+        "font-face-format": [
+            "string"
         ],
-        "style": [
-            "media",
-            "scoped",
-            "type"
-        ],
-        "map": [
-            "name"
-        ],
-        "param": [
-            "name",
-            "value"
-        ],
-        "details": [
-            "open"
-        ],
-        "dialog": [
-            "open"
-        ],
-        "ol": [
-            "reversed",
-            "start"
-        ],
-        "col": [
-            "span"
-        ],
-        "colgroup": [
-            "span"
-        ],
-        "table": [
-            "summary"
-        ],
-        "menu": [
-            "type"
-        ],
-        "data": [
-            "value"
-        ],
-        "li": [
-            "value"
+        "fePointLight": [
+            "z",
+            "y"
         ]
     }
 }

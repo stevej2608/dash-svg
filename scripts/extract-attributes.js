@@ -81,44 +81,77 @@ const fetchPage = async function(pageURL) {
     console.log('Fetching %s', pageURL)
     try {
       page = await request(pageURL)
-      cacheSave(pageURL, page)
     } catch (error) {
       console.log("Error loading %s", pageURL)
       page = "?????"
     }
+    cacheSave(pageURL, page)
   }
   return page
 }
 
+/**
+ * Read the https://developer.mozilla.org{href} page and extract the
+ * attribute description and the SVG elements that use the attribute
+ *
+ * @param {string} href the page reference
+ *
+ * @returns dict{description, elements[]}
+ */
+
 const getElementDetails = async function(href) {
   const pageURL = 'https://developer.mozilla.org' + href;
+
+  console.log(pageURL)
+
+  let  description = '?????'
+  let  depreciated = false
+  const elements = []
+
   try {
     const html = await fetchPage(pageURL)
-    const $ = cheerio.load(html);
-    const desc = $('p', 'article').text().split('.')[0]
+    if (html !== "?????") {
+      const $ = cheerio.load(html);
 
-    const usedByElements = $('ul', 'article').find('code')
 
-    const elements= []
+      depreciated = $('div.notecard.deprecated').length === 1? true: false
+      description = $('p', 'article').text().split('.')[0]
 
-    usedByElements.each((idx, el) => {
-      const text = $(el).text().replace(/[<>]/, '');
-      elements.push(text)
-    });
+      const usedByElements = $('p:contains("You can use this attribute")').next().find('code')
 
-    return {desc, elements}
+// accumulate: .main-page-content > div:nth-child(2) > ul:nth-child(4) > li:nth-child(1) > a:nth-child(1) > code:nth-child(1)
+// g2:         .main-page-content > div:nth-child(2) > ul:nth-child(5) > li:nth-child(1) > a:nth-child(1) > code:nth-child(1)
+// stop-color: .main-page-content > div:nth-child(2) > ul:nth-child(5) > li:nth-child(1) > a:nth-child(1) > code:nth-child(1)
+//             p:contains("You can use this attribute")
+
+      usedByElements.each((idx, el) => {
+        const text = $(el).text().replace(/[<>]/g, '');
+        console.log('Element %s', text)
+        if (text === "0" || text === "1") {
+          console.log('XXXXXXXXXXXXXXX')
+        }
+        elements.push(text)
+      });
+    }
 
   } catch (error) {
     console.log("Error loading %s", pageURL)
-    return "?????"
   }
+
+  return {description, depreciated, elements}
 }
 
 /**
  * From the MDN attributes reference, extract a map of attributes with
  * descriptions and supported elements.
+ *
+ * @param {*} $
+ * @returns
  */
+
 const extractAttributes = async function($) {
+
+  // Get a list of attributes defined by the page
 
   const attributeList = [];
 
@@ -144,14 +177,22 @@ const extractAttributes = async function($) {
     });
   });
 
+  // Iterate over each attribute and scrape the
+  // attribute details page and a list of elements that
+  // use the attribute.
+
+  const attributes = {}
+
   for (const i in attributeList) {
     const attr = attributeList[i]
+    console.log("[%s] %s", attr.svgAttribute, attr.pageUrl)
     const details = await getElementDetails(attr.pageUrl)
-    console.log("[%s]\n%s\n", attr.svgAttribute, details.desc)
-    attributeList.push(details)
+    // console.log("[%s]\n%s\n", attr.svgAttribute, details.desc)
+
+    attributes[attr.svgAttribute] = details
   }
 
-  return attributeList;
+  return attributes;
 }
 
 /**
@@ -198,6 +239,7 @@ const extractAllAttributes = async function() {
     // http://stackoverflow.com/a/11276104
     const tabWidth = 4;
     fs.writeFileSync(dataPath, JSON.stringify(out, null, tabWidth));
+    console.log('Done')
   } catch (e) {
     console.log(e)
   }
