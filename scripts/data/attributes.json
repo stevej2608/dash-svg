@@ -2,14 +2,20 @@
     "attributes": {
         "accentHeight": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/accent-height",
             "elements": [
                 "font-face"
             ]
         },
         "accumulate": {
             "description": "The accumulate attribute controls whether or not an animation is cumulative",
-            "depreciated": false,
+            "optional": true,
+            "type": " \"none\" | \"sum\" | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/accumulate",
             "elements": [
                 "animate",
                 "animateColor",
@@ -19,7 +25,10 @@
         },
         "additive": {
             "description": "The additive attribute controls whether or not an animation is additive",
-            "depreciated": false,
+            "optional": true,
+            "type": " \"replace\" | \"sum\" | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/additive",
             "elements": [
                 "animate",
                 "animateColor",
@@ -28,8 +37,13 @@
             ]
         },
         "alignmentBaseline": {
+            "0": "?",
+            "1": "?",
+            "2": "?",
+            "3": "?",
             "description": "The alignment-baseline attribute specifies how an object is aligned with respect to its parent",
-            "depreciated": false,
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/alignment-baseline",
             "elements": [
                 "tspan",
                 "tref",
@@ -39,14 +53,20 @@
         },
         "alphabetic": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/alphabetic",
             "elements": [
                 "font-face"
             ]
         },
         "amplitude": {
             "description": "The amplitude attribute controls the amplitude of the gamma function of a component transfer element when its type attribute is gamma",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/amplitude",
             "elements": [
                 "feFuncA",
                 "feFuncB",
@@ -56,21 +76,30 @@
         },
         "arabicForm": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " \"initial\" | \"medial\" | \"terminal\" | \"isolated\" | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/arabic-form",
             "elements": [
                 "glyph"
             ]
         },
         "ascent": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/ascent",
             "elements": [
                 "font-face"
             ]
         },
         "attributeName": {
             "description": "The attributeName attribute indicates the name of the CSS property or attribute of the target element that is going to be changed during an animation",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/attributeName",
             "elements": [
                 "animate",
                 "animateColor",
@@ -80,7 +109,10 @@
         },
         "attributeType": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/attributeType",
             "elements": [
                 "animate",
                 "animateColor",
@@ -90,21 +122,30 @@
         },
         "azimuth": {
             "description": "The azimuth attribute specifies the direction angle for the light source on the XY plane (clockwise), in degrees from the x axis",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/azimuth",
             "elements": [
                 "feDistantLight"
             ]
         },
         "baseFrequency": {
             "description": "The baseFrequency attribute represents the base frequency parameter for the noise function of the <feTurbulence> filter primitive",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/baseFrequency",
             "elements": [
                 "feTurbulence"
             ]
         },
         "baselineShift": {
             "description": "The baseline-shift attribute allows repositioning of the dominant-baseline relative to the dominant-baseline of the parent text content element",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/baseline-shift",
             "elements": [
                 "altGlyph",
                 "textPath",
@@ -114,21 +155,30 @@
         },
         "baseProfile": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/baseProfile",
             "elements": [
                 "svg"
             ]
         },
         "bbox": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/bbox",
             "elements": [
                 "font-face"
             ]
         },
         "begin": {
             "description": "The begin attribute defines when an animation should begin or when an element should be discarded",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/begin",
             "elements": [
                 "animate",
                 "animateColor",
@@ -140,14 +190,20 @@
         },
         "bias": {
             "description": "The bias attribute shifts the range of the filter",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/bias",
             "elements": [
                 "feConvolveMatrix"
             ]
         },
         "by": {
             "description": "The by attribute specifies a relative offset value for an attribute that will be modified during an animation",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/by",
             "elements": [
                 "animate",
                 "animateColor",
@@ -157,7 +213,10 @@
         },
         "calcMode": {
             "description": "The calcMode attribute specifies the interpolation mode for the animation",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/calcMode",
             "elements": [
                 "animate",
                 "animateColor",
@@ -167,14 +226,20 @@
         },
         "capHeight": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/cap-height",
             "elements": [
                 "font-face"
             ]
         },
         "clip": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/clip",
             "elements": [
                 "svg",
                 "symbol",
@@ -186,14 +251,20 @@
         },
         "clipPathUnits": {
             "description": "The clipPathUnits attribute indicates which coordinate system to use for the contents of the <clipPath> element",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/clipPathUnits",
             "elements": [
                 "clipPath"
             ]
         },
         "clipPath": {
             "description": "The clip-path presentation attribute defines or associates a clipping path with the element it is related to",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/clip-path",
             "elements": [
                 "a",
                 "circle",
@@ -218,12 +289,18 @@
         },
         "clipRule": {
             "description": "« SVG Attribute reference homeThe clip-rule attribute only applies to graphics elements that are contained within a <clipPath> element",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/clip-rule",
             "elements": []
         },
         "colorInterpolation": {
             "description": "The color-interpolation attribute specifies the color space for gradient interpolations, color animations, and alpha compositing",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/color-interpolation",
             "elements": [
                 "a",
                 "animate",
@@ -258,7 +335,10 @@
         },
         "colorInterpolationFilters": {
             "description": "The color-interpolation-filters attribute specifies the color space for imaging operations performed via filter effects",
-            "depreciated": false,
+            "optional": true,
+            "type": " \"auto\" | \"sRGB\" | \"linearRGB\" | \"inherit\" | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/color-interpolation-filters",
             "elements": [
                 "feSpotLight",
                 "feBlend",
@@ -282,14 +362,20 @@
         },
         "colorProfile": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/color-profile",
             "elements": [
                 "image"
             ]
         },
         "colorRendering": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/color-rendering",
             "elements": [
                 "a",
                 "animate",
@@ -324,22 +410,34 @@
         },
         "contentScriptType": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/contentScriptType",
             "elements": []
         },
         "contentStyleType": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/contentStyleType",
             "elements": []
         },
         "cursor": {
             "description": "« SVG Attribute reference homeThe cursor attribute specifies the mouse cursor displayed when the mouse pointer is over an element",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/cursor",
             "elements": []
         },
         "cx": {
             "description": "The cx attribute define the x-axis coordinate of a center point",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/cx",
             "elements": [
                 "circle",
                 "ellipse",
@@ -348,7 +446,10 @@
         },
         "cy": {
             "description": "The cy attribute define the y-axis coordinate of a center point",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/cy",
             "elements": [
                 "circle",
                 "ellipse",
@@ -357,7 +458,10 @@
         },
         "d": {
             "description": "The d attribute defines a path to be drawn",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d",
             "elements": [
                 "path",
                 "glyph",
@@ -365,27 +469,41 @@
             ]
         },
         "decelerate": {
+            "0": "?",
+            "1": "?",
+            "2": "?",
+            "3": "?",
             "description": "?????",
-            "depreciated": false,
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/decelerate",
             "elements": []
         },
         "descent": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/descent",
             "elements": [
                 "font-face"
             ]
         },
         "diffuseConstant": {
             "description": "The diffuseConstant attribute represents the kd value in the Phong lighting model",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/diffuseConstant",
             "elements": [
                 "feDiffuseLighting"
             ]
         },
         "direction": {
             "description": "The direction attribute specifies the inline-base direction of a <text> or <tspan> element",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/direction",
             "elements": [
                 "altGlyph",
                 "textPath",
@@ -396,19 +514,28 @@
         },
         "display": {
             "description": "The display attribute lets you control the rendering of graphical or container elements",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/display",
             "elements": []
         },
         "divisor": {
             "description": "The divisor attribute specifies the value by which the resulting number of applying the kernelMatrix of a <feConvolveMatrix> element to the input image color value is divided to yield the destination color value",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/divisor",
             "elements": [
                 "feConvolveMatrix"
             ]
         },
         "dominantBaseline": {
             "description": "The dominant-baseline attribute specifies the dominant baseline, which is the baseline used to align the box’s text and inline-level contents",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/dominant-baseline",
             "elements": [
                 "altGlyph",
                 "text",
@@ -419,7 +546,10 @@
         },
         "dur": {
             "description": "The dur attribute indicates the simple duration of an animation",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/dur",
             "elements": [
                 "animate",
                 "animateColor",
@@ -430,7 +560,10 @@
         },
         "dx": {
             "description": "The dx attribute indicates a shift along the x-axis on the position of an element or its content",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/dx",
             "elements": [
                 "altGlyph",
                 "feDropShadow",
@@ -443,7 +576,10 @@
         },
         "dy": {
             "description": "The dy attribute indicates a shift along the y-axis on the position of an element or its content",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/dy",
             "elements": [
                 "altGlyph",
                 "feDropShadow",
@@ -456,7 +592,10 @@
         },
         "edgeMode": {
             "description": "The edgeMode attribute determines how to extend the input image as necessary with color values so that the matrix operations can be applied when the kernel is positioned at or near the edge of the input image",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/edgeMode",
             "elements": [
                 "feConvolveMatrix",
                 "feGaussianBlur"
@@ -464,14 +603,20 @@
         },
         "elevation": {
             "description": "The elevation attribute specifies the direction angle for the light source from the XY plane towards the Z-axis, in degrees",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/elevation",
             "elements": [
                 "feDistantLight"
             ]
         },
         "enableBackground": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/enable-background",
             "elements": [
                 "a",
                 "defs",
@@ -488,7 +633,10 @@
         },
         "end": {
             "description": "The end attribute defines an end value for the animation that can constrain the active duration",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/end",
             "elements": [
                 "animate",
                 "animateColor",
@@ -499,7 +647,10 @@
         },
         "exponent": {
             "description": "The exponent attribute defines the exponent of the gamma function",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/exponent",
             "elements": [
                 "feFuncA",
                 "feFuncB",
@@ -509,7 +660,10 @@
         },
         "fill": {
             "description": "The fill attribute has two different meanings",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill",
             "elements": [
                 "altGlyph",
                 "circle",
@@ -526,7 +680,10 @@
         },
         "fillOpacity": {
             "description": "The fill-opacity attribute is a presentation attribute defining the opacity of the paint server (color, gradient, pattern, etc) applied to a shape",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill-opacity",
             "elements": [
                 "altGlyph",
                 "circle",
@@ -543,7 +700,10 @@
         },
         "fillRule": {
             "description": "The fill-rule attribute is a presentation attribute defining the algorithm to use to determine the inside part of a shape",
-            "depreciated": false,
+            "optional": true,
+            "type": " \"nonzero\" | \"evenodd\" | \"inherit\" | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill-rule",
             "elements": [
                 "altGlyph",
                 "path",
@@ -557,26 +717,38 @@
         },
         "filter": {
             "description": "The filter attribute specifies the filter effects defined by the <filter> element that shall be applied to its element",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/filter",
             "elements": []
         },
         "filterRes": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/filterRes",
             "elements": [
                 "filter"
             ]
         },
         "filterUnits": {
             "description": "The filterUnits attribute defines the coordinate system for the attributes x, y, width and height",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/filterUnits",
             "elements": [
                 "filter"
             ]
         },
         "floodColor": {
             "description": "The flood-color attribute indicates what color to use to flood the current filter primitive subregion",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/flood-color",
             "elements": [
                 "feFlood",
                 "feDropShadow"
@@ -584,7 +756,10 @@
         },
         "floodOpacity": {
             "description": "The flood-opacity attribute indicates the opacity value to use across the current filter primitive subregion",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/flood-opacity",
             "elements": [
                 "feFlood",
                 "feDropShadow"
@@ -592,7 +767,10 @@
         },
         "fontFamily": {
             "description": "The font-family attribute indicates which font family will be used to render the text, specified as a prioritized list of font family names and/or generic family names",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-family",
             "elements": [
                 "altGlyph",
                 "text",
@@ -603,7 +781,10 @@
         },
         "fontSize": {
             "description": "The font-size attribute refers to the size of the font from baseline to baseline when multiple lines of text are set solid in a multiline layout environment",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-size",
             "elements": [
                 "altGlyph",
                 "text",
@@ -614,7 +795,10 @@
         },
         "fontSizeAdjust": {
             "description": "The font-size-adjust attribute allows authors to specify an aspect value for an element that will preserve the x-height of the first choice font in a substitute font",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-size-adjust",
             "elements": [
                 "altGlyph",
                 "text",
@@ -625,7 +809,10 @@
         },
         "fontStretch": {
             "description": "The font-stretch attribute indicates the desired amount of condensing or expansion in the glyphs used to render the text",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-stretch",
             "elements": [
                 "altGlyph",
                 "text",
@@ -636,7 +823,10 @@
         },
         "fontStyle": {
             "description": "The font-style attribute specifies whether the text is to be rendered using a normal, italic, or oblique face",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-style",
             "elements": [
                 "altGlyph",
                 "text",
@@ -647,7 +837,10 @@
         },
         "fontVariant": {
             "description": "The font-variant attribute indicates whether the text is to be rendered using variations of the font's glyphs",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-variant",
             "elements": [
                 "altGlyph",
                 "text",
@@ -658,7 +851,10 @@
         },
         "fontWeight": {
             "description": "The font-weight attribute refers to the boldness or lightness of the glyphs used to render the text, relative to other fonts in the same font family",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-weight",
             "elements": [
                 "altGlyph",
                 "text",
@@ -669,7 +865,10 @@
         },
         "format": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/format",
             "elements": [
                 "altGlyph",
                 "glyphRef"
@@ -677,7 +876,10 @@
         },
         "from": {
             "description": "The from attribute indicates the initial value of the attribute that will be modified during the animation",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/From",
             "elements": [
                 "animate",
                 "animateColor",
@@ -687,21 +889,30 @@
         },
         "fx": {
             "description": "The fx attribute defines the x-axis coordinate of the focal point for a radial gradient",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fx",
             "elements": [
                 "radialGradient"
             ]
         },
         "fy": {
             "description": "The fy attribute defines the y-axis coordinate of the focal point for a radial gradient",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fy",
             "elements": [
                 "radialGradient"
             ]
         },
         "g1": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/g1",
             "elements": [
                 "hkern",
                 "vkern"
@@ -709,7 +920,10 @@
         },
         "g2": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/g2",
             "elements": [
                 "hkern",
                 "vkern"
@@ -717,14 +931,20 @@
         },
         "glyphName": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/glyph-name",
             "elements": [
                 "glyph"
             ]
         },
         "glyphOrientationHorizontal": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/glyph-orientation-horizontal",
             "elements": [
                 "altGlyph",
                 "textPath",
@@ -735,7 +955,10 @@
         },
         "glyphOrientationVertical": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/glyph-orientation-vertical",
             "elements": [
                 "altGlyph",
                 "textPath",
@@ -746,7 +969,10 @@
         },
         "glyphRef": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/glyphRef",
             "elements": [
                 "altGlyph",
                 "glyphRef"
@@ -754,7 +980,10 @@
         },
         "gradientTransform": {
             "description": "The gradientTransform attribute contains the definition of an optional additional transformation from the gradient coordinate system onto the target coordinate system (i",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/gradientTransform",
             "elements": [
                 "linearGradient",
                 "radialGradient"
@@ -762,7 +991,10 @@
         },
         "gradientUnits": {
             "description": "The gradientUnits attribute defines the coordinate system used for attributes specified on the gradient elements",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/gradientUnits",
             "elements": [
                 "linearGradient",
                 "radialGradient"
@@ -770,14 +1002,20 @@
         },
         "hanging": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/hanging",
             "elements": [
                 "font-face"
             ]
         },
         "horizAdvX": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/horiz-adv-x",
             "elements": [
                 "font",
                 "glyph",
@@ -786,28 +1024,40 @@
         },
         "horizOriginX": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/horiz-origin-x",
             "elements": [
                 "font"
             ]
         },
         "ideographic": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/ideographic",
             "elements": [
                 "font-face"
             ]
         },
         "imageRendering": {
             "description": "The image-rendering attribute provides a hint to the browser about how to make speed vs",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/image-rendering",
             "elements": [
                 "image"
             ]
         },
         "in": {
             "description": "The in attribute identifies input for the given filter primitive",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/in",
             "elements": [
                 "feBlend",
                 "feColorMatrix",
@@ -827,7 +1077,10 @@
         },
         "in2": {
             "description": "The in2 attribute identifies the second input for the given filter primitive",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/in2",
             "elements": [
                 "feBlend",
                 "feComposite",
@@ -836,7 +1089,10 @@
         },
         "intercept": {
             "description": "The intercept attribute defines the intercept of the linear function of color component transfers when the type attribute is set to linear",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/intercept",
             "elements": [
                 "feFuncA",
                 "feFuncB",
@@ -846,7 +1102,10 @@
         },
         "k": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/k",
             "elements": [
                 "hkern",
                 "vkern"
@@ -854,42 +1113,60 @@
         },
         "k1": {
             "description": "The k1 attribute defines one of the values to be used within the arithmetic operation of the <feComposite> filter primitive",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/k1",
             "elements": [
                 "feComposite"
             ]
         },
         "k2": {
             "description": "The k2 attribute defines one of the values to be used within the arithmetic operation of the <feComposite> filter primitive",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/k2",
             "elements": [
                 "feComposite"
             ]
         },
         "k3": {
             "description": "The k3 attribute defines one of the values to be used within the arithmetic operation of the <feComposite> filter primitive",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/k3",
             "elements": [
                 "feComposite"
             ]
         },
         "k4": {
             "description": "The k4 attribute defines one of the values to be used within the arithmetic operation of the <feComposite> filter primitive",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/k4",
             "elements": [
                 "feComposite"
             ]
         },
         "kernelMatrix": {
             "description": "The kernelMatrix attribute defines the list of numbers that make up the kernel matrix for the <feConvolveMatrix> element",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/kernelMatrix",
             "elements": [
                 "feConvolveMatrix"
             ]
         },
         "kernelUnitLength": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/kernelUnitLength",
             "elements": [
                 "feConvolveMatrix",
                 "feDiffuseLighting",
@@ -898,7 +1175,10 @@
         },
         "kerning": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/kerning",
             "elements": [
                 "altGlyph",
                 "textPath",
@@ -909,7 +1189,10 @@
         },
         "keyPoints": {
             "description": "The keyPoints attribute indicates the simple duration of an animation",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/keyPoints",
             "elements": [
                 "animate",
                 "animateColor",
@@ -920,7 +1203,10 @@
         },
         "keySplines": {
             "description": "The keySplines attribute defines a set of Bézier curve control points associated with the keyTimes list, defining a cubic Bézier function that controls interval pacing",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/keySplines",
             "elements": [
                 "animate",
                 "animateColor",
@@ -930,7 +1216,10 @@
         },
         "keyTimes": {
             "description": "The keyTimes attribute represents a list of time values used to control the pacing of the animation",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/keyTimes",
             "elements": [
                 "animate",
                 "animateColor",
@@ -940,7 +1229,10 @@
         },
         "lengthAdjust": {
             "description": "The lengthAdjust attribute controls how the text is stretched into the length defined by the textLength attribute",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/lengthAdjust",
             "elements": [
                 "text",
                 "textPath",
@@ -950,7 +1242,10 @@
         },
         "letterSpacing": {
             "description": "The letter-spacing attribute controls spacing between text characters, in addition to any spacing from the kerning attribute",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/letter-spacing",
             "elements": [
                 "altGlyph",
                 "text",
@@ -961,7 +1256,10 @@
         },
         "lightingColor": {
             "description": "The lighting-color attribute defines the color of the light source for lighting filter primitives",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/lighting-color",
             "elements": [
                 "feDiffuseLighting",
                 "feSpecularLighting"
@@ -969,19 +1267,30 @@
         },
         "limitingConeAngle": {
             "description": "The limitingConeAngle attribute represents the angle in degrees between the spot light axis (i",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/limitingConeAngle",
             "elements": [
                 "feSpotLight"
             ]
         },
         "local": {
+            "0": "?",
+            "1": "?",
+            "2": "?",
+            "3": "?",
             "description": "?????",
-            "depreciated": false,
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/local",
             "elements": []
         },
         "markerEnd": {
             "description": "The marker-end attribute defines the arrowhead or polymarker that will be drawn at the final vertex of the given shape",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/marker-end",
             "elements": [
                 "circle",
                 "ellipse",
@@ -994,7 +1303,10 @@
         },
         "markerMid": {
             "description": "The marker-mid attribute defines the arrowhead or polymarker that will be drawn at all interior vertices of the given shape",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/marker-mid",
             "elements": [
                 "circle",
                 "ellipse",
@@ -1007,7 +1319,10 @@
         },
         "markerStart": {
             "description": "The marker-start attribute defines the arrowhead or polymarker that will be drawn at the first vertex of the given shape",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/marker-start",
             "elements": [
                 "circle",
                 "ellipse",
@@ -1020,28 +1335,40 @@
         },
         "markerHeight": {
             "description": "The markerHeight attribute represents the height of the viewport into which the <marker> is to be fitted when it is rendered according to the viewBox and preserveAspectRatio attributes",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/markerHeight",
             "elements": [
                 "marker"
             ]
         },
         "markerUnits": {
             "description": "The markerUnits attribute defines the coordinate system for the markerWidth and markerHeight attributes and the contents of the <marker>",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/markerUnits",
             "elements": [
                 "marker"
             ]
         },
         "markerWidth": {
             "description": "The markerWidth attribute represents the width of the viewport into which the <marker> is to be fitted when it is rendered according to the viewBox and preserveAspectRatio attributes",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/markerWidth",
             "elements": [
                 "marker"
             ]
         },
         "mask": {
             "description": "The mask attribute is a presentation attribute mainly used to bind a given <mask> element with the element the attribute belongs to",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/mask",
             "elements": [
                 "a",
                 "circle",
@@ -1066,47 +1393,70 @@
         },
         "maskContentUnits": {
             "description": "The maskContentUnits attribute indicates which coordinate system to use for the contents of the <mask> element",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/maskContentUnits",
             "elements": [
                 "mask"
             ]
         },
         "maskUnits": {
             "description": "The maskUnits attribute indicates which coordinate system to use for the geometry properties of the <mask> element",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/maskUnits",
             "elements": [
                 "mask"
             ]
         },
         "mathematical": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/mathematical",
             "elements": [
                 "font-face"
             ]
         },
         "mode": {
             "description": "The mode attribute defines the blending mode on the <feBlend> filter primitive",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/mode",
             "elements": [
                 "feBlend"
             ]
         },
         "numOctaves": {
             "description": "The numOctaves attribute defines the number of octaves for the noise function of the <feTurbulence> primitive",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/numOctaves",
             "elements": [
                 "feTurbulence"
             ]
         },
         "offset": {
+            "0": "?",
+            "1": "?",
+            "2": "?",
+            "3": "?",
             "description": "?????",
-            "depreciated": false,
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/offset",
             "elements": []
         },
         "opacity": {
             "description": "The opacity attribute specifies the transparency of an object or of a group of objects, that is, the degree to which the background behind the element is overlaid",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/opacity",
             "elements": [
                 "a",
                 "audio",
@@ -1136,7 +1486,10 @@
         },
         "operator": {
             "description": "The operator attribute has two meanings based on the context it's used in",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/operator",
             "elements": [
                 "feComposite",
                 "feMorphology"
@@ -1144,35 +1497,50 @@
         },
         "order": {
             "description": "The order attribute indicates the size of the matrix to be used by a <feConvolveMatrix> element",
-            "depreciated": false,
+            "optional": true,
+            "type": " \"no\" | \"yes\" | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/order",
             "elements": [
                 "feConvolveMatrix"
             ]
         },
         "orient": {
             "description": "The orient attribute indicates how a marker is rotated when it is placed at its position on the shape",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/orient",
             "elements": [
                 "marker"
             ]
         },
         "orientation": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/orientation",
             "elements": [
                 "glyph"
             ]
         },
         "origin": {
             "description": "The origin attribute specifies the origin of motion for an animation",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/origin",
             "elements": [
                 "animateMotion"
             ]
         },
         "overflow": {
             "description": "The overflow attribute sets what to do when an element's content is too big to fit in its block formatting context",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/overflow",
             "elements": [
                 "foreignObject",
                 "iframe",
@@ -1186,28 +1554,40 @@
         },
         "overlinePosition": {
             "description": "The overline-position attribute represents the ideal vertical position of the overline",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/overline-position",
             "elements": [
                 "font-face"
             ]
         },
         "overlineThickness": {
             "description": "The overline-thickness attribute represents the ideal thickness of the overline",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/overline-thickness",
             "elements": [
                 "font-face"
             ]
         },
         "panose1": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/panose-1",
             "elements": [
                 "font-face"
             ]
         },
         "paintOrder": {
             "description": "The paint-order attribute specifies the order that the fill, stroke, and markers of a given shape or text element are painted",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/paint-order",
             "elements": [
                 "circle",
                 "ellipse",
@@ -1223,7 +1603,10 @@
         },
         "pathLength": {
             "description": "The pathLength attribute lets authors specify a total length for the path, in user units",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/pathLength",
             "elements": [
                 "circle",
                 "ellipse",
@@ -1236,28 +1619,40 @@
         },
         "patternContentUnits": {
             "description": "The patternContentUnits attribute indicates which coordinate system to use for the contents of the <pattern> element",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/patternContentUnits",
             "elements": [
                 "pattern"
             ]
         },
         "patternTransform": {
             "description": "The patternTransform attribute defines a list of transform definitions that are applied to a pattern tile",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/patternTransform",
             "elements": [
                 "pattern"
             ]
         },
         "patternUnits": {
             "description": "The patternUnits attribute indicates which coordinate system to use for the geometry properties of the <pattern> element",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/patternUnits",
             "elements": [
                 "pattern"
             ]
         },
         "pointerEvents": {
             "description": "The pointer-events attribute is a presentation attribute that allows defining whether or when an element may be the target of a mouse event",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/pointer-events",
             "elements": [
                 "a",
                 "circle",
@@ -1286,7 +1681,10 @@
         },
         "points": {
             "description": "The points attribute defines a list of points",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/points",
             "elements": [
                 "polyline",
                 "polygon"
@@ -1294,35 +1692,50 @@
         },
         "pointsAtX": {
             "description": "The pointsAtX attribute represents the x location in the coordinate system established by attribute primitiveUnits on the <filter> element of the point at which the light source is pointing",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/pointsAtX",
             "elements": [
                 "feSpotLight"
             ]
         },
         "pointsAtY": {
             "description": "The pointsAtY attribute represents the y location in the coordinate system established by attribute primitiveUnits on the <filter> element of the point at which the light source is pointing",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/pointsAtY",
             "elements": [
                 "feSpotLight"
             ]
         },
         "pointsAtZ": {
             "description": "The pointsAtZ attribute represents the y location in the coordinate system established by attribute primitiveUnits on the <filter> element of the point at which the light source is pointing, assuming that, in the initial local coordinate system, the positive z-axis comes out towards the person viewing the content and assuming that one unit along the z-axis equals one unit in x and y",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/pointsAtZ",
             "elements": [
                 "feSpotLight"
             ]
         },
         "preserveAlpha": {
             "description": "the preserveAlpha attribute indicates how a <feConvolveMatrix> element handled alpha transparency",
-            "depreciated": false,
+            "optional": true,
+            "type": " Booleanish | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/preserveAlpha",
             "elements": [
                 "feConvolveMatrix"
             ]
         },
         "preserveAspectRatio": {
             "description": "The preserveAspectRatio attribute indicates how an element with a viewBox providing a given aspect ratio must fit into a viewport with a different aspect ratio",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/preserveAspectRatio",
             "elements": [
                 "svg",
                 "symbol",
@@ -1335,14 +1748,20 @@
         },
         "primitiveUnits": {
             "description": "The primitiveUnits attribute specifies the coordinate system for the various length values within the filter primitives and for the attributes that define the filter primitive subregion",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/primitiveUnits",
             "elements": [
                 "filter"
             ]
         },
         "r": {
             "description": "The r attribute defines the radius of a circle",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/r",
             "elements": [
                 "circle",
                 "radialGradient"
@@ -1350,14 +1769,20 @@
         },
         "radius": {
             "description": "The radius attribute represents the radius (or radii) for the operation on a given <feMorphology> filter primitive",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/radius",
             "elements": [
                 "feMorphology"
             ]
         },
         "refX": {
             "description": "The refX attribute defines the x coordinate of an element’s reference point",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/refX",
             "elements": [
                 "marker",
                 "symbol"
@@ -1365,20 +1790,31 @@
         },
         "refY": {
             "description": "The refY attribute defines the y coordinate of an element’s reference point",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/refY",
             "elements": [
                 "marker",
                 "symbol"
             ]
         },
         "renderingIntent": {
+            "0": "?",
+            "1": "?",
+            "2": "?",
+            "3": "?",
             "description": "?????",
-            "depreciated": false,
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/rendering-intent",
             "elements": []
         },
         "repeatCount": {
             "description": "The repeatCount attribute indicates the number of times an animation will take place",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/repeatCount",
             "elements": [
                 "animate",
                 "animateColor",
@@ -1389,7 +1825,10 @@
         },
         "repeatDur": {
             "description": "The repeatDur attribute specifies the total duration for repeating an animation",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/repeatDur",
             "elements": [
                 "animate",
                 "animateColor",
@@ -1399,13 +1838,21 @@
             ]
         },
         "requiredExtensions": {
+            "0": "?",
+            "1": "?",
+            "2": "?",
+            "3": "?",
             "description": "?????",
-            "depreciated": false,
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/requiredExtensions",
             "elements": []
         },
         "requiredFeatures": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/requiredFeatures",
             "elements": [
                 "a",
                 "altGlyph",
@@ -1440,7 +1887,10 @@
         },
         "restart": {
             "description": "The restart attribute specifies whether or not an animation can restart",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/restart",
             "elements": [
                 "animate",
                 "animateColor",
@@ -1451,7 +1901,10 @@
         },
         "result": {
             "description": "The result attribute defines the assigned name for this filter primitive",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/result",
             "elements": [
                 "feBlend",
                 "feColorMatrix",
@@ -1474,14 +1927,20 @@
         },
         "rotate": {
             "description": "The rotate attribute specifies how the animated element rotates as it travels along a path specified in an <animateMotion> element",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/rotate",
             "elements": [
                 "animateMotion"
             ]
         },
         "rx": {
             "description": "The rx attribute defines a radius on the x-axis",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/rx",
             "elements": [
                 "ellipse",
                 "rect"
@@ -1489,7 +1948,10 @@
         },
         "ry": {
             "description": "The ry attribute defines a radius on the y-axis",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/ry",
             "elements": [
                 "ellipse",
                 "rect"
@@ -1497,21 +1959,30 @@
         },
         "scale": {
             "description": "The scale attribute defines the displacement scale factor to be used on a <feDisplacementMap> filter primitive",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/scale",
             "elements": [
                 "feDisplacementMap"
             ]
         },
         "seed": {
             "description": "The seed attribute represents the starting number for the pseudo random number generator of the <feTurbulence> filter primitive",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/seed",
             "elements": [
                 "feTurbulence"
             ]
         },
         "shapeRendering": {
             "description": "The shape-rendering attribute provides hints to the renderer about what tradeoffs to make when rendering shapes like paths, circles, or rectangles",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/shape-rendering",
             "elements": [
                 "circle",
                 "ellipse",
@@ -1524,41 +1995,61 @@
         },
         "slope": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/slope",
             "elements": [
                 "font-face"
             ]
         },
         "spacing": {
             "description": "The spacing attribute indicates how the user agent should determine the spacing between typographic characters that are to be rendered along a path",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/spacing",
             "elements": [
                 "textPath"
             ]
         },
         "specularConstant": {
             "description": "The specularConstant attribute controls the ratio of reflection of the specular lighting",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/specularConstant",
             "elements": [
                 "feSpecularLighting"
             ]
         },
         "specularExponent": {
             "description": "The specularExponent attribute controls the focus for the light source",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/specularExponent",
             "elements": [
                 "feSpecularLighting",
                 "feSpotLight"
             ]
         },
         "speed": {
+            "0": "?",
+            "1": "?",
+            "2": "?",
+            "3": "?",
             "description": "?????",
-            "depreciated": false,
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/speed",
             "elements": []
         },
         "spreadMethod": {
             "description": "The spreadMethod attribute determines how a shape is filled beyond the defined edges of a gradient",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/spreadMethod",
             "elements": [
                 "linearGradient",
                 "radialGradient"
@@ -1566,77 +2057,110 @@
         },
         "startOffset": {
             "description": "The startOffset attribute defines an offset from the start of the path for the initial current text position along the path after converting the path to the <textPath> element's coordinate system",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/startOffset",
             "elements": [
                 "textPath"
             ]
         },
         "stdDeviation": {
             "description": "The stdDeviation attribute defines the standard deviation for the blur operation",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stdDeviation",
             "elements": [
                 "feGaussianBlur"
             ]
         },
         "stemh": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stemh",
             "elements": [
                 "font-face"
             ]
         },
         "stemv": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stemv",
             "elements": [
                 "font-face"
             ]
         },
         "stitchTiles": {
             "description": "The stitchTiles attribute defines how the Perlin Noise tiles behave at the border",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stitchTiles",
             "elements": [
                 "feTurbulence"
             ]
         },
         "stopColor": {
             "description": "The stop-color attribute indicates what color to use at a gradient stop",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stop-color",
             "elements": [
                 "stop"
             ]
         },
         "stopOpacity": {
             "description": "The stop-opacity attribute defines the opacity of a given color gradient stop",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stop-opacity",
             "elements": [
                 "stop"
             ]
         },
         "strikethroughPosition": {
             "description": "« SVG Attribute reference homeThe strikethrough-position attribute represents the ideal vertical position of the strikethrough",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/strikethrough-position",
             "elements": [
                 "font-face"
             ]
         },
         "strikethroughThickness": {
             "description": "« SVG Attribute reference homeThe strikethrough-thickness attribute represents the ideal thickness of the strikethrough",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/strikethrough-thickness",
             "elements": [
                 "font-face"
             ]
         },
         "string": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/string",
             "elements": [
                 "font-face-format"
             ]
         },
         "stroke": {
             "description": "The stroke attribute is a presentation attribute defining the color (or any SVG paint servers like gradients or patterns) used to paint the outline of the shape;Note: As a presentation attribute stroke can be used as a CSS property",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke",
             "elements": [
                 "altGlyph",
                 "circle",
@@ -1654,7 +2178,10 @@
         },
         "strokeDasharray": {
             "description": "The stroke-dasharray attribute is a presentation attribute defining the pattern of dashes and gaps used to paint the outline of the shape;Note: As a presentation attribute, stroke-dasharray can be used as a CSS property",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | number | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray",
             "elements": [
                 "altGlyph",
                 "circle",
@@ -1672,7 +2199,10 @@
         },
         "strokeDashoffset": {
             "description": "The stroke-dashoffset attribute is a presentation attribute defining an offset on the rendering of the associated dash array",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | number | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dashoffset",
             "elements": [
                 "altGlyph",
                 "circle",
@@ -1690,7 +2220,10 @@
         },
         "strokeLinecap": {
             "description": "The stroke-linecap attribute is a presentation attribute defining the shape to be used at the end of open subpaths when they are stroked",
-            "depreciated": false,
+            "optional": true,
+            "type": " \"butt\" | \"round\" | \"square\" | \"inherit\" | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap",
             "elements": [
                 "altGlyph",
                 "path",
@@ -1704,7 +2237,10 @@
         },
         "strokeLinejoin": {
             "description": "The stroke-linejoin attribute is a presentation attribute defining the shape to be used at the corners of paths when they are stroked",
-            "depreciated": false,
+            "optional": true,
+            "type": " \"miter\" | \"round\" | \"bevel\" | \"inherit\" | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin",
             "elements": [
                 "altGlyph",
                 "path",
@@ -1719,7 +2255,10 @@
         },
         "strokeMiterlimit": {
             "description": "The stroke-miterlimit attribute is a presentation attribute defining a limit on the ratio of the miter length to the stroke-width used to draw a miter join",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-miterlimit",
             "elements": [
                 "altGlyph",
                 "path",
@@ -1734,7 +2273,10 @@
         },
         "strokeOpacity": {
             "description": "The stroke-opacity attribute is a presentation attribute defining the opacity of the paint server (color, gradient, pattern, etc) applied to the stroke of a shape",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-opacity",
             "elements": [
                 "altGlyph",
                 "circle",
@@ -1752,7 +2294,10 @@
         },
         "strokeWidth": {
             "description": "The stroke-width attribute is a presentation attribute defining the width of the stroke to be applied to the shape",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width",
             "elements": [
                 "altGlyph",
                 "circle",
@@ -1770,7 +2315,10 @@
         },
         "surfaceScale": {
             "description": "The surfaceScale attribute represents the height of the surface for a light filter primitive",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/surfaceScale",
             "elements": [
                 "feDiffuseLighting",
                 "feSpecularLighting"
@@ -1778,7 +2326,10 @@
         },
         "systemLanguage": {
             "description": "The systemLanguage attribute represents a list of supported language tags",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/systemLanguage",
             "elements": [
                 "a",
                 "altGlyph",
@@ -1819,7 +2370,10 @@
         },
         "tableValues": {
             "description": "The tableValues attribute defines a list of numbers defining a lookup table of values for a for a color component transfer function",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/tableValues",
             "elements": [
                 "feFuncA",
                 "feFuncB",
@@ -1829,21 +2383,30 @@
         },
         "targetX": {
             "description": "The targetX attribute determines the positioning in horizontal direction of the convolution matrix relative to a given target pixel in the input image",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/targetX",
             "elements": [
                 "feConvolveMatrix"
             ]
         },
         "targetY": {
             "description": "The targetY attribute determines the positioning in vertical direction of the convolution matrix relative to a given target pixel in the input image",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/targetY",
             "elements": [
                 "feConvolveMatrix"
             ]
         },
         "textAnchor": {
             "description": "The text-anchor attribute is used to align (start-, middle- or end-alignment) a string of pre-formatted text or auto-wrapped text where the wrapping area is determined from the inline-size property relative to a given point",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/text-anchor",
             "elements": [
                 "altGlyph",
                 "text",
@@ -1854,7 +2417,10 @@
         },
         "textDecoration": {
             "description": "The text-decoration attribute defines whether text is decorated with an underline, overline and/or strike-through",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/text-decoration",
             "elements": [
                 "altGlyph",
                 "text",
@@ -1865,14 +2431,20 @@
         },
         "textRendering": {
             "description": "The text-rendering attribute provides hints to the renderer about what tradeoffs to make when rendering text",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/text-rendering",
             "elements": [
                 "text"
             ]
         },
         "textLength": {
             "description": "The textLength attribute, available on SVG <text> and <tspan> elements, lets you specify the width of the space into which the text will draw",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/textLength",
             "elements": [
                 "text",
                 "textPath",
@@ -1882,7 +2454,10 @@
         },
         "to": {
             "description": "The to attribute indicates the final value of the attribute that will be modified during the animation",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/To",
             "elements": [
                 "animate",
                 "animateColor",
@@ -1893,12 +2468,18 @@
         },
         "transform": {
             "description": "The transform attribute defines a list of transform definitions that are applied to an element and the element's children",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/transform",
             "elements": []
         },
         "u1": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/u1",
             "elements": [
                 "hkern",
                 "vkern"
@@ -1906,7 +2487,10 @@
         },
         "u2": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/u2",
             "elements": [
                 "hkern",
                 "vkern"
@@ -1914,28 +2498,40 @@
         },
         "underlinePosition": {
             "description": "« SVG Attribute reference homeThe underline-position attribute represents the ideal vertical position of the underline",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/underline-position",
             "elements": [
                 "font-face"
             ]
         },
         "underlineThickness": {
             "description": "« SVG Attribute reference homeThe underline-thickness attribute represents the ideal thickness of the underline",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/underline-thickness",
             "elements": [
                 "font-face"
             ]
         },
         "unicode": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/unicode",
             "elements": [
                 "glyph"
             ]
         },
         "unicodeBidi": {
             "description": "The unicode-bidi attribute specifies how the accumulation of the background image is managed",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/unicode-bidi",
             "elements": [
                 "altGlyph",
                 "textPath",
@@ -1946,49 +2542,70 @@
         },
         "unicodeRange": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/unicode-range",
             "elements": [
                 "font-face"
             ]
         },
         "unitsPerEm": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/units-per-em",
             "elements": [
                 "font-face"
             ]
         },
         "vAlphabetic": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/v-alphabetic",
             "elements": [
                 "font-face"
             ]
         },
         "vHanging": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/v-hanging",
             "elements": [
                 "font-face"
             ]
         },
         "vIdeographic": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/v-ideographic",
             "elements": [
                 "font-face"
             ]
         },
         "vMathematical": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/v-mathematical",
             "elements": [
                 "font-face"
             ]
         },
         "values": {
             "description": "The values attribute has different meanings, depending upon the context where it's used, either it defines a sequence of values used over the course of an animation, or it's a list of numbers for a color matrix, which is interpreted differently depending on the type of color change to be performed",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/values",
             "elements": [
                 "animate",
                 "animateColor",
@@ -1999,7 +2616,10 @@
         },
         "vectorEffect": {
             "description": "The vector-effect property specifies the vector effect to use when drawing an object",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/vector-effect",
             "elements": [
                 "circle",
                 "ellipse",
@@ -2018,14 +2638,20 @@
         },
         "version": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/version",
             "elements": [
                 "svg"
             ]
         },
         "vertAdvY": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/vert-adv-y",
             "elements": [
                 "font",
                 "glyph",
@@ -2034,21 +2660,30 @@
         },
         "vertOriginX": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/vert-origin-x",
             "elements": [
                 "font"
             ]
         },
         "vertOriginY": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/vert-origin-y",
             "elements": [
                 "font"
             ]
         },
         "viewBox": {
             "description": "The viewBox attribute defines the position and dimension, in user space, of an SVG viewport",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox",
             "elements": [
                 "marker",
                 "pattern",
@@ -2059,14 +2694,20 @@
         },
         "viewTarget": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewTarget",
             "elements": [
                 "view"
             ]
         },
         "visibility": {
             "description": "The visibility attribute lets you control the visibility of graphical elements",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/visibility",
             "elements": [
                 "a",
                 "altGlyph",
@@ -2091,14 +2732,20 @@
         },
         "widths": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/widths",
             "elements": [
                 "font-face"
             ]
         },
         "wordSpacing": {
             "description": "The word-spacing attribute specifies spacing behavior between words",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/word-spacing",
             "elements": [
                 "altGlyph",
                 "text",
@@ -2109,7 +2756,10 @@
         },
         "writingMode": {
             "description": "The writing-mode attribute specifies whether the initial inline-progression-direction for a <text> element shall be left-to-right, right-to-left, or top-to-bottom",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/writing-mode",
             "elements": [
                 "altGlyph",
                 "text",
@@ -2120,7 +2770,10 @@
         },
         "z": {
             "description": "The z attribute defines the location along the z-axis for a light source in the coordinate system established by the primitiveUnits attribute on the <filter> element, assuming that, in the initial coordinate system, the positive z-axis comes out towards the person viewing the content and assuming that one unit along the z-axis equals one unit in x and y",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/z",
             "elements": [
                 "fePointLight",
                 "feSpotLight"
@@ -2128,7 +2781,10 @@
         },
         "zoomAndPan": {
             "description": "Deprecated: This feature is no longer recommended",
-            "depreciated": true,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": true,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/zoomAndPan",
             "elements": [
                 "svg",
                 "view"
@@ -2136,7 +2792,10 @@
         },
         "y": {
             "description": "The y attribute defines a y-axis coordinate in the user coordinate system",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/y",
             "elements": [
                 "altGlyph",
                 "cursor",
@@ -2181,7 +2840,10 @@
         },
         "y1": {
             "description": "The y1 attribute is used to specify the first y-coordinate for drawing an SVG element that requires more than one coordinate",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/y1",
             "elements": [
                 "line",
                 "linearGradient"
@@ -2189,7 +2851,10 @@
         },
         "y2": {
             "description": "The y2 attribute is used to specify the second y-coordinate for drawing an SVG element that requires more than one coordinate",
-            "depreciated": false,
+            "optional": true,
+            "type": " number | string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/y2",
             "elements": [
                 "line",
                 "linearGradient"
@@ -2197,7 +2862,10 @@
         },
         "yChannelSelector": {
             "description": "The yChannelSelector attribute indicates which color channel from in2 to use to displace the pixels in in along the y-axis",
-            "depreciated": false,
+            "optional": true,
+            "type": " string | undefined",
+            "deprecated": false,
+            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/yChannelSelector",
             "elements": [
                 "feDisplacementMap"
             ]

@@ -118,6 +118,8 @@ I'm hoping to do the same with dash-svg [SVG@developer.mozilla.org]
 
 ```
 
+https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/react/index.d.ts
+
 
 
 

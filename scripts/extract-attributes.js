@@ -11,6 +11,8 @@ const svgURL = 'https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute';
 const dataPath = './data/attributes.json';
 const htmlPath = './data/attributes.html';
 
+const DefinitelyTypedReact = 'https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/react/index.d.ts'
+
 // From https://reactjs.org/docs/dom-elements.html#differences-in-attributes
 //
 const supportedAttributes = ['accentHeight', 'accumulate', 'additive', 'alignmentBaseline', 'allowReorder', 'alphabetic',
@@ -90,22 +92,43 @@ const fetchPage = async function(pageURL) {
   return page
 }
 
+const getAttributeType = async function(attr) {
+  try {
+    const reactDt = await fetchPage(DefinitelyTypedReact)
+    const allTypes = reactDt.match(/SVGAttributes<T> extends[\s\S]*?}/gm)[0]
+
+    const re = new RegExp(`${attr}(.?):(.*?);`)
+    const definition = allTypes.match(re)
+    if (definition.length === 3) {
+      return {optional: true, type: definition[2]}
+    }
+    return {optional: false, type: definition[1]}
+
+  } catch (error) {
+    console.log("Error reading attribute type for %s", attr)
+    return "????"
+  }
+
+}
+
 /**
  * Read the https://developer.mozilla.org{href} page and extract the
  * attribute description and the SVG elements that use the attribute
  *
+ * @param {string} attr the the attribute name
  * @param {string} href the page reference
  *
- * @returns dict{description, elements[]}
+ * @returns dict{description, deprecated, elements[]}
  */
 
-const getElementDetails = async function(href) {
+const getAttributeDetails = async function(attr, href) {
   const pageURL = 'https://developer.mozilla.org' + href;
 
   console.log(pageURL)
 
   let  description = '?????'
-  let  depreciated = false
+  let  deprecated = false
+  let type = "????"
   const elements = []
 
   try {
@@ -113,16 +136,12 @@ const getElementDetails = async function(href) {
     if (html !== "?????") {
       const $ = cheerio.load(html);
 
-
-      depreciated = $('div.notecard.deprecated').length === 1? true: false
+      deprecated = $('div.notecard.deprecated').length === 1? true: false
       description = $('p', 'article').text().split('.')[0]
 
+      type = await getAttributeType(attr)
       const usedByElements = $('p:contains("You can use this attribute")').next().find('code')
 
-// accumulate: .main-page-content > div:nth-child(2) > ul:nth-child(4) > li:nth-child(1) > a:nth-child(1) > code:nth-child(1)
-// g2:         .main-page-content > div:nth-child(2) > ul:nth-child(5) > li:nth-child(1) > a:nth-child(1) > code:nth-child(1)
-// stop-color: .main-page-content > div:nth-child(2) > ul:nth-child(5) > li:nth-child(1) > a:nth-child(1) > code:nth-child(1)
-//             p:contains("You can use this attribute")
 
       usedByElements.each((idx, el) => {
         const text = $(el).text().replace(/[<>]/g, '');
@@ -138,7 +157,7 @@ const getElementDetails = async function(href) {
     console.log("Error loading %s", pageURL)
   }
 
-  return {description, depreciated, elements}
+  return {description, ...type, deprecated, pageURL, elements}
 }
 
 /**
@@ -186,7 +205,7 @@ const extractAttributes = async function($) {
   for (const i in attributeList) {
     const attr = attributeList[i]
     console.log("[%s] %s", attr.svgAttribute, attr.pageUrl)
-    const details = await getElementDetails(attr.pageUrl)
+    const details = await getAttributeDetails(attr.svgAttribute, attr.pageUrl)
     // console.log("[%s]\n%s\n", attr.svgAttribute, details.desc)
 
     attributes[attr.svgAttribute] = details
