@@ -115,7 +115,21 @@ const getAttributeType = async function(attr) {
     console.log('Attribute "%s" missing from DefinitelyTyped react/index.d.ts', attr)
     return {optional: true, type: "any"}
   }
+}
 
+/**
+ * Return list of SVG elements supported by react.js
+ *
+ * @returns
+ */
+
+const getReactElements = async function() {
+  const reactDt = await fetchPage(DefinitelyTypedReact)
+  const allElements = reactDt.match(/interface ReactSVG {([\s\S]*?)}/gm)[0];
+
+  // const elements = allElements.match(/(\w+): SVGFactory;/g)
+  const elements = allElements.match(/(\w+):/g)
+  return Array.from(elements, m => m.slice(0, -1))
 }
 
 /**
@@ -149,10 +163,16 @@ const getAttributeDetails = async function(attr, href) {
       type = await getAttributeType(attr)
       const usedByElements = $('p:contains("You can use this attribute")').next().find('code')
 
+      const reactElements = await getReactElements()
 
       usedByElements.each((idx, el) => {
         const text = $(el).text().replace(/[<>]/g, '');
-        elements.push(text)
+
+        // Skip element if it's not supported be react
+
+        if (reactElements.includes(text)) {
+          elements.push(text)
+        }
       });
     }
 
@@ -223,6 +243,7 @@ const extractAttributes = async function($) {
   return attributes;
 }
 
+
 /**
  * Create a map of elements to attributes e.g. {div: ['id', 'name']}
  */
@@ -256,6 +277,7 @@ const extractAllAttributes = async function() {
 
     const $ = cheerio.load(html);
     const attributes = await extractAttributes($);
+
     const elements = extractElements(attributes);
 
     const out = {

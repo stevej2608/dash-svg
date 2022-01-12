@@ -6,9 +6,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/accent-height",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "accumulate": {
             "description": "The accumulate attribute controls whether or not an animation is cumulative",
@@ -17,10 +15,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/accumulate",
             "elements": [
-                "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform"
+                "animate"
             ]
         },
         "additive": {
@@ -30,10 +25,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/additive",
             "elements": [
-                "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform"
+                "animate"
             ]
         },
         "alignmentBaseline": {
@@ -44,8 +36,6 @@
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/alignment-baseline",
             "elements": [
                 "tspan",
-                "tref",
-                "altGlyph",
                 "textPath"
             ]
         },
@@ -55,9 +45,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/alphabetic",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "amplitude": {
             "description": "The amplitude attribute controls the amplitude of the gamma function of a component transfer element when its type attribute is gamma",
@@ -78,9 +66,7 @@
             "type": " \"initial\" | \"medial\" | \"terminal\" | \"isolated\" | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/arabic-form",
-            "elements": [
-                "glyph"
-            ]
+            "elements": []
         },
         "ascent": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -88,9 +74,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/ascent",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "attributeName": {
             "description": "The attributeName attribute indicates the name of the CSS property or attribute of the target element that is going to be changed during an animation",
@@ -99,10 +83,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/attributeName",
             "elements": [
-                "animate",
-                "animateColor",
-                "animateTransform",
-                "set"
+                "animate"
             ]
         },
         "attributeType": {
@@ -112,10 +93,7 @@
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/attributeType",
             "elements": [
-                "animate",
-                "animateColor",
-                "animateTransform",
-                "set"
+                "animate"
             ]
         },
         "azimuth": {
@@ -145,9 +123,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/baseline-shift",
             "elements": [
-                "altGlyph",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -167,9 +143,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/bbox",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "begin": {
             "description": "The begin attribute defines when an animation should begin or when an element should be discarded",
@@ -178,12 +152,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/begin",
             "elements": [
-                "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform",
-                "discard",
-                "set"
+                "animate"
             ]
         },
         "bias": {
@@ -203,10 +172,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/by",
             "elements": [
-                "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform"
+                "animate"
             ]
         },
         "calcMode": {
@@ -216,10 +182,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/calcMode",
             "elements": [
-                "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform"
+                "animate"
             ]
         },
         "capHeight": {
@@ -228,9 +191,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/cap-height",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "clip": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -264,12 +225,10 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/clip-path",
             "elements": [
-                "a",
                 "circle",
                 "clipPath",
                 "ellipse",
                 "g",
-                "glyph",
                 "image",
                 "line",
                 "marker",
@@ -300,22 +259,18 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/color-interpolation",
             "elements": [
-                "a",
                 "animate",
-                "animateColor",
                 "circle",
                 "clipPath",
                 "defs",
                 "ellipse",
                 "foreignObject",
                 "g",
-                "glyph",
                 "image",
                 "line",
                 "linearGradient",
                 "marker",
                 "mask",
-                "missing-glyph",
                 "path",
                 "pattern",
                 "polygon",
@@ -375,22 +330,18 @@
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/color-rendering",
             "elements": [
-                "a",
                 "animate",
-                "animateColor",
                 "circle",
                 "clipPath",
                 "defs",
                 "ellipse",
                 "foreignObject",
                 "g",
-                "glyph",
                 "image",
                 "line",
                 "linearGradient",
                 "marker",
                 "mask",
-                "missing-glyph",
                 "path",
                 "pattern",
                 "polygon",
@@ -461,9 +412,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d",
             "elements": [
-                "path",
-                "glyph",
-                "missing-glyph"
+                "path"
             ]
         },
         "descent": {
@@ -472,9 +421,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/descent",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "diffuseConstant": {
             "description": "The diffuseConstant attribute represents the kd value in the Phong lighting model",
@@ -493,10 +440,8 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/direction",
             "elements": [
-                "altGlyph",
                 "textPath",
                 "text",
-                "tref",
                 "tspan"
             ]
         },
@@ -525,10 +470,8 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/dominant-baseline",
             "elements": [
-                "altGlyph",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -539,11 +482,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/dur",
             "elements": [
-                "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform",
-                "set"
+                "animate"
             ]
         },
         "dx": {
@@ -553,12 +492,9 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/dx",
             "elements": [
-                "altGlyph",
                 "feDropShadow",
                 "feOffset",
-                "glyphRef",
                 "text",
-                "tref",
                 "tspan"
             ]
         },
@@ -569,12 +505,9 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/dy",
             "elements": [
-                "altGlyph",
                 "feDropShadow",
                 "feOffset",
-                "glyphRef",
                 "text",
-                "tref",
                 "tspan"
             ]
         },
@@ -606,13 +539,10 @@
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/enable-background",
             "elements": [
-                "a",
                 "defs",
-                "glyph",
                 "g",
                 "marker",
                 "mask",
-                "missing-glyph",
                 "pattern",
                 "svg",
                 "switch",
@@ -626,11 +556,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/end",
             "elements": [
-                "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform",
-                "set"
+                "animate"
             ]
         },
         "exponent": {
@@ -653,7 +579,6 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill",
             "elements": [
-                "altGlyph",
                 "circle",
                 "ellipse",
                 "path",
@@ -662,7 +587,6 @@
                 "rect",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -673,7 +597,6 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill-opacity",
             "elements": [
-                "altGlyph",
                 "circle",
                 "ellipse",
                 "path",
@@ -682,7 +605,6 @@
                 "rect",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -693,13 +615,11 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/fill-rule",
             "elements": [
-                "altGlyph",
                 "path",
                 "polygon",
                 "polyline",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -760,10 +680,8 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-family",
             "elements": [
-                "altGlyph",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -774,10 +692,8 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-size",
             "elements": [
-                "altGlyph",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -788,10 +704,8 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-size-adjust",
             "elements": [
-                "altGlyph",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -802,10 +716,8 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-stretch",
             "elements": [
-                "altGlyph",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -816,10 +728,8 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-style",
             "elements": [
-                "altGlyph",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -830,10 +740,8 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-variant",
             "elements": [
-                "altGlyph",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -844,10 +752,8 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/font-weight",
             "elements": [
-                "altGlyph",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -857,10 +763,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/format",
-            "elements": [
-                "altGlyph",
-                "glyphRef"
-            ]
+            "elements": []
         },
         "from": {
             "description": "The from attribute indicates the initial value of the attribute that will be modified during the animation",
@@ -869,10 +772,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/From",
             "elements": [
-                "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform"
+                "animate"
             ]
         },
         "fx": {
@@ -901,10 +801,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/g1",
-            "elements": [
-                "hkern",
-                "vkern"
-            ]
+            "elements": []
         },
         "g2": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -912,10 +809,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/g2",
-            "elements": [
-                "hkern",
-                "vkern"
-            ]
+            "elements": []
         },
         "glyphName": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -923,9 +817,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/glyph-name",
-            "elements": [
-                "glyph"
-            ]
+            "elements": []
         },
         "glyphOrientationHorizontal": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -934,10 +826,8 @@
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/glyph-orientation-horizontal",
             "elements": [
-                "altGlyph",
                 "textPath",
                 "text",
-                "tref",
                 "tspan"
             ]
         },
@@ -948,10 +838,8 @@
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/glyph-orientation-vertical",
             "elements": [
-                "altGlyph",
                 "textPath",
                 "text",
-                "tref",
                 "tspan"
             ]
         },
@@ -961,10 +849,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/glyphRef",
-            "elements": [
-                "altGlyph",
-                "glyphRef"
-            ]
+            "elements": []
         },
         "gradientTransform": {
             "description": "The gradientTransform attribute contains the definition of an optional additional transformation from the gradient coordinate system onto the target coordinate system (i",
@@ -994,9 +879,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/hanging",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "horizAdvX": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -1004,11 +887,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/horiz-adv-x",
-            "elements": [
-                "font",
-                "glyph",
-                "missing-glyph"
-            ]
+            "elements": []
         },
         "horizOriginX": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -1016,9 +895,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/horiz-origin-x",
-            "elements": [
-                "font"
-            ]
+            "elements": []
         },
         "ideographic": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -1026,9 +903,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/ideographic",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "imageRendering": {
             "description": "The image-rendering attribute provides a hint to the browser about how to make speed vs",
@@ -1094,10 +969,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/k",
-            "elements": [
-                "hkern",
-                "vkern"
-            ]
+            "elements": []
         },
         "k1": {
             "description": "The k1 attribute defines one of the values to be used within the arithmetic operation of the <feComposite> filter primitive",
@@ -1168,10 +1040,8 @@
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/kerning",
             "elements": [
-                "altGlyph",
                 "textPath",
                 "text",
-                "tref",
                 "tspan"
             ]
         },
@@ -1182,11 +1052,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/keyPoints",
             "elements": [
-                "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform",
-                "set"
+                "animate"
             ]
         },
         "keySplines": {
@@ -1196,10 +1062,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/keySplines",
             "elements": [
-                "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform"
+                "animate"
             ]
         },
         "keyTimes": {
@@ -1209,10 +1072,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/keyTimes",
             "elements": [
-                "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform"
+                "animate"
             ]
         },
         "lengthAdjust": {
@@ -1224,7 +1084,6 @@
             "elements": [
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -1235,10 +1094,8 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/letter-spacing",
             "elements": [
-                "altGlyph",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -1348,12 +1205,10 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/mask",
             "elements": [
-                "a",
                 "circle",
                 "clipPath",
                 "ellipse",
                 "g",
-                "glyph",
                 "image",
                 "line",
                 "marker",
@@ -1395,9 +1250,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/mathematical",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "mode": {
             "description": "The mode attribute defines the blending mode on the <feBlend> filter primitive",
@@ -1426,14 +1279,10 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/opacity",
             "elements": [
-                "a",
-                "audio",
-                "canvas",
                 "circle",
                 "ellipse",
                 "foreignObject",
                 "g",
-                "iframe",
                 "image",
                 "line",
                 "marker",
@@ -1447,9 +1296,7 @@
                 "text",
                 "textPath",
                 "tspan",
-                "use",
-                "unknown",
-                "video"
+                "use"
             ]
         },
         "operator": {
@@ -1489,9 +1336,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/orientation",
-            "elements": [
-                "glyph"
-            ]
+            "elements": []
         },
         "origin": {
             "description": "The origin attribute specifies the origin of motion for an animation",
@@ -1499,9 +1344,7 @@
             "type": " number | string | undefined",
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/origin",
-            "elements": [
-                "animateMotion"
-            ]
+            "elements": []
         },
         "overflow": {
             "description": "The overflow attribute sets what to do when an element's content is too big to fit in its block formatting context",
@@ -1511,7 +1354,6 @@
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/overflow",
             "elements": [
                 "foreignObject",
-                "iframe",
                 "image",
                 "marker",
                 "pattern",
@@ -1526,9 +1368,7 @@
             "type": " number | string | undefined",
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/overline-position",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "overlineThickness": {
             "description": "The overline-thickness attribute represents the ideal thickness of the overline",
@@ -1536,9 +1376,7 @@
             "type": " number | string | undefined",
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/overline-thickness",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "panose1": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -1546,9 +1384,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/panose-1",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "paintOrder": {
             "description": "The paint-order attribute specifies the order that the fill, stroke, and markers of a given shape or text element are painted",
@@ -1622,7 +1458,6 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/pointer-events",
             "elements": [
-                "a",
                 "circle",
                 "clipPath",
                 "defs",
@@ -1774,11 +1609,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/repeatCount",
             "elements": [
-                "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform",
-                "set"
+                "animate"
             ]
         },
         "repeatDur": {
@@ -1788,11 +1619,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/repeatDur",
             "elements": [
-                "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform",
-                "set"
+                "animate"
             ]
         },
         "requiredFeatures": {
@@ -1802,15 +1629,9 @@
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/requiredFeatures",
             "elements": [
-                "a",
-                "altGlyph",
                 "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform",
                 "circle",
                 "clipPath",
-                "cursor",
                 "defs",
                 "ellipse",
                 "foreignObject",
@@ -1823,12 +1644,10 @@
                 "polygon",
                 "polyline",
                 "rect",
-                "set",
                 "svg",
                 "switch",
                 "text",
                 "textPath",
-                "tref",
                 "tspan",
                 "use"
             ]
@@ -1840,11 +1659,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/restart",
             "elements": [
-                "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform",
-                "set"
+                "animate"
             ]
         },
         "result": {
@@ -1879,9 +1694,7 @@
             "type": " number | string | undefined",
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/rotate",
-            "elements": [
-                "animateMotion"
-            ]
+            "elements": []
         },
         "rx": {
             "description": "The rx attribute defines a radius on the x-axis",
@@ -1947,9 +1760,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/slope",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "spacing": {
             "description": "The spacing attribute indicates how the user agent should determine the spacing between typographic characters that are to be rendered along a path",
@@ -2019,9 +1830,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stemh",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "stemv": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -2029,9 +1838,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stemv",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "stitchTiles": {
             "description": "The stitchTiles attribute defines how the Perlin Noise tiles behave at the border",
@@ -2069,9 +1876,7 @@
             "type": " number | string | undefined",
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/strikethrough-position",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "strikethroughThickness": {
             "description": "« SVG Attribute reference homeThe strikethrough-thickness attribute represents the ideal thickness of the strikethrough",
@@ -2079,9 +1884,7 @@
             "type": " number | string | undefined",
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/strikethrough-thickness",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "string": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -2089,9 +1892,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/string",
-            "elements": [
-                "font-face-format"
-            ]
+            "elements": []
         },
         "stroke": {
             "description": "The stroke attribute is a presentation attribute defining the color (or any SVG paint servers like gradients or patterns) used to paint the outline of the shape;Note: As a presentation attribute stroke can be used as a CSS property",
@@ -2100,7 +1901,6 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke",
             "elements": [
-                "altGlyph",
                 "circle",
                 "ellipse",
                 "line",
@@ -2110,7 +1910,6 @@
                 "rect",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -2121,7 +1920,6 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dasharray",
             "elements": [
-                "altGlyph",
                 "circle",
                 "ellipse",
                 "path",
@@ -2131,7 +1929,6 @@
                 "rect",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -2142,7 +1939,6 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-dashoffset",
             "elements": [
-                "altGlyph",
                 "circle",
                 "ellipse",
                 "path",
@@ -2152,7 +1948,6 @@
                 "rect",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -2163,13 +1958,11 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap",
             "elements": [
-                "altGlyph",
                 "path",
                 "polyline",
                 "line",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -2180,14 +1973,12 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linejoin",
             "elements": [
-                "altGlyph",
                 "path",
                 "polygon",
                 "polyline",
                 "rect",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -2198,14 +1989,12 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-miterlimit",
             "elements": [
-                "altGlyph",
                 "path",
                 "polygon",
                 "polyline",
                 "rect",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -2216,7 +2005,6 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-opacity",
             "elements": [
-                "altGlyph",
                 "circle",
                 "ellipse",
                 "path",
@@ -2226,7 +2014,6 @@
                 "rect",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -2237,7 +2024,6 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-width",
             "elements": [
-                "altGlyph",
                 "circle",
                 "ellipse",
                 "line",
@@ -2247,7 +2033,6 @@
                 "rect",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -2269,23 +2054,13 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/systemLanguage",
             "elements": [
-                "a",
-                "altGlyph",
                 "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform",
-                "audio",
-                "canvas",
                 "circle",
                 "clipPath",
-                "cursor",
                 "defs",
-                "discard",
                 "ellipse",
                 "foreignObject",
                 "g",
-                "iframe",
                 "image",
                 "line",
                 "mask",
@@ -2294,16 +2069,12 @@
                 "polygon",
                 "polyline",
                 "rect",
-                "set",
                 "svg",
                 "switch",
                 "text",
                 "textPath",
-                "tref",
                 "tspan",
-                "unknown",
-                "use",
-                "video"
+                "use"
             ]
         },
         "tableValues": {
@@ -2346,10 +2117,8 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/text-anchor",
             "elements": [
-                "altGlyph",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -2360,10 +2129,8 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/text-decoration",
             "elements": [
-                "altGlyph",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -2386,7 +2153,6 @@
             "elements": [
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -2397,11 +2163,7 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/To",
             "elements": [
-                "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform",
-                "set"
+                "animate"
             ]
         },
         "transform": {
@@ -2418,10 +2180,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/u1",
-            "elements": [
-                "hkern",
-                "vkern"
-            ]
+            "elements": []
         },
         "u2": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -2429,10 +2188,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/u2",
-            "elements": [
-                "hkern",
-                "vkern"
-            ]
+            "elements": []
         },
         "underlinePosition": {
             "description": "« SVG Attribute reference homeThe underline-position attribute represents the ideal vertical position of the underline",
@@ -2440,9 +2196,7 @@
             "type": " number | string | undefined",
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/underline-position",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "underlineThickness": {
             "description": "« SVG Attribute reference homeThe underline-thickness attribute represents the ideal thickness of the underline",
@@ -2450,9 +2204,7 @@
             "type": " number | string | undefined",
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/underline-thickness",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "unicode": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -2460,9 +2212,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/unicode",
-            "elements": [
-                "glyph"
-            ]
+            "elements": []
         },
         "unicodeBidi": {
             "description": "The unicode-bidi attribute specifies how the accumulation of the background image is managed",
@@ -2471,10 +2221,8 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/unicode-bidi",
             "elements": [
-                "altGlyph",
                 "textPath",
                 "text",
-                "tref",
                 "tspan"
             ]
         },
@@ -2484,9 +2232,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/unicode-range",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "unitsPerEm": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -2494,9 +2240,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/units-per-em",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "vAlphabetic": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -2504,9 +2248,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/v-alphabetic",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "vHanging": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -2514,9 +2256,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/v-hanging",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "vIdeographic": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -2524,9 +2264,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/v-ideographic",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "vMathematical": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -2534,9 +2272,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/v-mathematical",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "values": {
             "description": "The values attribute has different meanings, depending upon the context where it's used, either it defines a sequence of values used over the course of an animation, or it's a list of numbers for a color matrix, which is interpreted differently depending on the type of color change to be performed",
@@ -2546,9 +2282,6 @@
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/values",
             "elements": [
                 "animate",
-                "animateColor",
-                "animateMotion",
-                "animateTransform",
                 "feColorMatrix"
             ]
         },
@@ -2590,11 +2323,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/vert-adv-y",
-            "elements": [
-                "font",
-                "glyph",
-                "missing-glyph"
-            ]
+            "elements": []
         },
         "vertOriginX": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -2602,9 +2331,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/vert-origin-x",
-            "elements": [
-                "font"
-            ]
+            "elements": []
         },
         "vertOriginY": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -2612,9 +2339,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/vert-origin-y",
-            "elements": [
-                "font"
-            ]
+            "elements": []
         },
         "viewBox": {
             "description": "The viewBox attribute defines the position and dimension, in user space, of an SVG viewport",
@@ -2647,14 +2372,9 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/visibility",
             "elements": [
-                "a",
-                "altGlyph",
-                "audio",
-                "canvas",
                 "circle",
                 "ellipse",
                 "foreignObject",
-                "iframe",
                 "image",
                 "line",
                 "path",
@@ -2663,9 +2383,7 @@
                 "rect",
                 "text",
                 "textPath",
-                "tref",
-                "tspan",
-                "video"
+                "tspan"
             ]
         },
         "widths": {
@@ -2674,9 +2392,7 @@
             "type": " number | string | undefined",
             "deprecated": true,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/widths",
-            "elements": [
-                "font-face"
-            ]
+            "elements": []
         },
         "wordSpacing": {
             "description": "The word-spacing attribute specifies spacing behavior between words",
@@ -2685,10 +2401,8 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/word-spacing",
             "elements": [
-                "altGlyph",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -2699,10 +2413,8 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/writing-mode",
             "elements": [
-                "altGlyph",
                 "text",
                 "textPath",
-                "tref",
                 "tspan"
             ]
         },
@@ -2735,8 +2447,6 @@
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/y",
             "elements": [
-                "altGlyph",
-                "cursor",
                 "feBlend",
                 "feColorMatrix",
                 "feComponentTransfer",
@@ -2763,7 +2473,6 @@
                 "feTurbulence",
                 "filter",
                 "foreignObject",
-                "glyphRef",
                 "image",
                 "mask",
                 "pattern",
@@ -2771,7 +2480,6 @@
                 "svg",
                 "symbol",
                 "text",
-                "tref",
                 "tspan",
                 "use"
             ]
@@ -2810,34 +2518,6 @@
         }
     },
     "elements": {
-        "font-face": [
-            "accentHeight",
-            "alphabetic",
-            "ascent",
-            "bbox",
-            "capHeight",
-            "descent",
-            "hanging",
-            "ideographic",
-            "mathematical",
-            "overlinePosition",
-            "overlineThickness",
-            "panose1",
-            "slope",
-            "stemh",
-            "stemv",
-            "strikethroughPosition",
-            "strikethroughThickness",
-            "underlinePosition",
-            "underlineThickness",
-            "unicodeRange",
-            "unitsPerEm",
-            "vAlphabetic",
-            "vHanging",
-            "vIdeographic",
-            "vMathematical",
-            "widths"
-        ],
         "animate": [
             "accumulate",
             "additive",
@@ -2848,74 +2528,6 @@
             "calcMode",
             "colorInterpolation",
             "colorRendering",
-            "dur",
-            "end",
-            "from",
-            "keyPoints",
-            "keySplines",
-            "keyTimes",
-            "repeatCount",
-            "repeatDur",
-            "requiredFeatures",
-            "restart",
-            "systemLanguage",
-            "to",
-            "values"
-        ],
-        "animateColor": [
-            "accumulate",
-            "additive",
-            "attributeName",
-            "attributeType",
-            "begin",
-            "by",
-            "calcMode",
-            "colorInterpolation",
-            "colorRendering",
-            "dur",
-            "end",
-            "from",
-            "keyPoints",
-            "keySplines",
-            "keyTimes",
-            "repeatCount",
-            "repeatDur",
-            "requiredFeatures",
-            "restart",
-            "systemLanguage",
-            "to",
-            "values"
-        ],
-        "animateMotion": [
-            "accumulate",
-            "additive",
-            "begin",
-            "by",
-            "calcMode",
-            "dur",
-            "end",
-            "from",
-            "keyPoints",
-            "keySplines",
-            "keyTimes",
-            "origin",
-            "repeatCount",
-            "repeatDur",
-            "requiredFeatures",
-            "restart",
-            "rotate",
-            "systemLanguage",
-            "to",
-            "values"
-        ],
-        "animateTransform": [
-            "accumulate",
-            "additive",
-            "attributeName",
-            "attributeType",
-            "begin",
-            "by",
-            "calcMode",
             "dur",
             "end",
             "from",
@@ -2972,88 +2584,6 @@
             "textLength",
             "unicodeBidi",
             "vectorEffect",
-            "visibility",
-            "wordSpacing",
-            "writingMode",
-            "y"
-        ],
-        "tref": [
-            "alignmentBaseline",
-            "baselineShift",
-            "direction",
-            "dominantBaseline",
-            "dx",
-            "dy",
-            "fill",
-            "fillOpacity",
-            "fillRule",
-            "fontFamily",
-            "fontSize",
-            "fontSizeAdjust",
-            "fontStretch",
-            "fontStyle",
-            "fontVariant",
-            "fontWeight",
-            "glyphOrientationHorizontal",
-            "glyphOrientationVertical",
-            "kerning",
-            "lengthAdjust",
-            "letterSpacing",
-            "requiredFeatures",
-            "stroke",
-            "strokeDasharray",
-            "strokeDashoffset",
-            "strokeLinecap",
-            "strokeLinejoin",
-            "strokeMiterlimit",
-            "strokeOpacity",
-            "strokeWidth",
-            "systemLanguage",
-            "textAnchor",
-            "textDecoration",
-            "textLength",
-            "unicodeBidi",
-            "visibility",
-            "wordSpacing",
-            "writingMode",
-            "y"
-        ],
-        "altGlyph": [
-            "alignmentBaseline",
-            "baselineShift",
-            "direction",
-            "dominantBaseline",
-            "dx",
-            "dy",
-            "fill",
-            "fillOpacity",
-            "fillRule",
-            "fontFamily",
-            "fontSize",
-            "fontSizeAdjust",
-            "fontStretch",
-            "fontStyle",
-            "fontVariant",
-            "fontWeight",
-            "format",
-            "glyphOrientationHorizontal",
-            "glyphOrientationVertical",
-            "glyphRef",
-            "kerning",
-            "letterSpacing",
-            "requiredFeatures",
-            "stroke",
-            "strokeDasharray",
-            "strokeDashoffset",
-            "strokeLinecap",
-            "strokeLinejoin",
-            "strokeMiterlimit",
-            "strokeOpacity",
-            "strokeWidth",
-            "systemLanguage",
-            "textAnchor",
-            "textDecoration",
-            "unicodeBidi",
             "visibility",
             "wordSpacing",
             "writingMode",
@@ -3133,34 +2663,6 @@
             "tableValues",
             "y"
         ],
-        "glyph": [
-            "arabicForm",
-            "clipPath",
-            "colorInterpolation",
-            "colorRendering",
-            "d",
-            "enableBackground",
-            "glyphName",
-            "horizAdvX",
-            "mask",
-            "orientation",
-            "unicode",
-            "vertAdvY"
-        ],
-        "set": [
-            "attributeName",
-            "attributeType",
-            "begin",
-            "dur",
-            "end",
-            "keyPoints",
-            "repeatCount",
-            "repeatDur",
-            "requiredFeatures",
-            "restart",
-            "systemLanguage",
-            "to"
-        ],
         "feDistantLight": [
             "azimuth",
             "elevation"
@@ -3192,10 +2694,6 @@
             "viewBox",
             "zoomAndPan",
             "y"
-        ],
-        "discard": [
-            "begin",
-            "systemLanguage"
         ],
         "feConvolveMatrix": [
             "bias",
@@ -3305,18 +2803,6 @@
             "pointerEvents",
             "requiredFeatures",
             "systemLanguage"
-        ],
-        "a": [
-            "clipPath",
-            "colorInterpolation",
-            "colorRendering",
-            "enableBackground",
-            "mask",
-            "opacity",
-            "pointerEvents",
-            "requiredFeatures",
-            "systemLanguage",
-            "visibility"
         ],
         "circle": [
             "clipPath",
@@ -3622,14 +3108,6 @@
             "y1",
             "y2"
         ],
-        "missing-glyph": [
-            "colorInterpolation",
-            "colorRendering",
-            "d",
-            "enableBackground",
-            "horizAdvX",
-            "vertAdvY"
-        ],
         "radialGradient": [
             "colorInterpolation",
             "colorRendering",
@@ -3782,68 +3260,15 @@
             "result",
             "y"
         ],
-        "glyphRef": [
-            "dx",
-            "dy",
-            "format",
-            "glyphRef",
-            "y"
-        ],
         "filter": [
             "filterRes",
             "filterUnits",
             "primitiveUnits",
             "y"
         ],
-        "hkern": [
-            "g1",
-            "g2",
-            "k",
-            "u1",
-            "u2"
-        ],
-        "vkern": [
-            "g1",
-            "g2",
-            "k",
-            "u1",
-            "u2"
-        ],
-        "font": [
-            "horizAdvX",
-            "horizOriginX",
-            "vertAdvY",
-            "vertOriginX",
-            "vertOriginY"
-        ],
         "feMergeNode": [
             "in",
             "y"
-        ],
-        "audio": [
-            "opacity",
-            "systemLanguage",
-            "visibility"
-        ],
-        "canvas": [
-            "opacity",
-            "systemLanguage",
-            "visibility"
-        ],
-        "iframe": [
-            "opacity",
-            "overflow",
-            "systemLanguage",
-            "visibility"
-        ],
-        "unknown": [
-            "opacity",
-            "systemLanguage"
-        ],
-        "video": [
-            "opacity",
-            "systemLanguage",
-            "visibility"
         ],
         "view": [
             "preserveAspectRatio",
@@ -3851,17 +3276,9 @@
             "viewTarget",
             "zoomAndPan"
         ],
-        "cursor": [
-            "requiredFeatures",
-            "systemLanguage",
-            "y"
-        ],
         "stop": [
             "stopColor",
             "stopOpacity"
-        ],
-        "font-face-format": [
-            "string"
         ],
         "fePointLight": [
             "z",
