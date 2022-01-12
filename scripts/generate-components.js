@@ -10,109 +10,45 @@ const path = require('path');
 const srcPath = '../src/components';
 const attributesPath = './data/attributes.json';
 
-// Based off https://github.com/iandevlin/html-attributes/blob/master/boolean-attributes.json
-const BOOLEAN_PROPERTIES = [
-    'allowFullScreen',
-    'allowPaymentRequest',
-    'async',
-    'autoFocus',
-    'autoPlay',
-    'checked',
-    'controls',
-    'default',
-    'defer',
-    'disabled',
-    'formNoValidate',
-    'hidden',
-    'isMap',
-    'itemScope',
-    'loop',
-    'multiple',
-    'muted',
-    'noModule',
-    'noValidate',
-    'open',
-    'readonly',
-    'required',
-    'reversed',
-    'selected',
-    'typeMustMatch'
-];
-
-// Based off reading through
-// "Some of the DOM attributes supported by React include" section in
-// https://reactjs.org/docs/dom-elements.html
-const NUMERIC_PROPERTIES = [
-    'width',
-    'height',
-    'marginWidth',
-    'marginHeight',
-    'max',
-    'maxLength',
-    'min',
-    'minLength',
-    'rows',
-    'rowSpan',
-    'cols',
-    'colSpan',
-    'size',
-    'step'
-];
 
 const PROP_TYPES = {
-    _default: 'string',
-    style: 'object',
+  _default: 'string',
+  style: 'object',
 };
-BOOLEAN_PROPERTIES.forEach(property => {
-    let capitalizationOptions;
-    if (property.toLowerCase() !== property) {
-        capitalizationOptions = `${property}', '${property.toLowerCase()}', '${property.toUpperCase()}`
-    } else {
-        capitalizationOptions = `${property}', '${property.toUpperCase()}`
-    }
-    PROP_TYPES[property] = (
-        'oneOfType([\n' +
-        `        PropTypes.oneOf(['${capitalizationOptions}']),\n` +
-        '        PropTypes.bool\n' +
-        '     ])'
-    );
-})
-NUMERIC_PROPERTIES.forEach(property => {
-    PROP_TYPES[property] = (
-        'oneOfType([\n' +
-        '        PropTypes.string,\n' +
-        '        PropTypes.number\n' +
-        '     ])'
-    );
-
-})
-
 function bail(message) {
-    console.error('Error: ' + message);
-    process.exit(1);
+  console.error('Error: ' + message);
+  process.exit(1);
 }
 
 function upperCase(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
+  return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 function nameComponent(elementName) {
-    const reservedWords = {
-        'object': 'ObjectEl',
-        'map': 'MapEl'
-    };
+  const reservedWords = {
+    'object': 'ObjectEl',
+    'map': 'MapEl'
+  };
 
-    return reservedWords[elementName] || upperCase(elementName);
+  return reservedWords[elementName] || upperCase(elementName);
 }
 
-function generatePropTypes(element, attributes) {
-    const elements = attributes.elements;
-    // Always add the list of global attributes.
-    const supportedAttributes = elements[element] ?
-        elements[element].concat(elements.Globalattribute) :
-        elements.Globalattribute;
+/**
+ * Generate the prototypes for the SVG element
+ *
+ * @param {*} element the element name
+ * @param {*} attributes attributes, descriptions and types for all SVG elements
+ * @returns
+ */
 
-    return `
+function generatePropTypes(element, attributes) {
+  const elements = attributes.elements;
+  // Always add the list of global attributes.
+  const supportedAttributes = elements[element] ?
+    elements[element].concat(elements.Globalattribute) :
+    elements.Globalattribute;
+
+  return `
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -160,19 +96,19 @@ function generatePropTypes(element, attributes) {
      */
     'aria-*': PropTypes.string,` +
 
-        supportedAttributes.reduce((propTypes, attributeName) => {
-            const attribute = attributes.attributes[attributeName];
-            const propType = PROP_TYPES[attributeName] || PROP_TYPES._default;
-            if (attributeName === 'id') {
-                return propTypes;
-            }
-            return propTypes + `
+    supportedAttributes.reduce((propTypes, attributeName) => {
+      const attribute = attributes.attributes[attributeName];
+      const propType = PROP_TYPES[attributeName] || PROP_TYPES._default;
+      if (attributeName === 'id') {
+        return propTypes;
+      }
+      return propTypes + `
 
     /**
      *${attribute.description ? ' ' + attribute.description : ''}
      */
     '${attributeName}': PropTypes.${propType},`;
-        }, '') + `
+    }, '') + `
 
     /**
      * Object that holds the loading state object coming from dash-renderer
@@ -203,57 +139,66 @@ const obsoleteDoc = element => `
  * as it is not supported by any modern browsers.`;
 
 const customDocs = {
-    basefont: `
+  basefont: `
  * OBSOLETE: <basefont> is included for completeness, but should be avoided
  * as it is only supported by Internet Explorer.`,
-    blink: obsoleteDoc('blink'),
-    command: obsoleteDoc('command'),
-    element: obsoleteDoc('element'),
-    isindex: obsoleteDoc('isindex'),
-    keygen: `
+  blink: obsoleteDoc('blink'),
+  command: obsoleteDoc('command'),
+  element: obsoleteDoc('element'),
+  isindex: obsoleteDoc('isindex'),
+  keygen: `
  * DEPRECATED: <keygen> is included for completeness, but should be avoided
  * as it is not supported by all browsers and may be removed at any time from
  * those that do support it.`,
-    listing: obsoleteDoc('listing') + ' Use <pre> or <code> instead.',
-    marquee: `
+  listing: obsoleteDoc('listing') + ' Use <pre> or <code> instead.',
+  marquee: `
  * DEPRECATED: <marquee> is included for completeness, but should be avoided
  * as browsers may remove it at any time.`,
-    meta: `
+  meta: `
  * CAUTION: <meta> is included for completeness, but generally will not behave
  * as expected since <meta> tags should be static HTML content in the <head> of
  * the document. Dash components are dynamic <body> content.`,
-    multicol: obsoleteDoc('multicol'),
-    nextid: obsoleteDoc('nextid'),
-    output: `
+  multicol: obsoleteDoc('multicol'),
+  nextid: obsoleteDoc('nextid'),
+  output: `
  * CAUTION: <output> is included for completeness, but its typical usage
  * requires the oninput attribute of the enclosing <form> element, which
  * is not accessible to Dash.`,
-    script: `
+  script: `
  * CAUTION: <script> is included for completeness, but you cannot execute
  * JavaScript code by providing it to a <script> element. Use a clientside
  * callback for this purpose instead.`,
-    plaintext: `
+  plaintext: `
  * OBSOLETE: <plaintext> is included for completeness, but should be avoided
  * as browsers may remove it at any time, and its behavior when added
  * dynamically by Dash is not what it would be statically on page load.
  * Use <pre> or <code> instead.`,
-    shadow: `
+  shadow: `
  * DEPRECATED: <shadow> is included for completeness, but should be avoided
  * as it is not supported by all browsers and may be removed at any time from
  * those that do support it.`,
-    spacer: obsoleteDoc('spacer'),
-    title: `
+  spacer: obsoleteDoc('spacer'),
+  title: `
  * CAUTION: <title> is included for completeness, but is not expected to
  * do anything outside of <head>. Dash components are always created in the
  * <body>.`
 };
 
+/**
+ * Generate fully formed React component source code that wraps the given SVG element
+ *
+ * @param {*} Component the component name, upper case
+ * @param {*} element the element name
+ * @param {*} attributes attributes, descriptions and types for all SVG elements
+ * @returns
+ */
+
 function generateComponent(Component, element, attributes) {
-    const propTypes = generatePropTypes(element, attributes);
+  const propTypes = generatePropTypes(element, attributes);
 
-    const customDoc = customDocs[element] ? ('\n *' + customDocs[element] + '\n *') : '';
+  const customDoc = customDocs[element] ? ('\n *' + customDocs[element] + '\n *') : '';
 
-    return `
+  return `
 import React from 'react';
 import PropTypes from 'prop-types';
 import {omit} from 'ramda';
@@ -298,49 +243,56 @@ export default ${Component};
 /**
  * Generate an object with Component names as keys, component definitions as
  * values
+ *
+ * @param {*} componentList Names on components to be generated
+ * @param {*} attributes attributes, descriptions, types of all components
+ * @returns
  */
-function generateComponents(list, attributes) {
-    return list.reduce((componentMap, element) => {
-        const componentName = nameComponent(element);
-        const Component = generateComponent(componentName, element, attributes);
+function generateComponents(componentList, attributes) {
+  return componentList.reduce((componentMap, element) => {
+    const componentName = nameComponent(element);
+    const Component = generateComponent(componentName, element, attributes);
 
-        componentMap[componentName] = Component;
+    componentMap[componentName] = Component;
 
-        return componentMap;
-    }, {});
+    return componentMap;
+  }, {});
 }
 
 /**
  * Writes component definitions to disk.
  */
+
 function writeComponents(components, destination) {
-    console.log(`Writing ${Object.keys(components).length} component files to ${srcPath}.`);
-    let componentPath;
-    for (const Component in components) {
-        componentPath = path.join(destination, `${Component}.react.js`);
-        fs.mkdirSync(path.join(destination), { recursive: true });
-        fs.writeFileSync(componentPath, components[Component]);
-    }
+  console.log(`Writing ${Object.keys(components).length} component files to ${srcPath}.`);
+  let componentPath;
+  for (const Component in components) {
+    componentPath = path.join(destination, `${Component}.react.js`);
+    fs.mkdirSync(path.join(destination), { recursive: true });
+    fs.writeFileSync(componentPath, components[Component]);
+  }
 }
 
 
 // Get first command-line argument
-const listPath = process.argv[2];
+const componentListPath = process.argv[2];
 
-if (!listPath) {
-    bail('Must specify an element list.');
+if (!componentListPath) {
+  bail('Must specify an element list.');
 }
 
-// Read the list of elements
-const list = fs
-    .readFileSync(listPath, 'utf8')
-    .split('\n')
-    .filter(item => Boolean(item));
+// Read the list of elements (skip comments and blank lines)
+
+const componentList = fs
+  .readFileSync(componentListPath, 'utf8')
+  .split('\n')
+  .filter(item => !(item.startsWith('#') || item === ''));
 
 // Get the mapping of attributes to elements
+
 const attributes = JSON.parse(fs.readFileSync(attributesPath, 'utf-8'));
 
-const components = generateComponents(list, attributes);
+const components = generateComponents(componentList, attributes);
 
 writeComponents(components, srcPath);
 
