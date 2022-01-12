@@ -37,11 +37,9 @@
             ]
         },
         "alignmentBaseline": {
-            "0": "?",
-            "1": "?",
-            "2": "?",
-            "3": "?",
             "description": "The alignment-baseline attribute specifies how an object is aligned with respect to its parent",
+            "optional": true,
+            "type": "any",
             "deprecated": false,
             "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/alignment-baseline",
             "elements": [
@@ -467,16 +465,6 @@
                 "glyph",
                 "missing-glyph"
             ]
-        },
-        "decelerate": {
-            "0": "?",
-            "1": "?",
-            "2": "?",
-            "3": "?",
-            "description": "?????",
-            "deprecated": false,
-            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/decelerate",
-            "elements": []
         },
         "descent": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -1275,16 +1263,6 @@
                 "feSpotLight"
             ]
         },
-        "local": {
-            "0": "?",
-            "1": "?",
-            "2": "?",
-            "3": "?",
-            "description": "?????",
-            "deprecated": false,
-            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/local",
-            "elements": []
-        },
         "markerEnd": {
             "description": "The marker-end attribute defines the arrowhead or polymarker that will be drawn at the final vertex of the given shape",
             "optional": true,
@@ -1440,16 +1418,6 @@
             "elements": [
                 "feTurbulence"
             ]
-        },
-        "offset": {
-            "0": "?",
-            "1": "?",
-            "2": "?",
-            "3": "?",
-            "description": "?????",
-            "deprecated": false,
-            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/offset",
-            "elements": []
         },
         "opacity": {
             "description": "The opacity attribute specifies the transparency of an object or of a group of objects, that is, the degree to which the background behind the element is overlaid",
@@ -1799,16 +1767,6 @@
                 "symbol"
             ]
         },
-        "renderingIntent": {
-            "0": "?",
-            "1": "?",
-            "2": "?",
-            "3": "?",
-            "description": "?????",
-            "deprecated": false,
-            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/rendering-intent",
-            "elements": []
-        },
         "repeatCount": {
             "description": "The repeatCount attribute indicates the number of times an animation will take place",
             "optional": true,
@@ -1836,16 +1794,6 @@
                 "animateTransform",
                 "set"
             ]
-        },
-        "requiredExtensions": {
-            "0": "?",
-            "1": "?",
-            "2": "?",
-            "3": "?",
-            "description": "?????",
-            "deprecated": false,
-            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/requiredExtensions",
-            "elements": []
         },
         "requiredFeatures": {
             "description": "Deprecated: This feature is no longer recommended",
@@ -2033,16 +1981,6 @@
                 "feSpecularLighting",
                 "feSpotLight"
             ]
-        },
-        "speed": {
-            "0": "?",
-            "1": "?",
-            "2": "?",
-            "3": "?",
-            "description": "?????",
-            "deprecated": false,
-            "pageURL": "https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/speed",
-            "elements": []
         },
         "spreadMethod": {
             "description": "The spreadMethod attribute determines how a shape is filled beyond the defined edges of a gradient",

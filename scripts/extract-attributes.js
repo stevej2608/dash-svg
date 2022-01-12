@@ -91,6 +91,13 @@ const fetchPage = async function(pageURL) {
   }
   return page
 }
+/**
+ * Extract the type information for the given attribute from
+ * React DefinitelyTyped react/index.d.ts
+ *
+ * @param {string} attr, eg alignment-baseline
+ * @returns
+ */
 
 const getAttributeType = async function(attr) {
   try {
@@ -105,8 +112,8 @@ const getAttributeType = async function(attr) {
     return {optional: false, type: definition[1]}
 
   } catch (error) {
-    console.log("Error reading attribute type for %s", attr)
-    return "????"
+    console.log('Attribute "%s" missing from DefinitelyTyped react/index.d.ts', attr)
+    return {optional: true, type: "any"}
   }
 
 }
@@ -124,7 +131,7 @@ const getAttributeType = async function(attr) {
 const getAttributeDetails = async function(attr, href) {
   const pageURL = 'https://developer.mozilla.org' + href;
 
-  console.log(pageURL)
+  // console.log(pageURL)
 
   let  description = '?????'
   let  deprecated = false
@@ -145,10 +152,6 @@ const getAttributeDetails = async function(attr, href) {
 
       usedByElements.each((idx, el) => {
         const text = $(el).text().replace(/[<>]/g, '');
-        console.log('Element %s', text)
-        if (text === "0" || text === "1") {
-          console.log('XXXXXXXXXXXXXXX')
-        }
         elements.push(text)
       });
     }
@@ -180,14 +183,23 @@ const extractAttributes = async function($) {
       // console.log(cheerio(attr).text())
 
       const svgAttribute = str(cheerio(attr).text())
-        .trim()
-        // Convert e.g. `accept-charset` to `acceptCharset`
-        .camelize()
-        .toString();
+      .trim()
+      // Convert e.g. `accept-charset` to `acceptCharset`
+      .camelize()
+      .toString();
+
+      if (attr.attribs && attr.attribs.class === 'page-not-created') {
+        console.log('Missing details "%s"', svgAttribute)
+        return;
+      }
 
       // Ensure attribute is supported by React
       if (!supportedAttributes.includes(svgAttribute)) {
         return;
+      }
+
+      if (svgAttribute === 'decelerate'){
+        console.log('XXXXXXXXXXXXXXX')
       }
 
       const pageUrl = attr.attribs.href
@@ -204,10 +216,7 @@ const extractAttributes = async function($) {
 
   for (const i in attributeList) {
     const attr = attributeList[i]
-    console.log("[%s] %s", attr.svgAttribute, attr.pageUrl)
     const details = await getAttributeDetails(attr.svgAttribute, attr.pageUrl)
-    // console.log("[%s]\n%s\n", attr.svgAttribute, details.desc)
-
     attributes[attr.svgAttribute] = details
   }
 
