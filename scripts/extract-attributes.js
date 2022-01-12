@@ -197,7 +197,7 @@ const extractAttributes = async function($) {
 
   const attributeList = [];
 
-  "abcdefghijklmnopqrstuvwzyz".split('').forEach(letter => {
+  "abcdefghijklmnopqrstuvwxyz".split('').forEach(letter => {
     const attributes = $(`h3[id=${letter}]`).next().find('a')
     attributes.each((i, attr) => {
       // console.log(cheerio(attr).text())
@@ -216,10 +216,6 @@ const extractAttributes = async function($) {
       // Ensure attribute is supported by React
       if (!supportedAttributes.includes(svgAttribute)) {
         return;
-      }
-
-      if (svgAttribute === 'decelerate'){
-        console.log('XXXXXXXXXXXXXXX')
       }
 
       const pageUrl = attr.attribs.href
@@ -280,6 +276,12 @@ const extractAllAttributes = async function() {
 
     const elements = extractElements(attributes);
 
+    // Add SVG <desc> and <metadata> elements. These elements have no attributes and so will not have
+    // been discovered by scraping the attributes on developer.mozilla.org
+
+    elements.desc = []
+    elements.metadata = []
+
     const out = {
       attributes,
       elements
@@ -287,6 +289,7 @@ const extractAllAttributes = async function() {
 
     // Print out JSON with 4-space indentation formatting.
     // http://stackoverflow.com/a/11276104
+
     const tabWidth = 4;
     fs.writeFileSync(dataPath, JSON.stringify(out, null, tabWidth));
     console.log('Done')
