@@ -168,7 +168,7 @@ const getAttributeDetails = async function(attr, href) {
       const $ = cheerio.load(html);
 
       deprecated = $('div.notecard.deprecated').length === 1? true: false
-      description = $('p', 'article').text().split('.')[0]
+      description = $('p', 'article').text()
 
       type = await getAttributeType(attr)
       const usedByElements = $('p:contains("You can use this attribute")').next().find('code')

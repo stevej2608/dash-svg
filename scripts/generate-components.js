@@ -58,11 +58,12 @@ function nameComponent(elementName) {
     const words = desc.replace(/\s/, ' ').split(' ')
 
     const lines = words.reduce((lines, word) => {
+      const lineWidth = 60
       let line = lines.pop()
       line += ` ${word}`
       lines.push(line)
-      if (line.length > 60) {
-        lines.push('      * ')
+      if (line.length > lineWidth) {
+        lines.push('     * ')
       }
       return lines
     }, ['']);
@@ -78,8 +79,8 @@ function nameComponent(elementName) {
     let PROP_TYPE = `
 
     /**
-    *${description ? ' ' + foldDescription(description) : ''}
-    */
+     *${description ? ' ' + foldDescription(description) : ''}
+     */
     ${attribute}: PropTypes.`
 
     if (type === 'string') {
