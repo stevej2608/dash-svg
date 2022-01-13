@@ -46,11 +46,6 @@ G.propTypes = {
      */
     'children': PropTypes.node,
 
-     /**
-      *  The fill attribute has two different meanings
-      */
-    fill: PropTypes.string,
-
     /**
      * An integer that represents the number of times
      * that this element has been clicked on.
@@ -86,60 +81,71 @@ G.propTypes = {
      */
     'aria-*': PropTypes.string,
 
-     /**
-      *  The clip-path presentation attribute defines or associates a
+    /**
+    *  The clip-path presentation attribute defines or associates a
       *  clipping path with the element it is related to
-      */
-      clipPath: PropTypes.string,
+    */
+    clipPath: PropTypes.string,
 
-     /**
-      *  The color-interpolation attribute specifies the color space for
+    /**
+    *  The color-interpolation attribute specifies the color space for
       *  gradient interpolations, color animations, and alpha
       *  compositing
-      */
-      colorInterpolation: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    colorInterpolation: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  Deprecated: This feature is no longer recommended
-      */
-      colorRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+    *  Deprecated: This feature is no longer recommended
+    */
+    colorRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  Deprecated: This feature is no longer recommended
-      */
-      enableBackground: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+    *  Deprecated: This feature is no longer recommended
+    */
+    enableBackground: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The mask attribute is a presentation attribute mainly used to
+    /**
+    *  The mask attribute is a presentation attribute mainly used to
       *  bind a given <mask> element with the element the attribute
       *  belongs to
-      */
-      mask: PropTypes.string,
+    */
+    mask: PropTypes.string,
 
-     /**
-      *  The opacity attribute specifies the transparency of an object
+    /**
+    *  The opacity attribute specifies the transparency of an object
       *  or of a group of objects, that is, the degree to which
       *  the background behind the element is overlaid
-      */
-      opacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    opacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The pointer-events attribute is a presentation attribute that
+    /**
+    *  The pointer-events attribute is a presentation attribute that
       *  allows defining whether or when an element may be the
       *  target of a mouse event
-      */
-      pointerEvents: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    pointerEvents: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  Deprecated: This feature is no longer recommended
-      */
-      requiredFeatures: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+    *  Deprecated: This feature is no longer recommended
+    */
+    requiredFeatures: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The systemLanguage attribute represents a list of supported language
+    /**
+    *  The systemLanguage attribute represents a list of supported language
       *  tags
-      */
-      systemLanguage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    systemLanguage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /**
+    *  The fill attribute has two different meanings
+    */
+    fill: PropTypes.string,
+
+    /**
+    *  Often used with CSS to style elements with common properties.
+      * 
+    */
+    className: PropTypes.string,
 
 
     /**

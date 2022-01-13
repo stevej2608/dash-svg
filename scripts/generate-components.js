@@ -10,6 +10,22 @@ const path = require('path');
 const srcPath = '../src/lib/components';
 const attributesPath = './data/attributes.json';
 
+const GLOBAL_ATTRIBUTES = {
+  "className": {
+    "description": "Often used with CSS to style elements with common properties.",
+    "isRequired": false,
+    "type": "string",
+    },
+}
+
+const SVG_ADDITIONAL_ATTRIBUTES = {
+  "alt": {
+    "description": "Alternative text in case an image can't be displayed.",
+    "isRequired": false,
+    "type": "string",
+    },
+}
+
 function bail(message) {
   console.error('Error: ' + message);
   process.exit(1);
@@ -36,7 +52,7 @@ function nameComponent(elementName) {
  * @returns
  */
 
- function makePropTypes(attributes, attributeDatabase) {
+ function makePropTypes(elementAttributes, attributeDatabase) {
 
   const foldDescription = (desc) => {
     const words = desc.replace(/\s/, ' ').split(' ')
@@ -54,38 +70,37 @@ function nameComponent(elementName) {
     return lines.join('\n')
   }
 
+  const propTypes = []
+  for (const attribute of elementAttributes) {
+    const { description, type } = attributeDatabase[attribute]
+    console.log(`type "${type}"`)
 
-   const propTypes  = []
-   for (const attribute of attributes) {
-     const {description, type } = attributeDatabase[attribute]
-     console.log(`type "${type}"`)
+    let PROP_TYPE = `
 
-     let PROP_TYPE = `
+    /**
+    *${description ? ' ' + foldDescription(description) : ''}
+    */
+    ${attribute}: PropTypes.`
 
-     /**
-      *${description ? ' ' + foldDescription(description) : ''}
-      */
-      ${attribute}: PropTypes.`
-
-     if (type === 'string') {
+    if (type === 'string') {
       PROP_TYPE += 'string';
-     } else
-     if (type === 'number|string') {
+    } else
+      if (type === 'number|string') {
         PROP_TYPE += 'oneOfType([PropTypes.string, PropTypes.number])'
-     }
-     else {
-     PROP_TYPE +=
-              'oneOfType([\n' +
-              `        PropTypes.oneOf(['${type}']),\n` +
-              '        PropTypes.bool\n' +
-              '     ])'
-     }
+      }
+      else {
+        PROP_TYPE +=
+          'oneOfType([\n' +
+          `        PropTypes.oneOf(['${type}']),\n` +
+          '        PropTypes.bool\n' +
+          '     ])'
+      }
 
-     if (attribute.isRequired) {
+    if (attribute.isRequired) {
       PROP_TYPE += '.isRequired'
-     }
+    }
 
-     propTypes.push(PROP_TYPE)
+    propTypes.push(PROP_TYPE)
 
    }
 
@@ -102,9 +117,23 @@ function nameComponent(elementName) {
  */
 
 function generatePropTypes(element, attributes) {
-  const elements = attributes.elements;
 
-  const PROP_TYPES = makePropTypes(elements[element], attributes.attributes)
+  const allAttributes = {...attributes.attributes, ...GLOBAL_ATTRIBUTES, ...SVG_ADDITIONAL_ATTRIBUTES}
+
+  // Create a list of attributes for this element. It's the
+  // aggregate of the attributes scraped from developer.mozilla.org
+  // and hand picked GLOBAL_ATTRIBUTES
+
+  const elements = attributes.elements[element];
+  const elementAttributes = [...elements, ...Object.keys(GLOBAL_ATTRIBUTES)];
+
+  // Add a few more hand picked attributes for the <svg/> element
+
+  if (element === 'svg') {
+    elementAttributes.push(...Object.keys(SVG_ADDITIONAL_ATTRIBUTES))
+  }
+
+  const PROP_TYPES = makePropTypes(elementAttributes, allAttributes)
 
   console.log('TODO: Always add the list of global attributes')
 
@@ -339,6 +368,11 @@ const componentList = fs
 // Get the mapping of attributes to elements
 
 const attributes = JSON.parse(fs.readFileSync(attributesPath, 'utf-8'));
+
+// The attribute/element pages on developer.mozilla.org are
+// incomplete. Add a few omissions
+
+attributes.elements.g.push('fill')
 
 const components = generateComponents(componentList, attributes);
 

@@ -81,198 +81,204 @@ Path.propTypes = {
      */
     'aria-*': PropTypes.string,
 
-     /**
-      *  The clip-path presentation attribute defines or associates a
+    /**
+    *  The clip-path presentation attribute defines or associates a
       *  clipping path with the element it is related to
-      */
-      clipPath: PropTypes.string,
+    */
+    clipPath: PropTypes.string,
 
-     /**
-      *  The color-interpolation attribute specifies the color space for
+    /**
+    *  The color-interpolation attribute specifies the color space for
       *  gradient interpolations, color animations, and alpha
       *  compositing
-      */
-      colorInterpolation: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    colorInterpolation: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  Deprecated: This feature is no longer recommended
-      */
-      colorRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+    *  Deprecated: This feature is no longer recommended
+    */
+    colorRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The d attribute defines a path to be drawn
-      */
-      d: PropTypes.string,
+    /**
+    *  The d attribute defines a path to be drawn
+    */
+    d: PropTypes.string,
 
-     /**
-      *  The fill attribute has two different meanings
-      */
-      fill: PropTypes.string,
+    /**
+    *  The fill attribute has two different meanings
+    */
+    fill: PropTypes.string,
 
-     /**
-      *  The fill-opacity attribute is a presentation attribute defining
+    /**
+    *  The fill-opacity attribute is a presentation attribute defining
       *  the opacity of the paint server (color, gradient, pattern,
       *  etc) applied to a shape
-      */
-      fillOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    fillOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The fill-rule attribute is a presentation attribute defining
+    /**
+    *  The fill-rule attribute is a presentation attribute defining
       *  the algorithm to use to determine the inside part of
       *  a shape
-      */
-      fillRule: PropTypes.oneOfType([
+    */
+    fillRule: PropTypes.oneOfType([
         PropTypes.oneOf(['"evenodd"|"inherit"|"nonzero"']),
         PropTypes.bool
      ]),
 
-     /**
-      *  The marker-end attribute defines the arrowhead or polymarker
+    /**
+    *  The marker-end attribute defines the arrowhead or polymarker
       *  that will be drawn at the final vertex of the given shape
       * 
-      */
-      markerEnd: PropTypes.string,
+    */
+    markerEnd: PropTypes.string,
 
-     /**
-      *  The marker-mid attribute defines the arrowhead or polymarker
+    /**
+    *  The marker-mid attribute defines the arrowhead or polymarker
       *  that will be drawn at all interior vertices of the given
       *  shape
-      */
-      markerMid: PropTypes.string,
+    */
+    markerMid: PropTypes.string,
 
-     /**
-      *  The marker-start attribute defines the arrowhead or polymarker
+    /**
+    *  The marker-start attribute defines the arrowhead or polymarker
       *  that will be drawn at the first vertex of the given shape
       * 
-      */
-      markerStart: PropTypes.string,
+    */
+    markerStart: PropTypes.string,
 
-     /**
-      *  The mask attribute is a presentation attribute mainly used to
+    /**
+    *  The mask attribute is a presentation attribute mainly used to
       *  bind a given <mask> element with the element the attribute
       *  belongs to
-      */
-      mask: PropTypes.string,
+    */
+    mask: PropTypes.string,
 
-     /**
-      *  The opacity attribute specifies the transparency of an object
+    /**
+    *  The opacity attribute specifies the transparency of an object
       *  or of a group of objects, that is, the degree to which
       *  the background behind the element is overlaid
-      */
-      opacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    opacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The paint-order attribute specifies the order that the fill,
+    /**
+    *  The paint-order attribute specifies the order that the fill,
       *  stroke, and markers of a given shape or text element
       *  are painted
-      */
-      paintOrder: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    paintOrder: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The pathLength attribute lets authors specify a total length
+    /**
+    *  The pathLength attribute lets authors specify a total length
       *  for the path, in user units
-      */
-      pathLength: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    pathLength: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The pointer-events attribute is a presentation attribute that
+    /**
+    *  The pointer-events attribute is a presentation attribute that
       *  allows defining whether or when an element may be the
       *  target of a mouse event
-      */
-      pointerEvents: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    pointerEvents: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  Deprecated: This feature is no longer recommended
-      */
-      requiredFeatures: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+    *  Deprecated: This feature is no longer recommended
+    */
+    requiredFeatures: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The shape-rendering attribute provides hints to the renderer
+    /**
+    *  The shape-rendering attribute provides hints to the renderer
       *  about what tradeoffs to make when rendering shapes like
       *  paths, circles, or rectangles
-      */
-      shapeRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    shapeRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The stroke attribute is a presentation attribute defining the
+    /**
+    *  The stroke attribute is a presentation attribute defining the
       *  color (or any SVG paint servers like gradients or patterns)
       *  used to paint the outline of the shape;Note: As a presentation
       *  attribute stroke can be used as a CSS property
-      */
-      stroke: PropTypes.string,
+    */
+    stroke: PropTypes.string,
 
-     /**
-      *  The stroke-dasharray attribute is a presentation attribute defining
+    /**
+    *  The stroke-dasharray attribute is a presentation attribute defining
       *  the pattern of dashes and gaps used to paint the outline
       *  of the shape;Note: As a presentation attribute, stroke-dasharray
       *  can be used as a CSS property
-      */
-      strokeDasharray: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    strokeDasharray: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The stroke-dashoffset attribute is a presentation attribute defining
+    /**
+    *  The stroke-dashoffset attribute is a presentation attribute defining
       *  an offset on the rendering of the associated dash array
       * 
-      */
-      strokeDashoffset: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    strokeDashoffset: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The stroke-linecap attribute is a presentation attribute defining
+    /**
+    *  The stroke-linecap attribute is a presentation attribute defining
       *  the shape to be used at the end of open subpaths when
       *  they are stroked
-      */
-      strokeLinecap: PropTypes.oneOfType([
+    */
+    strokeLinecap: PropTypes.oneOfType([
         PropTypes.oneOf(['"butt"|"inherit"|"round"|"square"']),
         PropTypes.bool
      ]),
 
-     /**
-      *  The stroke-linejoin attribute is a presentation attribute defining
+    /**
+    *  The stroke-linejoin attribute is a presentation attribute defining
       *  the shape to be used at the corners of paths when they
       *  are stroked
-      */
-      strokeLinejoin: PropTypes.oneOfType([
+    */
+    strokeLinejoin: PropTypes.oneOfType([
         PropTypes.oneOf(['"bevel"|"inherit"|"miter"|"round"']),
         PropTypes.bool
      ]),
 
-     /**
-      *  The stroke-miterlimit attribute is a presentation attribute defining
+    /**
+    *  The stroke-miterlimit attribute is a presentation attribute defining
       *  a limit on the ratio of the miter length to the stroke-width
       *  used to draw a miter join
-      */
-      strokeMiterlimit: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    strokeMiterlimit: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The stroke-opacity attribute is a presentation attribute defining
+    /**
+    *  The stroke-opacity attribute is a presentation attribute defining
       *  the opacity of the paint server (color, gradient, pattern,
       *  etc) applied to the stroke of a shape
-      */
-      strokeOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    strokeOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The stroke-width attribute is a presentation attribute defining
+    /**
+    *  The stroke-width attribute is a presentation attribute defining
       *  the width of the stroke to be applied to the shape
-      */
-      strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The systemLanguage attribute represents a list of supported language
+    /**
+    *  The systemLanguage attribute represents a list of supported language
       *  tags
-      */
-      systemLanguage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    systemLanguage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The vector-effect property specifies the vector effect to use
+    /**
+    *  The vector-effect property specifies the vector effect to use
       *  when drawing an object
-      */
-      vectorEffect: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    vectorEffect: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The visibility attribute lets you control the visibility of graphical
+    /**
+    *  The visibility attribute lets you control the visibility of graphical
       *  elements
-      */
-      visibility: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    visibility: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /**
+    *  Often used with CSS to style elements with common properties.
+      * 
+    */
+    className: PropTypes.string,
 
 
     /**

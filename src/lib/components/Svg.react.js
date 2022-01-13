@@ -42,16 +42,6 @@ Svg.propTypes = {
     'id': PropTypes.string,
 
     /**
-     * Often used with CSS to style elements with common properties.
-     */
-    'className': PropTypes.string,
-
-    /**
-     * Alternative text in case an image can't be displayed.
-     */
-    'alt': PropTypes.string,
-
-    /**
      * The children of this component
      */
     'children': PropTypes.node,
@@ -91,111 +81,122 @@ Svg.propTypes = {
      */
     'aria-*': PropTypes.string,
 
-     /**
-      *  Deprecated: This feature is no longer recommended
-      */
-      baseProfile: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+    *  Deprecated: This feature is no longer recommended
+    */
+    baseProfile: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  Deprecated: This feature is no longer recommended
-      */
-      clip: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+    *  Deprecated: This feature is no longer recommended
+    */
+    clip: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The clip-path presentation attribute defines or associates a
+    /**
+    *  The clip-path presentation attribute defines or associates a
       *  clipping path with the element it is related to
-      */
-      clipPath: PropTypes.string,
+    */
+    clipPath: PropTypes.string,
 
-     /**
-      *  The color-interpolation attribute specifies the color space for
+    /**
+    *  The color-interpolation attribute specifies the color space for
       *  gradient interpolations, color animations, and alpha
       *  compositing
-      */
-      colorInterpolation: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    colorInterpolation: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  Deprecated: This feature is no longer recommended
-      */
-      colorRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+    *  Deprecated: This feature is no longer recommended
+    */
+    colorRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  Deprecated: This feature is no longer recommended
-      */
-      enableBackground: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+    *  Deprecated: This feature is no longer recommended
+    */
+    enableBackground: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The mask attribute is a presentation attribute mainly used to
+    /**
+    *  The mask attribute is a presentation attribute mainly used to
       *  bind a given <mask> element with the element the attribute
       *  belongs to
-      */
-      mask: PropTypes.string,
+    */
+    mask: PropTypes.string,
 
-     /**
-      *  The opacity attribute specifies the transparency of an object
+    /**
+    *  The opacity attribute specifies the transparency of an object
       *  or of a group of objects, that is, the degree to which
       *  the background behind the element is overlaid
-      */
-      opacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    opacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The overflow attribute sets what to do when an element's content
+    /**
+    *  The overflow attribute sets what to do when an element's content
       *  is too big to fit in its block formatting context
-      */
-      overflow: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    overflow: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The pointer-events attribute is a presentation attribute that
+    /**
+    *  The pointer-events attribute is a presentation attribute that
       *  allows defining whether or when an element may be the
       *  target of a mouse event
-      */
-      pointerEvents: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    pointerEvents: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The preserveAspectRatio attribute indicates how an element with
+    /**
+    *  The preserveAspectRatio attribute indicates how an element with
       *  a viewBox providing a given aspect ratio must fit into
       *  a viewport with a different aspect ratio
-      */
-      preserveAspectRatio: PropTypes.string,
+    */
+    preserveAspectRatio: PropTypes.string,
 
-     /**
-      *  Deprecated: This feature is no longer recommended
-      */
-      requiredFeatures: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    /**
+    *  Deprecated: This feature is no longer recommended
+    */
+    requiredFeatures: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The systemLanguage attribute represents a list of supported language
+    /**
+    *  The systemLanguage attribute represents a list of supported language
       *  tags
-      */
-      systemLanguage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    systemLanguage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  Deprecated: This feature is no longer recommended
-      */
-      version: PropTypes.string,
+    /**
+    *  Deprecated: This feature is no longer recommended
+    */
+    version: PropTypes.string,
 
-     /**
-      *  The viewBox attribute defines the position and dimension, in
+    /**
+    *  The viewBox attribute defines the position and dimension, in
       *  user space, of an SVG viewport
-      */
-      viewBox: PropTypes.string,
+    */
+    viewBox: PropTypes.string,
 
-     /**
-      *  The x attribute defines a x-axis coordinate in the user coordinate
+    /**
+    *  The x attribute defines a x-axis coordinate in the user coordinate
       *  system
-      */
-      x: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    x: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  The y attribute defines a y-axis coordinate in the user coordinate
+    /**
+    *  The y attribute defines a y-axis coordinate in the user coordinate
       *  system
-      */
-      y: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    */
+    y: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
-     /**
-      *  Deprecated: This feature is no longer recommended
-      */
-      zoomAndPan: PropTypes.string,
+    /**
+    *  Deprecated: This feature is no longer recommended
+    */
+    zoomAndPan: PropTypes.string,
+
+    /**
+    *  Often used with CSS to style elements with common properties.
+      * 
+    */
+    className: PropTypes.string,
+
+    /**
+    *  Alternative text in case an image can't be displayed.
+    */
+    alt: PropTypes.string,
 
 
     /**
