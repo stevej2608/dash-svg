@@ -4,6 +4,8 @@ Scalable Vector Graphics (SVG) library for Plotly/Dash
 
 ## Usage
 
+![](docs/img/dash-minimal.png)
+
 *Dash clone of create-react-app default project*
 ```
 from  dash_svg import Svg, G, Path, Circle
