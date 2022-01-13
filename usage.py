@@ -1,6 +1,6 @@
-from  dash_svg import Svg, G, Path, Circle
 import dash
-import dash_html_components as html
+from dash import html
+from dash_svg import Svg, G, Path, Circle
 
 app = dash.Dash(__name__)
 
