@@ -7,14 +7,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const srcPath = '../src/components';
+const srcPath = '../src/lib/components';
 const attributesPath = './data/attributes.json';
 
-
-const PROP_TYPES = {
-  _default: 'string',
-  style: 'object',
-};
 function bail(message) {
   console.error('Error: ' + message);
   process.exit(1);
@@ -94,7 +89,7 @@ function nameComponent(elementName) {
 
    }
 
-   return `${propTypes.join(',')};\n`
+   return `${propTypes.join(',')},\n`
  }
 
 

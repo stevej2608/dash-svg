@@ -1,6 +1,11 @@
-/* eslint-disable import/prefer-default-export */
-import DashSvg from './components/DashSvg.react';
+import Circle from './components/Circle.react';
+import G from './components/G.react';
+import Path from './components/Path.react';
+import Svg from './components/Svg.react';
 
 export {
-    DashSvg
+    Circle,
+    G,
+    Path,
+    Svg
 };

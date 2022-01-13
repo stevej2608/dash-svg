@@ -7,7 +7,7 @@
 const fs = require('fs');
 const path = require('path')
 
-const srcPath = '../src';
+const srcPath = '../src/lib';
 const componentPath = './components';
 const indexFileName = 'index.js';
 
