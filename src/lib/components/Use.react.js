@@ -4,18 +4,18 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * Circle is a wrapper for the <circle> SVG element.
+ * Use is a wrapper for the <use> SVG element.
  * For detailed attribute info see:
- * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle
+ * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/use
  */
-const Circle = (props) => {
+const Use = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
     }
 
     return (
-        <circle
+        <use
             onClick={() => props.setProps({
                 n_clicks: props.n_clicks + 1,
                 n_clicks_timestamp: Date.now()
@@ -24,16 +24,16 @@ const Circle = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </circle>
+        </use>
     );
 };
 
-Circle.defaultProps = {
+Use.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-Circle.propTypes = {
+Use.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -162,163 +162,6 @@ Circle.propTypes = {
     colorRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The cx attribute define the x-axis coordinate of a center point.You
-     *  can use this attribute with the following SVG elements:For
-     *  <circle>, cx defines the x-axis coordinate of the center
-     *  of the shape.Note: Starting with SVG2 cx, is a Geometry
-     *  Property, meaning this attribute can also be used as CSS
-     *  property for circles.For <ellipse>, cx defines the x-axis
-     *  coordinate of the center of the shape.Note: Starting with
-     *  SVG2 cx, is a Geometry Property, meaning this attribute
-     *  can also be used as CSS property for ellipses.For <radialGradient>,
-     *  cx defines the x-axis coordinate of the end circle for
-     *  the radial gradient.
-     */
-    cx: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  The cy attribute define the y-axis coordinate of a center point.You
-     *  can use this attribute with the following SVG elements:For
-     *  <circle>, cy defines the y-axis coordinate of the center
-     *  of the shape.Note: Starting with SVG2, cy is a Geometry
-     *  Property meaning this attribute can also be used as a
-     *  CSS property for circles.For <ellipse>, cy defines the
-     *  y-axis coordinate of the center of the shape.Note: Starting
-     *  with SVG2, cy is a Geometry Property meaning this attribute
-     *  can also be used as a CSS property for ellipses.For <radialGradient>,
-     *  cy defines the y-axis coordinate of the end circle for
-     *  the radial gradient.
-     */
-    cy: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  The fill attribute has two different meanings. For shapes and
-     *  text it's a presentation attribute that defines the color
-     *  (or any SVG paint servers like gradients or patterns)
-     *  used to paint the element; for animation it defines the
-     *  final state of the animation.You can use this attribute
-     *  with the following SVG elements:For animation, these elements
-     *  are using this attribute: <animate>, <animateColor>, <animateMotion>,
-     *  <animateTransform>, and <set>.Warning: As of SVG2 <altGlyph>
-     *  is deprecated and shouldn't be used.For <altGlyph>, fill
-     *  is a presentation attribute that defines the color of
-     *  the glyph.Note: As a presentation attribute fill can be
-     *  used as a CSS property.For <animate>, fill defines the
-     *  final state of the animation.Warning: As of SVG Animation
-     *  2 <animateColor> is deprecated and shouldn't be used.
-     *  Use <animate> instead.For <animateColor>, fill defines
-     *  the final state of the animation.For <animateMotion>,
-     *  fill defines the final state of the animation.For <animateTransform>,
-     *  fill defines the final state of the animation.For <circle>,
-     *  fill is a presentation attribute that defines the color
-     *  of the circle.Note: As a presentation attribute fill can
-     *  be used as a CSS property.For <ellipse>, fill is a presentation
-     *  attribute that defines the color of the ellipse.Note:
-     *  As a presentation attribute fill can be used as a CSS
-     *  property.For <path>, fill is a presentation attribute
-     *  that defines the color of the interior of the shape. (Interior
-     *  is define by the fill-rule attribute)Note: As a presentation
-     *  attribute fill can be used as a CSS property.For <polygon>,
-     *  fill is a presentation attribute that defines the color
-     *  of the interior of the shape. (Interior is define by the
-     *  fill-rule attribute)Note: As a presentation attribute
-     *  fill can be used as a CSS property.For <polyline>, fill
-     *  is a presentation attribute that defines the color of
-     *  the interior of the shape. (Interior is define by the
-     *  fill-rule attribute)Note: As a presentation attribute
-     *  fill can be used as a CSS property.For <rect>, fill is
-     *  a presentation attribute that defines the color of the
-     *  rectangle.Note: As a presentation attribute fill can be
-     *  used as a CSS property.For <set>, fill defines the final
-     *  state of the animation.For <text>, fill is a presentation
-     *  attribute that defines what the color of the text.Note:
-     *  As a presentation attribute fill can be used as a CSS
-     *  property.For <textPath>, fill is a presentation attribute
-     *  that defines the color of the text.Note: As a presentation
-     *  attribute fill can be used as a CSS property.Warning:
-     *  As of SVG2 <tref> is deprecated and shouldn't be used.For
-     *  <tref>, fill is a presentation attribute that defines
-     *  the color of the text.Note: As a presentation attribute
-     *  fill can be used as a CSS property.For <tspan>, fill is
-     *  a presentation attribute that defines the color of the
-     *  text.Note: As a presentation attribute fill can be used
-     *  as a CSS property.BCD tables only load in the browserNote:
-     *  For information on using the context-fill (and context-stroke)
-     *  values from HTML documents, see the documentation for
-     *  the non-standard -moz-context-properties property.
-     */
-    fill: PropTypes.string,
-
-    /**
-     *  The fill-opacity attribute is a presentation attribute defining
-     *  the opacity of the paint server (color, gradient, pattern,
-     *  etc) applied to a shape.Note: As a presentation attribute
-     *  fill-opacity can be used as a CSS property.You can use
-     *  this attribute with the following SVG elements:Note: SVG2
-     *  introduces percentage values for fill-opacity, however,
-     *  it is not widely supported yet (See Browser compatibility
-     *  below) as a consequence, it is best practices to set opacity
-     *  with a value in the range [0-1].BCD tables only load in
-     *  the browser
-     */
-    fillOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  The marker-end attribute defines the arrowhead or polymarker
-     *  that will be drawn at the final vertex of the given shape.For
-     *  all shape elements, except <polyline> and <path>, the
-     *  last vertex is the same as the first vertex. In this case,
-     *  if the value of marker-start and marker-end are both not
-     *  none, then two markers will be rendered on that final
-     *  vertex. For <path> elements, for each closed subpath,
-     *  the last vertex is the same as the first vertex. marker-end
-     *  is only rendered on the final vertex of the path data.Note:
-     *  As a presentation attribute, marker-end can be used as
-     *  a CSS property.You can use this attribute with the following
-     *  SVG elements:Indicates that no marker symbol shall be
-     *  drawn at the final vertex.This value is a reference to
-     *  a <marker> element, which will be drawn at the final vertex.
-     *  If the reference is not valid, then no marker will be
-     *  drawn.BCD tables only load in the browser
-     */
-    markerEnd: PropTypes.string,
-
-    /**
-     *  The marker-mid attribute defines the arrowhead or polymarker
-     *  that will be drawn at all interior vertices of the given
-     *  shape.The marker is rendered on every vertex other than
-     *  the first and last vertices of the path data.Note: As
-     *  a presentation attribute, marker-mid can be used as a
-     *  CSS property.You can use this attribute with the following
-     *  SVG elements:Indicates that no marker symbol shall be
-     *  drawn at the given vertices.This value is a reference
-     *  to a <marker> element, which will be drawn at the given
-     *  vertices. If the reference is not valid, then no marker
-     *  will be drawn.BCD tables only load in the browser
-     */
-    markerMid: PropTypes.string,
-
-    /**
-     *  The marker-start attribute defines the arrowhead or polymarker
-     *  that will be drawn at the first vertex of the given shape.For
-     *  all shape elements, except <polyline> and <path>, the
-     *  last vertex is the same as the first vertex. In this case,
-     *  if the value of marker-start and marker-end are both not
-     *  none, then two markers will be rendered on that final
-     *  vertex. For <path> elements, for each closed subpath,
-     *  the last vertex is the same as the first vertex. marker-start
-     *  is only rendered on the first vertex of the path data.Note:
-     *  As a presentation attribute, marker-start can be used
-     *  as a CSS property.You can use this attribute with the
-     *  following SVG elements:Indicates that no marker symbol
-     *  shall be drawn at the first vertex.This value is a reference
-     *  to a <marker> element, which will be drawn at the first
-     *  vertex. If the reference is not valid, then no marker
-     *  will be drawn.BCD tables only load in the browser
-     */
-    markerStart: PropTypes.string,
-
-    /**
      *  The mask attribute is a presentation attribute mainly used to
      *  bind a given <mask> element with the element the attribute
      *  belongs to.Note: As a presentation attribute mask can
@@ -346,54 +189,6 @@ Circle.propTypes = {
     opacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The paint-order attribute specifies the order that the fill,
-     *  stroke, and markers of a given shape or text element are
-     *  painted.Note: As a presentation attribute, paint-order
-     *  can be used as a CSS property.You can use this attribute
-     *  with the following SVG elements:This value indicates that
-     *  the fill will be painted first, then the stroke, and finally
-     *  the markers.The order of these three keywords indicates
-     *  the order in which the painting happens, from left to
-     *  right. If any of the three painting components is omitted,
-     *  they will be painted in their default order after the
-     *  specified components. For example, using stroke is equivalent
-     *  to stroke fill markers.The example would be rendered as
-     *  follows:
-  
-The stroke under effect could be achieved
-     *  via the following CSS property:BCD tables only load in
-     *  the browser
-     */
-    paintOrder: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  The pathLength attribute lets authors specify a total length
-     *  for the path, in user units. This value is then used to
-     *  calibrate the browser's distance calculations with those
-     *  of the author, by scaling all distance computations using
-     *  the ratio pathLength/(computed value of path length).This
-     *  can affect the actual rendered lengths of paths; including
-     *  text paths, animation paths, and various stroke operations.
-     *  Basically, all computations that require the length of
-     *  the path. stroke-dasharray, for example, will assume the
-     *  start of the path being 0 and the end point the value defined
-     *  in the pathLength attribute.You can use this attribute
-     *  with the following SVG elements:For <circle>, pathLength
-     *  lets authors specify a total length for the circle, in
-     *  user units.For <ellipse>, pathLength lets authors specify
-     *  a total length for the ellipse, in user units.For <line>,
-     *  pathLength lets authors specify a total length for the
-     *  line, in user units.For <path>, pathLength lets authors
-     *  specify a total length for the path, in user units.For
-     *  <polygon>, pathLength lets authors specify a total length
-     *  for the shape, in user units.For <polyline>, pathLength
-     *  lets authors specify a total length for the shape, in
-     *  user units.For <rect>, pathLength lets authors specify
-     *  a total length for the rectangle, in user units.
-     */
-    pathLength: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
      *  The pointer-events attribute is a presentation attribute that
      *  allows defining whether or when an element may be the
      *  target of a mouse event.Note: As a presentation attribute
@@ -404,23 +199,6 @@ The stroke under effect could be achieved
      *  in the browser
      */
     pointerEvents: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  The r attribute defines the radius of a circle.You can use this
-     *  attribute with the following SVG elements:For <circle>,
-     *  r defines the radius of the circle and therefor its size.
-     *  With a value lower or equal to zero the circle won't be
-     *  drawn at all.Note: Starting with SVG2, r is a Geometry
-     *  Property meaning this attribute can also be used as a
-     *  CSS property for circles.For <radialGradient>, r defines
-     *  the radius of the end circle for the radial gradient.The
-     *  gradient will be drawn such that the 100% gradient stop
-     *  is mapped to the perimeter of this end circle. A value
-     *  of lower or equal to zero will cause the area to be painted
-     *  as a single color using the color and opacity of the last
-     *  gradient <stop>.
-     */
-    r: PropTypes.string,
 
     /**
      *  Deprecated: This feature is no longer recommended. Though some
@@ -542,102 +320,6 @@ The stroke under effect could be achieved
     requiredFeatures: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The shape-rendering attribute provides hints to the renderer
-     *  about what tradeoffs to make when rendering shapes like
-     *  paths, circles, or rectangles.Note: As a presentation
-     *  attribute, shape-rendering can be used as a CSS property.You
-     *  can use this attribute with the following SVG elements:This
-     *  value indicates that the user agent shall make appropriate
-     *  tradeoffs to balance speed, crisp edges and geometric
-     *  precision, but with geometric precision given more importance
-     *  than speed and crisp edges.This value indicates that the
-     *  user agent shall emphasize rendering speed over geometric
-     *  precision and crisp edges. This option will sometimes
-     *  cause the user agent to turn off shape anti-aliasing.This
-     *  value indicates that the user agent shall attempt to emphasize
-     *  the contrast between clean edges of artwork over rendering
-     *  speed and geometric precision. To achieve crisp edges,
-     *  the user agent might turn off anti-aliasing for all lines
-     *  and curves or possibly just for straight lines which are
-     *  close to vertical or horizontal. Also, the user agent
-     *  might adjust line positions and line widths to align edges
-     *  with device pixels.Indicates that the user agent shall
-     *  emphasize geometric precision over speed and crisp edges.BCD
-     *  tables only load in the browser
-     */
-    shapeRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  The stroke attribute is a presentation attribute defining the
-     *  color (or any SVG paint servers like gradients or patterns)
-     *  used to paint the outline of the shape;Note: As a presentation
-     *  attribute stroke can be used as a CSS property.You can
-     *  use this attribute with the following SVG elements:BCD
-     *  tables only load in the browserNote: For information on
-     *  using the context-stroke (and context-fill) values from
-     *  HTML documents, see the documentation for the non-standard
-     *  -moz-context-properties property.
-     */
-    stroke: PropTypes.string,
-
-    /**
-     *  The stroke-dasharray attribute is a presentation attribute defining
-     *  the pattern of dashes and gaps used to paint the outline
-     *  of the shape;Note: As a presentation attribute, stroke-dasharray
-     *  can be used as a CSS property.You can use this attribute
-     *  with the following SVG elements:A list of comma and/or
-     *  white space separated <length>s and <percentage>s that
-     *  specify the lengths of alternating dashes and gaps.If
-     *  an odd number of values is provided, then the list of
-     *  values is repeated to yield an even number of values.
-     *  Thus, 5,3,2 is equivalent to 5,3,2,5,3,2.BCD tables only
-     *  load in the browser
-     */
-    strokeDasharray: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  The stroke-dashoffset attribute is a presentation attribute defining
-     *  an offset on the rendering of the associated dash array.Note:
-     *  As a presentation attribute stroke-dashoffset can be used
-     *  as a CSS property.You can use this attribute with the
-     *  following SVG elements:The offset is usually expressed
-     *  in user units resolved against the pathLength but if a
-     *  <percentage> is used, the value is resolved as a percentage
-     *  of the current viewport.BCD tables only load in the browser
-     * 
-     */
-    strokeDashoffset: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  The stroke-opacity attribute is a presentation attribute defining
-     *  the opacity of the paint server (color, gradient, pattern,
-     *  etc) applied to the stroke of a shape.Note: As a presentation
-     *  attribute stroke-opacity can be used as a CSS property.You
-     *  can use this attribute with the following SVG elements:Note:
-     *  SVG2 introduces percentage values for stroke-opacity,
-     *  however, it is not widely supported yet (See Browser compatibility
-     *  below) as a consequence, it is best practices to set opacity
-     *  with a value in the range [0-1].It's important to know
-     *  that the stroke partially covers the fill of a shape,
-     *  so a stroke with an opacity different than 1 will partially
-     *  show the fill underneath. To avoid this effect, it is
-     *  possible to apply a global opacity with the opacity attribute
-     *  or to put the stroke behind the fill with the paint-order
-     *  attribute.BCD tables only load in the browser
-     */
-    strokeOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  The stroke-width attribute is a presentation attribute defining
-     *  the width of the stroke to be applied to the shape.You
-     *  can use this attribute with the following SVG elements:Note:
-     *  A percentage value is always computed as a percentage
-     *  of the normalized viewBox diagonal length.BCD tables only
-     *  load in the browser
-     */
-    strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
      *  The systemLanguage attribute represents a list of supported language
      *  tags. This list is matched against the language defined
      *  in the user preferences.You can use this attribute with
@@ -725,29 +407,225 @@ The stroke under effect could be achieved
     vectorEffect: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The visibility attribute lets you control the visibility of graphical
-     *  elements. With a value of hidden or collapse the current
-     *  graphics element is invisible.Note: If the visibility
-     *  attribute is set to hidden on a text element, then the
-     *  text is invisible but still takes up space in text layout
-     *  calculations.Depending on the value of attribute pointer-events,
-     *  graphics elements which have their visibility attribute
-     *  set to hidden still might receive events.Note: As a presentation
-     *  attribute, visibility can be used as a CSS property. See
-     *  the css visibility property for more information.You can
-     *  use this attribute with the following SVG elements:This
-     *  value indicates that the element will be painted.This
-     *  value indicates that the element will not be painted.
-     *  Though it is still part of the rendering tree, i.e. it
-     *  may receive pointer events depending on the pointer-events
-     *  attribute, may receive focus depending on the tabindex
-     *  attribute, contributes to bounding box calculations and
-     *  clipping paths, and does affect text layout.This value
-     *  is equal to hidden.The following example toggles the CSS
-     *  visibility of the SVG image path.BCD tables only load
-     *  in the browser
+     *  The x attribute defines a x-axis coordinate in the user coordinate
+     *  system.You can use this attribute with the following SVG
+     *  elements:Warning: As of SVG2 <altGlyph> is deprecated
+     *  and shouldn't be used.For <altGlyph>, x defines the x-axis
+     *  coordinate of the alternate glyph.For <feBlend>, x defines
+     *  the minimum x coordinate for the rendering area of the
+     *  primitive.For <feColorMatrix>, x defines the minimum x
+     *  coordinate for the rendering area of the primitive.For
+     *  <feComponentTransfer>, x defines the minimum x coordinate
+     *  for the rendering area of the primitive.For <feComposite>,
+     *  x defines the minimum x coordinate for the rendering area
+     *  of the primitive.For <feConvolveMatrix>, x defines the
+     *  minimum x coordinate for the rendering area of the primitive.For
+     *  <feDiffuseLighting>, x defines the minimum x coordinate
+     *  for the rendering area of the primitive.For <feDisplacementMap>,
+     *  x defines the minimum x coordinate for the rendering area
+     *  of the primitive.For <feDropShadow>, x defines the minimum
+     *  x coordinate for the rendering area of the primitive.For
+     *  <feFlood>, x defines the minimum x coordinate for the
+     *  rendering area of the primitive.For <feFuncA>, x defines
+     *  the minimum x coordinate for the rendering area of the
+     *  primitive.For <feFuncB>, x defines the minimum x coordinate
+     *  for the rendering area of the primitive.For <feFuncG>,
+     *  x defines the minimum x coordinate for the rendering area
+     *  of the primitive.For <feFuncR>, x defines the minimum
+     *  x coordinate for the rendering area of the primitive.For
+     *  <feGaussianBlur>, x defines the minimum x coordinate for
+     *  the rendering area of the primitive.For <feImage>, x defines
+     *  the minimum x coordinate for the rendering area of the
+     *  primitive.For <feMerge>, x defines the minimum x coordinate
+     *  for the rendering area of the primitive.For <feMergeNode>,
+     *  x defines the minimum x coordinate for the rendering area
+     *  of the primitive.For <feMorphology>, x defines the minimum
+     *  x coordinate for the rendering area of the primitive.For
+     *  <feOffset>, x defines the minimum x coordinate for the
+     *  rendering area of the primitive.For <fePointLight>, x
+     *  defines the x location for the light source in the coordinate
+     *  system defined by the primitiveUnits attribute on the
+     *  <filter> element.For <feSpecularLighting>, x defines the
+     *  minimum x coordinate for the rendering area of the primitive.For
+     *  <feSpotLight>, x defines the x location for the light
+     *  source in the coordinate system defined by the primitiveUnits
+     *  attribute on the <filter> element.For <feTile>, x defines
+     *  the minimum x coordinate for the rendering area of the
+     *  primitive.For <feTurbulence>, x defines the minimum x
+     *  coordinate for the rendering area of the primitive.For
+     *  <filter>, x defines the x coordinate of the upper left
+     *  corner for the rendering area of the filter.For <foreignObject>,
+     *  x defines the  x coordinate of the upper left corner of
+     *  its viewport.Note: Starting with SVG2, x is a Geometry
+     *  Property meaning this attribute can also be used as a
+     *  CSS property for <foreignObject>.Warning: As of SVG2 <glyphRef>
+     *  is deprecated and shouldn't be used.For <glyphRef>, x
+     *  defines the x-axis coordinate of the glyph.For <image>,
+     *  x defines the  x coordinate of the upper left corner of
+     *  the image.Note: Starting with SVG2, x is a Geometry Property
+     *  meaning this attribute can also be used as a CSS property
+     *  for images.For <mask>, x defines the  x coordinate of
+     *  the upper left corner of its area of effect. The exact
+     *  effect of this attribute is influenced by the maskUnits
+     *  attribute.For <pattern>, x defines the  x coordinate of
+     *  the upper left corner of the tile pattern. The exact effect
+     *  of this attribute is influenced by the patternUnits and
+     *  patternTransform attributes.For <rect>, x defines the 
+     *  x coordinate of the upper left corner of the shape.Note:
+     *  Starting with SVG2, x is a Geometry Property meaning this
+     *  attribute can also be used as a CSS property for rectangles.For
+     *  <svg>, x defines the  x coordinate of the upper left corner
+     *  of its viewport.Note: Starting with SVG2, x is a Geometry
+     *  Property meaning this attribute can also be used as a
+     *  CSS property for <svg>.For <text>, if it contain a single
+     *  value, x defines the x coordinate on where the content
+     *  text position must be placed. The content text position
+     *  is usually a point on the baseline of the first line of
+     *  text. The exact content text position is influenced by
+     *  some properties like text-anchor, or direction.If there
+     *  are multiple values, x defines the x coordinate of each
+     *  individual glyph from the text. If there are less values
+     *  than glyphs, the remaining glyphs are placed in the continuity
+     *  of the last positioned glyph. If there are more values
+     *  than glyphs, extra values are ignored.Warning: As of SVG2
+     *  <tref> is deprecated and shouldn't be used.For <tref>,
+     *  if it contain a single value, x defines the x coordinate
+     *  on where the content text position must be placed. The
+     *  content text position is usually a point on the baseline
+     *  of the first line of text. The exact content text position
+     *  is influenced by some properties like text-anchor, or
+     *  direction.If there are multiple values, x defines the
+     *  x coordinate of each individual glyph from the text. If
+     *  there are less values than glyphs, the remaining glyphs
+     *  are placed in the continuity of the last positioned glyph.
+     *  If there are more values than glyphs, extra values are
+     *  ignored.For <tspan>, if it contain a single value, x defines
+     *  the x coordinate on where the content text position must
+     *  be placed. The content text position is usually a point
+     *  on the baseline of the first line of text. The exact content
+     *  text position is influenced by some properties like text-anchor,
+     *  or direction.If there are multiple values, x defines the
+     *  x coordinate of each individual glyph from the text. If
+     *  there are less values than glyphs, the remaining glyphs
+     *  are placed in the continuity of the last positioned glyph.
+     *  If there are more values than glyphs, extra values are
+     *  ignored.For <use>, x defines the  x coordinate of the
+     *  upper left corner of the referenced element.Note: Starting
+     *  with SVG2, x is a Geometry Property meaning this attribute
+     *  can also be used as a CSS property for used elements.
+     * 
      */
-    visibility: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    x: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /**
+     *  The y attribute defines a y-axis coordinate in the user coordinate
+     *  system.You can use this attribute with the following SVG
+     *  elements:Warning: As of SVG2 <altGlyph> is deprecated
+     *  and shouldn't be used.For <altGlyph>, y defines the y-axis
+     *  coordinate of the alternate glyph.For <feBlend>, y defines
+     *  the minimum y coordinate for the rendering area of the
+     *  primitive.For <feColorMatrix>, y defines the minimum y
+     *  coordinate for the rendering area of the primitive.For
+     *  <feComponentTransfer>, y defines the minimum y coordinate
+     *  for the rendering area of the primitive.For <feComposite>,
+     *  y defines the minimum y coordinate for the rendering area
+     *  of the primitive.For <feConvolveMatrix>, y defines the
+     *  minimum y coordinate for the rendering area of the primitive.For
+     *  <feDiffuseLighting>, y defines the minimum y coordinate
+     *  for the rendering area of the primitive.For <feDisplacementMap>,
+     *  y defines the minimum y coordinate for the rendering area
+     *  of the primitive.For <feDropShadow>, y defines the minimum
+     *  y coordinate for the rendering area of the primitive.For
+     *  <feFlood>, y defines the minimum y coordinate for the
+     *  rendering area of the primitive.For <feFuncA>, y defines
+     *  the minimum y coordinate for the rendering area of the
+     *  primitive.For <feFuncB>, y defines the minimum y coordinate
+     *  for the rendering area of the primitive.For <feFuncG>,
+     *  y defines the minimum y coordinate for the rendering area
+     *  of the primitive.For <feFuncR>, y defines the minimum
+     *  y coordinate for the rendering area of the primitive.For
+     *  <feGaussianBlur>, y defines the minimum y coordinate for
+     *  the rendering area of the primitive.For <feImage>, y defines
+     *  the minimum y coordinate for the rendering area of the
+     *  primitive.For <feMerge>, y defines the minimum y coordinate
+     *  for the rendering area of the primitive.For <feMergeNode>,
+     *  y defines the minimum y coordinate for the rendering area
+     *  of the primitive.For <feMorphology>, y defines the minimum
+     *  y coordinate for the rendering area of the primitive.For
+     *  <feOffset>, y defines the minimum y coordinate for the
+     *  rendering area of the primitive.For <fePointLight>, y
+     *  defines the y location for the light source in the coordinate
+     *  system defined by the primitiveUnits attribute on the
+     *  <filter> element.For <feSpecularLighting>, y defines the
+     *  minimum y coordinate for the rendering area of the primitive.For
+     *  <feSpotLight>, y defines the y location for the light
+     *  source in the coordinate system defined by the primitiveUnits
+     *  attribute on the <filter> element.For <feTile>, y defines
+     *  the minimum y coordinate for the rendering area of the
+     *  primitive.For <feTurbulence>, y defines the minimum y
+     *  coordinate for the rendering area of the primitive.For
+     *  <filter>, y defines the y coordinate of the upper left
+     *  corner for the rendering area of the filter.For <foreignObject>,
+     *  y defines the y coordinate of the upper left corner of
+     *  its viewport.Note: Starting with SVG2, y is a Geometry
+     *  Property meaning this attribute can also be used as a
+     *  CSS property for <foreignObject>.Warning: As of SVG2 <glyphRef>
+     *  is deprecated and shouldn't be used.For <glyphRef>, y
+     *  defines the y-axis coordinate of the glyph.For <image>,
+     *  y defines the y coordinate of the upper left corner of
+     *  the image.Note: Starting with SVG2, y is a Geometry Property
+     *  meaning this attribute can also be used as a CSS property
+     *  for images.For <mask>, y defines the y coordinate of the
+     *  upper left corner of its area of effect. The exact effect
+     *  of this attribute is influenced by the maskUnits attribute.For
+     *  <pattern>, y defines the y coordinate of the upper left
+     *  corner of the tile pattern. The exact effect of this attribute
+     *  is influenced by the patternUnits and patternTransform
+     *  attributes.For <rect>, y defines the y coordinate of the
+     *  upper left corner of the shape.Note: Starting with SVG2,
+     *  y is a Geometry Property meaning this attribute can also
+     *  be used as a CSS property for rectangles.For <svg>, y
+     *  defines the y coordinate of the upper left corner of its
+     *  viewport.Note: Starting with SVG2, y is a Geometry Property
+     *  meaning this attribute can also be used as a CSS property
+     *  for <svg>.For <text>, if it contain a single value, y
+     *  defines the y coordinate on where the content text position
+     *  must be placed. The content text position is usually a
+     *  point on the baseline of the first line of text. The exact
+     *  content text position is influenced by some properties
+     *  like text-anchor, or direction.If there are multiple values,
+     *  y defines the y coordinate of each individual glyph from
+     *  the text. If there are less values than glyphs, the remaining
+     *  glyphs are placed in the continuity of the last positioned
+     *  glyph. If there are more values than glyphs, extra values
+     *  are ignored.Warning: As of SVG2 <tref> is deprecated and
+     *  shouldn't be used.For <tref>, if it contain a single value,
+     *  y defines the y coordinate on where the content text position
+     *  must be placed. The content text position is usually a
+     *  point on the baseline of the first line of text. The exact
+     *  content text position is influenced by some properties
+     *  like text-anchor, or direction.If there are multiple values,
+     *  y defines the y coordinate of each individual glyph from
+     *  the text. If there are less values than glyphs, the remaining
+     *  glyphs are placed in the continuity of the last positioned
+     *  glyph. If there are more values than glyphs, extra values
+     *  are ignored.For <tspan>, if it contain a single value,
+     *  y defines the y coordinate on where the content text position
+     *  must be placed. The content text position is usually a
+     *  point on the baseline of the first line of text. The exact
+     *  content text position is influenced by some properties
+     *  like text-anchor, or direction.If there are multiple values,
+     *  y defines the y coordinate of each individual glyph from
+     *  the text. If there are less values than glyphs, the remaining
+     *  glyphs are placed in the continuity of the last positioned
+     *  glyph. If there are more values than glyphs, extra values
+     *  are ignored.For <use>, y defines the y coordinate of the
+     *  upper left corner of the referenced element.Note: Starting
+     *  with SVG2, y is a Geometry Property meaning this attribute
+     *  can also be used as a CSS property for used elements.
+     * 
+     */
+    y: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  Often used with CSS to style elements with common properties.
@@ -780,4 +658,4 @@ The stroke under effect could be achieved
     'setProps': PropTypes.func
 };
 
-export default Circle;
+export default Use;

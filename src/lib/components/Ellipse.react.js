@@ -4,18 +4,18 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * Circle is a wrapper for the <circle> SVG element.
+ * Ellipse is a wrapper for the <ellipse> SVG element.
  * For detailed attribute info see:
- * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle
+ * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse
  */
-const Circle = (props) => {
+const Ellipse = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
     }
 
     return (
-        <circle
+        <ellipse
             onClick={() => props.setProps({
                 n_clicks: props.n_clicks + 1,
                 n_clicks_timestamp: Date.now()
@@ -24,16 +24,16 @@ const Circle = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </circle>
+        </ellipse>
     );
 };
 
-Circle.defaultProps = {
+Ellipse.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-Circle.propTypes = {
+Ellipse.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -406,23 +406,6 @@ The stroke under effect could be achieved
     pointerEvents: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The r attribute defines the radius of a circle.You can use this
-     *  attribute with the following SVG elements:For <circle>,
-     *  r defines the radius of the circle and therefor its size.
-     *  With a value lower or equal to zero the circle won't be
-     *  drawn at all.Note: Starting with SVG2, r is a Geometry
-     *  Property meaning this attribute can also be used as a
-     *  CSS property for circles.For <radialGradient>, r defines
-     *  the radius of the end circle for the radial gradient.The
-     *  gradient will be drawn such that the 100% gradient stop
-     *  is mapped to the perimeter of this end circle. A value
-     *  of lower or equal to zero will cause the area to be painted
-     *  as a single color using the color and opacity of the last
-     *  gradient <stop>.
-     */
-    r: PropTypes.string,
-
-    /**
      *  Deprecated: This feature is no longer recommended. Though some
      *  browsers might still support it, it may have already been
      *  removed from the relevant web standards, may be in the
@@ -540,6 +523,40 @@ The stroke under effect could be achieved
      *  tables only load in the browser
      */
     requiredFeatures: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /**
+     *  The rx attribute defines a radius on the x-axis.You can use this
+     *  attribute with the following SVG elements:For <ellipse>,
+     *  rx defines the x-radius of the shape. With a value lower
+     *  or equal to zero the ellipse won't be drawn at all.Note:
+     *  Starting with SVG2, rx is a Geometry Property meaning
+     *  this attribute can also be used as a CSS property for
+     *  ellipses.For <rect>, rx defines the x-axis radius of the
+     *  ellipse used to round off the corners of the rectangle.The
+     *  way the value of the rx attribute is interpreted depend
+     *  on both the ry attribute and the width of the rectangle:Note:
+     *  Starting with SVG2, rx is a Geometry Property meaning
+     *  this attribute can also be used as a CSS property for
+     *  rects.
+     */
+    rx: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /**
+     *  The ry attribute defines a radius on the y-axis.You can use this
+     *  attribute with the following SVG elements:For <ellipse>,
+     *  ry defines the y-radius of the shape. With a value lower
+     *  or equal to zero the ellipse won't be drawn at all.Note:
+     *  Starting with SVG2, ry is a Geometry Property meaning
+     *  this attribute can also be used as a CSS property for
+     *  ellipses.For <rect>, ry defines the y-axis radius of the
+     *  ellipse used to round off the corners of the rectangle.The
+     *  way the value of the ry attribute is interpreted depend
+     *  on both the rx attribute and the width of the rectangle:Note:
+     *  Starting with SVG2, ry is a Geometry Property meaning
+     *  this attribute can also be used as a CSS property for
+     *  rects.
+     */
+    ry: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  The shape-rendering attribute provides hints to the renderer
@@ -780,4 +797,4 @@ The stroke under effect could be achieved
     'setProps': PropTypes.func
 };
 
-export default Circle;
+export default Ellipse;

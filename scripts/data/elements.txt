@@ -2,66 +2,58 @@
 # Dash component are generated for the following SVG elements
 #
 
+animate
 circle
+clipPath
+defs
+desc
+ellipse
+feBlend
+feColorMatrix
+feComponentTransfer
+feComposite
+feConvolveMatrix
+feDiffuseLighting
+feDisplacementMap
+feDistantLight
+feDropShadow
+feFlood
+feFuncA
+feFuncB
+feFuncG
+feFuncR
+feGaussianBlur
+feImage
+feMerge
+feMergeNode
+feMorphology
+feOffset
+fePointLight
+feSpecularLighting
+feSpotLight
+feTile
+feTurbulence
+filter
+foreignObject
 g
+image
+line
+linearGradient
+marker
+mask
+metadata
 path
+pattern
+polygon
+polyline
+radialGradient
+rect
+stop
 svg
-
-#
-# All SVG elements supported by react.js
-#
-# animate
-# circle
-# clipPath
-# defs
-# desc
-# ellipse
-# feBlend
-# feColorMatrix
-# feComponentTransfer
-# feComposite
-# feConvolveMatrix
-# feDiffuseLighting
-# feDisplacementMap
-# feDistantLight
-# feDropShadow
-# feFlood
-# feFuncA
-# feFuncB
-# feFuncG
-# feFuncR
-# feGaussianBlur
-# feImage
-# feMerge
-# feMergeNode
-# feMorphology
-# feOffset
-# fePointLight
-# feSpecularLighting
-# feSpotLight
-# feTile
-# feTurbulence
-# filter
-# foreignObject
-# g
-# image
-# line
-# linearGradient
-# marker
-# mask
-# metadata
-# path
-# pattern
-# polygon
-# polyline
-# radialGradient
-# rect
-# stop
-# svg
-# switch
-# symbol
-# text
-# textPath
-# tspan
-# use
-# view#
+switch
+symbol
+text
+textPath
+tspan
+use
+view

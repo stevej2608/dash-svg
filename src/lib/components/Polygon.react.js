@@ -4,18 +4,18 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * Circle is a wrapper for the <circle> SVG element.
+ * Polygon is a wrapper for the <polygon> SVG element.
  * For detailed attribute info see:
- * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle
+ * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polygon
  */
-const Circle = (props) => {
+const Polygon = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
     }
 
     return (
-        <circle
+        <polygon
             onClick={() => props.setProps({
                 n_clicks: props.n_clicks + 1,
                 n_clicks_timestamp: Date.now()
@@ -24,16 +24,16 @@ const Circle = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </circle>
+        </polygon>
     );
 };
 
-Circle.defaultProps = {
+Polygon.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-Circle.propTypes = {
+Polygon.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -162,36 +162,6 @@ Circle.propTypes = {
     colorRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The cx attribute define the x-axis coordinate of a center point.You
-     *  can use this attribute with the following SVG elements:For
-     *  <circle>, cx defines the x-axis coordinate of the center
-     *  of the shape.Note: Starting with SVG2 cx, is a Geometry
-     *  Property, meaning this attribute can also be used as CSS
-     *  property for circles.For <ellipse>, cx defines the x-axis
-     *  coordinate of the center of the shape.Note: Starting with
-     *  SVG2 cx, is a Geometry Property, meaning this attribute
-     *  can also be used as CSS property for ellipses.For <radialGradient>,
-     *  cx defines the x-axis coordinate of the end circle for
-     *  the radial gradient.
-     */
-    cx: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  The cy attribute define the y-axis coordinate of a center point.You
-     *  can use this attribute with the following SVG elements:For
-     *  <circle>, cy defines the y-axis coordinate of the center
-     *  of the shape.Note: Starting with SVG2, cy is a Geometry
-     *  Property meaning this attribute can also be used as a
-     *  CSS property for circles.For <ellipse>, cy defines the
-     *  y-axis coordinate of the center of the shape.Note: Starting
-     *  with SVG2, cy is a Geometry Property meaning this attribute
-     *  can also be used as a CSS property for ellipses.For <radialGradient>,
-     *  cy defines the y-axis coordinate of the end circle for
-     *  the radial gradient.
-     */
-    cy: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
      *  The fill attribute has two different meanings. For shapes and
      *  text it's a presentation attribute that defines the color
      *  (or any SVG paint servers like gradients or patterns)
@@ -262,6 +232,35 @@ Circle.propTypes = {
      *  the browser
      */
     fillOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /**
+     *  The fill-rule attribute is a presentation attribute defining
+     *  the algorithm to use to determine the inside part of a
+     *  shape.Note: As a presentation attribute, fill-rule can
+     *  be used as a CSS property.You can use this attribute with
+     *  the following SVG elements:The fill-rule attribute provides
+     *  two options for how the inside (that is, the area to be
+     *  filled) of a shape is determined:The value nonzero determines
+     *  the "insideness" of a point in the shape by drawing a
+     *  ray from that point to infinity in any direction, and
+     *  then examining the places where a segment of the shape
+     *  crosses the ray. Starting with a count of zero, add one
+     *  each time a path segment crosses the ray from left to
+     *  right and subtract one each time a path segment crosses
+     *  the ray from right to left. After counting the crossings,
+     *  if the result is zero then the point is outside the path.
+     *  Otherwise, it is inside.The value evenodd determines the
+     *  "insideness" of a point in the shape by drawing a ray
+     *  from that point to infinity in any direction and counting
+     *  the number of path segments from the given shape that
+     *  the ray crosses. If this number is odd, the point is inside;
+     *  if even, the point is outside.BCD tables only load in
+     *  the browser
+     */
+    fillRule: PropTypes.oneOfType([
+        PropTypes.oneOf(['"evenodd"|"inherit"|"nonzero"']),
+        PropTypes.bool
+     ]),
 
     /**
      *  The marker-end attribute defines the arrowhead or polymarker
@@ -406,21 +405,23 @@ The stroke under effect could be achieved
     pointerEvents: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The r attribute defines the radius of a circle.You can use this
-     *  attribute with the following SVG elements:For <circle>,
-     *  r defines the radius of the circle and therefor its size.
-     *  With a value lower or equal to zero the circle won't be
-     *  drawn at all.Note: Starting with SVG2, r is a Geometry
-     *  Property meaning this attribute can also be used as a
-     *  CSS property for circles.For <radialGradient>, r defines
-     *  the radius of the end circle for the radial gradient.The
-     *  gradient will be drawn such that the 100% gradient stop
-     *  is mapped to the perimeter of this end circle. A value
-     *  of lower or equal to zero will cause the area to be painted
-     *  as a single color using the color and opacity of the last
-     *  gradient <stop>.
+     *  The points attribute defines a list of points. Each point is
+     *  defined by a pair of number representing a X and a Y coordinate
+     *  in the user coordinate system. If the attribute contains
+     *  an odd number of coordinates, the last one will be ignored.You
+     *  can use this attribute with the following SVG elements:For
+     *  <polyline>, points defines a list of points, each representing
+     *  a vertex of the line to be drawn. Each point is define
+     *  by a X and Y coordinate in the user coordinate system.Note:
+     *  A polyline is an open shape, meaning the last point is
+     *  not connected to the first point.For <polygon>, points
+     *  defines a list of points, each representing a vertex of
+     *  the shape to be drawn. Each point is define by a X and
+     *  Y coordinate in the user coordinate system.Note: A polygon
+     *  is a closed shape, meaning the last point is connected
+     *  to the first point.
      */
-    r: PropTypes.string,
+    points: PropTypes.string,
 
     /**
      *  Deprecated: This feature is no longer recommended. Though some
@@ -609,6 +610,116 @@ The stroke under effect could be achieved
     strokeDashoffset: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
+     *  The stroke-linejoin attribute is a presentation attribute defining
+     *  the shape to be used at the corners of paths when they
+     *  are stroked.Note: As a presentation attribute stroke-linejoin
+     *  can be used as a CSS property.You can use this attribute
+     *  with the following SVG elements:Note: The arcs value as
+     *  been introduced in SVG2 and it isn't widely supported
+     *  yet, see Browser compatibility below for details.The arcs
+     *  value indicates that an arcs corner is to be used to join
+     *  path segments. The arcs shape is formed by extending the
+     *  outer edges of the stroke at the join point with arcs
+     *  that have the same curvature as the outer edges at the
+     *  join point.The bevel value indicates that a bevelled corner
+     *  is to be used to join path segments.The miter value indicates
+     *  that a sharp corner is to be used to join path segments.
+     *  The corner is formed by extending the outer edges of the
+     *  stroke at the tangents of the path segments until they
+     *  intersect.Note: If the stroke-miterlimit is exceeded,
+     *  the line join falls back to bevel.Note: the miter-clip
+     *  value as been introduced in SVG2 and it isn't widely supported
+     *  yet, see Browser compatibility below for details.The miter-clip
+     *  value indicates that a sharp corner is to be used to join
+     *  path segments. The corner is formed by extending the outer
+     *  edges of the stroke at the tangents of the path segments
+     *  until they intersect.If the stroke-miterlimit is exceeded,
+     *  the miter is clipped at a distance equal to half the stroke-miterlimit
+     *  value multiplied by the stroke width from the intersection
+     *  of the path segments. This provides a better rendering
+     *  than miter on very sharp join or in case of an animation.The
+     *  round value indicates that a round corner is to be used
+     *  to join path segments.BCD tables only load in the browser
+     * 
+     */
+    strokeLinejoin: PropTypes.oneOfType([
+        PropTypes.oneOf(['"bevel"|"inherit"|"miter"|"round"']),
+        PropTypes.bool
+     ]),
+
+    /**
+     *  The stroke-miterlimit attribute is a presentation attribute defining
+     *  a limit on the ratio of the miter length to the stroke-width
+     *  used to draw a miter join. When the limit is exceeded,
+     *  the join is converted from a miter to a bevel.Note: As
+     *  a presentation attribute stroke-miterlimit can be used
+     *  as a CSS property.You can use this attribute with the
+     *  following SVG elements:When two line segments meet at
+     *  a sharp angle and miter joins have been specified for
+     *  stroke-linejoin, it is possible for the miter to extend
+     *  far beyond the thickness of the line stroking the path.
+     *  The stroke-miterlimit ratio is used to define when the
+     *  limit is exceeded, if so the join is converted from a
+     *  miter to a bevel.The ratio of miter length (distance between
+     *  the outer tip and the inner corner of the miter) to stroke-width
+     *  is directly related to the angle (theta) between the segments
+     *  in user space by the formula:
+  
+    
+      stroke-miterlimit
+
+     *       =
+      
+        
+          miterLength
+        
+
+     *         
+          stroke-width
+        
+      
+      =
+
+     *       
+        
+          1
+        
+        
+        
+     *   
+            sin
+            
+              (
+      
+     *         
+                
+                  θ
+        
+     *         
+                
+                  2
+        
+     *         
+              
+              )
+            
+ 
+     *          
+        
+      
+    
+  
+For example, a miter
+     *  limit of 1.414 converts miters to bevels for theta less
+     *  than 90 degrees, a limit of 4.0 converts them for theta
+     *  less than approximately 29 degrees, and a limit of 10.0
+     *  converts them for theta less than approximately 11.5 degrees.The
+     *  value of stroke-miterlimit must be greater than or equal
+     *  to 1.BCD tables only load in the browser
+     */
+    strokeMiterlimit: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /**
      *  The stroke-opacity attribute is a presentation attribute defining
      *  the opacity of the paint server (color, gradient, pattern,
      *  etc) applied to the stroke of a shape.Note: As a presentation
@@ -780,4 +891,4 @@ The stroke under effect could be achieved
     'setProps': PropTypes.func
 };
 
-export default Circle;
+export default Polygon;

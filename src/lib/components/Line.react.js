@@ -4,18 +4,18 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * Circle is a wrapper for the <circle> SVG element.
+ * Line is a wrapper for the <line> SVG element.
  * For detailed attribute info see:
- * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle
+ * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/line
  */
-const Circle = (props) => {
+const Line = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
     }
 
     return (
-        <circle
+        <line
             onClick={() => props.setProps({
                 n_clicks: props.n_clicks + 1,
                 n_clicks_timestamp: Date.now()
@@ -24,16 +24,16 @@ const Circle = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </circle>
+        </line>
     );
 };
 
-Circle.defaultProps = {
+Line.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-Circle.propTypes = {
+Line.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -160,108 +160,6 @@ Circle.propTypes = {
      *  speed.BCD tables only load in the browser
      */
     colorRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  The cx attribute define the x-axis coordinate of a center point.You
-     *  can use this attribute with the following SVG elements:For
-     *  <circle>, cx defines the x-axis coordinate of the center
-     *  of the shape.Note: Starting with SVG2 cx, is a Geometry
-     *  Property, meaning this attribute can also be used as CSS
-     *  property for circles.For <ellipse>, cx defines the x-axis
-     *  coordinate of the center of the shape.Note: Starting with
-     *  SVG2 cx, is a Geometry Property, meaning this attribute
-     *  can also be used as CSS property for ellipses.For <radialGradient>,
-     *  cx defines the x-axis coordinate of the end circle for
-     *  the radial gradient.
-     */
-    cx: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  The cy attribute define the y-axis coordinate of a center point.You
-     *  can use this attribute with the following SVG elements:For
-     *  <circle>, cy defines the y-axis coordinate of the center
-     *  of the shape.Note: Starting with SVG2, cy is a Geometry
-     *  Property meaning this attribute can also be used as a
-     *  CSS property for circles.For <ellipse>, cy defines the
-     *  y-axis coordinate of the center of the shape.Note: Starting
-     *  with SVG2, cy is a Geometry Property meaning this attribute
-     *  can also be used as a CSS property for ellipses.For <radialGradient>,
-     *  cy defines the y-axis coordinate of the end circle for
-     *  the radial gradient.
-     */
-    cy: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  The fill attribute has two different meanings. For shapes and
-     *  text it's a presentation attribute that defines the color
-     *  (or any SVG paint servers like gradients or patterns)
-     *  used to paint the element; for animation it defines the
-     *  final state of the animation.You can use this attribute
-     *  with the following SVG elements:For animation, these elements
-     *  are using this attribute: <animate>, <animateColor>, <animateMotion>,
-     *  <animateTransform>, and <set>.Warning: As of SVG2 <altGlyph>
-     *  is deprecated and shouldn't be used.For <altGlyph>, fill
-     *  is a presentation attribute that defines the color of
-     *  the glyph.Note: As a presentation attribute fill can be
-     *  used as a CSS property.For <animate>, fill defines the
-     *  final state of the animation.Warning: As of SVG Animation
-     *  2 <animateColor> is deprecated and shouldn't be used.
-     *  Use <animate> instead.For <animateColor>, fill defines
-     *  the final state of the animation.For <animateMotion>,
-     *  fill defines the final state of the animation.For <animateTransform>,
-     *  fill defines the final state of the animation.For <circle>,
-     *  fill is a presentation attribute that defines the color
-     *  of the circle.Note: As a presentation attribute fill can
-     *  be used as a CSS property.For <ellipse>, fill is a presentation
-     *  attribute that defines the color of the ellipse.Note:
-     *  As a presentation attribute fill can be used as a CSS
-     *  property.For <path>, fill is a presentation attribute
-     *  that defines the color of the interior of the shape. (Interior
-     *  is define by the fill-rule attribute)Note: As a presentation
-     *  attribute fill can be used as a CSS property.For <polygon>,
-     *  fill is a presentation attribute that defines the color
-     *  of the interior of the shape. (Interior is define by the
-     *  fill-rule attribute)Note: As a presentation attribute
-     *  fill can be used as a CSS property.For <polyline>, fill
-     *  is a presentation attribute that defines the color of
-     *  the interior of the shape. (Interior is define by the
-     *  fill-rule attribute)Note: As a presentation attribute
-     *  fill can be used as a CSS property.For <rect>, fill is
-     *  a presentation attribute that defines the color of the
-     *  rectangle.Note: As a presentation attribute fill can be
-     *  used as a CSS property.For <set>, fill defines the final
-     *  state of the animation.For <text>, fill is a presentation
-     *  attribute that defines what the color of the text.Note:
-     *  As a presentation attribute fill can be used as a CSS
-     *  property.For <textPath>, fill is a presentation attribute
-     *  that defines the color of the text.Note: As a presentation
-     *  attribute fill can be used as a CSS property.Warning:
-     *  As of SVG2 <tref> is deprecated and shouldn't be used.For
-     *  <tref>, fill is a presentation attribute that defines
-     *  the color of the text.Note: As a presentation attribute
-     *  fill can be used as a CSS property.For <tspan>, fill is
-     *  a presentation attribute that defines the color of the
-     *  text.Note: As a presentation attribute fill can be used
-     *  as a CSS property.BCD tables only load in the browserNote:
-     *  For information on using the context-fill (and context-stroke)
-     *  values from HTML documents, see the documentation for
-     *  the non-standard -moz-context-properties property.
-     */
-    fill: PropTypes.string,
-
-    /**
-     *  The fill-opacity attribute is a presentation attribute defining
-     *  the opacity of the paint server (color, gradient, pattern,
-     *  etc) applied to a shape.Note: As a presentation attribute
-     *  fill-opacity can be used as a CSS property.You can use
-     *  this attribute with the following SVG elements:Note: SVG2
-     *  introduces percentage values for fill-opacity, however,
-     *  it is not widely supported yet (See Browser compatibility
-     *  below) as a consequence, it is best practices to set opacity
-     *  with a value in the range [0-1].BCD tables only load in
-     *  the browser
-     */
-    fillOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  The marker-end attribute defines the arrowhead or polymarker
@@ -404,23 +302,6 @@ The stroke under effect could be achieved
      *  in the browser
      */
     pointerEvents: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  The r attribute defines the radius of a circle.You can use this
-     *  attribute with the following SVG elements:For <circle>,
-     *  r defines the radius of the circle and therefor its size.
-     *  With a value lower or equal to zero the circle won't be
-     *  drawn at all.Note: Starting with SVG2, r is a Geometry
-     *  Property meaning this attribute can also be used as a
-     *  CSS property for circles.For <radialGradient>, r defines
-     *  the radius of the end circle for the radial gradient.The
-     *  gradient will be drawn such that the 100% gradient stop
-     *  is mapped to the perimeter of this end circle. A value
-     *  of lower or equal to zero will cause the area to be painted
-     *  as a single color using the color and opacity of the last
-     *  gradient <stop>.
-     */
-    r: PropTypes.string,
 
     /**
      *  Deprecated: This feature is no longer recommended. Though some
@@ -609,6 +490,32 @@ The stroke under effect could be achieved
     strokeDashoffset: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
+     *  The stroke-linecap attribute is a presentation attribute defining
+     *  the shape to be used at the end of open subpaths when
+     *  they are stroked.Note: As a presentation attribute stroke-linecap
+     *  can be used as a CSS property.You can use this attribute
+     *  with the following SVG elements:The butt value indicates
+     *  that the stroke for each subpath does not extend beyond
+     *  its two endpoints. On a zero length subpath, the path
+     *  will not be rendered at all.The round value indicates
+     *  that at the end of each subpath the stroke will be extended
+     *  by a half circle with a diameter equal to the stroke width.
+     *  On a zero length subpath, the stroke consists of a full
+     *  circle centered at the subpath's point.The square value
+     *  indicates that at the end of each subpath the stroke will
+     *  be extended by a rectangle with a width equal to half
+     *  the width of the stroke and a height equal to the width
+     *  of the stroke. On a zero length subpath, the stroke consists
+     *  of a square with its width equal to the stroke width,
+     *  centered at the subpath's point.BCD tables only load in
+     *  the browser
+     */
+    strokeLinecap: PropTypes.oneOfType([
+        PropTypes.oneOf(['"butt"|"inherit"|"round"|"square"']),
+        PropTypes.bool
+     ]),
+
+    /**
      *  The stroke-opacity attribute is a presentation attribute defining
      *  the opacity of the paint server (color, gradient, pattern,
      *  etc) applied to the stroke of a shape.Note: As a presentation
@@ -750,6 +657,62 @@ The stroke under effect could be achieved
     visibility: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
+     *  The x1 attribute is used to specify the first x-coordinate for
+     *  drawing an SVG element that requires more than one coordinate.
+     *  Elements that only need one coordinate use the x attribute
+     *  instead.You can use this attribute with the following
+     *  SVG elements:For <line>, x1 defines the x coordinate of
+     *  the starting point of the line.For <linearGradient>, x1
+     *  defines the  x coordinate of the starting point of the
+     *  gradient vector used to map the gradient stop values.
+     *  The exact behavior of this attribute is influenced by
+     *  the gradientUnits attributes
+     */
+    x1: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /**
+     *  The x2 attribute is used to specify the second x-coordinate for
+     *  drawing an SVG element that requires more than one coordinate.
+     *  Elements that only need one coordinate use the x attribute
+     *  instead.You can use this attribute with the following
+     *  SVG elements:For <line>, x2 defines the x coordinate of
+     *  the ending point of the line.For <linearGradient>, x2
+     *  defines the  x coordinate of the ending point of the gradient
+     *  vector used to map the gradient stop values. The exact
+     *  behavior of this attribute is influenced by the gradientUnits
+     *  attributes
+     */
+    x2: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /**
+     *  The y1 attribute is used to specify the first y-coordinate for
+     *  drawing an SVG element that requires more than one coordinate.
+     *  Elements that only need one coordinate use the y attribute
+     *  instead.You can use this attribute with the following
+     *  SVG elements:For <line>, y1 defines the y coordinate of
+     *  the starting point of the line.For <linearGradient>, y1
+     *  defines the y coordinate of the starting point of the
+     *  gradient vector used to map the gradient stop values.
+     *  The exact behavior of this attribute is influenced by
+     *  the gradientUnits attributes
+     */
+    y1: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /**
+     *  The y2 attribute is used to specify the second y-coordinate for
+     *  drawing an SVG element that requires more than one coordinate.
+     *  Elements that only need one coordinate use the y attribute
+     *  instead.You can use this attribute with the following
+     *  SVG elements:For <line>, y2 defines the y coordinate of
+     *  the ending point of the line.For <linearGradient>, y2
+     *  defines the y coordinate of the ending point of the gradient
+     *  vector used to map the gradient stop values. The exact
+     *  behavior of this attribute is influenced by the gradientUnits
+     *  attributes
+     */
+    y2: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /**
      *  Often used with CSS to style elements with common properties.
      * 
      */
@@ -780,4 +743,4 @@ The stroke under effect could be achieved
     'setProps': PropTypes.func
 };
 
-export default Circle;
+export default Line;
