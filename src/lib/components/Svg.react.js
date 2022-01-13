@@ -42,6 +42,16 @@ Svg.propTypes = {
     'id': PropTypes.string,
 
     /**
+     * Often used with CSS to style elements with common properties.
+     */
+    'className': PropTypes.string,
+
+    /**
+     * Alternative text in case an image can't be displayed.
+     */
+    'alt': PropTypes.string,
+
+    /**
      * The children of this component
      */
     'children': PropTypes.node,

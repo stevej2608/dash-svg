@@ -46,6 +46,11 @@ G.propTypes = {
      */
     'children': PropTypes.node,
 
+     /**
+      *  The fill attribute has two different meanings
+      */
+    fill: PropTypes.string,
+
     /**
      * An integer that represents the number of times
      * that this element has been clicked on.
