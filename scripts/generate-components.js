@@ -34,7 +34,7 @@ function nameComponent(elementName) {
 }
 
 /**
- * Make the React propTypes for the given element
+ * Make the React propTypes for the given attributes
  *
  * @param {*} attributes the attributes to be processed
  * @param {*} attributeDatabase descriptions and types for all SVG elements
@@ -42,24 +42,46 @@ function nameComponent(elementName) {
  */
 
  function makePropTypes(attributes, attributeDatabase) {
-   const attr  = {}
+   const propTypes  = []
    for (const attribute of attributes) {
      const {description, type } = attributeDatabase[attribute]
      console.log(`type "${type}"`)
 
-     const protoType = `XXXX ${type}`
+     let PROP_TYPE = `
 
+     /**
+      *${description ? ' ' + description : ''}
+      */
+      ${attribute}: PropTypes.`
 
-     attr[attribute] = {description, protoType }
+     if (type === 'string') {
+      PROP_TYPE += 'string';
+     } else
+     if (type === 'number|string') {
+        PROP_TYPE += 'oneOfType([PropTypes.string, PropTypes.number])'
+     }
+     else {
+     PROP_TYPE +=
+              'oneOfType([\n' +
+              `        PropTypes.oneOf(['${type}']),\n` +
+              '        PropTypes.bool\n' +
+              '     ])'
+     }
+
+     if (attribute.isRequired) {
+      PROP_TYPE += '.isRequired'
+     }
+
+     propTypes.push(PROP_TYPE)
 
    }
 
-   return attr
+   return `${propTypes.join(',')};\n`
  }
 
 
 /**
- * Generate the prototypes for the SVG element
+ * Generate the prototypes for the given SVG element
  *
  * @param {*} element the element name
  * @param {*} attributes attributes, descriptions and types for all SVG elements
@@ -73,10 +95,7 @@ function generatePropTypes(element, attributes) {
   const PROP_TYPES = makePropTypes(elements[element], attributes.attributes)
 
 
-  // Always add the list of global attributes.
-  const supportedAttributes = elements[element] ?
-    elements[element].concat(elements.Globalattribute) :
-    elements.Globalattribute;
+  console.log('TODO: Always add the list of global attributes')
 
   return `
     /**

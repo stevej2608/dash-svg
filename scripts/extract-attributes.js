@@ -117,9 +117,9 @@ const getAttributeType = async function(attr) {
     const re = new RegExp(`${attr}(.?):(.*?);`)
     const definition = allTypes.match(re)
     if (definition.length === 3) {
-      return {optional: true, type: normaliseType(definition[2])}
+      return {isRequired: false, type: normaliseType(definition[2])}
     }
-    return {optional: false, type: normaliseType(definition[1])}
+    return {isRequired: true, type: normaliseType(definition[1])}
 
   } catch (error) {
     console.log('Attribute "%s": type missing from DefinitelyTyped react/index.d.ts', attr)
