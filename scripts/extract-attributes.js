@@ -122,7 +122,7 @@ const getAttributeType = async function(attr) {
     return {isRequired: true, type: normaliseType(definition[1])}
 
   } catch (error) {
-    console.log('Attribute "%s": type missing from DefinitelyTyped react/index.d.ts', attr)
+    console.log('WARN: Attribute "%s": type missing from DefinitelyTyped react/index.d.ts', attr)
     return {optional: true, type: "number|string"}
   }
 }
@@ -219,7 +219,7 @@ const extractAttributes = async function($) {
       .toString();
 
       if (attr.attribs && attr.attribs.class === 'page-not-created') {
-        console.log('Missing details "%s"', svgAttribute)
+        console.log('WARN: Missing details "%s"', svgAttribute)
         return;
       }
 

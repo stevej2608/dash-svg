@@ -73,7 +73,7 @@ function nameComponent(elementName) {
   const propTypes = []
   for (const attribute of elementAttributes) {
     const { description, type } = attributeDatabase[attribute]
-    console.log(`type "${type}"`)
+    // console.log(`type "${type}"`)
 
     let PROP_TYPE = `
 
@@ -212,56 +212,6 @@ function generatePropTypes(element, attributes) {
      */
     'setProps': PropTypes.func`
 }
-
-const obsoleteDoc = element => `
- * OBSOLETE: <${element}> is included for completeness, but should be avoided
- * as it is not supported by any modern browsers.`;
-
-const customDocs = {
-  basefont: `
- * OBSOLETE: <basefont> is included for completeness, but should be avoided
- * as it is only supported by Internet Explorer.`,
-  blink: obsoleteDoc('blink'),
-  command: obsoleteDoc('command'),
-  element: obsoleteDoc('element'),
-  isindex: obsoleteDoc('isindex'),
-  keygen: `
- * DEPRECATED: <keygen> is included for completeness, but should be avoided
- * as it is not supported by all browsers and may be removed at any time from
- * those that do support it.`,
-  listing: obsoleteDoc('listing') + ' Use <pre> or <code> instead.',
-  marquee: `
- * DEPRECATED: <marquee> is included for completeness, but should be avoided
- * as browsers may remove it at any time.`,
-  meta: `
- * CAUTION: <meta> is included for completeness, but generally will not behave
- * as expected since <meta> tags should be static HTML content in the <head> of
- * the document. Dash components are dynamic <body> content.`,
-  multicol: obsoleteDoc('multicol'),
-  nextid: obsoleteDoc('nextid'),
-  output: `
- * CAUTION: <output> is included for completeness, but its typical usage
- * requires the oninput attribute of the enclosing <form> element, which
- * is not accessible to Dash.`,
-  script: `
- * CAUTION: <script> is included for completeness, but you cannot execute
- * JavaScript code by providing it to a <script> element. Use a clientside
- * callback for this purpose instead.`,
-  plaintext: `
- * OBSOLETE: <plaintext> is included for completeness, but should be avoided
- * as browsers may remove it at any time, and its behavior when added
- * dynamically by Dash is not what it would be statically on page load.
- * Use <pre> or <code> instead.`,
-  shadow: `
- * DEPRECATED: <shadow> is included for completeness, but should be avoided
- * as it is not supported by all browsers and may be removed at any time from
- * those that do support it.`,
-  spacer: obsoleteDoc('spacer'),
-  title: `
- * CAUTION: <title> is included for completeness, but is not expected to
- * do anything outside of <head>. Dash components are always created in the
- * <body>.`
-};
 
 /**
  * Generate fully formed React component source code that wraps the given SVG element
