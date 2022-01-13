@@ -55,7 +55,7 @@ const supportedAttributes = ['accentHeight', 'accumulate', 'additive', 'alignmen
 
 var pageCache = flatCache.load('pages', path.resolve('cache'));
 
-const CACHE_TIMEOUT = 1000 * 24 * 60 * 60
+const CACHE_TIMEOUT = 1000 * 7 * 24 * 60 * 60
 
 const cacheSave = function(key, page) {
   const timeStamp = Date.now() + CACHE_TIMEOUT;
@@ -100,6 +100,16 @@ const fetchPage = async function(pageURL) {
  */
 
 const getAttributeType = async function(attr) {
+
+  const normaliseType = (str) => {
+    return str.replace(/\s+/g, '')
+              .split('|')
+              .sort()
+              .join('|')
+              .replace('|undefined', '');
+  }
+
+
   try {
     const reactDt = await fetchPage(DefinitelyTypedReact)
     const allTypes = reactDt.match(/SVGAttributes<T> extends[\s\S]*?}/gm)[0]
@@ -107,13 +117,13 @@ const getAttributeType = async function(attr) {
     const re = new RegExp(`${attr}(.?):(.*?);`)
     const definition = allTypes.match(re)
     if (definition.length === 3) {
-      return {optional: true, type: definition[2]}
+      return {optional: true, type: normaliseType(definition[2])}
     }
-    return {optional: false, type: definition[1]}
+    return {optional: false, type: normaliseType(definition[1])}
 
   } catch (error) {
-    console.log('Attribute "%s" missing from DefinitelyTyped react/index.d.ts', attr)
-    return {optional: true, type: "any"}
+    console.log('Attribute "%s": type missing from DefinitelyTyped react/index.d.ts', attr)
+    return {optional: true, type: "number|string"}
   }
 }
 

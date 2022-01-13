@@ -34,6 +34,31 @@ function nameComponent(elementName) {
 }
 
 /**
+ * Make the React propTypes for the given element
+ *
+ * @param {*} attributes the attributes to be processed
+ * @param {*} attributeDatabase descriptions and types for all SVG elements
+ * @returns
+ */
+
+ function makePropTypes(attributes, attributeDatabase) {
+   const attr  = {}
+   for (const attribute of attributes) {
+     const {description, type } = attributeDatabase[attribute]
+     console.log(`type "${type}"`)
+
+     const protoType = `XXXX ${type}`
+
+
+     attr[attribute] = {description, protoType }
+
+   }
+
+   return attr
+ }
+
+
+/**
  * Generate the prototypes for the SVG element
  *
  * @param {*} element the element name
@@ -43,6 +68,11 @@ function nameComponent(elementName) {
 
 function generatePropTypes(element, attributes) {
   const elements = attributes.elements;
+
+
+  const PROP_TYPES = makePropTypes(elements[element], attributes.attributes)
+
+
   // Always add the list of global attributes.
   const supportedAttributes = elements[element] ?
     elements[element].concat(elements.Globalattribute) :
