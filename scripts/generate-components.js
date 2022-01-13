@@ -42,6 +42,24 @@ function nameComponent(elementName) {
  */
 
  function makePropTypes(attributes, attributeDatabase) {
+
+  const foldDescription = (desc) => {
+    const words = desc.replace(/\s/, ' ').split(' ')
+
+    const lines = words.reduce((lines, word) => {
+      let line = lines.pop()
+      line += ` ${word}`
+      lines.push(line)
+      if (line.length > 60) {
+        lines.push('      * ')
+      }
+      return lines
+    }, ['']);
+
+    return lines.join('\n')
+  }
+
+
    const propTypes  = []
    for (const attribute of attributes) {
      const {description, type } = attributeDatabase[attribute]
@@ -50,7 +68,7 @@ function nameComponent(elementName) {
      let PROP_TYPE = `
 
      /**
-      *${description ? ' ' + description : ''}
+      *${description ? ' ' + foldDescription(description) : ''}
       */
       ${attribute}: PropTypes.`
 
@@ -91,9 +109,7 @@ function nameComponent(elementName) {
 function generatePropTypes(element, attributes) {
   const elements = attributes.elements;
 
-
   const PROP_TYPES = makePropTypes(elements[element], attributes.attributes)
-
 
   console.log('TODO: Always add the list of global attributes')
 
@@ -145,19 +161,9 @@ function generatePropTypes(element, attributes) {
      */
     'aria-*': PropTypes.string,` +
 
-    supportedAttributes.reduce((propTypes, attributeName) => {
-      const attribute = attributes.attributes[attributeName];
-      const propType = PROP_TYPES[attributeName] || PROP_TYPES._default;
-      if (attributeName === 'id') {
-        return propTypes;
-      }
-      return propTypes + `
+    PROP_TYPES
 
-    /**
-     *${attribute.description ? ' ' + attribute.description : ''}
-     */
-    '${attributeName}': PropTypes.${propType},`;
-    }, '') + `
+    + `
 
     /**
      * Object that holds the loading state object coming from dash-renderer
@@ -245,17 +251,15 @@ const customDocs = {
 function generateComponent(Component, element, attributes) {
   const propTypes = generatePropTypes(element, attributes);
 
-  const customDoc = customDocs[element] ? ('\n *' + customDocs[element] + '\n *') : '';
-
   return `
 import React from 'react';
 import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * ${Component} is a wrapper for the <${element}> HTML5 element.${customDoc}
+ * ${Component} is a wrapper for the <${element}> SVG element.
  * For detailed attribute info see:
- * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/${element}
+ * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/${element}
  */
 const ${Component} = (props) => {
     const dataAttributes = {};
