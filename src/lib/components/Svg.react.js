@@ -790,6 +790,100 @@ Svg.propTypes = {
     zoomAndPan: PropTypes.string,
 
     /**
+     *  The fill attribute has two different meanings. For shapes and
+     *  text it's a presentation attribute that defines the color
+     *  (or any SVG paint servers like gradients or patterns)
+     *  used to paint the element; for animation it defines the
+     *  final state of the animation.You can use this attribute
+     *  with the following SVG elements:For animation, these elements
+     *  are using this attribute: <animate>, <animateColor>, <animateMotion>,
+     *  <animateTransform>, and <set>.Warning: As of SVG2 <altGlyph>
+     *  is deprecated and shouldn't be used.For <altGlyph>, fill
+     *  is a presentation attribute that defines the color of
+     *  the glyph.Note: As a presentation attribute fill can be
+     *  used as a CSS property.For <animate>, fill defines the
+     *  final state of the animation.Warning: As of SVG Animation
+     *  2 <animateColor> is deprecated and shouldn't be used.
+     *  Use <animate> instead.For <animateColor>, fill defines
+     *  the final state of the animation.For <animateMotion>,
+     *  fill defines the final state of the animation.For <animateTransform>,
+     *  fill defines the final state of the animation.For <circle>,
+     *  fill is a presentation attribute that defines the color
+     *  of the circle.Note: As a presentation attribute fill can
+     *  be used as a CSS property.For <ellipse>, fill is a presentation
+     *  attribute that defines the color of the ellipse.Note:
+     *  As a presentation attribute fill can be used as a CSS
+     *  property.For <path>, fill is a presentation attribute
+     *  that defines the color of the interior of the shape. (Interior
+     *  is define by the fill-rule attribute)Note: As a presentation
+     *  attribute fill can be used as a CSS property.For <polygon>,
+     *  fill is a presentation attribute that defines the color
+     *  of the interior of the shape. (Interior is define by the
+     *  fill-rule attribute)Note: As a presentation attribute
+     *  fill can be used as a CSS property.For <polyline>, fill
+     *  is a presentation attribute that defines the color of
+     *  the interior of the shape. (Interior is define by the
+     *  fill-rule attribute)Note: As a presentation attribute
+     *  fill can be used as a CSS property.For <rect>, fill is
+     *  a presentation attribute that defines the color of the
+     *  rectangle.Note: As a presentation attribute fill can be
+     *  used as a CSS property.For <set>, fill defines the final
+     *  state of the animation.For <text>, fill is a presentation
+     *  attribute that defines what the color of the text.Note:
+     *  As a presentation attribute fill can be used as a CSS
+     *  property.For <textPath>, fill is a presentation attribute
+     *  that defines the color of the text.Note: As a presentation
+     *  attribute fill can be used as a CSS property.Warning:
+     *  As of SVG2 <tref> is deprecated and shouldn't be used.For
+     *  <tref>, fill is a presentation attribute that defines
+     *  the color of the text.Note: As a presentation attribute
+     *  fill can be used as a CSS property.For <tspan>, fill is
+     *  a presentation attribute that defines the color of the
+     *  text.Note: As a presentation attribute fill can be used
+     *  as a CSS property.BCD tables only load in the browserNote:
+     *  For information on using the context-fill (and context-stroke)
+     *  values from HTML documents, see the documentation for
+     *  the non-standard -moz-context-properties property.
+     */
+    fill: PropTypes.string,
+
+    /**
+     *  The stroke attribute is a presentation attribute defining the
+     *  color (or any SVG paint servers like gradients or patterns)
+     *  used to paint the outline of the shape;Note: As a presentation
+     *  attribute stroke can be used as a CSS property.You can
+     *  use this attribute with the following SVG elements:BCD
+     *  tables only load in the browserNote: For information on
+     *  using the context-stroke (and context-fill) values from
+     *  HTML documents, see the documentation for the non-standard
+     *  -moz-context-properties property.
+     */
+    stroke: PropTypes.string,
+
+    /**
+     *  The viewBox attribute defines the position and dimension, in
+     *  user space, of an SVG viewport.The value of the viewBox
+     *  attribute is a list of four numbers: min-x, min-y, width
+     *  and height. The numbers separated by whitespace and/or
+     *  a comma, which specify a rectangle in user space which
+     *  is mapped to the bounds of the viewport established for
+     *  the associated SVG element (not the browser viewport).You
+     *  can use this attribute with the following SVG elements:The
+     *  exact effect of this attribute is influenced by the preserveAspectRatio
+     *  attribute.Note: Values for width or height lower or equal
+     *  to 0 disable rendering of the element.For <marker>, viewBox
+     *  defines the position and dimension for the content of
+     *  the <marker> element.For <pattern>, viewBox defines the
+     *  position and dimension for the content of the pattern
+     *  tile.For <svg>, viewBox defines the position and dimension
+     *  for the content of the <svg> element.For <symbol>, viewBox
+     *  defines the position and dimension for the content of
+     *  the <symbol> element.For <view>, viewBox defines the position
+     *  and dimension for the content of the <view> element.
+     */
+    viewBox: PropTypes.string,
+
+    /**
      *  Often used with CSS to style elements with common properties.
      * 
      */
@@ -799,6 +893,11 @@ Svg.propTypes = {
      *  Alternative text in case an image can't be displayed.
      */
     alt: PropTypes.string,
+
+    /**
+     *  SVG xml namespace.
+     */
+    xmlns: PropTypes.string,
 
 
     /**

@@ -1193,6 +1193,27 @@ For example, a miter
     visibility: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
+     *  « SVG Attribute reference homeThe clip-rule attribute only applies
+     *  to graphics elements that are contained within a <clipPath>
+     *  element. The clip-rule attribute basically works as the
+     *  fill-rule attribute, except that it applies to <clipPath>
+     *  definitions.The following fragment of code will cause
+     *  an evenodd clipping rule to be applied to the clipping
+     *  path because clip-rule is specified on the <path> element
+     *  that defines the clipping shape:whereas the following
+     *  fragment of code will not cause an evenodd clipping rule
+     *  to be applied because the clip-rule is specified on the
+     *  referencing element, not on the object defining the clipping
+     *  shape:As a presentation attribute, it also can be used
+     *  as a property directly inside a CSS stylesheetSee description
+     *  of fill-rule property.See description of fill-rule property.The
+     *  following elements can use the clip-rule attribute, but
+     *  only if they are inside a <clipPath> element.BCD tables
+     *  only load in the browser
+     */
+    clipRule: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /**
      *  Often used with CSS to style elements with common properties.
      * 
      */

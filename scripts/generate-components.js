@@ -24,6 +24,11 @@ const SVG_ADDITIONAL_ATTRIBUTES = {
     "isRequired": false,
     "type": "string",
     },
+  "xmlns": {
+    "description": "SVG xml namespace.",
+    "isRequired": false,
+    "type": "string",
+    },
 }
 
 function bail(message) {
@@ -324,6 +329,12 @@ const attributes = JSON.parse(fs.readFileSync(attributesPath, 'utf-8'));
 // incomplete. Add a few omissions
 
 attributes.elements.g.push('fill')
+
+attributes.elements.svg.push('fill')
+attributes.elements.svg.push('stroke')
+attributes.elements.svg.push('viewBox')
+
+attributes.elements.path.push('clipRule')
 
 const components = generateComponents(componentList, attributes);
 

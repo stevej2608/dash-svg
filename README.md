@@ -64,6 +64,7 @@ components:
 
 First change the release version in [package.json](package.json), then:
 
+    rm -rf dist/*
     python setup.py sdist bdist_wheel
 
 The tarball is in *dist/dash_svg-<version>.tar.gz*
