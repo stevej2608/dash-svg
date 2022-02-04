@@ -7,5 +7,6 @@ include dash_svg/*-shared.js.map
 include dash_svg/metadata.json
 include dash_svg/package-info.json
 include README.md
+include landing-page.md
 include LICENSE
 include package.json

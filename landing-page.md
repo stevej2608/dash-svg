@@ -1,10 +1,8 @@
-## dash-svg
+# dash-svg
 
-![](docs/img/dash-minimal.png)
+![](https://raw.githubusercontent.com/stevej2608/dash-svg/master/docs/img/dash-minimal.png)
 
 Scalable Vector Graphics (SVG) library for [Plotly/Dash](https://dash.plotly.com/)
-
-## Usage
 
 Dash clone of the ubiquitous *create-react-app* default project,
 ```
@@ -34,9 +32,27 @@ if __name__ == '__main__':
     app.run_server(debug=True)
 ```
 
-To run demo:
+## Installation
 
-    pip install dash-svg
+You can install *dash-svg* with `pip`:
 
-    python usage.py
+```
+pip install dash-svg
+```
 
+## Documentation
+
+Head over to the [*README*][docs-homepage] for more details.
+
+## Contributing
+
+The source code for *dash-svg* is available
+[on GitHub][dash-svg-repo]. If you find a bug or something is unclear, we encourage
+you to raise an issue. We also welcome contributions, to contribute, fork the
+repository and open a [pull request][dash-svg-pulls].
+
+
+[dash-homepage]: https://dash.plot.ly/
+[dash-svg-repo]: https://github.com/stevej2608/dash-svg
+[docs-homepage]: https://github.com/stevej2608/dash-svg/blob/master/README.md
+[dash-svg-pulls]: https://github.com/stevej2608/dash-svg/pulls
