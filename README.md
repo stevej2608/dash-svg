@@ -4,6 +4,18 @@
 
 Scalable Vector Graphics (SVG) library for [Plotly/Dash](https://dash.plotly.com/)
 
+As with the Plotly/Dash [dash_html_components] library the SVG library components
+are created automatically by scraping [SVG@developer.mozilla.org]. The resulting
+Dash component library is a thin wrapper that accepts the SVG attributes and passes
+them on to the underlying SVG engine in the browser.
+
+Testing dash-svg is minimal, given the huge number of SVG components and
+attribute combinations I suspect this will always be the case. Since the library is
+generated automatically any bugs are likely to be systematic.
+
+The [SVG@developer.mozilla.org] reference pages have been updated to SVG 2, the
+dash-svg reflects these changes.
+
 ## Usage
 
 Dash clone of the ubiquitous *create-react-app* default project,
@@ -40,3 +52,6 @@ To run demo:
 
     python usage.py
 
+
+[dash_html_components]: https://github.com/plotly/dash/tree/dev/components/dash-html-components
+[SVG@developer.mozilla.org]: https://developer.mozilla.org/en-US/docs/Web/SVG/Element
