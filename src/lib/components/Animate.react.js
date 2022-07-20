@@ -95,7 +95,8 @@ Animate.propTypes = {
      *  attribute value does not support addition, or if the animation
      *  element does not repeat.This attribute will be ignored
      *  if the animation function is specified with only the to
-     *  attribute.
+     *  attribute.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     accumulate: PropTypes.oneOfType([
         PropTypes.oneOf(['"none"|"sum"']),
@@ -114,8 +115,8 @@ Animate.propTypes = {
      *  other lower priority animations. This is the default,
      *  however the behavior is also affected by the animation
      *  value attributes by and to, as described in SMIL Animation:
-     *  How from, to and by attributes affect additive behavior.
-     * 
+     *  How from, to and by attributes affect additive behavior.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     additive: PropTypes.oneOfType([
         PropTypes.oneOf(['"replace"|"sum"']),
@@ -128,7 +129,8 @@ Animate.propTypes = {
      *  changed during an animation.You can use this attribute
      *  with the following SVG elements:This value indicates the
      *  name of the CSS property or attribute of the target element
-     *  to be animated.
+     *  to be animated.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     attributeName: PropTypes.string,
 
@@ -152,8 +154,8 @@ Animate.propTypes = {
      *  match the attributeName to an attribute for the target
      *  element. User agents first search through the list of
      *  CSS properties for a matching property name, and if none
-     *  is found, search the default XML namespace for the element.
-     * 
+     *  is found, search the default XML namespace for the element.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     attributeType: PropTypes.string,
 
@@ -190,7 +192,7 @@ Animate.propTypes = {
      *  a dot and one of the supported events for that element.
      *  All valid events (not necessarily supported by all elements)
      *  are defined by the DOM and HTML specifications. Those
-     *  are: focus, blur, focusin, focusout, activate, auxclick,
+     *  are: focus, blur, focusin, focusout, DOMActivate, auxclick,
      *  click, dblclick, mousedown, mouseenter, mouseleave, mousemove,
      *  mouseout, mouseover, mouseup, wheel, beforeinput, input,
      *  keydown, keyup, compositionstart, compositionupdate, compositionend,
@@ -236,8 +238,8 @@ Animate.propTypes = {
      *  element.The definition of <begin-value-list> is the same
      *  as for the other animation elements.begin-1-offset.svgbegin-2-syncbase.svgbegin-3-event.svgbegin-4-repeat.svgThis
      *  example is embed in an iFrame. If you want to activate
-     *  the key events, you have to click on it first.begin-5-accesskey.svg
-     * 
+     *  the key events, you have to click on it first.begin-5-accesskey.svgLast
+     *  modified: Jul 12, 2022, by MDN contributors
      */
     begin: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -250,9 +252,9 @@ Animate.propTypes = {
      *  the following SVG elements:The exact value type for this
      *  attribute depends on the value of the attribute that will
      *  be animated.When a list of values is defined via the values
-     *  attribute, the by attribute is ignored.No compatibility
-     *  data found for svg.elements.animate.by.Check for problems
-     *  with this page or contribute missing data to mdn/browser-compat-data.
+     *  attribute, the by attribute is ignored.BCD tables only
+     *  load in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
      * 
      */
     by: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
@@ -278,7 +280,8 @@ Animate.propTypes = {
      *  to a time function defined by a cubic Bézier spline. The
      *  points of the spline are defined in the keyTimes attribute,
      *  and the control points for each interval are defined in
-     *  the keySplines attribute.
+     *  the keySplines attribute.Last modified: May 13, 2022,
+     *  by MDN contributors
      */
     calcMode: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -307,53 +310,24 @@ Animate.propTypes = {
      *  can choose either the sRGB or linearRGB spaces for color
      *  interpolation. This option indicates that the author doesn't
      *  require that color interpolation occur in a particular
-     *  color space.Indicates that color interpolation should
+     *  color space.Indicates that color interpolation should
      *  occur in the sRGB color space.Indicates that color interpolation
      *  should occur in the linearized RGB color space as described
      *  in the sRGB specification.BCD tables only load in the
-     *  browser
+     *  browser with JavaScript enabled. Enable JavaScript to
+     *  view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     colorInterpolation: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  Deprecated: This feature is no longer recommended. Though some
-     *  browsers might still support it, it may have already been
-     *  removed from the relevant web standards, may be in the
-     *  process of being dropped, or may only be kept for compatibility
-     *  purposes. Avoid using it, and update existing code if
-     *  possible; see the compatibility table at the bottom of
-     *  this page to guide your decision. Be aware that this feature
-     *  may cease to work at any time.The color-rendering attribute
-     *  provides a hint to the SVG user agent about how to optimize
-     *  its color interpolation and compositing operations.color-rendering
-     *  takes precedence over color-interpolation-filters. For
-     *  example, assume color-rendering: optimizeSpeed and color-interpolation-filters:
-     *  linearRGB. In this case, the SVG user agent should perform
-     *  color operations in a way that optimizes performance,
-     *  which might mean sacrificing the color interpolation precision
-     *  as specified by through the linearRGB value for color-interpolation-filters.Note:
-     *  As a presentation attribute, color-rendering can be used
-     *  as a CSS property.You can use this attribute with the
-     *  following SVG elements:Indicates that the user agent shall
-     *  make appropriate tradeoffs to balance speed and quality,
-     *  but quality shall be given more importance than speed.Indicates
-     *  that the user agent shall emphasize rendering speed over
-     *  quality. For RGB display devices, this option will sometimes
-     *  cause the user agent to perform color interpolation and
-     *  compositing in the device RGB color space.Indicates that
-     *  the user agent shall emphasize quality over rendering
-     *  speed.BCD tables only load in the browser
-     */
-    colorRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  The dur attribute indicates the simple duration of an animation.You
      *  can use this attribute with the following SVG elements:This
      *  value specifies the length of the simple duration. The
-     *  value must be greater than 0 and can be expressed with hours
-     *  (h), minutes (m), seconds (s) or milliseconds (ms). It's
-     *  possible to combine those time representations to create
-     *  some complex durations like hh:mm:ss.iii or mm:ss.iii.
+     *  value must be greater than 0 and can be expressed with
+     *  hours (h), minutes (m), seconds (s) or milliseconds (ms).
+     *  It's possible to combine those time representations to
+     *  create some complex durations like hh:mm:ss.iii or mm:ss.iii.
 
      *       This value specifies the simple duration as the intrinsic
      *  media duration. This is only valid for elements that define
@@ -364,7 +338,9 @@ Animate.propTypes = {
      *  the simple duration as indefinite.Note: the interpolation
      *  will not work if the simple duration is indefinite (although
      *  this may still be useful for <set> elements).BCD tables
-     *  only load in the browser
+     *  only load in the browser with JavaScript enabled. Enable
+     *  JavaScript to view data.Last modified: May 17, 2022, by
+     *  MDN contributors
      */
     dur: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -420,12 +396,13 @@ Animate.propTypes = {
      *  will be determined by an SVGAnimationElement.endElement()
      *  method call.This example is embed in an iFrame. If you
      *  want to activate the key events, you have to click on
-     *  it first.
+     *  it first.Last modified: May 17, 2022, by MDN contributors
+     * 
      */
     end: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The from attribute indicates the initial value of the attribute
+     *  The from attribute indicates the initial value of the attribute
      *  that will be modified during the animation.When used with
      *  the to attribute, the animation will change the modified
      *  attribute from the from value to the to value. When used
@@ -436,7 +413,9 @@ Animate.propTypes = {
      *  on the value of the attribute that will be animated.When
      *  a list of values is defined via the values attribute,
      *  the from attribute is ignored.BCD tables only load in
-     *  the browser
+     *  the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     from: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -457,7 +436,8 @@ Animate.propTypes = {
      *  space are ignored.If there are any errors in the value
      *  specification (i.e. bad values, too many or too few values),
      *  then that's an error.BCD tables only load in the browser
-     * 
+     *  with JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     keyPoints: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -470,10 +450,8 @@ Animate.propTypes = {
      *  values, too many or too few values), the animation will
      *  not occur.You can use this attribute with the following
      *  SVG elements:The attribute value is a semicolon-separated
-     *  list of control point descriptions.No compatibility data
-     *  found for svg.elements.animate.keySplines.Check for problems
-     *  with this page or contribute missing data to mdn/browser-compat-data.
-     * 
+     *  list of control point descriptions.Last modified: May
+     *  17, 2022, by MDN contributors
      */
     keySplines: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -494,15 +472,13 @@ Animate.propTypes = {
      *  upon the interpolation mode:If the calcMode attribute
      *  is set to paced, the keyTimes attribute is ignored.If
      *  the duration of the animation is indefinite, any keyTimes
-     *  specification will be ignored.No compatibility data found
-     *  for svg.elements.animate.keyTimes.Check for problems with
-     *  this page or contribute missing data to mdn/browser-compat-data.
-     * 
+     *  specification will be ignored.Last modified: May 13, 2022,
+     *  by MDN contributors
      */
     keyTimes: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The repeatCount attribute indicates the number of times an animation
+     *  The repeatCount attribute indicates the number of times an animation
      *  will take place.You can use this attribute with the following
      *  SVG elements:This value specifies the number of iterations.
      *  It can include partial iterations expressed as fraction
@@ -510,7 +486,9 @@ Animate.propTypes = {
      *  simple duration. Values must be greater than 0.This value
      *  indicates that the animation will be repeated indefinitely
      *  (i.e. until the document ends).BCD tables only load in
-     *  the browser
+     *  the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     repeatCount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -520,9 +498,8 @@ Animate.propTypes = {
      *  SVG elements:This value specifies the duration in presentation
      *  time to repeat the animation.This value indicates that
      *  the animation will be repeated indefinitely (i.e. until
-     *  the document ends).No compatibility data found for svg.elements.animate.repeatDur.Check
-     *  for problems with this page or contribute missing data
-     *  to mdn/browser-compat-data.
+     *  the document ends).Last modified: May 13, 2022, by MDN
+     *  contributors
      */
     repeatDur: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -542,7 +519,7 @@ Animate.propTypes = {
      *  to true end the element is rendered; otherwise, the attribute
      *  evaluates to false and the current element and its children
      *  are skipped and thus will not be rendered. This provides
-     *  a way to design SVG that gracefully falls back when features
+     *  a way to design SVG that gracefully falls back when features
      *  aren't available.If the attribute is not present, then
      *  its implicit evaluated value is true. If a null string
      *  or empty string value is given to attribute requiredFeatures,
@@ -550,7 +527,7 @@ Animate.propTypes = {
      *  often used in conjunction with the <switch> element. If
      *  requiredFeatures is used in other situations, it represents
      *  a simple switch on the given element whether to render
-     *  the element or not.To detect availability of an SVG feature
+     *  the element or not.To detect availability of an SVG feature
      *  from script, there is the (also deprecated) DOMImplementation.hasFeature()
      *  method.You can use this attribute with the following SVG
      *  elements:This is a list of feature strings, separated
@@ -641,7 +618,9 @@ Animate.propTypes = {
      *  <font>, <font-face>, <glyph>, <missing-glyph>, <hkern>,
      *  <font-face-src> and <font-face-name> elementsThe browser
      *  supports the <foreignObject> elementSee also requiredFeatures.svgBCD
-     *  tables only load in the browser
+     *  tables only load in the browser with JavaScript enabled.
+     *  Enable JavaScript to view data.Last modified: May 13,
+     *  2022, by MDN contributors
      */
     requiredFeatures: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -654,9 +633,8 @@ Animate.propTypes = {
      *  (i.e. after the active end). Attempts to restart the animation
      *  during its active duration are ignored.This value indicates
      *  that the animation cannot be restarted for the time the
-     *  document is loaded.No compatibility data found for svg.elements.animate.restart.Check
-     *  for problems with this page or contribute missing data
-     *  to mdn/browser-compat-data.
+     *  document is loaded.Last modified: May 13, 2022, by MDN
+     *  contributors
      */
     restart: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -697,12 +675,14 @@ Animate.propTypes = {
      *  language primer, such as "A First Lesson in Latin," which
      *  is clearly intended to be used by an English-literate
      *  audience. In this case, the attribute should only include
-     *  en.BCD tables only load in the browser
+     *  en.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 13, 2022, by MDN contributors
      */
     systemLanguage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The to attribute indicates the final value of the attribute that
+     *  The to attribute indicates the final value of the attribute that
      *  will be modified during the animation.The value of the
      *  attribute will change between the from attribute value
      *  and this value.You can use this attribute with the following
@@ -714,8 +694,8 @@ Animate.propTypes = {
      *  the to attribute is ignored.For the <set> element, to
      *  specifies the value for the attribute during the duration
      *  of the element.The exact value type for this attribute
-     *  depend on the value of the attribute that will be animated.
-     * 
+     *  depend on the value of the attribute that will be animated.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     to: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -737,7 +717,8 @@ Animate.propTypes = {
      *  a list of numbers interpreted differently depending on
      *  the value of the type attribute.The value is a list of
      *  numbers, which is interpreted differently depending on
-     *  the value of the type attribute:
+     *  the value of the type attribute:Last modified: Jul 10,
+     *  2022, by MDN contributors
      */
     values: PropTypes.string,
 

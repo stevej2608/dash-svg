@@ -111,7 +111,8 @@ View.propTypes = {
      *  a uniform scaling must be performed to fit the element
      *  viewport.For <view>, preserveAspectRatio indicates if
      *  a uniform scaling must be performed to fit the element
-     *  viewport.
+     *  viewport.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     preserveAspectRatio: PropTypes.string,
 
@@ -119,9 +120,9 @@ View.propTypes = {
      *  The viewBox attribute defines the position and dimension, in
      *  user space, of an SVG viewport.The value of the viewBox
      *  attribute is a list of four numbers: min-x, min-y, width
-     *  and height. The numbers separated by whitespace and/or
-     *  a comma, which specify a rectangle in user space which
-     *  is mapped to the bounds of the viewport established for
+     *  and height. The numbers, which are separated by whitespace
+     *  and/or a comma, specify a rectangle in user space which
+     *  is mapped to the bounds of the viewport established for
      *  the associated SVG element (not the browser viewport).You
      *  can use this attribute with the following SVG elements:The
      *  exact effect of this attribute is influenced by the preserveAspectRatio
@@ -134,7 +135,8 @@ View.propTypes = {
      *  for the content of the <svg> element.For <symbol>, viewBox
      *  defines the position and dimension for the content of
      *  the <symbol> element.For <view>, viewBox defines the position
-     *  and dimension for the content of the <view> element.
+     *  and dimension for the content of the <view> element.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     viewBox: PropTypes.string,
 
@@ -150,7 +152,9 @@ View.propTypes = {
      *  indicates the target object associated with the view.You
      *  can use this attribute with the following SVG elements:This
      *  value specifies the name of the object associated with
-     *  the view.BCD tables only load in the browser
+     *  the view.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 13, 2022, by MDN contributors
      */
     viewTarget: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -170,7 +174,9 @@ View.propTypes = {
      *  a translation (i.e., a shift) transformation on an SVG
      *  document fragment in response to a user interface action.You
      *  can use this attribute with the following SVG elements:BCD
-     *  tables only load in the browser
+     *  tables only load in the browser with JavaScript enabled.
+     *  Enable JavaScript to view data.Last modified: May 13,
+     *  2022, by MDN contributors
      */
     zoomAndPan: PropTypes.string,
 

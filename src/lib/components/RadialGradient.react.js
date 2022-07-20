@@ -106,44 +106,15 @@ RadialGradient.propTypes = {
      *  can choose either the sRGB or linearRGB spaces for color
      *  interpolation. This option indicates that the author doesn't
      *  require that color interpolation occur in a particular
-     *  color space.Indicates that color interpolation should
+     *  color space.Indicates that color interpolation should
      *  occur in the sRGB color space.Indicates that color interpolation
      *  should occur in the linearized RGB color space as described
      *  in the sRGB specification.BCD tables only load in the
-     *  browser
+     *  browser with JavaScript enabled. Enable JavaScript to
+     *  view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     colorInterpolation: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  Deprecated: This feature is no longer recommended. Though some
-     *  browsers might still support it, it may have already been
-     *  removed from the relevant web standards, may be in the
-     *  process of being dropped, or may only be kept for compatibility
-     *  purposes. Avoid using it, and update existing code if
-     *  possible; see the compatibility table at the bottom of
-     *  this page to guide your decision. Be aware that this feature
-     *  may cease to work at any time.The color-rendering attribute
-     *  provides a hint to the SVG user agent about how to optimize
-     *  its color interpolation and compositing operations.color-rendering
-     *  takes precedence over color-interpolation-filters. For
-     *  example, assume color-rendering: optimizeSpeed and color-interpolation-filters:
-     *  linearRGB. In this case, the SVG user agent should perform
-     *  color operations in a way that optimizes performance,
-     *  which might mean sacrificing the color interpolation precision
-     *  as specified by through the linearRGB value for color-interpolation-filters.Note:
-     *  As a presentation attribute, color-rendering can be used
-     *  as a CSS property.You can use this attribute with the
-     *  following SVG elements:Indicates that the user agent shall
-     *  make appropriate tradeoffs to balance speed and quality,
-     *  but quality shall be given more importance than speed.Indicates
-     *  that the user agent shall emphasize rendering speed over
-     *  quality. For RGB display devices, this option will sometimes
-     *  cause the user agent to perform color interpolation and
-     *  compositing in the device RGB color space.Indicates that
-     *  the user agent shall emphasize quality over rendering
-     *  speed.BCD tables only load in the browser
-     */
-    colorRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  The cx attribute define the x-axis coordinate of a center point.You
@@ -156,7 +127,8 @@ RadialGradient.propTypes = {
      *  SVG2 cx, is a Geometry Property, meaning this attribute
      *  can also be used as CSS property for ellipses.For <radialGradient>,
      *  cx defines the x-axis coordinate of the end circle for
-     *  the radial gradient.
+     *  the radial gradient.Last modified: May 13, 2022, by MDN
+     *  contributors
      */
     cx: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -171,7 +143,8 @@ RadialGradient.propTypes = {
      *  with SVG2, cy is a Geometry Property meaning this attribute
      *  can also be used as a CSS property for ellipses.For <radialGradient>,
      *  cy defines the y-axis coordinate of the end circle for
-     *  the radial gradient.
+     *  the radial gradient.Last modified: May 13, 2022, by MDN
+     *  contributors
      */
     cy: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -179,7 +152,9 @@ RadialGradient.propTypes = {
      *  The fx attribute defines the x-axis coordinate of the focal point
      *  for a radial gradient.You can use this attribute with
      *  the following SVG elements:BCD tables only load in the
-     *  browser
+     *  browser with JavaScript enabled. Enable JavaScript to
+     *  view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     fx: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -187,7 +162,9 @@ RadialGradient.propTypes = {
      *  The fy attribute defines the y-axis coordinate of the focal point
      *  for a radial gradient.You can use this attribute with
      *  the following SVG elements:BCD tables only load in the
-     *  browser
+     *  browser with JavaScript enabled. Enable JavaScript to
+     *  view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     fy: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -204,7 +181,9 @@ RadialGradient.propTypes = {
      *  with the following SVG elements:A list of transformation
      *  functions specifying some additional transformation from
      *  the gradient coordinate system onto the target coordinate
-     *  system.BCD tables only load in the browser
+     *  system.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 13, 2022, by MDN contributors
      */
     gradientTransform: PropTypes.string,
 
@@ -270,7 +249,8 @@ RadialGradient.propTypes = {
      *  box space will render as elliptical due to application
      *  of the non-uniform scaling transformation from bounding
      *  box space to user space.
-    
+    Last modified: May 13, 2022,
+     *  by MDN contributors
      */
     gradientUnits: PropTypes.string,
 
@@ -287,7 +267,8 @@ RadialGradient.propTypes = {
      *  is mapped to the perimeter of this end circle. A value
      *  of lower or equal to zero will cause the area to be painted
      *  as a single color using the color and opacity of the last
-     *  gradient <stop>.
+     *  gradient <stop>.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     r: PropTypes.string,
 
@@ -309,9 +290,9 @@ RadialGradient.propTypes = {
      *  the cx, cy and r (outer) and fx, fy and fr (inner) attributes.Notice
      *  that the middle third of each gradient is the same. The
      *  outer thirds show the difference between the three spread
-     *  methods.No compatibility data found for svg.attributes.presentation.spreadMethod.Check
-     *  for problems with this page or contribute missing data
-     *  to mdn/browser-compat-data.
+     *  methods.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 13, 2022, by MDN contributors
      */
     spreadMethod: PropTypes.string,
 

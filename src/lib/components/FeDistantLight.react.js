@@ -85,7 +85,9 @@ FeDistantLight.propTypes = {
      *  The azimuth attribute specifies the direction angle for the light
      *  source on the XY plane (clockwise), in degrees from the
      *  x axis.You can use this attribute with the following SVG
-     *  elements:BCD tables only load in the browser
+     *  elements:BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 13, 2022, by MDN contributors
      */
     azimuth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -95,7 +97,9 @@ FeDistantLight.propTypes = {
      *  degrees. Note that the positive Z-axis points towards
      *  the viewer of the content.You can use this attribute with
      *  the following SVG elements:BCD tables only load in the
-     *  browser
+     *  browser with JavaScript enabled. Enable JavaScript to
+     *  view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     elevation: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 

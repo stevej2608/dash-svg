@@ -82,7 +82,7 @@ FePointLight.propTypes = {
     'aria-*': PropTypes.string,
 
     /**
-     *  The x attribute defines a x-axis coordinate in the user coordinate
+     *  The x attribute defines an x-axis coordinate in the user coordinate
      *  system.You can use this attribute with the following SVG
      *  elements:Warning: As of SVG2 <altGlyph> is deprecated
      *  and shouldn't be used.For <altGlyph>, x defines the x-axis
@@ -130,65 +130,66 @@ FePointLight.propTypes = {
      *  coordinate for the rendering area of the primitive.For
      *  <filter>, x defines the x coordinate of the upper left
      *  corner for the rendering area of the filter.For <foreignObject>,
-     *  x defines the  x coordinate of the upper left corner of
+     *  x defines the x coordinate of the upper left corner of
      *  its viewport.Note: Starting with SVG2, x is a Geometry
      *  Property meaning this attribute can also be used as a
      *  CSS property for <foreignObject>.Warning: As of SVG2 <glyphRef>
      *  is deprecated and shouldn't be used.For <glyphRef>, x
      *  defines the x-axis coordinate of the glyph.For <image>,
-     *  x defines the  x coordinate of the upper left corner of
+     *  x defines the x coordinate of the upper left corner of
      *  the image.Note: Starting with SVG2, x is a Geometry Property
      *  meaning this attribute can also be used as a CSS property
-     *  for images.For <mask>, x defines the  x coordinate of
-     *  the upper left corner of its area of effect. The exact
-     *  effect of this attribute is influenced by the maskUnits
-     *  attribute.For <pattern>, x defines the  x coordinate of
-     *  the upper left corner of the tile pattern. The exact effect
-     *  of this attribute is influenced by the patternUnits and
-     *  patternTransform attributes.For <rect>, x defines the 
-     *  x coordinate of the upper left corner of the shape.Note:
-     *  Starting with SVG2, x is a Geometry Property meaning this
-     *  attribute can also be used as a CSS property for rectangles.For
-     *  <svg>, x defines the  x coordinate of the upper left corner
-     *  of its viewport.Note: Starting with SVG2, x is a Geometry
-     *  Property meaning this attribute can also be used as a
-     *  CSS property for <svg>.For <text>, if it contain a single
-     *  value, x defines the x coordinate on where the content
-     *  text position must be placed. The content text position
-     *  is usually a point on the baseline of the first line of
-     *  text. The exact content text position is influenced by
-     *  some properties like text-anchor, or direction.If there
-     *  are multiple values, x defines the x coordinate of each
-     *  individual glyph from the text. If there are less values
-     *  than glyphs, the remaining glyphs are placed in the continuity
-     *  of the last positioned glyph. If there are more values
-     *  than glyphs, extra values are ignored.Warning: As of SVG2
-     *  <tref> is deprecated and shouldn't be used.For <tref>,
-     *  if it contain a single value, x defines the x coordinate
-     *  on where the content text position must be placed. The
-     *  content text position is usually a point on the baseline
-     *  of the first line of text. The exact content text position
-     *  is influenced by some properties like text-anchor, or
-     *  direction.If there are multiple values, x defines the
+     *  for images.For <mask>, x defines the x coordinate of the
+     *  upper left corner of its area of effect. The exact effect
+     *  of this attribute is influenced by the maskUnits attribute.For
+     *  <pattern>, x defines the x coordinate of the upper left
+     *  corner of the tile pattern. The exact effect of this attribute
+     *  is influenced by the patternUnits and patternTransform
+     *  attributes.For <rect>, x defines the x coordinate of the
+     *  upper left corner of the shape.Note: Starting with SVG2,
+     *  x is a Geometry Property meaning this attribute can also
+     *  be used as a CSS property for rectangles.For <svg>, x
+     *  defines the x coordinate of the upper left corner of its
+     *  viewport.Note: Starting with SVG2, x is a Geometry Property
+     *  meaning this attribute can also be used as a CSS property
+     *  for <svg>.For <text>, if it contains a single value, x
+     *  defines the x coordinate where the content text position
+     *  must be placed. The content text position is usually a
+     *  point on the baseline of the first line of text. The exact
+     *  content text position is influenced by other properties,
+     *  such as text-anchor or direction.If it contains multiple
+     *  values, x defines the x coordinate of each individual
+     *  glyph from the text. If there are fewer values than glyphs,
+     *  the remaining glyphs are placed in line with the last
+     *  positioned glyph. If there are more values than glyphs,
+     *  the extra values are ignored.Warning: As of SVG2 <tref>
+     *  is deprecated and shouldn't be used.For <tref>, if it
+     *  contains a single value, x defines the x coordinate where
+     *  the content text position must be placed. The content
+     *  text position is usually a point on the baseline of the
+     *  first line of text. The exact content text position is
+     *  influenced by other properties, such as text-anchor or
+     *  direction.If it contains multiple values, x defines the
      *  x coordinate of each individual glyph from the text. If
-     *  there are less values than glyphs, the remaining glyphs
-     *  are placed in the continuity of the last positioned glyph.
-     *  If there are more values than glyphs, extra values are
-     *  ignored.For <tspan>, if it contain a single value, x defines
-     *  the x coordinate on where the content text position must
-     *  be placed. The content text position is usually a point
-     *  on the baseline of the first line of text. The exact content
-     *  text position is influenced by some properties like text-anchor,
-     *  or direction.If there are multiple values, x defines the
-     *  x coordinate of each individual glyph from the text. If
-     *  there are less values than glyphs, the remaining glyphs
-     *  are placed in the continuity of the last positioned glyph.
-     *  If there are more values than glyphs, extra values are
-     *  ignored.For <use>, x defines the  x coordinate of the
-     *  upper left corner of the referenced element.Note: Starting
-     *  with SVG2, x is a Geometry Property meaning this attribute
-     *  can also be used as a CSS property for used elements.
-     * 
+     *  there are fewer values than glyphs, the remaining glyphs
+     *  are placed in line with the last positioned glyph. If
+     *  there are more values than glyphs, the extra values are
+     *  ignored.For <tspan>, if it contains a single value, x
+     *  defines the x coordinate where the content text position
+     *  must be placed. The content text position is usually a
+     *  point on the baseline of the first line of text. The exact
+     *  content text position is influenced by other properties,
+     *  such as text-anchor or direction.If it contains multiple
+     *  values, x defines the x coordinate of each individual
+     *  glyph from the text. If there are fewer values than glyphs,
+     *  the remaining glyphs are placed in line with the last
+     *  positioned glyph. If there are more values than glyphs,
+     *  the extra values are ignored.For <use>, x defines the
+     *  x coordinate of the upper left corner of the referenced
+     *  element.Note: Starting with SVG2, x is a Geometry Property
+     *  meaning this attribute can also be used as a CSS property
+     *  for used elements.Last modified: Jun 17, 2022, by MDN
+     *  contributors
      */
     x: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -263,42 +264,44 @@ FePointLight.propTypes = {
      *  defines the y coordinate of the upper left corner of its
      *  viewport.Note: Starting with SVG2, y is a Geometry Property
      *  meaning this attribute can also be used as a CSS property
-     *  for <svg>.For <text>, if it contain a single value, y
-     *  defines the y coordinate on where the content text position
+     *  for <svg>.For <text>, if it contains a single value, y
+     *  defines the y coordinate where the content text position
      *  must be placed. The content text position is usually a
      *  point on the baseline of the first line of text. The exact
-     *  content text position is influenced by some properties
-     *  like text-anchor, or direction.If there are multiple values,
-     *  y defines the y coordinate of each individual glyph from
-     *  the text. If there are less values than glyphs, the remaining
-     *  glyphs are placed in the continuity of the last positioned
-     *  glyph. If there are more values than glyphs, extra values
-     *  are ignored.Warning: As of SVG2 <tref> is deprecated and
-     *  shouldn't be used.For <tref>, if it contain a single value,
-     *  y defines the y coordinate on where the content text position
+     *  content text position is influenced by other properties,
+     *  such as text-anchor or direction.If it contains multiple
+     *  values, y defines the y coordinate of each individual
+     *  glyph from the text. If there are fewer values than glyphs,
+     *  the remaining glyphs are placed in line with the last
+     *  positioned glyph. If there are more values than glyphs,
+     *  the extra values are ignored.Warning: As of SVG2 <tref>
+     *  is deprecated and shouldn't be used.For <tref>, if it
+     *  contains a single value, y defines the y coordinate where
+     *  the content text position must be placed. The content
+     *  text position is usually a point on the baseline of the
+     *  first line of text. The exact content text position is
+     *  influenced by other properties, such as text-anchor or
+     *  direction.If it contains multiple values, y defines the
+     *  y coordinate of each individual glyph from the text. If
+     *  there are fewer values than glyphs, the remaining glyphs
+     *  are placed in line with the last positioned glyph. If
+     *  there are more values than glyphs, the extra values are
+     *  ignored.For <tspan>, if it contains a single value, y
+     *  defines the y coordinate where the content text position
      *  must be placed. The content text position is usually a
      *  point on the baseline of the first line of text. The exact
-     *  content text position is influenced by some properties
-     *  like text-anchor, or direction.If there are multiple values,
-     *  y defines the y coordinate of each individual glyph from
-     *  the text. If there are less values than glyphs, the remaining
-     *  glyphs are placed in the continuity of the last positioned
-     *  glyph. If there are more values than glyphs, extra values
-     *  are ignored.For <tspan>, if it contain a single value,
-     *  y defines the y coordinate on where the content text position
-     *  must be placed. The content text position is usually a
-     *  point on the baseline of the first line of text. The exact
-     *  content text position is influenced by some properties
-     *  like text-anchor, or direction.If there are multiple values,
-     *  y defines the y coordinate of each individual glyph from
-     *  the text. If there are less values than glyphs, the remaining
-     *  glyphs are placed in the continuity of the last positioned
-     *  glyph. If there are more values than glyphs, extra values
-     *  are ignored.For <use>, y defines the y coordinate of the
-     *  upper left corner of the referenced element.Note: Starting
-     *  with SVG2, y is a Geometry Property meaning this attribute
-     *  can also be used as a CSS property for used elements.
-     * 
+     *  content text position is influenced by other properties,
+     *  such as text-anchor or direction.If it contains multiple
+     *  values, y defines the y coordinate of each individual
+     *  glyph from the text. If there are fewer values than glyphs,
+     *  the remaining glyphs are placed in line with the last
+     *  positioned glyph. If there are more values than glyphs,
+     *  the extra values are ignored.For <use>, y defines the
+     *  y coordinate of the upper left corner of the referenced
+     *  element.Note: Starting with SVG2, y is a Geometry Property
+     *  meaning this attribute can also be used as a CSS property
+     *  for used elements.Last modified: Jun 14, 2022, by MDN
+     *  contributors
      */
     y: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -315,8 +318,8 @@ FePointLight.propTypes = {
      *  by the primitiveUnits attribute on the <filter> element.For
      *  <feSpotLight>, z defines the location along the z-axis
      *  for the light source in the coordinate system established
-     *  by the primitiveUnits attribute on the <filter> element.
-     * 
+     *  by the primitiveUnits attribute on the <filter> element.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     z: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 

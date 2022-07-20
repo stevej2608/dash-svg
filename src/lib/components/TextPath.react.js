@@ -94,29 +94,29 @@ TextPath.propTypes = {
      *  the following SVG elements:The value is the dominant-baseline
      *  of the script to which the character belongs - i.e., use
      *  the dominant-baseline of the parent.Uses the dominant
-     *  baseline choice of the parent. Matches the box’s corresponding
+     *  baseline choice of the parent. Matches the box's corresponding
      *  baseline to that of its parent.The alignment-point of
      *  the object being aligned is aligned with the "before-edge"
      *  baseline of the parent text content element.Matches the
-     *  bottom of the box to the top of the parent’s content area.The
+     *  bottom of the box to the top of the parent's content area.The
      *  alignment-point of the object being aligned is aligned
      *  with the "text-before-edge" baseline of the parent text
      *  content element.Note: This keyword may be mapped to text-top.Aligns
      *  the vertical midpoint of the box with the baseline of
      *  the parent box plus half the x-height of the parent.Matches
-     *  the box’s central baseline to the central baseline of
+     *  the box's central baseline to the central baseline of
      *  its parent.The alignment-point of the object being aligned
      *  is aligned with the "after-edge" baseline of the parent
      *  text content element.Matches the top of the box to the
-     *  top of the parent’s content area.The alignment-point of
+     *  top of the parent's content area.The alignment-point of
      *  the object being aligned is aligned with the "text-after-edge"
      *  baseline of the parent text content element.Note: This
-     *  keyword may be mapped to text-bottom.Matches the box’s
+     *  keyword may be mapped to text-bottom.Matches the box's
      *  ideographic character face under-side baseline to that
-     *  of its parent.Matches the box’s alphabetic baseline to
+     *  of its parent.Matches the box's alphabetic baseline to
      *  that of its parent.The alignment-point of the object being
      *  aligned is aligned with the "hanging" baseline of the
-     *  parent text content element.Matches the box’s mathematical
+     *  parent text content element.Matches the box's mathematical
      *  baseline to that of its parent.Aligns the top of the aligned
      *  subtree with the top of the line box.Aligns the center
      *  of the aligned subtree with the center of the line box.Aligns
@@ -128,7 +128,9 @@ TextPath.propTypes = {
      *  to text-bottom. Neither text-before-edge nor text-after-edge
      *  should be used with the vertical-align property.For object
      *  alignment in other elements (such as <text>), see dominant-baseline.BCD
-     *  tables only load in the browser
+     *  tables only load in the browser with JavaScript enabled.
+     *  Enable JavaScript to view data.Last modified: May 13,
+     *  2022, by MDN contributors
      */
     alignmentBaseline: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -148,7 +150,9 @@ TextPath.propTypes = {
      *  percentage value raises (positive value) or lowers (negative
      *  value) the dominant-baseline of the parent text content
      *  element by the specified percentage of the line-height.BCD
-     *  tables only load in the browser
+     *  tables only load in the browser with JavaScript enabled.
+     *  Enable JavaScript to view data.Last modified: May 13,
+     *  2022, by MDN contributors
      */
     baselineShift: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -177,44 +181,15 @@ TextPath.propTypes = {
      *  can choose either the sRGB or linearRGB spaces for color
      *  interpolation. This option indicates that the author doesn't
      *  require that color interpolation occur in a particular
-     *  color space.Indicates that color interpolation should
+     *  color space.Indicates that color interpolation should
      *  occur in the sRGB color space.Indicates that color interpolation
      *  should occur in the linearized RGB color space as described
      *  in the sRGB specification.BCD tables only load in the
-     *  browser
+     *  browser with JavaScript enabled. Enable JavaScript to
+     *  view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     colorInterpolation: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  Deprecated: This feature is no longer recommended. Though some
-     *  browsers might still support it, it may have already been
-     *  removed from the relevant web standards, may be in the
-     *  process of being dropped, or may only be kept for compatibility
-     *  purposes. Avoid using it, and update existing code if
-     *  possible; see the compatibility table at the bottom of
-     *  this page to guide your decision. Be aware that this feature
-     *  may cease to work at any time.The color-rendering attribute
-     *  provides a hint to the SVG user agent about how to optimize
-     *  its color interpolation and compositing operations.color-rendering
-     *  takes precedence over color-interpolation-filters. For
-     *  example, assume color-rendering: optimizeSpeed and color-interpolation-filters:
-     *  linearRGB. In this case, the SVG user agent should perform
-     *  color operations in a way that optimizes performance,
-     *  which might mean sacrificing the color interpolation precision
-     *  as specified by through the linearRGB value for color-interpolation-filters.Note:
-     *  As a presentation attribute, color-rendering can be used
-     *  as a CSS property.You can use this attribute with the
-     *  following SVG elements:Indicates that the user agent shall
-     *  make appropriate tradeoffs to balance speed and quality,
-     *  but quality shall be given more importance than speed.Indicates
-     *  that the user agent shall emphasize rendering speed over
-     *  quality. For RGB display devices, this option will sometimes
-     *  cause the user agent to perform color interpolation and
-     *  compositing in the device RGB color space.Indicates that
-     *  the user agent shall emphasize quality over rendering
-     *  speed.BCD tables only load in the browser
-     */
-    colorRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  The direction attribute specifies the inline-base direction of
@@ -237,14 +212,16 @@ TextPath.propTypes = {
      *  elements:Note: As a presentation attribute, direction
      *  can be used as a CSS property. See css direction for further
      *  information.You can use this attribute with the following
-     *  SVG elements:BCD tables only load in the browser
+     *  SVG elements:BCD tables only load in the browser with
+     *  JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     direction: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  The dominant-baseline attribute specifies the dominant baseline,
-     *  which is the baseline used to align the box’s text and
-     *  inline-level contents. It also indicates the default alignment
+     *  which is the baseline used to align the box's text and
+     *  inline-level contents. It also indicates the default alignment
      *  baseline of any boxes participating in baseline alignment
      *  in the box's alignment context.It is used to determine
      *  or re-determine a scaled-baseline-table. A scaled-baseline-table
@@ -337,12 +314,14 @@ TextPath.propTypes = {
      *  The baseline-table font-size is changed to the value of
      *  the font-size attribute on this element.This value uses
      *  the top of the em box as the baseline.BCD tables only
-     *  load in the browser
+     *  load in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: Jul 8, 2022, by MDN contributors
+     * 
      */
     dominantBaseline: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The fill attribute has two different meanings. For shapes and
+     *  The fill attribute has two different meanings. For shapes and
      *  text it's a presentation attribute that defines the color
      *  (or any SVG paint servers like gradients or patterns)
      *  used to paint the element; for animation it defines the
@@ -392,10 +371,9 @@ TextPath.propTypes = {
      *  fill can be used as a CSS property.For <tspan>, fill is
      *  a presentation attribute that defines the color of the
      *  text.Note: As a presentation attribute fill can be used
-     *  as a CSS property.BCD tables only load in the browserNote:
-     *  For information on using the context-fill (and context-stroke)
-     *  values from HTML documents, see the documentation for
-     *  the non-standard -moz-context-properties property.
+     *  as a CSS property.BCD tables only load in the browser
+     *  with JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     fill: PropTypes.string,
 
@@ -409,7 +387,9 @@ TextPath.propTypes = {
      *  it is not widely supported yet (See Browser compatibility
      *  below) as a consequence, it is best practices to set opacity
      *  with a value in the range [0-1].BCD tables only load in
-     *  the browser
+     *  the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     fillOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -435,7 +415,9 @@ TextPath.propTypes = {
      *  the number of path segments from the given shape that
      *  the ray crosses. If this number is odd, the point is inside;
      *  if even, the point is outside.BCD tables only load in
-     *  the browser
+     *  the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     fillRule: PropTypes.oneOfType([
         PropTypes.oneOf(['"evenodd"|"inherit"|"nonzero"']),
@@ -449,10 +431,11 @@ TextPath.propTypes = {
      *  As a presentation attribute, font-family can be used as
      *  a CSS property. See the css font-family property for more
      *  information.You can use this attribute with the following
-     *  SVG elements:where <family-name> = <string> | <custom-ident>+<generic-family>
-     *  = serif | sans-serif | cursive | fantasy | monospaceFor
-     *  a description of the values, please refer to the CSS font-family
-     *  property.BCD tables only load in the browser
+     *  SVG elements:For a description of the values, please refer
+     *  to the CSS font-family property.BCD tables only load in
+     *  the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 17, 2022, by MDN contributors
+     * 
      */
     fontFamily: PropTypes.string,
 
@@ -464,7 +447,9 @@ TextPath.propTypes = {
      *  the css font-size property for more information.You can
      *  use this attribute with the following SVG elements:For
      *  a description of the values, please refer to the CSS font-size
-     *  property.BCD tables only load in the browser
+     *  property.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 17, 2022, by MDN contributors
      */
     fontSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -485,7 +470,9 @@ TextPath.propTypes = {
      *  when available, will appear the same size in browsers,
      *  whether or not they support font-size-adjust.0 yields
      *  text of zero height (hidden text).BCD tables only load
-     *  in the browser
+     *  in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     fontSizeAdjust: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -495,10 +482,9 @@ TextPath.propTypes = {
      *  As a presentation attribute, font-stretch can be used
      *  as a CSS property. See the css font-stretch property for
      *  more information.You can use this attribute with the following
-     *  SVG elements:where <font-stretch-absolute> = normal |
-     *  ultra-condensed | extra-condensed | condensed | semi-condensed
-     *  | semi-expanded | expanded | extra-expanded | ultra-expanded
-     *  | <percentage>BCD tables only load in the browser
+     *  SVG elements:BCD tables only load in the browser with
+     *  JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     fontStretch: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -510,7 +496,9 @@ TextPath.propTypes = {
      *  information.You can use this attribute with the following
      *  SVG elements:For a description of the values, please refer
      *  to the CSS font-style property.BCD tables only load in
-     *  the browser
+     *  the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 17, 2022, by MDN contributors
+     * 
      */
     fontStyle: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -558,7 +546,9 @@ TextPath.propTypes = {
     
      *     For a description of the values, please refer to the
      *  CSS font-variant property.BCD tables only load in the
-     *  browser
+     *  browser with JavaScript enabled. Enable JavaScript to
+     *  view data.Last modified: May 17, 2022, by MDN contributors
+     * 
      */
     fontVariant: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -570,7 +560,9 @@ TextPath.propTypes = {
      *  See the css font-weight property for more information.You
      *  can use this attribute with the following SVG elements:For
      *  a description of the values, please refer to the CSS font-weight
-     *  property.BCD tables only load in the browser
+     *  property.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 17, 2022, by MDN contributors
      */
     fontWeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -605,7 +597,9 @@ TextPath.propTypes = {
      *  towards the reference orientation. A value of 90deg indicates
      *  an orientation of 90 degrees clockwise from the reference
      *  orientation.
-    BCD tables only load in the browser
+    BCD tables only load in the browser with
+     *  JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     glyphOrientationHorizontal: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -657,7 +651,9 @@ TextPath.propTypes = {
      *  A value of 90deg indicates an orientation of 90 degrees
      *  clockwise from the reference orientation.
     BCD tables
-     *  only load in the browser
+     *  only load in the browser with JavaScript enabled. Enable
+     *  JavaScript to view data.Last modified: May 13, 2022, by
+     *  MDN contributors
      */
     glyphOrientationVertical: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -679,8 +675,8 @@ TextPath.propTypes = {
      *  called font-kerning, though.You can use this attribute
      *  with the following SVG elements:This value indicates that
      *  the spacing between glyphs is adjusted based on kerning
-     *  tables that are included in the font that will be used.If a
-     *  length is provided, then auto-kerning is disabled. Instead,
+     *  tables that are included in the font that will be used.If
+     *  a length is provided, then auto-kerning is disabled. Instead,
      *  inter-character spacing is set to the given length.If
      *  a length is provided without a unit identifier (e.g.,
      *  an unqualified number such as 128), the length is processed
@@ -692,7 +688,9 @@ TextPath.propTypes = {
      *  of 0 so that auto-kerning is disabled.The given length
      *  is added to the inter-character spacing value specified
      *  by the letter-spacing attribute.BCD tables only load in
-     *  the browser
+     *  the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: Feb 4, 2022, by MDN contributors
+     * 
      */
     kerning: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -700,7 +698,9 @@ TextPath.propTypes = {
      *  The lengthAdjust attribute controls how the text is stretched
      *  into the length defined by the textLength attribute.You
      *  can use this attribute with the following SVG elements:BCD
-     *  tables only load in the browser
+     *  tables only load in the browser with JavaScript enabled.
+     *  Enable JavaScript to view data.Last modified: May 13,
+     *  2022, by MDN contributors
      */
     lengthAdjust: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -717,7 +717,9 @@ TextPath.propTypes = {
      *  property for more information.You can use this attribute
      *  with the following SVG elements:For a description of the
      *  values, please refer to the CSS letter-spacing property.BCD
-     *  tables only load in the browser
+     *  tables only load in the browser with JavaScript enabled.
+     *  Enable JavaScript to view data.Last modified: May 13,
+     *  2022, by MDN contributors
      */
     letterSpacing: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -731,7 +733,9 @@ TextPath.propTypes = {
      *  uniform opacity setting to be applied across an entire
      *  object, as a <number>. Any values outside the range 0.0
      *  (fully transparent) to 1.0 (fully opaque) will be clamped
-     *  to this range.BCD tables only load in the browser
+     *  to this range.BCD tables only load in the browser with
+     *  JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     opacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -752,7 +756,9 @@ TextPath.propTypes = {
   
 The stroke under effect could be achieved
      *  via the following CSS property:BCD tables only load in
-     *  the browser
+     *  the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     paintOrder: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -763,8 +769,10 @@ The stroke under effect could be achieved
      *  pointer-events can be used as a CSS property.You can use
      *  this attribute with the following SVG elements:For a detailed
      *  explanation of each possible value, have a look at the
-     *  CSS  pointer-events documentation.BCD tables only load
-     *  in the browser
+     *  CSS pointer-events documentation.BCD tables only load
+     *  in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     pointerEvents: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -784,7 +792,7 @@ The stroke under effect could be achieved
      *  to true end the element is rendered; otherwise, the attribute
      *  evaluates to false and the current element and its children
      *  are skipped and thus will not be rendered. This provides
-     *  a way to design SVG that gracefully falls back when features
+     *  a way to design SVG that gracefully falls back when features
      *  aren't available.If the attribute is not present, then
      *  its implicit evaluated value is true. If a null string
      *  or empty string value is given to attribute requiredFeatures,
@@ -792,7 +800,7 @@ The stroke under effect could be achieved
      *  often used in conjunction with the <switch> element. If
      *  requiredFeatures is used in other situations, it represents
      *  a simple switch on the given element whether to render
-     *  the element or not.To detect availability of an SVG feature
+     *  the element or not.To detect availability of an SVG feature
      *  from script, there is the (also deprecated) DOMImplementation.hasFeature()
      *  method.You can use this attribute with the following SVG
      *  elements:This is a list of feature strings, separated
@@ -883,7 +891,9 @@ The stroke under effect could be achieved
      *  <font>, <font-face>, <glyph>, <missing-glyph>, <hkern>,
      *  <font-face-src> and <font-face-name> elementsThe browser
      *  supports the <foreignObject> elementSee also requiredFeatures.svgBCD
-     *  tables only load in the browser
+     *  tables only load in the browser with JavaScript enabled.
+     *  Enable JavaScript to view data.Last modified: May 13,
+     *  2022, by MDN contributors
      */
     requiredFeatures: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -898,7 +908,9 @@ The stroke under effect could be achieved
      *  indicates that the typographic characters should be rendered
      *  exactly according to the spacing rules as specified by
      *  the layout rules for text-on-a-path.BCD tables only load
-     *  in the browser
+     *  in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     spacing: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -917,7 +929,9 @@ The stroke under effect could be achieved
      *  the current user coordinate system for the <textPath>
      *  element.Note: Negative values and values larger than the
      *  path length (e.g. 150%) are allowed.BCD tables only load
-     *  in the browser
+     *  in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     startOffset: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -927,17 +941,16 @@ The stroke under effect could be achieved
      *  used to paint the outline of the shape;Note: As a presentation
      *  attribute stroke can be used as a CSS property.You can
      *  use this attribute with the following SVG elements:BCD
-     *  tables only load in the browserNote: For information on
-     *  using the context-stroke (and context-fill) values from
-     *  HTML documents, see the documentation for the non-standard
-     *  -moz-context-properties property.
+     *  tables only load in the browser with JavaScript enabled.
+     *  Enable JavaScript to view data.Last modified: May 13,
+     *  2022, by MDN contributors
      */
     stroke: PropTypes.string,
 
     /**
      *  The stroke-dasharray attribute is a presentation attribute defining
      *  the pattern of dashes and gaps used to paint the outline
-     *  of the shape;Note: As a presentation attribute, stroke-dasharray
+     *  of the shape;Note: As a presentation attribute, stroke-dasharray
      *  can be used as a CSS property.You can use this attribute
      *  with the following SVG elements:A list of comma and/or
      *  white space separated <length>s and <percentage>s that
@@ -945,7 +958,9 @@ The stroke under effect could be achieved
      *  an odd number of values is provided, then the list of
      *  values is repeated to yield an even number of values.
      *  Thus, 5,3,2 is equivalent to 5,3,2,5,3,2.BCD tables only
-     *  load in the browser
+     *  load in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     strokeDasharray: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -958,7 +973,8 @@ The stroke under effect could be achieved
      *  in user units resolved against the pathLength but if a
      *  <percentage> is used, the value is resolved as a percentage
      *  of the current viewport.BCD tables only load in the browser
-     * 
+     *  with JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     strokeDashoffset: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -981,7 +997,9 @@ The stroke under effect could be achieved
      *  of the stroke. On a zero length subpath, the stroke consists
      *  of a square with its width equal to the stroke width,
      *  centered at the subpath's point.BCD tables only load in
-     *  the browser
+     *  the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     strokeLinecap: PropTypes.oneOfType([
         PropTypes.oneOf(['"butt"|"inherit"|"round"|"square"']),
@@ -1019,7 +1037,8 @@ The stroke under effect could be achieved
      *  than miter on very sharp join or in case of an animation.The
      *  round value indicates that a round corner is to be used
      *  to join path segments.BCD tables only load in the browser
-     * 
+     *  with JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     strokeLinejoin: PropTypes.oneOfType([
         PropTypes.oneOf(['"bevel"|"inherit"|"miter"|"round"']),
@@ -1094,7 +1113,9 @@ For example, a miter
      *  less than approximately 29 degrees, and a limit of 10.0
      *  converts them for theta less than approximately 11.5 degrees.The
      *  value of stroke-miterlimit must be greater than or equal
-     *  to 1.BCD tables only load in the browser
+     *  to 1.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 13, 2022, by MDN contributors
      */
     strokeMiterlimit: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -1113,7 +1134,9 @@ For example, a miter
      *  show the fill underneath. To avoid this effect, it is
      *  possible to apply a global opacity with the opacity attribute
      *  or to put the stroke behind the fill with the paint-order
-     *  attribute.BCD tables only load in the browser
+     *  attribute.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 13, 2022, by MDN contributors
      */
     strokeOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -1123,7 +1146,9 @@ For example, a miter
      *  can use this attribute with the following SVG elements:Note:
      *  A percentage value is always computed as a percentage
      *  of the normalized viewBox diagonal length.BCD tables only
-     *  load in the browser
+     *  load in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -1164,7 +1189,9 @@ For example, a miter
      *  language primer, such as "A First Lesson in Latin," which
      *  is clearly intended to be used by an English-literate
      *  audience. In this case, the attribute should only include
-     *  en.BCD tables only load in the browser
+     *  en.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 13, 2022, by MDN contributors
      */
     systemLanguage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -1217,7 +1244,9 @@ For example, a miter
      *  element with a vertical primary text direction (often
      *  typical for Asian text), the bottom of the text is rendered
      *  at the initial text position.BCD tables only load in the
-     *  browser
+     *  browser with JavaScript enabled. Enable JavaScript to
+     *  view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     textAnchor: PropTypes.string,
 
@@ -1235,7 +1264,9 @@ For example, a miter
      *  See the css text-decoration property for more information.You
      *  can use this attribute with the following SVG elements:For
      *  a description of the values, please refer to the CSS text-decoration
-     *  property.BCD tables only load in the browser
+     *  property.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 13, 2022, by MDN contributors
      */
     textDecoration: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -1286,7 +1317,9 @@ For example, a miter
      *  box are updated with the new value as well, and we're
      *  finished.Here's what the example looks like. Try dragging
      *  the slider around to get a feel for what it does.BCD tables
-     *  only load in the browser
+     *  only load in the browser with JavaScript enabled. Enable
+     *  JavaScript to view data.Last modified: Jul 8, 2022, by
+     *  MDN contributors
      */
     textLength: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -1297,7 +1330,9 @@ For example, a miter
      *  See the CSS unicode-bidi property for more information.You
      *  can use this attribute with the following SVG elements:For
      *  a description of the values, please refer to the CSS unicode-bidi
-     *  property.BCD tables only load in the browser
+     *  property.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 13, 2022, by MDN contributors
      */
     unicodeBidi: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -1316,7 +1351,7 @@ For example, a miter
      *  stroke outline of the shape's path in current user coordinate
      *  system and filling that outline with the stroke paint
      *  (color or gradient). The resulting visual effect of this
-     *  value is that the stroke width is not dependant on the
+     *  value is that the stroke width is not dependent on the
      *  transformations of the element (including non-uniform
      *  scaling and shear transformations) and zoom level.This
      *  value specifies a special user coordinate system used
@@ -1340,10 +1375,10 @@ For example, a miter
      *  host coordinate space. However, it does not specify the
      *  suppression of rotation, skew and scaling. When this vector
      *  effect and the transform property are defined at the same
-     *  time, that property is consumed for this effect.No compatibility
-     *  data found for svg.attributes.vector-effect.Check for
-     *  problems with this page or contribute missing data to
-     *  mdn/browser-compat-data.
+     *  time, that property is consumed for this effect.BCD tables
+     *  only load in the browser with JavaScript enabled. Enable
+     *  JavaScript to view data.Last modified: May 13, 2022, by
+     *  MDN contributors
      */
     vectorEffect: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -1358,17 +1393,19 @@ For example, a miter
      *  set to hidden still might receive events.Note: As a presentation
      *  attribute, visibility can be used as a CSS property. See
      *  the css visibility property for more information.You can
-     *  use this attribute with the following SVG elements:This
-     *  value indicates that the element will be painted.This
-     *  value indicates that the element will not be painted.
-     *  Though it is still part of the rendering tree, i.e. it
-     *  may receive pointer events depending on the pointer-events
-     *  attribute, may receive focus depending on the tabindex
-     *  attribute, contributes to bounding box calculations and
-     *  clipping paths, and does affect text layout.This value
-     *  is equal to hidden.The following example toggles the CSS
-     *  visibility of the SVG image path.BCD tables only load
-     *  in the browser
+     *  use this attribute with the following SVG elements:The
+     *  following example toggles the CSS visibility of the SVG
+     *  image path.This value indicates that the element will
+     *  be painted.This value indicates that the element will
+     *  not be painted. Though it is still part of the rendering
+     *  tree, i.e. it may receive pointer events depending on
+     *  the pointer-events attribute, may receive focus depending
+     *  on the tabindex attribute, contributes to bounding box
+     *  calculations and clipping paths, and does affect text
+     *  layout.This value is equal to hidden.BCD tables only load
+     *  in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     visibility: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -1385,7 +1422,9 @@ For example, a miter
      *  See the css word-spacing property for more information.You
      *  can use this attribute with the following SVG elements:For
      *  a description of the values, please refer to the CSS letter-spacing
-     *  property.BCD tables only load in the browser
+     *  property.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 13, 2022, by MDN contributors
      */
     wordSpacing: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -1408,7 +1447,8 @@ For example, a miter
      *  mode are vertical.This value defines a left-to-right block
      *  flow direction. Both the writing mode and the typographic
      *  mode are vertical.BCD tables only load in the browser
-     * 
+     *  with JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     writingMode: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 

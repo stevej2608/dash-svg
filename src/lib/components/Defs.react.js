@@ -106,44 +106,15 @@ Defs.propTypes = {
      *  can choose either the sRGB or linearRGB spaces for color
      *  interpolation. This option indicates that the author doesn't
      *  require that color interpolation occur in a particular
-     *  color space.Indicates that color interpolation should
+     *  color space.Indicates that color interpolation should
      *  occur in the sRGB color space.Indicates that color interpolation
      *  should occur in the linearized RGB color space as described
      *  in the sRGB specification.BCD tables only load in the
-     *  browser
+     *  browser with JavaScript enabled. Enable JavaScript to
+     *  view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     colorInterpolation: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  Deprecated: This feature is no longer recommended. Though some
-     *  browsers might still support it, it may have already been
-     *  removed from the relevant web standards, may be in the
-     *  process of being dropped, or may only be kept for compatibility
-     *  purposes. Avoid using it, and update existing code if
-     *  possible; see the compatibility table at the bottom of
-     *  this page to guide your decision. Be aware that this feature
-     *  may cease to work at any time.The color-rendering attribute
-     *  provides a hint to the SVG user agent about how to optimize
-     *  its color interpolation and compositing operations.color-rendering
-     *  takes precedence over color-interpolation-filters. For
-     *  example, assume color-rendering: optimizeSpeed and color-interpolation-filters:
-     *  linearRGB. In this case, the SVG user agent should perform
-     *  color operations in a way that optimizes performance,
-     *  which might mean sacrificing the color interpolation precision
-     *  as specified by through the linearRGB value for color-interpolation-filters.Note:
-     *  As a presentation attribute, color-rendering can be used
-     *  as a CSS property.You can use this attribute with the
-     *  following SVG elements:Indicates that the user agent shall
-     *  make appropriate tradeoffs to balance speed and quality,
-     *  but quality shall be given more importance than speed.Indicates
-     *  that the user agent shall emphasize rendering speed over
-     *  quality. For RGB display devices, this option will sometimes
-     *  cause the user agent to perform color interpolation and
-     *  compositing in the device RGB color space.Indicates that
-     *  the user agent shall emphasize quality over rendering
-     *  speed.BCD tables only load in the browser
-     */
-    colorRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  Deprecated: This feature is no longer recommended. Though some
@@ -158,7 +129,7 @@ Defs.propTypes = {
      *  is managed.Note: As a presentation attribute, enable-background
      *  can be used as a CSS property.You can use this attribute
      *  with the following SVG elements:If an ancestor container
-     *  element has a property value of enable-background: new,
+     *  element has a property value of enable-background: new,
      *  then all graphics elements within the current container
      *  element are rendered both onto the parent container element's
      *  background image canvas and onto the target device.Otherwise,
@@ -183,7 +154,9 @@ Defs.propTypes = {
      *  BackgroundImage and BackgroundAlpha of a filter primitive
      *  are processed as if background image processing were not
      *  enabled.
-    BCD tables only load in the browser
+    BCD tables only load in the browser with
+     *  JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 17, 2022, by MDN contributors
      */
     enableBackground: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -194,8 +167,10 @@ Defs.propTypes = {
      *  pointer-events can be used as a CSS property.You can use
      *  this attribute with the following SVG elements:For a detailed
      *  explanation of each possible value, have a look at the
-     *  CSS  pointer-events documentation.BCD tables only load
-     *  in the browser
+     *  CSS pointer-events documentation.BCD tables only load
+     *  in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     pointerEvents: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -215,7 +190,7 @@ Defs.propTypes = {
      *  to true end the element is rendered; otherwise, the attribute
      *  evaluates to false and the current element and its children
      *  are skipped and thus will not be rendered. This provides
-     *  a way to design SVG that gracefully falls back when features
+     *  a way to design SVG that gracefully falls back when features
      *  aren't available.If the attribute is not present, then
      *  its implicit evaluated value is true. If a null string
      *  or empty string value is given to attribute requiredFeatures,
@@ -223,7 +198,7 @@ Defs.propTypes = {
      *  often used in conjunction with the <switch> element. If
      *  requiredFeatures is used in other situations, it represents
      *  a simple switch on the given element whether to render
-     *  the element or not.To detect availability of an SVG feature
+     *  the element or not.To detect availability of an SVG feature
      *  from script, there is the (also deprecated) DOMImplementation.hasFeature()
      *  method.You can use this attribute with the following SVG
      *  elements:This is a list of feature strings, separated
@@ -314,7 +289,9 @@ Defs.propTypes = {
      *  <font>, <font-face>, <glyph>, <missing-glyph>, <hkern>,
      *  <font-face-src> and <font-face-name> elementsThe browser
      *  supports the <foreignObject> elementSee also requiredFeatures.svgBCD
-     *  tables only load in the browser
+     *  tables only load in the browser with JavaScript enabled.
+     *  Enable JavaScript to view data.Last modified: May 13,
+     *  2022, by MDN contributors
      */
     requiredFeatures: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -355,7 +332,9 @@ Defs.propTypes = {
      *  language primer, such as "A First Lesson in Latin," which
      *  is clearly intended to be used by an English-literate
      *  audience. In this case, the attribute should only include
-     *  en.BCD tables only load in the browser
+     *  en.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 13, 2022, by MDN contributors
      */
     systemLanguage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 

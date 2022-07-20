@@ -95,7 +95,9 @@ Stop.propTypes = {
      *  in the same manner as within a <paint> specification for
      *  the fill and stroke attributes.This value indicates a
      *  color value.This value refers to an ICC color profile.BCD
-     *  tables only load in the browser
+     *  tables only load in the browser with JavaScript enabled.
+     *  Enable JavaScript to view data.Last modified: May 13,
+     *  2022, by MDN contributors
      */
     stopColor: PropTypes.string,
 
@@ -110,7 +112,9 @@ Stop.propTypes = {
      *  can use this attribute with the following SVG elements:This
      *  value is either a <number> between 0 and 1 or a <percentage>
      *  value specifying the opacity of the color gradient stop.BCD
-     *  tables only load in the browser
+     *  tables only load in the browser with JavaScript enabled.
+     *  Enable JavaScript to view data.Last modified: May 13,
+     *  2022, by MDN contributors
      */
     stopOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 

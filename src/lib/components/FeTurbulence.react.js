@@ -90,7 +90,9 @@ FeTurbulence.propTypes = {
      *  one the base frequency in the vertical direction. If one
      *  number is provided, then that value is used for both x
      *  and y.Negative values are forbidden.BCD tables only load
-     *  in the browser
+     *  in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     baseFrequency: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -117,12 +119,80 @@ FeTurbulence.propTypes = {
      *  occur in the sRGB color space.Indicates that color interpolation
      *  should occur in the linearized RGB color space as described
      *  in the sRGB specification.BCD tables only load in the
-     *  browser
+     *  browser with JavaScript enabled. Enable JavaScript to
+     *  view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     colorInterpolationFilters: PropTypes.oneOfType([
         PropTypes.oneOf(['"auto"|"inherit"|"linearRGB"|"sRGB"']),
         PropTypes.bool
      ]),
+
+    /**
+     *  The height attribute defines the vertical length of an element
+     *  in the user coordinate system.You can use this attribute
+     *  with the following SVG elements:For <feBlend>, height
+     *  defines the vertical length for the rendering area of
+     *  the primitive.For <feColorMatrix>, height defines the
+     *  vertical length for the rendering area of the primitive.For
+     *  <feComponentTransfer>, height defines the vertical length
+     *  for the rendering area of the primitive.For <feComposite>,
+     *  height defines the vertical length for the rendering area
+     *  of the primitive.For <feConvolveMatrix>, height defines
+     *  the vertical length for the rendering area of the primitive.For
+     *  <feDiffuseLighting>, height defines the vertical length
+     *  for the rendering area of the primitive.For <feDisplacementMap>,
+     *  height defines the vertical length for the rendering area
+     *  of the primitive.For <feDropShadow>, height defines the
+     *  vertical length for the rendering area of the primitive.For
+     *  <feFlood>, height defines the vertical length for the
+     *  rendering area of the primitive.For <feGaussianBlur>,
+     *  height defines the vertical length for the rendering area
+     *  of the primitive.For <feImage>, height defines the vertical
+     *  length for the rendering area of the primitive.For <feMerge>,
+     *  height defines the vertical length for the rendering area
+     *  of the primitive.For <feMorphology>, height defines the
+     *  vertical length for the rendering area of the primitive.For
+     *  <feOffset>, height defines the vertical length for the
+     *  rendering area of the primitive.For <feSpecularLighting>,
+     *  height defines the vertical length for the rendering area
+     *  of the primitive.For <feTile>, height defines the vertical
+     *  length for the rendering area of the primitive.For <feTurbulence>,
+     *  height defines the vertical length for the rendering area
+     *  of the primitive.For <filter>, height defines the vertical
+     *  length for the rendering area of the filter.For <foreignObject>,
+     *  height defines the vertical length for the rendering area
+     *  for the referenced document.Note: Starting with SVG2,
+     *  height is a Geometry Property meaning this attribute can
+     *  also be used as a CSS property for <foreignObject>.For
+     *  <image>, height defines the vertical length for the image.Note:
+     *  Starting with SVG2, height is a Geometry Property meaning
+     *  this attribute can also be used as a CSS property for
+     *  images.For <mask>, height defines the vertical length
+     *  of its area of effect. The exact effect of this attribute
+     *  is influenced by the maskUnits attribute.For <pattern>,
+     *  height defines the vertical length of the tile pattern.
+     *  The exact effect of this attribute is influenced by the
+     *  patternUnits and patternTransform attributes.For <rect>,
+     *  height defines the vertical length for the rectangle.Note:
+     *  Starting with SVG2, height is a Geometry Property meaning
+     *  this attribute can also be used as a CSS property for
+     *  rectangles.For <svg>, height defines the vertical length
+     *  for the rendering area of the SVG viewport.Note: In an
+     *  HTML document if both the viewBox and height attributes
+     *  are omitted, the svg element will be rendered with a height
+     *  of 150pxNote: Starting with SVG2, height is a Geometry
+     *  Property meaning this attribute can also be used as a
+     *  CSS property for <svg>.For <use>, height defines the vertical
+     *  length for the referenced element.Note: height has no
+     *  effect on use elements, unless the element referenced
+     *  has a viewbox - i.e. they only have an effect when use
+     *  refers to a svg or symbol element.Note: Starting with
+     *  SVG2, height is a Geometry Property meaning this attribute
+     *  can also be used as a CSS property for used elements.Last
+     *  modified: Jun 29, 2022, by MDN contributors
+     */
+    height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  The numOctaves attribute defines the number of octaves for the
@@ -138,7 +208,9 @@ FeTurbulence.propTypes = {
 You can
      *  use this attribute with the following SVG elements:Defines
      *  the number of octaves. Negative values are forbidden.BCD
-     *  tables only load in the browser
+     *  tables only load in the browser with JavaScript enabled.
+     *  Enable JavaScript to view data.Last modified: May 13,
+     *  2022, by MDN contributors
      */
     numOctaves: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -158,7 +230,8 @@ You can
      *  <filter-primitive-reference> to appear multiple times
      *  within the same <filter> element. When referenced, this
      *  value will use the closest preceding filter primitive
-     *  with the given result.
+     *  with the given result.Last modified: May 13, 2022, by
+     *  MDN contributors
      */
     result: PropTypes.string,
 
@@ -166,7 +239,9 @@ You can
      *  The seed attribute represents the starting number for the pseudo
      *  random number generator of the <feTurbulence> filter primitive.You
      *  can use this attribute with the following SVG elements:BCD
-     *  tables only load in the browser
+     *  tables only load in the browser with JavaScript enabled.
+     *  Enable JavaScript to view data.Last modified: May 13,
+     *  2022, by MDN contributors
      */
     seed: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -179,15 +254,83 @@ You can
      *  result will show clear discontinuities at the tile borders.This
      *  value indicates that the user agent will automatically
      *  adjust the x and y values of the base frequency such that
-     *  the <feTurbulence> node’s width and height (i.e., the
+     *  the <feTurbulence> node's width and height (i.e., the
      *  width and height of the current subregion) contain an
      *  integral number of the tile width and height for the first
-     *  octave.BCD tables only load in the browser
+     *  octave.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 13, 2022, by MDN contributors
      */
     stitchTiles: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The x attribute defines a x-axis coordinate in the user coordinate
+     *  The width attribute defines the horizontal length of an element
+     *  in the user coordinate system.You can use this attribute
+     *  with the following SVG elements:For <feBlend>, width defines
+     *  the horizontal length for the rendering area of the primitive.For
+     *  <feColorMatrix>, width defines the horizontal length for
+     *  the rendering area of the primitive.For <feComponentTransfer>,
+     *  width defines the horizontal length for the rendering
+     *  area of the primitive.For <feComposite>, width defines
+     *  the horizontal length for the rendering area of the primitive.For
+     *  <feConvolveMatrix>, width defines the horizontal length
+     *  for the rendering area of the primitive.For <feDiffuseLighting>,
+     *  width defines the horizontal length for the rendering
+     *  area of the primitive.For <feDisplacementMap>, width defines
+     *  the horizontal length for the rendering area of the primitive.For
+     *  <feDropShadow>, width defines the horizontal length for
+     *  the rendering area of the primitive.For <feFlood>, width
+     *  defines the horizontal length for the rendering area of
+     *  the primitive.For <feGaussianBlur>, width defines the
+     *  horizontal length for the rendering area of the primitive.For
+     *  <feImage>, width defines the horizontal length for the
+     *  rendering area of the primitive.For <feMerge>, width defines
+     *  the horizontal length for the rendering area of the primitive.For
+     *  <feMorphology>, width defines the horizontal length for
+     *  the rendering area of the primitive.For <feOffset>, width
+     *  defines the horizontal length for the rendering area of
+     *  the primitive.For <feSpecularLighting>, width defines
+     *  the horizontal length for the rendering area of the primitive.For
+     *  <feTile>, width defines the horizontal length for the
+     *  rendering area of the primitive.For <feTurbulence>, width
+     *  defines the horizontal length for the rendering area of
+     *  the primitive.For <filter>, width defines the horizontal
+     *  length for the rendering area of the filter.For <foreignObject>,
+     *  width defines the horizontal length for the rendering
+     *  area for the referenced document.Note: Starting with SVG2,
+     *  width is a Geometry Property meaning this attribute can
+     *  also be used as a CSS property for <foreignObject>.For
+     *  <image>, width defines the horizontal length for the image.Note:
+     *  Starting with SVG2, width is a Geometry Property meaning
+     *  this attribute can also be used as a CSS property for
+     *  images.For <mask>, width defines the horizontal length
+     *  of its area of effect. The exact effect of this attribute
+     *  is influenced by the maskUnits attribute.For <pattern>,
+     *  width defines the horizontal length of the tile pattern.
+     *  The exact effect of this attribute is influenced by the
+     *  patternUnits and patternTransform attributes.For <rect>,
+     *  width defines the horizontal length for the rectangle.Note:
+     *  Starting with SVG2, width is a Geometry Property meaning
+     *  this attribute can also be used as a CSS property for
+     *  rectangles.For <svg>, width defines the horizontal length
+     *  for the rendering area of the SVG viewport.Note: In an
+     *  HTML document if both the viewBox and width attributes
+     *  are omitted, the svg element will be rendered with a width
+     *  of 300pxNote: Starting with SVG2, width is a Geometry
+     *  Property meaning this attribute can also be used as a
+     *  CSS property for <svg>.For <use>, width defines the horizontal
+     *  length for the referenced element.Note: width has no effect
+     *  on use elements, unless the element referenced has a viewbox
+     *  - i.e. they only have an effect when use refers to a svg
+     *  or symbol element.Note: Starting with SVG2, width is a
+     *  Geometry Property meaning this attribute can also be used
+     *  as a CSS property for used elements.Last modified: Jun
+     *  29, 2022, by MDN contributors
+     */
+    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /**
+     *  The x attribute defines an x-axis coordinate in the user coordinate
      *  system.You can use this attribute with the following SVG
      *  elements:Warning: As of SVG2 <altGlyph> is deprecated
      *  and shouldn't be used.For <altGlyph>, x defines the x-axis
@@ -235,65 +378,66 @@ You can
      *  coordinate for the rendering area of the primitive.For
      *  <filter>, x defines the x coordinate of the upper left
      *  corner for the rendering area of the filter.For <foreignObject>,
-     *  x defines the  x coordinate of the upper left corner of
+     *  x defines the x coordinate of the upper left corner of
      *  its viewport.Note: Starting with SVG2, x is a Geometry
      *  Property meaning this attribute can also be used as a
      *  CSS property for <foreignObject>.Warning: As of SVG2 <glyphRef>
      *  is deprecated and shouldn't be used.For <glyphRef>, x
      *  defines the x-axis coordinate of the glyph.For <image>,
-     *  x defines the  x coordinate of the upper left corner of
+     *  x defines the x coordinate of the upper left corner of
      *  the image.Note: Starting with SVG2, x is a Geometry Property
      *  meaning this attribute can also be used as a CSS property
-     *  for images.For <mask>, x defines the  x coordinate of
-     *  the upper left corner of its area of effect. The exact
-     *  effect of this attribute is influenced by the maskUnits
-     *  attribute.For <pattern>, x defines the  x coordinate of
-     *  the upper left corner of the tile pattern. The exact effect
-     *  of this attribute is influenced by the patternUnits and
-     *  patternTransform attributes.For <rect>, x defines the 
-     *  x coordinate of the upper left corner of the shape.Note:
-     *  Starting with SVG2, x is a Geometry Property meaning this
-     *  attribute can also be used as a CSS property for rectangles.For
-     *  <svg>, x defines the  x coordinate of the upper left corner
-     *  of its viewport.Note: Starting with SVG2, x is a Geometry
-     *  Property meaning this attribute can also be used as a
-     *  CSS property for <svg>.For <text>, if it contain a single
-     *  value, x defines the x coordinate on where the content
-     *  text position must be placed. The content text position
-     *  is usually a point on the baseline of the first line of
-     *  text. The exact content text position is influenced by
-     *  some properties like text-anchor, or direction.If there
-     *  are multiple values, x defines the x coordinate of each
-     *  individual glyph from the text. If there are less values
-     *  than glyphs, the remaining glyphs are placed in the continuity
-     *  of the last positioned glyph. If there are more values
-     *  than glyphs, extra values are ignored.Warning: As of SVG2
-     *  <tref> is deprecated and shouldn't be used.For <tref>,
-     *  if it contain a single value, x defines the x coordinate
-     *  on where the content text position must be placed. The
-     *  content text position is usually a point on the baseline
-     *  of the first line of text. The exact content text position
-     *  is influenced by some properties like text-anchor, or
-     *  direction.If there are multiple values, x defines the
+     *  for images.For <mask>, x defines the x coordinate of the
+     *  upper left corner of its area of effect. The exact effect
+     *  of this attribute is influenced by the maskUnits attribute.For
+     *  <pattern>, x defines the x coordinate of the upper left
+     *  corner of the tile pattern. The exact effect of this attribute
+     *  is influenced by the patternUnits and patternTransform
+     *  attributes.For <rect>, x defines the x coordinate of the
+     *  upper left corner of the shape.Note: Starting with SVG2,
+     *  x is a Geometry Property meaning this attribute can also
+     *  be used as a CSS property for rectangles.For <svg>, x
+     *  defines the x coordinate of the upper left corner of its
+     *  viewport.Note: Starting with SVG2, x is a Geometry Property
+     *  meaning this attribute can also be used as a CSS property
+     *  for <svg>.For <text>, if it contains a single value, x
+     *  defines the x coordinate where the content text position
+     *  must be placed. The content text position is usually a
+     *  point on the baseline of the first line of text. The exact
+     *  content text position is influenced by other properties,
+     *  such as text-anchor or direction.If it contains multiple
+     *  values, x defines the x coordinate of each individual
+     *  glyph from the text. If there are fewer values than glyphs,
+     *  the remaining glyphs are placed in line with the last
+     *  positioned glyph. If there are more values than glyphs,
+     *  the extra values are ignored.Warning: As of SVG2 <tref>
+     *  is deprecated and shouldn't be used.For <tref>, if it
+     *  contains a single value, x defines the x coordinate where
+     *  the content text position must be placed. The content
+     *  text position is usually a point on the baseline of the
+     *  first line of text. The exact content text position is
+     *  influenced by other properties, such as text-anchor or
+     *  direction.If it contains multiple values, x defines the
      *  x coordinate of each individual glyph from the text. If
-     *  there are less values than glyphs, the remaining glyphs
-     *  are placed in the continuity of the last positioned glyph.
-     *  If there are more values than glyphs, extra values are
-     *  ignored.For <tspan>, if it contain a single value, x defines
-     *  the x coordinate on where the content text position must
-     *  be placed. The content text position is usually a point
-     *  on the baseline of the first line of text. The exact content
-     *  text position is influenced by some properties like text-anchor,
-     *  or direction.If there are multiple values, x defines the
-     *  x coordinate of each individual glyph from the text. If
-     *  there are less values than glyphs, the remaining glyphs
-     *  are placed in the continuity of the last positioned glyph.
-     *  If there are more values than glyphs, extra values are
-     *  ignored.For <use>, x defines the  x coordinate of the
-     *  upper left corner of the referenced element.Note: Starting
-     *  with SVG2, x is a Geometry Property meaning this attribute
-     *  can also be used as a CSS property for used elements.
-     * 
+     *  there are fewer values than glyphs, the remaining glyphs
+     *  are placed in line with the last positioned glyph. If
+     *  there are more values than glyphs, the extra values are
+     *  ignored.For <tspan>, if it contains a single value, x
+     *  defines the x coordinate where the content text position
+     *  must be placed. The content text position is usually a
+     *  point on the baseline of the first line of text. The exact
+     *  content text position is influenced by other properties,
+     *  such as text-anchor or direction.If it contains multiple
+     *  values, x defines the x coordinate of each individual
+     *  glyph from the text. If there are fewer values than glyphs,
+     *  the remaining glyphs are placed in line with the last
+     *  positioned glyph. If there are more values than glyphs,
+     *  the extra values are ignored.For <use>, x defines the
+     *  x coordinate of the upper left corner of the referenced
+     *  element.Note: Starting with SVG2, x is a Geometry Property
+     *  meaning this attribute can also be used as a CSS property
+     *  for used elements.Last modified: Jun 17, 2022, by MDN
+     *  contributors
      */
     x: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -368,42 +512,44 @@ You can
      *  defines the y coordinate of the upper left corner of its
      *  viewport.Note: Starting with SVG2, y is a Geometry Property
      *  meaning this attribute can also be used as a CSS property
-     *  for <svg>.For <text>, if it contain a single value, y
-     *  defines the y coordinate on where the content text position
+     *  for <svg>.For <text>, if it contains a single value, y
+     *  defines the y coordinate where the content text position
      *  must be placed. The content text position is usually a
      *  point on the baseline of the first line of text. The exact
-     *  content text position is influenced by some properties
-     *  like text-anchor, or direction.If there are multiple values,
-     *  y defines the y coordinate of each individual glyph from
-     *  the text. If there are less values than glyphs, the remaining
-     *  glyphs are placed in the continuity of the last positioned
-     *  glyph. If there are more values than glyphs, extra values
-     *  are ignored.Warning: As of SVG2 <tref> is deprecated and
-     *  shouldn't be used.For <tref>, if it contain a single value,
-     *  y defines the y coordinate on where the content text position
+     *  content text position is influenced by other properties,
+     *  such as text-anchor or direction.If it contains multiple
+     *  values, y defines the y coordinate of each individual
+     *  glyph from the text. If there are fewer values than glyphs,
+     *  the remaining glyphs are placed in line with the last
+     *  positioned glyph. If there are more values than glyphs,
+     *  the extra values are ignored.Warning: As of SVG2 <tref>
+     *  is deprecated and shouldn't be used.For <tref>, if it
+     *  contains a single value, y defines the y coordinate where
+     *  the content text position must be placed. The content
+     *  text position is usually a point on the baseline of the
+     *  first line of text. The exact content text position is
+     *  influenced by other properties, such as text-anchor or
+     *  direction.If it contains multiple values, y defines the
+     *  y coordinate of each individual glyph from the text. If
+     *  there are fewer values than glyphs, the remaining glyphs
+     *  are placed in line with the last positioned glyph. If
+     *  there are more values than glyphs, the extra values are
+     *  ignored.For <tspan>, if it contains a single value, y
+     *  defines the y coordinate where the content text position
      *  must be placed. The content text position is usually a
      *  point on the baseline of the first line of text. The exact
-     *  content text position is influenced by some properties
-     *  like text-anchor, or direction.If there are multiple values,
-     *  y defines the y coordinate of each individual glyph from
-     *  the text. If there are less values than glyphs, the remaining
-     *  glyphs are placed in the continuity of the last positioned
-     *  glyph. If there are more values than glyphs, extra values
-     *  are ignored.For <tspan>, if it contain a single value,
-     *  y defines the y coordinate on where the content text position
-     *  must be placed. The content text position is usually a
-     *  point on the baseline of the first line of text. The exact
-     *  content text position is influenced by some properties
-     *  like text-anchor, or direction.If there are multiple values,
-     *  y defines the y coordinate of each individual glyph from
-     *  the text. If there are less values than glyphs, the remaining
-     *  glyphs are placed in the continuity of the last positioned
-     *  glyph. If there are more values than glyphs, extra values
-     *  are ignored.For <use>, y defines the y coordinate of the
-     *  upper left corner of the referenced element.Note: Starting
-     *  with SVG2, y is a Geometry Property meaning this attribute
-     *  can also be used as a CSS property for used elements.
-     * 
+     *  content text position is influenced by other properties,
+     *  such as text-anchor or direction.If it contains multiple
+     *  values, y defines the y coordinate of each individual
+     *  glyph from the text. If there are fewer values than glyphs,
+     *  the remaining glyphs are placed in line with the last
+     *  positioned glyph. If there are more values than glyphs,
+     *  the extra values are ignored.For <use>, y defines the
+     *  y coordinate of the upper left corner of the referenced
+     *  element.Note: Starting with SVG2, y is a Geometry Property
+     *  meaning this attribute can also be used as a CSS property
+     *  for used elements.Last modified: Jun 14, 2022, by MDN
+     *  contributors
      */
     y: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 

@@ -332,7 +332,7 @@ attributes.elements.g.push('fill')
 
 attributes.elements.svg.push('fill')
 attributes.elements.svg.push('stroke')
-attributes.elements.svg.push('viewbox')
+attributes.elements.svg.push('viewBox')
 
 attributes.elements.path.push('clipRule')
 

@@ -100,13 +100,15 @@ Symbol.propTypes = {
      *  with the following SVG elements:Warning: This property
      *  is deprecated. Use clip-path instead.The value auto defines
      *  a clipping path along the bounds of the viewport created
-     *  by the given element.The value rect() defines a clipping
+     *  by the given element. The value rect() defines a clipping
      *  rectangle following the following syntax: rect(<top>,
      *  <right>, <bottom>, <left>). The <top> and <bottom> values
      *  specify offsets from the top border edge of the element
      *  viewport, while <right> and <left> specify offsets from
      *  the left border edge of the element viewport.BCD tables
-     *  only load in the browser
+     *  only load in the browser with JavaScript enabled. Enable
+     *  JavaScript to view data.Last modified: Jun 28, 2022, by
+     *  MDN contributors
      */
     clip: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -122,7 +124,9 @@ Symbol.propTypes = {
      *  to use the nearest SVG viewport as the reference box.Note:
      *  For more details on the clip-path syntax, see the CSS
      *  property clip-path reference page.BCD tables only load
-     *  in the browser
+     *  in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     clipPath: PropTypes.string,
 
@@ -151,44 +155,15 @@ Symbol.propTypes = {
      *  can choose either the sRGB or linearRGB spaces for color
      *  interpolation. This option indicates that the author doesn't
      *  require that color interpolation occur in a particular
-     *  color space.Indicates that color interpolation should
+     *  color space.Indicates that color interpolation should
      *  occur in the sRGB color space.Indicates that color interpolation
      *  should occur in the linearized RGB color space as described
      *  in the sRGB specification.BCD tables only load in the
-     *  browser
+     *  browser with JavaScript enabled. Enable JavaScript to
+     *  view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     colorInterpolation: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  Deprecated: This feature is no longer recommended. Though some
-     *  browsers might still support it, it may have already been
-     *  removed from the relevant web standards, may be in the
-     *  process of being dropped, or may only be kept for compatibility
-     *  purposes. Avoid using it, and update existing code if
-     *  possible; see the compatibility table at the bottom of
-     *  this page to guide your decision. Be aware that this feature
-     *  may cease to work at any time.The color-rendering attribute
-     *  provides a hint to the SVG user agent about how to optimize
-     *  its color interpolation and compositing operations.color-rendering
-     *  takes precedence over color-interpolation-filters. For
-     *  example, assume color-rendering: optimizeSpeed and color-interpolation-filters:
-     *  linearRGB. In this case, the SVG user agent should perform
-     *  color operations in a way that optimizes performance,
-     *  which might mean sacrificing the color interpolation precision
-     *  as specified by through the linearRGB value for color-interpolation-filters.Note:
-     *  As a presentation attribute, color-rendering can be used
-     *  as a CSS property.You can use this attribute with the
-     *  following SVG elements:Indicates that the user agent shall
-     *  make appropriate tradeoffs to balance speed and quality,
-     *  but quality shall be given more importance than speed.Indicates
-     *  that the user agent shall emphasize rendering speed over
-     *  quality. For RGB display devices, this option will sometimes
-     *  cause the user agent to perform color interpolation and
-     *  compositing in the device RGB color space.Indicates that
-     *  the user agent shall emphasize quality over rendering
-     *  speed.BCD tables only load in the browser
-     */
-    colorRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  Deprecated: This feature is no longer recommended. Though some
@@ -203,7 +178,7 @@ Symbol.propTypes = {
      *  is managed.Note: As a presentation attribute, enable-background
      *  can be used as a CSS property.You can use this attribute
      *  with the following SVG elements:If an ancestor container
-     *  element has a property value of enable-background: new,
+     *  element has a property value of enable-background: new,
      *  then all graphics elements within the current container
      *  element are rendered both onto the parent container element's
      *  background image canvas and onto the target device.Otherwise,
@@ -228,7 +203,9 @@ Symbol.propTypes = {
      *  BackgroundImage and BackgroundAlpha of a filter primitive
      *  are processed as if background image processing were not
      *  enabled.
-    BCD tables only load in the browser
+    BCD tables only load in the browser with
+     *  JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 17, 2022, by MDN contributors
      */
     enableBackground: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -241,7 +218,9 @@ Symbol.propTypes = {
      *  is defined as a css property and is a shorthand for many
      *  other properties: mask-image, mask-mode, mask-repeat,
      *  mask-position, mask-clip, mask-origin, mask-size, and
-     *  mask-composite.BCD tables only load in the browser
+     *  mask-composite.BCD tables only load in the browser with
+     *  JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     mask: PropTypes.string,
 
@@ -255,14 +234,16 @@ Symbol.propTypes = {
      *  uniform opacity setting to be applied across an entire
      *  object, as a <number>. Any values outside the range 0.0
      *  (fully transparent) to 1.0 (fully opaque) will be clamped
-     *  to this range.BCD tables only load in the browser
+     *  to this range.BCD tables only load in the browser with
+     *  JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     opacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  The overflow attribute sets what to do when an element's content
      *  is too big to fit in its block formatting context. This
-     *  feature is not widely implemented yet.This attribute has
+     *  feature is not widely implemented yet.This attribute has
      *  the same parameter values and meaning as the css overflow
      *  property, however, the following additional points apply:Note:
      *  Although the initial value for overflow is auto, it is
@@ -270,11 +251,13 @@ Symbol.propTypes = {
      *  element when it is not the root element of a stand-alone
      *  document, the <pattern> element, and the <marker> element
      *  to be hidden by default.Note: As a presentation attribute,
-     *  overflow can be used as a CSS property. See the css opacity
+     *  overflow can be used as a CSS property. See the CSS overflow
      *  property for more information.You can use this attribute
      *  with the following SVG elements:For a description of the
      *  values, please see the css overflow property.BCD tables
-     *  only load in the browser
+     *  only load in the browser with JavaScript enabled. Enable
+     *  JavaScript to view data.Last modified: May 13, 2022, by
+     *  MDN contributors
      */
     overflow: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -285,8 +268,10 @@ Symbol.propTypes = {
      *  pointer-events can be used as a CSS property.You can use
      *  this attribute with the following SVG elements:For a detailed
      *  explanation of each possible value, have a look at the
-     *  CSS  pointer-events documentation.BCD tables only load
-     *  in the browser
+     *  CSS pointer-events documentation.BCD tables only load
+     *  in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     pointerEvents: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -320,16 +305,17 @@ Symbol.propTypes = {
      *  a uniform scaling must be performed to fit the element
      *  viewport.For <view>, preserveAspectRatio indicates if
      *  a uniform scaling must be performed to fit the element
-     *  viewport.
+     *  viewport.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     preserveAspectRatio: PropTypes.string,
 
     /**
-     *  The refX attribute defines the x coordinate of an element’s reference
+     *  The refX attribute defines the x coordinate of an element's reference
      *  point.You can use this attribute with the following SVG
      *  elements:For <marker>, refX defines the x coordinate of
-     *  the marker’s reference point, which is to be placed exactly
-     *  at the marker’s position on the shape.Lengths are interpreted
+     *  the marker's reference point, which is to be placed exactly
+     *  at the marker's position on the shape.Lengths are interpreted
      *  as being in the coordinate system of the marker contents,
      *  after application of the viewBox and preserveAspectRatio
      *  attributes.Percentage values are interpreted as being
@@ -348,7 +334,7 @@ Symbol.propTypes = {
      *  of the symbol contents, after application of the viewBox
      *  and preserveAspectRatio attributes. If the attribute is
      *  not specified, no horizontal adjustment is made, and the
-     *  left side of the symbol’s rectangular viewport region
+     *  left side of the symbol's rectangular viewport region
      *  (regardless of the viewBox coordinate) is positioned at
      *  the x coordinate.Note: For backwards compatibility, the
      *  behavior when refX is not specified on a <symbol> element
@@ -365,16 +351,17 @@ Symbol.propTypes = {
      *  at the left edge of the shape.The reference point of the
      *  marker is placed at the horizontal center of the shape.The
      *  reference point of the marker is placed at the right edge
-     *  of the shape.
+     *  of the shape.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     refX: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The refY attribute defines the y coordinate of an element’s reference
+     *  The refY attribute defines the y coordinate of an element's reference
      *  point.You can use this attribute with the following SVG
      *  elements:For <marker>, refY defines the y coordinate of
-     *  the marker’s reference point, which is to be placed exactly
-     *  at the marker’s position on the shape.Lengths are interpreted
+     *  the marker's reference point, which is to be placed exactly
+     *  at the marker's position on the shape.Lengths are interpreted
      *  as being in the coordinate system of the marker contents,
      *  after application of the viewBox and preserveAspectRatio
      *  attributes.Percentage values are interpreted as being
@@ -393,7 +380,7 @@ Symbol.propTypes = {
      *  of the symbol contents, after application of the viewBox
      *  and preserveAspectRatio attributes. If the attribute is
      *  not specified, no vertical adjustment is made, and the
-     *  top side of the symbol’s rectangular viewport region (regardless
+     *  top side of the symbol's rectangular viewport region (regardless
      *  of the viewBox coordinate) is positioned at the y coordinate.Note:
      *  For backwards compatibility, the behavior when refY is
      *  not specified on a <symbol> element is different from
@@ -410,7 +397,8 @@ Symbol.propTypes = {
      *  at the top edge of the shape.The reference point of the
      *  marker is placed at the vertical center of the shape.The
      *  reference point of the marker is placed at the bottom
-     *  edge of the shape.
+     *  edge of the shape.Last modified: May 13, 2022, by MDN
+     *  contributors
      */
     refY: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -418,9 +406,9 @@ Symbol.propTypes = {
      *  The viewBox attribute defines the position and dimension, in
      *  user space, of an SVG viewport.The value of the viewBox
      *  attribute is a list of four numbers: min-x, min-y, width
-     *  and height. The numbers separated by whitespace and/or
-     *  a comma, which specify a rectangle in user space which
-     *  is mapped to the bounds of the viewport established for
+     *  and height. The numbers, which are separated by whitespace
+     *  and/or a comma, specify a rectangle in user space which
+     *  is mapped to the bounds of the viewport established for
      *  the associated SVG element (not the browser viewport).You
      *  can use this attribute with the following SVG elements:The
      *  exact effect of this attribute is influenced by the preserveAspectRatio
@@ -433,12 +421,13 @@ Symbol.propTypes = {
      *  for the content of the <svg> element.For <symbol>, viewBox
      *  defines the position and dimension for the content of
      *  the <symbol> element.For <view>, viewBox defines the position
-     *  and dimension for the content of the <view> element.
+     *  and dimension for the content of the <view> element.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     viewBox: PropTypes.string,
 
     /**
-     *  The x attribute defines a x-axis coordinate in the user coordinate
+     *  The x attribute defines an x-axis coordinate in the user coordinate
      *  system.You can use this attribute with the following SVG
      *  elements:Warning: As of SVG2 <altGlyph> is deprecated
      *  and shouldn't be used.For <altGlyph>, x defines the x-axis
@@ -486,65 +475,66 @@ Symbol.propTypes = {
      *  coordinate for the rendering area of the primitive.For
      *  <filter>, x defines the x coordinate of the upper left
      *  corner for the rendering area of the filter.For <foreignObject>,
-     *  x defines the  x coordinate of the upper left corner of
+     *  x defines the x coordinate of the upper left corner of
      *  its viewport.Note: Starting with SVG2, x is a Geometry
      *  Property meaning this attribute can also be used as a
      *  CSS property for <foreignObject>.Warning: As of SVG2 <glyphRef>
      *  is deprecated and shouldn't be used.For <glyphRef>, x
      *  defines the x-axis coordinate of the glyph.For <image>,
-     *  x defines the  x coordinate of the upper left corner of
+     *  x defines the x coordinate of the upper left corner of
      *  the image.Note: Starting with SVG2, x is a Geometry Property
      *  meaning this attribute can also be used as a CSS property
-     *  for images.For <mask>, x defines the  x coordinate of
-     *  the upper left corner of its area of effect. The exact
-     *  effect of this attribute is influenced by the maskUnits
-     *  attribute.For <pattern>, x defines the  x coordinate of
-     *  the upper left corner of the tile pattern. The exact effect
-     *  of this attribute is influenced by the patternUnits and
-     *  patternTransform attributes.For <rect>, x defines the 
-     *  x coordinate of the upper left corner of the shape.Note:
-     *  Starting with SVG2, x is a Geometry Property meaning this
-     *  attribute can also be used as a CSS property for rectangles.For
-     *  <svg>, x defines the  x coordinate of the upper left corner
-     *  of its viewport.Note: Starting with SVG2, x is a Geometry
-     *  Property meaning this attribute can also be used as a
-     *  CSS property for <svg>.For <text>, if it contain a single
-     *  value, x defines the x coordinate on where the content
-     *  text position must be placed. The content text position
-     *  is usually a point on the baseline of the first line of
-     *  text. The exact content text position is influenced by
-     *  some properties like text-anchor, or direction.If there
-     *  are multiple values, x defines the x coordinate of each
-     *  individual glyph from the text. If there are less values
-     *  than glyphs, the remaining glyphs are placed in the continuity
-     *  of the last positioned glyph. If there are more values
-     *  than glyphs, extra values are ignored.Warning: As of SVG2
-     *  <tref> is deprecated and shouldn't be used.For <tref>,
-     *  if it contain a single value, x defines the x coordinate
-     *  on where the content text position must be placed. The
-     *  content text position is usually a point on the baseline
-     *  of the first line of text. The exact content text position
-     *  is influenced by some properties like text-anchor, or
-     *  direction.If there are multiple values, x defines the
+     *  for images.For <mask>, x defines the x coordinate of the
+     *  upper left corner of its area of effect. The exact effect
+     *  of this attribute is influenced by the maskUnits attribute.For
+     *  <pattern>, x defines the x coordinate of the upper left
+     *  corner of the tile pattern. The exact effect of this attribute
+     *  is influenced by the patternUnits and patternTransform
+     *  attributes.For <rect>, x defines the x coordinate of the
+     *  upper left corner of the shape.Note: Starting with SVG2,
+     *  x is a Geometry Property meaning this attribute can also
+     *  be used as a CSS property for rectangles.For <svg>, x
+     *  defines the x coordinate of the upper left corner of its
+     *  viewport.Note: Starting with SVG2, x is a Geometry Property
+     *  meaning this attribute can also be used as a CSS property
+     *  for <svg>.For <text>, if it contains a single value, x
+     *  defines the x coordinate where the content text position
+     *  must be placed. The content text position is usually a
+     *  point on the baseline of the first line of text. The exact
+     *  content text position is influenced by other properties,
+     *  such as text-anchor or direction.If it contains multiple
+     *  values, x defines the x coordinate of each individual
+     *  glyph from the text. If there are fewer values than glyphs,
+     *  the remaining glyphs are placed in line with the last
+     *  positioned glyph. If there are more values than glyphs,
+     *  the extra values are ignored.Warning: As of SVG2 <tref>
+     *  is deprecated and shouldn't be used.For <tref>, if it
+     *  contains a single value, x defines the x coordinate where
+     *  the content text position must be placed. The content
+     *  text position is usually a point on the baseline of the
+     *  first line of text. The exact content text position is
+     *  influenced by other properties, such as text-anchor or
+     *  direction.If it contains multiple values, x defines the
      *  x coordinate of each individual glyph from the text. If
-     *  there are less values than glyphs, the remaining glyphs
-     *  are placed in the continuity of the last positioned glyph.
-     *  If there are more values than glyphs, extra values are
-     *  ignored.For <tspan>, if it contain a single value, x defines
-     *  the x coordinate on where the content text position must
-     *  be placed. The content text position is usually a point
-     *  on the baseline of the first line of text. The exact content
-     *  text position is influenced by some properties like text-anchor,
-     *  or direction.If there are multiple values, x defines the
-     *  x coordinate of each individual glyph from the text. If
-     *  there are less values than glyphs, the remaining glyphs
-     *  are placed in the continuity of the last positioned glyph.
-     *  If there are more values than glyphs, extra values are
-     *  ignored.For <use>, x defines the  x coordinate of the
-     *  upper left corner of the referenced element.Note: Starting
-     *  with SVG2, x is a Geometry Property meaning this attribute
-     *  can also be used as a CSS property for used elements.
-     * 
+     *  there are fewer values than glyphs, the remaining glyphs
+     *  are placed in line with the last positioned glyph. If
+     *  there are more values than glyphs, the extra values are
+     *  ignored.For <tspan>, if it contains a single value, x
+     *  defines the x coordinate where the content text position
+     *  must be placed. The content text position is usually a
+     *  point on the baseline of the first line of text. The exact
+     *  content text position is influenced by other properties,
+     *  such as text-anchor or direction.If it contains multiple
+     *  values, x defines the x coordinate of each individual
+     *  glyph from the text. If there are fewer values than glyphs,
+     *  the remaining glyphs are placed in line with the last
+     *  positioned glyph. If there are more values than glyphs,
+     *  the extra values are ignored.For <use>, x defines the
+     *  x coordinate of the upper left corner of the referenced
+     *  element.Note: Starting with SVG2, x is a Geometry Property
+     *  meaning this attribute can also be used as a CSS property
+     *  for used elements.Last modified: Jun 17, 2022, by MDN
+     *  contributors
      */
     x: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -619,42 +609,44 @@ Symbol.propTypes = {
      *  defines the y coordinate of the upper left corner of its
      *  viewport.Note: Starting with SVG2, y is a Geometry Property
      *  meaning this attribute can also be used as a CSS property
-     *  for <svg>.For <text>, if it contain a single value, y
-     *  defines the y coordinate on where the content text position
+     *  for <svg>.For <text>, if it contains a single value, y
+     *  defines the y coordinate where the content text position
      *  must be placed. The content text position is usually a
      *  point on the baseline of the first line of text. The exact
-     *  content text position is influenced by some properties
-     *  like text-anchor, or direction.If there are multiple values,
-     *  y defines the y coordinate of each individual glyph from
-     *  the text. If there are less values than glyphs, the remaining
-     *  glyphs are placed in the continuity of the last positioned
-     *  glyph. If there are more values than glyphs, extra values
-     *  are ignored.Warning: As of SVG2 <tref> is deprecated and
-     *  shouldn't be used.For <tref>, if it contain a single value,
-     *  y defines the y coordinate on where the content text position
+     *  content text position is influenced by other properties,
+     *  such as text-anchor or direction.If it contains multiple
+     *  values, y defines the y coordinate of each individual
+     *  glyph from the text. If there are fewer values than glyphs,
+     *  the remaining glyphs are placed in line with the last
+     *  positioned glyph. If there are more values than glyphs,
+     *  the extra values are ignored.Warning: As of SVG2 <tref>
+     *  is deprecated and shouldn't be used.For <tref>, if it
+     *  contains a single value, y defines the y coordinate where
+     *  the content text position must be placed. The content
+     *  text position is usually a point on the baseline of the
+     *  first line of text. The exact content text position is
+     *  influenced by other properties, such as text-anchor or
+     *  direction.If it contains multiple values, y defines the
+     *  y coordinate of each individual glyph from the text. If
+     *  there are fewer values than glyphs, the remaining glyphs
+     *  are placed in line with the last positioned glyph. If
+     *  there are more values than glyphs, the extra values are
+     *  ignored.For <tspan>, if it contains a single value, y
+     *  defines the y coordinate where the content text position
      *  must be placed. The content text position is usually a
      *  point on the baseline of the first line of text. The exact
-     *  content text position is influenced by some properties
-     *  like text-anchor, or direction.If there are multiple values,
-     *  y defines the y coordinate of each individual glyph from
-     *  the text. If there are less values than glyphs, the remaining
-     *  glyphs are placed in the continuity of the last positioned
-     *  glyph. If there are more values than glyphs, extra values
-     *  are ignored.For <tspan>, if it contain a single value,
-     *  y defines the y coordinate on where the content text position
-     *  must be placed. The content text position is usually a
-     *  point on the baseline of the first line of text. The exact
-     *  content text position is influenced by some properties
-     *  like text-anchor, or direction.If there are multiple values,
-     *  y defines the y coordinate of each individual glyph from
-     *  the text. If there are less values than glyphs, the remaining
-     *  glyphs are placed in the continuity of the last positioned
-     *  glyph. If there are more values than glyphs, extra values
-     *  are ignored.For <use>, y defines the y coordinate of the
-     *  upper left corner of the referenced element.Note: Starting
-     *  with SVG2, y is a Geometry Property meaning this attribute
-     *  can also be used as a CSS property for used elements.
-     * 
+     *  content text position is influenced by other properties,
+     *  such as text-anchor or direction.If it contains multiple
+     *  values, y defines the y coordinate of each individual
+     *  glyph from the text. If there are fewer values than glyphs,
+     *  the remaining glyphs are placed in line with the last
+     *  positioned glyph. If there are more values than glyphs,
+     *  the extra values are ignored.For <use>, y defines the
+     *  y coordinate of the upper left corner of the referenced
+     *  element.Note: Starting with SVG2, y is a Geometry Property
+     *  meaning this attribute can also be used as a CSS property
+     *  for used elements.Last modified: Jun 14, 2022, by MDN
+     *  contributors
      */
     y: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 

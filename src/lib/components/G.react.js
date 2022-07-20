@@ -93,7 +93,9 @@ G.propTypes = {
      *  to use the nearest SVG viewport as the reference box.Note:
      *  For more details on the clip-path syntax, see the CSS
      *  property clip-path reference page.BCD tables only load
-     *  in the browser
+     *  in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     clipPath: PropTypes.string,
 
@@ -122,44 +124,15 @@ G.propTypes = {
      *  can choose either the sRGB or linearRGB spaces for color
      *  interpolation. This option indicates that the author doesn't
      *  require that color interpolation occur in a particular
-     *  color space.Indicates that color interpolation should
+     *  color space.Indicates that color interpolation should
      *  occur in the sRGB color space.Indicates that color interpolation
      *  should occur in the linearized RGB color space as described
      *  in the sRGB specification.BCD tables only load in the
-     *  browser
+     *  browser with JavaScript enabled. Enable JavaScript to
+     *  view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     colorInterpolation: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  Deprecated: This feature is no longer recommended. Though some
-     *  browsers might still support it, it may have already been
-     *  removed from the relevant web standards, may be in the
-     *  process of being dropped, or may only be kept for compatibility
-     *  purposes. Avoid using it, and update existing code if
-     *  possible; see the compatibility table at the bottom of
-     *  this page to guide your decision. Be aware that this feature
-     *  may cease to work at any time.The color-rendering attribute
-     *  provides a hint to the SVG user agent about how to optimize
-     *  its color interpolation and compositing operations.color-rendering
-     *  takes precedence over color-interpolation-filters. For
-     *  example, assume color-rendering: optimizeSpeed and color-interpolation-filters:
-     *  linearRGB. In this case, the SVG user agent should perform
-     *  color operations in a way that optimizes performance,
-     *  which might mean sacrificing the color interpolation precision
-     *  as specified by through the linearRGB value for color-interpolation-filters.Note:
-     *  As a presentation attribute, color-rendering can be used
-     *  as a CSS property.You can use this attribute with the
-     *  following SVG elements:Indicates that the user agent shall
-     *  make appropriate tradeoffs to balance speed and quality,
-     *  but quality shall be given more importance than speed.Indicates
-     *  that the user agent shall emphasize rendering speed over
-     *  quality. For RGB display devices, this option will sometimes
-     *  cause the user agent to perform color interpolation and
-     *  compositing in the device RGB color space.Indicates that
-     *  the user agent shall emphasize quality over rendering
-     *  speed.BCD tables only load in the browser
-     */
-    colorRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  Deprecated: This feature is no longer recommended. Though some
@@ -174,7 +147,7 @@ G.propTypes = {
      *  is managed.Note: As a presentation attribute, enable-background
      *  can be used as a CSS property.You can use this attribute
      *  with the following SVG elements:If an ancestor container
-     *  element has a property value of enable-background: new,
+     *  element has a property value of enable-background: new,
      *  then all graphics elements within the current container
      *  element are rendered both onto the parent container element's
      *  background image canvas and onto the target device.Otherwise,
@@ -199,7 +172,9 @@ G.propTypes = {
      *  BackgroundImage and BackgroundAlpha of a filter primitive
      *  are processed as if background image processing were not
      *  enabled.
-    BCD tables only load in the browser
+    BCD tables only load in the browser with
+     *  JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 17, 2022, by MDN contributors
      */
     enableBackground: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -212,7 +187,9 @@ G.propTypes = {
      *  is defined as a css property and is a shorthand for many
      *  other properties: mask-image, mask-mode, mask-repeat,
      *  mask-position, mask-clip, mask-origin, mask-size, and
-     *  mask-composite.BCD tables only load in the browser
+     *  mask-composite.BCD tables only load in the browser with
+     *  JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     mask: PropTypes.string,
 
@@ -226,7 +203,9 @@ G.propTypes = {
      *  uniform opacity setting to be applied across an entire
      *  object, as a <number>. Any values outside the range 0.0
      *  (fully transparent) to 1.0 (fully opaque) will be clamped
-     *  to this range.BCD tables only load in the browser
+     *  to this range.BCD tables only load in the browser with
+     *  JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     opacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -237,8 +216,10 @@ G.propTypes = {
      *  pointer-events can be used as a CSS property.You can use
      *  this attribute with the following SVG elements:For a detailed
      *  explanation of each possible value, have a look at the
-     *  CSS  pointer-events documentation.BCD tables only load
-     *  in the browser
+     *  CSS pointer-events documentation.BCD tables only load
+     *  in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     pointerEvents: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -258,7 +239,7 @@ G.propTypes = {
      *  to true end the element is rendered; otherwise, the attribute
      *  evaluates to false and the current element and its children
      *  are skipped and thus will not be rendered. This provides
-     *  a way to design SVG that gracefully falls back when features
+     *  a way to design SVG that gracefully falls back when features
      *  aren't available.If the attribute is not present, then
      *  its implicit evaluated value is true. If a null string
      *  or empty string value is given to attribute requiredFeatures,
@@ -266,7 +247,7 @@ G.propTypes = {
      *  often used in conjunction with the <switch> element. If
      *  requiredFeatures is used in other situations, it represents
      *  a simple switch on the given element whether to render
-     *  the element or not.To detect availability of an SVG feature
+     *  the element or not.To detect availability of an SVG feature
      *  from script, there is the (also deprecated) DOMImplementation.hasFeature()
      *  method.You can use this attribute with the following SVG
      *  elements:This is a list of feature strings, separated
@@ -357,7 +338,9 @@ G.propTypes = {
      *  <font>, <font-face>, <glyph>, <missing-glyph>, <hkern>,
      *  <font-face-src> and <font-face-name> elementsThe browser
      *  supports the <foreignObject> elementSee also requiredFeatures.svgBCD
-     *  tables only load in the browser
+     *  tables only load in the browser with JavaScript enabled.
+     *  Enable JavaScript to view data.Last modified: May 13,
+     *  2022, by MDN contributors
      */
     requiredFeatures: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -398,12 +381,14 @@ G.propTypes = {
      *  language primer, such as "A First Lesson in Latin," which
      *  is clearly intended to be used by an English-literate
      *  audience. In this case, the attribute should only include
-     *  en.BCD tables only load in the browser
+     *  en.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 13, 2022, by MDN contributors
      */
     systemLanguage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The fill attribute has two different meanings. For shapes and
+     *  The fill attribute has two different meanings. For shapes and
      *  text it's a presentation attribute that defines the color
      *  (or any SVG paint servers like gradients or patterns)
      *  used to paint the element; for animation it defines the
@@ -453,10 +438,9 @@ G.propTypes = {
      *  fill can be used as a CSS property.For <tspan>, fill is
      *  a presentation attribute that defines the color of the
      *  text.Note: As a presentation attribute fill can be used
-     *  as a CSS property.BCD tables only load in the browserNote:
-     *  For information on using the context-fill (and context-stroke)
-     *  values from HTML documents, see the documentation for
-     *  the non-standard -moz-context-properties property.
+     *  as a CSS property.BCD tables only load in the browser
+     *  with JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     fill: PropTypes.string,
 

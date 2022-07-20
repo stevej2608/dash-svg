@@ -93,7 +93,9 @@ Ellipse.propTypes = {
      *  to use the nearest SVG viewport as the reference box.Note:
      *  For more details on the clip-path syntax, see the CSS
      *  property clip-path reference page.BCD tables only load
-     *  in the browser
+     *  in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     clipPath: PropTypes.string,
 
@@ -122,44 +124,15 @@ Ellipse.propTypes = {
      *  can choose either the sRGB or linearRGB spaces for color
      *  interpolation. This option indicates that the author doesn't
      *  require that color interpolation occur in a particular
-     *  color space.Indicates that color interpolation should
+     *  color space.Indicates that color interpolation should
      *  occur in the sRGB color space.Indicates that color interpolation
      *  should occur in the linearized RGB color space as described
      *  in the sRGB specification.BCD tables only load in the
-     *  browser
+     *  browser with JavaScript enabled. Enable JavaScript to
+     *  view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     colorInterpolation: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-
-    /**
-     *  Deprecated: This feature is no longer recommended. Though some
-     *  browsers might still support it, it may have already been
-     *  removed from the relevant web standards, may be in the
-     *  process of being dropped, or may only be kept for compatibility
-     *  purposes. Avoid using it, and update existing code if
-     *  possible; see the compatibility table at the bottom of
-     *  this page to guide your decision. Be aware that this feature
-     *  may cease to work at any time.The color-rendering attribute
-     *  provides a hint to the SVG user agent about how to optimize
-     *  its color interpolation and compositing operations.color-rendering
-     *  takes precedence over color-interpolation-filters. For
-     *  example, assume color-rendering: optimizeSpeed and color-interpolation-filters:
-     *  linearRGB. In this case, the SVG user agent should perform
-     *  color operations in a way that optimizes performance,
-     *  which might mean sacrificing the color interpolation precision
-     *  as specified by through the linearRGB value for color-interpolation-filters.Note:
-     *  As a presentation attribute, color-rendering can be used
-     *  as a CSS property.You can use this attribute with the
-     *  following SVG elements:Indicates that the user agent shall
-     *  make appropriate tradeoffs to balance speed and quality,
-     *  but quality shall be given more importance than speed.Indicates
-     *  that the user agent shall emphasize rendering speed over
-     *  quality. For RGB display devices, this option will sometimes
-     *  cause the user agent to perform color interpolation and
-     *  compositing in the device RGB color space.Indicates that
-     *  the user agent shall emphasize quality over rendering
-     *  speed.BCD tables only load in the browser
-     */
-    colorRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  The cx attribute define the x-axis coordinate of a center point.You
@@ -172,7 +145,8 @@ Ellipse.propTypes = {
      *  SVG2 cx, is a Geometry Property, meaning this attribute
      *  can also be used as CSS property for ellipses.For <radialGradient>,
      *  cx defines the x-axis coordinate of the end circle for
-     *  the radial gradient.
+     *  the radial gradient.Last modified: May 13, 2022, by MDN
+     *  contributors
      */
     cx: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -187,12 +161,13 @@ Ellipse.propTypes = {
      *  with SVG2, cy is a Geometry Property meaning this attribute
      *  can also be used as a CSS property for ellipses.For <radialGradient>,
      *  cy defines the y-axis coordinate of the end circle for
-     *  the radial gradient.
+     *  the radial gradient.Last modified: May 13, 2022, by MDN
+     *  contributors
      */
     cy: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The fill attribute has two different meanings. For shapes and
+     *  The fill attribute has two different meanings. For shapes and
      *  text it's a presentation attribute that defines the color
      *  (or any SVG paint servers like gradients or patterns)
      *  used to paint the element; for animation it defines the
@@ -242,10 +217,9 @@ Ellipse.propTypes = {
      *  fill can be used as a CSS property.For <tspan>, fill is
      *  a presentation attribute that defines the color of the
      *  text.Note: As a presentation attribute fill can be used
-     *  as a CSS property.BCD tables only load in the browserNote:
-     *  For information on using the context-fill (and context-stroke)
-     *  values from HTML documents, see the documentation for
-     *  the non-standard -moz-context-properties property.
+     *  as a CSS property.BCD tables only load in the browser
+     *  with JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     fill: PropTypes.string,
 
@@ -259,7 +233,9 @@ Ellipse.propTypes = {
      *  it is not widely supported yet (See Browser compatibility
      *  below) as a consequence, it is best practices to set opacity
      *  with a value in the range [0-1].BCD tables only load in
-     *  the browser
+     *  the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     fillOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -279,7 +255,9 @@ Ellipse.propTypes = {
      *  drawn at the final vertex.This value is a reference to
      *  a <marker> element, which will be drawn at the final vertex.
      *  If the reference is not valid, then no marker will be
-     *  drawn.BCD tables only load in the browser
+     *  drawn.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 17, 2022, by MDN contributors
      */
     markerEnd: PropTypes.string,
 
@@ -294,7 +272,9 @@ Ellipse.propTypes = {
      *  drawn at the given vertices.This value is a reference
      *  to a <marker> element, which will be drawn at the given
      *  vertices. If the reference is not valid, then no marker
-     *  will be drawn.BCD tables only load in the browser
+     *  will be drawn.BCD tables only load in the browser with
+     *  JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 17, 2022, by MDN contributors
      */
     markerMid: PropTypes.string,
 
@@ -314,7 +294,9 @@ Ellipse.propTypes = {
      *  shall be drawn at the first vertex.This value is a reference
      *  to a <marker> element, which will be drawn at the first
      *  vertex. If the reference is not valid, then no marker
-     *  will be drawn.BCD tables only load in the browser
+     *  will be drawn.BCD tables only load in the browser with
+     *  JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 17, 2022, by MDN contributors
      */
     markerStart: PropTypes.string,
 
@@ -327,7 +309,9 @@ Ellipse.propTypes = {
      *  is defined as a css property and is a shorthand for many
      *  other properties: mask-image, mask-mode, mask-repeat,
      *  mask-position, mask-clip, mask-origin, mask-size, and
-     *  mask-composite.BCD tables only load in the browser
+     *  mask-composite.BCD tables only load in the browser with
+     *  JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     mask: PropTypes.string,
 
@@ -341,7 +325,9 @@ Ellipse.propTypes = {
      *  uniform opacity setting to be applied across an entire
      *  object, as a <number>. Any values outside the range 0.0
      *  (fully transparent) to 1.0 (fully opaque) will be clamped
-     *  to this range.BCD tables only load in the browser
+     *  to this range.BCD tables only load in the browser with
+     *  JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     opacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -362,13 +348,15 @@ Ellipse.propTypes = {
   
 The stroke under effect could be achieved
      *  via the following CSS property:BCD tables only load in
-     *  the browser
+     *  the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     paintOrder: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  The pathLength attribute lets authors specify a total length
-     *  for the path, in user units. This value is then used to
+     *  for the path, in user units. This value is then used to
      *  calibrate the browser's distance calculations with those
      *  of the author, by scaling all distance computations using
      *  the ratio pathLength/(computed value of path length).This
@@ -376,20 +364,21 @@ The stroke under effect could be achieved
      *  text paths, animation paths, and various stroke operations.
      *  Basically, all computations that require the length of
      *  the path. stroke-dasharray, for example, will assume the
-     *  start of the path being 0 and the end point the value defined
-     *  in the pathLength attribute.You can use this attribute
+     *  start of the path being 0 and the end point the value
+     *  defined in the pathLength attribute.You can use this attribute
      *  with the following SVG elements:For <circle>, pathLength
-     *  lets authors specify a total length for the circle, in
+     *  lets authors specify a total length for the circle, in
      *  user units.For <ellipse>, pathLength lets authors specify
-     *  a total length for the ellipse, in user units.For <line>,
+     *  a total length for the ellipse, in user units.For <line>,
      *  pathLength lets authors specify a total length for the
-     *  line, in user units.For <path>, pathLength lets authors
-     *  specify a total length for the path, in user units.For
+     *  line, in user units.For <path>, pathLength lets authors
+     *  specify a total length for the path, in user units.For
      *  <polygon>, pathLength lets authors specify a total length
-     *  for the shape, in user units.For <polyline>, pathLength
-     *  lets authors specify a total length for the shape, in
+     *  for the shape, in user units.For <polyline>, pathLength
+     *  lets authors specify a total length for the shape, in
      *  user units.For <rect>, pathLength lets authors specify
-     *  a total length for the rectangle, in user units.
+     *  a total length for the rectangle, in user units.Last modified:
+     *  May 13, 2022, by MDN contributors
      */
     pathLength: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -400,8 +389,10 @@ The stroke under effect could be achieved
      *  pointer-events can be used as a CSS property.You can use
      *  this attribute with the following SVG elements:For a detailed
      *  explanation of each possible value, have a look at the
-     *  CSS  pointer-events documentation.BCD tables only load
-     *  in the browser
+     *  CSS pointer-events documentation.BCD tables only load
+     *  in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     pointerEvents: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -421,7 +412,7 @@ The stroke under effect could be achieved
      *  to true end the element is rendered; otherwise, the attribute
      *  evaluates to false and the current element and its children
      *  are skipped and thus will not be rendered. This provides
-     *  a way to design SVG that gracefully falls back when features
+     *  a way to design SVG that gracefully falls back when features
      *  aren't available.If the attribute is not present, then
      *  its implicit evaluated value is true. If a null string
      *  or empty string value is given to attribute requiredFeatures,
@@ -429,7 +420,7 @@ The stroke under effect could be achieved
      *  often used in conjunction with the <switch> element. If
      *  requiredFeatures is used in other situations, it represents
      *  a simple switch on the given element whether to render
-     *  the element or not.To detect availability of an SVG feature
+     *  the element or not.To detect availability of an SVG feature
      *  from script, there is the (also deprecated) DOMImplementation.hasFeature()
      *  method.You can use this attribute with the following SVG
      *  elements:This is a list of feature strings, separated
@@ -520,7 +511,9 @@ The stroke under effect could be achieved
      *  <font>, <font-face>, <glyph>, <missing-glyph>, <hkern>,
      *  <font-face-src> and <font-face-name> elementsThe browser
      *  supports the <foreignObject> elementSee also requiredFeatures.svgBCD
-     *  tables only load in the browser
+     *  tables only load in the browser with JavaScript enabled.
+     *  Enable JavaScript to view data.Last modified: May 13,
+     *  2022, by MDN contributors
      */
     requiredFeatures: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -537,7 +530,8 @@ The stroke under effect could be achieved
      *  on both the ry attribute and the width of the rectangle:Note:
      *  Starting with SVG2, rx is a Geometry Property meaning
      *  this attribute can also be used as a CSS property for
-     *  rects.
+     *  rects.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     rx: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -554,7 +548,8 @@ The stroke under effect could be achieved
      *  on both the rx attribute and the width of the rectangle:Note:
      *  Starting with SVG2, ry is a Geometry Property meaning
      *  this attribute can also be used as a CSS property for
-     *  rects.
+     *  rects.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     ry: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -580,7 +575,9 @@ The stroke under effect could be achieved
      *  might adjust line positions and line widths to align edges
      *  with device pixels.Indicates that the user agent shall
      *  emphasize geometric precision over speed and crisp edges.BCD
-     *  tables only load in the browser
+     *  tables only load in the browser with JavaScript enabled.
+     *  Enable JavaScript to view data.Last modified: May 13,
+     *  2022, by MDN contributors
      */
     shapeRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -590,17 +587,16 @@ The stroke under effect could be achieved
      *  used to paint the outline of the shape;Note: As a presentation
      *  attribute stroke can be used as a CSS property.You can
      *  use this attribute with the following SVG elements:BCD
-     *  tables only load in the browserNote: For information on
-     *  using the context-stroke (and context-fill) values from
-     *  HTML documents, see the documentation for the non-standard
-     *  -moz-context-properties property.
+     *  tables only load in the browser with JavaScript enabled.
+     *  Enable JavaScript to view data.Last modified: May 13,
+     *  2022, by MDN contributors
      */
     stroke: PropTypes.string,
 
     /**
      *  The stroke-dasharray attribute is a presentation attribute defining
      *  the pattern of dashes and gaps used to paint the outline
-     *  of the shape;Note: As a presentation attribute, stroke-dasharray
+     *  of the shape;Note: As a presentation attribute, stroke-dasharray
      *  can be used as a CSS property.You can use this attribute
      *  with the following SVG elements:A list of comma and/or
      *  white space separated <length>s and <percentage>s that
@@ -608,7 +604,9 @@ The stroke under effect could be achieved
      *  an odd number of values is provided, then the list of
      *  values is repeated to yield an even number of values.
      *  Thus, 5,3,2 is equivalent to 5,3,2,5,3,2.BCD tables only
-     *  load in the browser
+     *  load in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     strokeDasharray: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -621,7 +619,8 @@ The stroke under effect could be achieved
      *  in user units resolved against the pathLength but if a
      *  <percentage> is used, the value is resolved as a percentage
      *  of the current viewport.BCD tables only load in the browser
-     * 
+     *  with JavaScript enabled. Enable JavaScript to view data.Last
+     *  modified: May 13, 2022, by MDN contributors
      */
     strokeDashoffset: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -640,7 +639,9 @@ The stroke under effect could be achieved
      *  show the fill underneath. To avoid this effect, it is
      *  possible to apply a global opacity with the opacity attribute
      *  or to put the stroke behind the fill with the paint-order
-     *  attribute.BCD tables only load in the browser
+     *  attribute.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 13, 2022, by MDN contributors
      */
     strokeOpacity: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -650,7 +651,9 @@ The stroke under effect could be achieved
      *  can use this attribute with the following SVG elements:Note:
      *  A percentage value is always computed as a percentage
      *  of the normalized viewBox diagonal length.BCD tables only
-     *  load in the browser
+     *  load in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     strokeWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -691,7 +694,9 @@ The stroke under effect could be achieved
      *  language primer, such as "A First Lesson in Latin," which
      *  is clearly intended to be used by an English-literate
      *  audience. In this case, the attribute should only include
-     *  en.BCD tables only load in the browser
+     *  en.BCD tables only load in the browser with JavaScript
+     *  enabled. Enable JavaScript to view data.Last modified:
+     *  May 13, 2022, by MDN contributors
      */
     systemLanguage: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -710,7 +715,7 @@ The stroke under effect could be achieved
      *  stroke outline of the shape's path in current user coordinate
      *  system and filling that outline with the stroke paint
      *  (color or gradient). The resulting visual effect of this
-     *  value is that the stroke width is not dependant on the
+     *  value is that the stroke width is not dependent on the
      *  transformations of the element (including non-uniform
      *  scaling and shear transformations) and zoom level.This
      *  value specifies a special user coordinate system used
@@ -734,10 +739,10 @@ The stroke under effect could be achieved
      *  host coordinate space. However, it does not specify the
      *  suppression of rotation, skew and scaling. When this vector
      *  effect and the transform property are defined at the same
-     *  time, that property is consumed for this effect.No compatibility
-     *  data found for svg.attributes.vector-effect.Check for
-     *  problems with this page or contribute missing data to
-     *  mdn/browser-compat-data.
+     *  time, that property is consumed for this effect.BCD tables
+     *  only load in the browser with JavaScript enabled. Enable
+     *  JavaScript to view data.Last modified: May 13, 2022, by
+     *  MDN contributors
      */
     vectorEffect: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
@@ -752,17 +757,19 @@ The stroke under effect could be achieved
      *  set to hidden still might receive events.Note: As a presentation
      *  attribute, visibility can be used as a CSS property. See
      *  the css visibility property for more information.You can
-     *  use this attribute with the following SVG elements:This
-     *  value indicates that the element will be painted.This
-     *  value indicates that the element will not be painted.
-     *  Though it is still part of the rendering tree, i.e. it
-     *  may receive pointer events depending on the pointer-events
-     *  attribute, may receive focus depending on the tabindex
-     *  attribute, contributes to bounding box calculations and
-     *  clipping paths, and does affect text layout.This value
-     *  is equal to hidden.The following example toggles the CSS
-     *  visibility of the SVG image path.BCD tables only load
-     *  in the browser
+     *  use this attribute with the following SVG elements:The
+     *  following example toggles the CSS visibility of the SVG
+     *  image path.This value indicates that the element will
+     *  be painted.This value indicates that the element will
+     *  not be painted. Though it is still part of the rendering
+     *  tree, i.e. it may receive pointer events depending on
+     *  the pointer-events attribute, may receive focus depending
+     *  on the tabindex attribute, contributes to bounding box
+     *  calculations and clipping paths, and does affect text
+     *  layout.This value is equal to hidden.BCD tables only load
+     *  in the browser with JavaScript enabled. Enable JavaScript
+     *  to view data.Last modified: May 13, 2022, by MDN contributors
+     * 
      */
     visibility: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
