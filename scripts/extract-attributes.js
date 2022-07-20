@@ -26,7 +26,7 @@ const supportedAttributes = ['accentHeight', 'accumulate', 'additive', 'alignmen
   'filterRes', 'filterUnits', 'floodColor', 'floodOpacity', 'focusable', 'fontFamily', 'fontSize',
   'fontSizeAdjust', 'fontStretch', 'fontStyle', 'fontVariant', 'fontWeight', 'format', 'from', 'fx', 'fy',
   'g1', 'g2', 'glyphName', 'glyphOrientationHorizontal', 'glyphOrientationVertical', 'glyphRef',
-  'gradientTransform', 'gradientUnits', 'hanging', 'horizAdvX', 'horizOriginX', 'ideographic',
+  'gradientTransform', 'gradientUnits', 'hanging', 'height', 'horizAdvX', 'horizOriginX', 'ideographic',
   'imageRendering', 'in', 'in2', 'intercept', 'k', 'k1', 'k2', 'k3', 'k4', 'kernelMatrix', 'kernelUnitLength',
   'kerning', 'keyPoints', 'keySplines', 'keyTimes', 'lengthAdjust', 'letterSpacing', 'lightingColor',
   'limitingConeAngle', 'local', 'markerEnd', 'markerHeight', 'markerMid', 'markerStart',
@@ -45,7 +45,7 @@ const supportedAttributes = ['accentHeight', 'accumulate', 'additive', 'alignmen
   'textDecoration', 'textLength', 'textRendering', 'to', 'transform', 'u1', 'u2', 'underlinePosition',
   'underlineThickness', 'unicode', 'unicodeBidi', 'unicodeRange', 'unitsPerEm', 'vAlphabetic',
   'vHanging', 'vIdeographic', 'vMathematical', 'values', 'vectorEffect', 'version', 'vertAdvY',
-  'vertOriginX', 'vertOriginY', 'viewBox', 'viewTarget', 'visibility', 'widths', 'wordSpacing',
+  'vertOriginX', 'vertOriginY', 'viewBox', 'viewTarget', 'visibility', 'width', 'widths', 'wordSpacing',
   'writingMode', 'x', 'x1', 'x2', 'xChannelSelector', 'xHeight', 'xlinkActuate', 'xlinkArcrole',
   'xlinkHref', 'xlinkRole', 'xlinkShow', 'xlinkTitle', 'xlinkType', 'xmlns', 'xmlnsXlink', 'xmlBase',
   'xmlLang', 'xmlSpace', 'y', 'y1', 'y2', 'yChannelSelector', 'z', 'zoomAndPan'];
@@ -155,6 +155,28 @@ const getReactElements = async function() {
 const getAttributeDetails = async function(attr, href) {
   const pageURL = 'https://developer.mozilla.org' + href;
 
+  // console.log('pageURL %s', pageURL)
+
+  function getElements($) {
+    let elements = 0;
+
+    if (attr === 'd'){
+      console.log('XXXX')
+    }
+
+    elements = $('p:contains("You can use this attribute")').find('code');
+
+    if (elements.length === 0) {
+      elements = $('p:contains("You can use this attribute")').next().find('code');
+    }
+
+    if (elements.length === 0){
+      console.warn('WARN: No elements for attr %s (%s)', attr, pageURL)
+    }
+
+    return elements
+  }
+
   // console.log(pageURL)
 
   let  description = '?????'
@@ -171,7 +193,7 @@ const getAttributeDetails = async function(attr, href) {
       description = $('p', 'article').text()
 
       type = await getAttributeType(attr)
-      const usedByElements = $('p:contains("You can use this attribute")').next().find('code')
+      const usedByElements = getElements($)
 
       const reactElements = await getReactElements()
 
@@ -187,7 +209,7 @@ const getAttributeDetails = async function(attr, href) {
     }
 
   } catch (error) {
-    console.log("Error loading %s", pageURL)
+    console.log("Error loading %s: %s", pageURL, error.message)
   }
 
   return {description, ...type, deprecated, pageURL, elements}
@@ -219,7 +241,7 @@ const extractAttributes = async function($) {
       .toString();
 
       if (attr.attribs && attr.attribs.class === 'page-not-created') {
-        console.log('WARN: Missing details "%s"', svgAttribute)
+        console.warn('WARN: Missing details "%s"', svgAttribute)
         return;
       }
 
