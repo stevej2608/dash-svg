@@ -11,11 +11,63 @@ const srcPath = '../src/lib/components';
 const attributesPath = './data/attributes.json';
 
 const GLOBAL_ATTRIBUTES = {
-  "className": {
-    "description": "Often used with CSS to style elements with common properties.",
-    "isRequired": false,
-    "type": "string",
-    },
+  	"className": {
+    		"description": "Often used with CSS to style elements with common properties.",
+    		"isRequired": false,
+    		"type": "string",
+    	},
+	"transform": {
+		"description": "Transformation to apply to the element ",
+		"isRequired": false,
+		"type": "string",
+	},
+	"style": {
+		"description": "CSS style to apply to the element ",
+		"isRequired": false,
+		"type": "React.CSSProperties",
+	},
+	"x": {
+		"description": "x position",
+		"isRequired": false,
+		"type": "string",
+	},
+	"y": {
+		"description": "y position",
+		"isRequired": false,
+		"type": "string",
+	},
+}
+const RECT_ADDITIONAL_ATTRIBUTES = {
+	"width": {
+		"description": "width",
+		"isRequired": false,
+		"type": "string",
+	},
+	"height": {
+		"description": "width",
+		"isRequired": false,
+		"type": "string",
+	},
+	"rx": {
+		"description": "x border radius",
+		"isRequired": false,
+		"type": "string",
+	},
+	"ry": {
+		"description": "y border radius",
+		"isRequired": false,
+		"type": "string",
+	},
+	"fill": {
+		"description": "fill color",
+		"isRequired": false,
+		"type": "string",
+	},
+	"stroke": {
+		"description": "stroke color",
+		"isRequired": false,
+		"type": "string",
+	},
 }
 
 const SVG_ADDITIONAL_ATTRIBUTES = {
@@ -26,6 +78,16 @@ const SVG_ADDITIONAL_ATTRIBUTES = {
     },
   "xmlns": {
     "description": "SVG xml namespace.",
+    "isRequired": false,
+    "type": "string",
+    },
+  "width": {
+    "description": "SVG width",
+    "isRequired": false,
+    "type": "string",
+    },
+  "height": {
+    "description": "SVG height",
     "isRequired": false,
     "type": "string",
     },
@@ -124,19 +186,24 @@ function nameComponent(elementName) {
 
 function generatePropTypes(element, attributes) {
 
-  const allAttributes = {...attributes.attributes, ...GLOBAL_ATTRIBUTES, ...SVG_ADDITIONAL_ATTRIBUTES}
+  const allAttributes = {...attributes.attributes, ...GLOBAL_ATTRIBUTES, ...SVG_ADDITIONAL_ATTRIBUTES, ...RECT_ADDITIONAL_ATTRIBUTES}
+	element = element.trim()
 
   // Create a list of attributes for this element. It's the
   // aggregate of the attributes scraped from developer.mozilla.org
   // and hand picked GLOBAL_ATTRIBUTES
 
   const elements = attributes.elements[element];
-  const elementAttributes = [...elements, ...Object.keys(GLOBAL_ATTRIBUTES)];
+  const elementAttributes = [...(elements ?? []), ...Object.keys(GLOBAL_ATTRIBUTES)];
 
   // Add a few more hand picked attributes for the <svg/> element
 
   if (element === 'svg') {
     elementAttributes.push(...Object.keys(SVG_ADDITIONAL_ATTRIBUTES))
+  }
+  if (element === 'rect') {
+    elementAttributes.push(...Object.keys(RECT_ADDITIONAL_ATTRIBUTES))
+	  console.log(elementAttributes)
   }
 
   const PROP_TYPES = makePropTypes(elementAttributes, allAttributes)
@@ -300,7 +367,7 @@ function writeComponents(components, destination) {
   console.log(`Writing ${Object.keys(components).length} component files to ${srcPath}.`);
   let componentPath;
   for (const Component in components) {
-    componentPath = path.join(destination, `${Component}.react.js`);
+    componentPath = path.join(destination, `${Component.trim()}.react.js`);
     fs.mkdirSync(path.join(destination), { recursive: true });
     fs.writeFileSync(componentPath, components[Component]);
   }
