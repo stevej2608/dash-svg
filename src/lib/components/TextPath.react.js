@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * TextPath is a wrapper for the <textPath> SVG element.
+ * TextPath is a wrapper for the <textPath> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/textPath
  */
-const TextPath = (props) => {
+const TextPath = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const TextPath = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </textPath>
+        </textPath>
     );
 };
 
-TextPath.defaultProps = {
+TextPath.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-TextPath.propTypes = {
+TextPath.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -321,59 +321,7 @@ TextPath.propTypes = {
     dominantBaseline: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The fill attribute has two different meanings. For shapes and
-     *  text it's a presentation attribute that defines the color
-     *  (or any SVG paint servers like gradients or patterns)
-     *  used to paint the element; for animation it defines the
-     *  final state of the animation.You can use this attribute
-     *  with the following SVG elements:For animation, these elements
-     *  are using this attribute: <animate>, <animateColor>, <animateMotion>,
-     *  <animateTransform>, and <set>.Warning: As of SVG2 <altGlyph>
-     *  is deprecated and shouldn't be used.For <altGlyph>, fill
-     *  is a presentation attribute that defines the color of
-     *  the glyph.Note: As a presentation attribute fill can be
-     *  used as a CSS property.For <animate>, fill defines the
-     *  final state of the animation.Warning: As of SVG Animation
-     *  2 <animateColor> is deprecated and shouldn't be used.
-     *  Use <animate> instead.For <animateColor>, fill defines
-     *  the final state of the animation.For <animateMotion>,
-     *  fill defines the final state of the animation.For <animateTransform>,
-     *  fill defines the final state of the animation.For <circle>,
-     *  fill is a presentation attribute that defines the color
-     *  of the circle.Note: As a presentation attribute fill can
-     *  be used as a CSS property.For <ellipse>, fill is a presentation
-     *  attribute that defines the color of the ellipse.Note:
-     *  As a presentation attribute fill can be used as a CSS
-     *  property.For <path>, fill is a presentation attribute
-     *  that defines the color of the interior of the shape. (Interior
-     *  is define by the fill-rule attribute)Note: As a presentation
-     *  attribute fill can be used as a CSS property.For <polygon>,
-     *  fill is a presentation attribute that defines the color
-     *  of the interior of the shape. (Interior is define by the
-     *  fill-rule attribute)Note: As a presentation attribute
-     *  fill can be used as a CSS property.For <polyline>, fill
-     *  is a presentation attribute that defines the color of
-     *  the interior of the shape. (Interior is define by the
-     *  fill-rule attribute)Note: As a presentation attribute
-     *  fill can be used as a CSS property.For <rect>, fill is
-     *  a presentation attribute that defines the color of the
-     *  rectangle.Note: As a presentation attribute fill can be
-     *  used as a CSS property.For <set>, fill defines the final
-     *  state of the animation.For <text>, fill is a presentation
-     *  attribute that defines what the color of the text.Note:
-     *  As a presentation attribute fill can be used as a CSS
-     *  property.For <textPath>, fill is a presentation attribute
-     *  that defines the color of the text.Note: As a presentation
-     *  attribute fill can be used as a CSS property.Warning:
-     *  As of SVG2 <tref> is deprecated and shouldn't be used.For
-     *  <tref>, fill is a presentation attribute that defines
-     *  the color of the text.Note: As a presentation attribute
-     *  fill can be used as a CSS property.For <tspan>, fill is
-     *  a presentation attribute that defines the color of the
-     *  text.Note: As a presentation attribute fill can be used
-     *  as a CSS property.BCD tables only load in the browser
-     *  with JavaScript enabled. Enable JavaScript to view data.Last
-     *  modified: May 13, 2022, by MDN contributors
+     *  fill color
      */
     fill: PropTypes.string,
 
@@ -936,14 +884,7 @@ The stroke under effect could be achieved
     startOffset: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The stroke attribute is a presentation attribute defining the
-     *  color (or any SVG paint servers like gradients or patterns)
-     *  used to paint the outline of the shape;Note: As a presentation
-     *  attribute stroke can be used as a CSS property.You can
-     *  use this attribute with the following SVG elements:BCD
-     *  tables only load in the browser with JavaScript enabled.
-     *  Enable JavaScript to view data.Last modified: May 13,
-     *  2022, by MDN contributors
+     *  stroke color
      */
     stroke: PropTypes.string,
 
@@ -1458,6 +1399,29 @@ For example, a miter
      */
     className: PropTypes.string,
 
+    /**
+     *  Transformation to apply to the element 
+     */
+    transform: PropTypes.string,
+
+    /**
+     *  CSS style to apply to the element 
+     */
+    style: PropTypes.oneOfType([
+        PropTypes.oneOf(['React.CSSProperties']),
+        PropTypes.bool
+     ]),
+
+    /**
+     *  x position
+     */
+    x: PropTypes.string,
+
+    /**
+     *  y position
+     */
+    y: PropTypes.string,
+
 
     /**
      * Object that holds the loading state object coming from dash-renderer
@@ -1483,4 +1447,4 @@ For example, a miter
     'setProps': PropTypes.func
 };
 
-export default TextPath;
+export default TextPath;

@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * LinearGradient is a wrapper for the <linearGradient> SVG element.
+ * LinearGradient is a wrapper for the <linearGradient> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/linearGradient
  */
-const LinearGradient = (props) => {
+const LinearGradient = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const LinearGradient = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </linearGradient>
+        </linearGradient>
     );
 };
 
-LinearGradient.defaultProps = {
+LinearGradient.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-LinearGradient.propTypes = {
+LinearGradient.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -292,6 +292,29 @@ LinearGradient.propTypes = {
      */
     className: PropTypes.string,
 
+    /**
+     *  Transformation to apply to the element 
+     */
+    transform: PropTypes.string,
+
+    /**
+     *  CSS style to apply to the element 
+     */
+    style: PropTypes.oneOfType([
+        PropTypes.oneOf(['React.CSSProperties']),
+        PropTypes.bool
+     ]),
+
+    /**
+     *  x position
+     */
+    x: PropTypes.string,
+
+    /**
+     *  y position
+     */
+    y: PropTypes.string,
+
 
     /**
      * Object that holds the loading state object coming from dash-renderer
@@ -317,4 +340,4 @@ LinearGradient.propTypes = {
     'setProps': PropTypes.func
 };
 
-export default LinearGradient;
+export default LinearGradient;

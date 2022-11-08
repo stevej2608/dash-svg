@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * Stop is a wrapper for the <stop> SVG element.
+ * Stop is a wrapper for the <stop> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/stop
  */
-const Stop = (props) => {
+const Stop = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const Stop = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </stop>
+        </stop>
     );
 };
 
-Stop.defaultProps = {
+Stop.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-Stop.propTypes = {
+Stop.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -124,6 +124,29 @@ Stop.propTypes = {
      */
     className: PropTypes.string,
 
+    /**
+     *  Transformation to apply to the element 
+     */
+    transform: PropTypes.string,
+
+    /**
+     *  CSS style to apply to the element 
+     */
+    style: PropTypes.oneOfType([
+        PropTypes.oneOf(['React.CSSProperties']),
+        PropTypes.bool
+     ]),
+
+    /**
+     *  x position
+     */
+    x: PropTypes.string,
+
+    /**
+     *  y position
+     */
+    y: PropTypes.string,
+
 
     /**
      * Object that holds the loading state object coming from dash-renderer
@@ -149,4 +172,4 @@ Stop.propTypes = {
     'setProps': PropTypes.func
 };
 
-export default Stop;
+export default Stop;

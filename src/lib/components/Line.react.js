@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * Line is a wrapper for the <line> SVG element.
+ * Line is a wrapper for the <line> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/line
  */
-const Line = (props) => {
+const Line = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const Line = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </line>
+        </line>
     );
 };
 
-Line.defaultProps = {
+Line.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-Line.propTypes = {
+Line.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -441,14 +441,7 @@ The stroke under effect could be achieved
     shapeRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The stroke attribute is a presentation attribute defining the
-     *  color (or any SVG paint servers like gradients or patterns)
-     *  used to paint the outline of the shape;Note: As a presentation
-     *  attribute stroke can be used as a CSS property.You can
-     *  use this attribute with the following SVG elements:BCD
-     *  tables only load in the browser with JavaScript enabled.
-     *  Enable JavaScript to view data.Last modified: May 13,
-     *  2022, by MDN contributors
+     *  stroke color
      */
     stroke: PropTypes.string,
 
@@ -726,6 +719,29 @@ The stroke under effect could be achieved
      */
     className: PropTypes.string,
 
+    /**
+     *  Transformation to apply to the element 
+     */
+    transform: PropTypes.string,
+
+    /**
+     *  CSS style to apply to the element 
+     */
+    style: PropTypes.oneOfType([
+        PropTypes.oneOf(['React.CSSProperties']),
+        PropTypes.bool
+     ]),
+
+    /**
+     *  x position
+     */
+    x: PropTypes.string,
+
+    /**
+     *  y position
+     */
+    y: PropTypes.string,
+
 
     /**
      * Object that holds the loading state object coming from dash-renderer
@@ -751,4 +767,4 @@ The stroke under effect could be achieved
     'setProps': PropTypes.func
 };
 
-export default Line;
+export default Line;
