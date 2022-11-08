@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * Ellipse is a wrapper for the <ellipse> SVG element.
+ * Ellipse is a wrapper for the <ellipse> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse
  */
-const Ellipse = (props) => {
+const Ellipse = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const Ellipse = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </ellipse>
+        </ellipse>
     );
 };
 
-Ellipse.defaultProps = {
+Ellipse.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-Ellipse.propTypes = {
+Ellipse.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -167,59 +167,7 @@ Ellipse.propTypes = {
     cy: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The fill attribute has two different meanings. For shapes and
-     *  text it's a presentation attribute that defines the color
-     *  (or any SVG paint servers like gradients or patterns)
-     *  used to paint the element; for animation it defines the
-     *  final state of the animation.You can use this attribute
-     *  with the following SVG elements:For animation, these elements
-     *  are using this attribute: <animate>, <animateColor>, <animateMotion>,
-     *  <animateTransform>, and <set>.Warning: As of SVG2 <altGlyph>
-     *  is deprecated and shouldn't be used.For <altGlyph>, fill
-     *  is a presentation attribute that defines the color of
-     *  the glyph.Note: As a presentation attribute fill can be
-     *  used as a CSS property.For <animate>, fill defines the
-     *  final state of the animation.Warning: As of SVG Animation
-     *  2 <animateColor> is deprecated and shouldn't be used.
-     *  Use <animate> instead.For <animateColor>, fill defines
-     *  the final state of the animation.For <animateMotion>,
-     *  fill defines the final state of the animation.For <animateTransform>,
-     *  fill defines the final state of the animation.For <circle>,
-     *  fill is a presentation attribute that defines the color
-     *  of the circle.Note: As a presentation attribute fill can
-     *  be used as a CSS property.For <ellipse>, fill is a presentation
-     *  attribute that defines the color of the ellipse.Note:
-     *  As a presentation attribute fill can be used as a CSS
-     *  property.For <path>, fill is a presentation attribute
-     *  that defines the color of the interior of the shape. (Interior
-     *  is define by the fill-rule attribute)Note: As a presentation
-     *  attribute fill can be used as a CSS property.For <polygon>,
-     *  fill is a presentation attribute that defines the color
-     *  of the interior of the shape. (Interior is define by the
-     *  fill-rule attribute)Note: As a presentation attribute
-     *  fill can be used as a CSS property.For <polyline>, fill
-     *  is a presentation attribute that defines the color of
-     *  the interior of the shape. (Interior is define by the
-     *  fill-rule attribute)Note: As a presentation attribute
-     *  fill can be used as a CSS property.For <rect>, fill is
-     *  a presentation attribute that defines the color of the
-     *  rectangle.Note: As a presentation attribute fill can be
-     *  used as a CSS property.For <set>, fill defines the final
-     *  state of the animation.For <text>, fill is a presentation
-     *  attribute that defines what the color of the text.Note:
-     *  As a presentation attribute fill can be used as a CSS
-     *  property.For <textPath>, fill is a presentation attribute
-     *  that defines the color of the text.Note: As a presentation
-     *  attribute fill can be used as a CSS property.Warning:
-     *  As of SVG2 <tref> is deprecated and shouldn't be used.For
-     *  <tref>, fill is a presentation attribute that defines
-     *  the color of the text.Note: As a presentation attribute
-     *  fill can be used as a CSS property.For <tspan>, fill is
-     *  a presentation attribute that defines the color of the
-     *  text.Note: As a presentation attribute fill can be used
-     *  as a CSS property.BCD tables only load in the browser
-     *  with JavaScript enabled. Enable JavaScript to view data.Last
-     *  modified: May 13, 2022, by MDN contributors
+     *  fill color
      */
     fill: PropTypes.string,
 
@@ -518,40 +466,14 @@ The stroke under effect could be achieved
     requiredFeatures: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The rx attribute defines a radius on the x-axis.You can use this
-     *  attribute with the following SVG elements:For <ellipse>,
-     *  rx defines the x-radius of the shape. With a value lower
-     *  or equal to zero the ellipse won't be drawn at all.Note:
-     *  Starting with SVG2, rx is a Geometry Property meaning
-     *  this attribute can also be used as a CSS property for
-     *  ellipses.For <rect>, rx defines the x-axis radius of the
-     *  ellipse used to round off the corners of the rectangle.The
-     *  way the value of the rx attribute is interpreted depend
-     *  on both the ry attribute and the width of the rectangle:Note:
-     *  Starting with SVG2, rx is a Geometry Property meaning
-     *  this attribute can also be used as a CSS property for
-     *  rects.Last modified: May 13, 2022, by MDN contributors
-     * 
+     *  x border radius
      */
-    rx: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    rx: PropTypes.string,
 
     /**
-     *  The ry attribute defines a radius on the y-axis.You can use this
-     *  attribute with the following SVG elements:For <ellipse>,
-     *  ry defines the y-radius of the shape. With a value lower
-     *  or equal to zero the ellipse won't be drawn at all.Note:
-     *  Starting with SVG2, ry is a Geometry Property meaning
-     *  this attribute can also be used as a CSS property for
-     *  ellipses.For <rect>, ry defines the y-axis radius of the
-     *  ellipse used to round off the corners of the rectangle.The
-     *  way the value of the ry attribute is interpreted depend
-     *  on both the rx attribute and the width of the rectangle:Note:
-     *  Starting with SVG2, ry is a Geometry Property meaning
-     *  this attribute can also be used as a CSS property for
-     *  rects.Last modified: May 13, 2022, by MDN contributors
-     * 
+     *  y border radius
      */
-    ry: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    ry: PropTypes.string,
 
     /**
      *  The shape-rendering attribute provides hints to the renderer
@@ -582,14 +504,7 @@ The stroke under effect could be achieved
     shapeRendering: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
-     *  The stroke attribute is a presentation attribute defining the
-     *  color (or any SVG paint servers like gradients or patterns)
-     *  used to paint the outline of the shape;Note: As a presentation
-     *  attribute stroke can be used as a CSS property.You can
-     *  use this attribute with the following SVG elements:BCD
-     *  tables only load in the browser with JavaScript enabled.
-     *  Enable JavaScript to view data.Last modified: May 13,
-     *  2022, by MDN contributors
+     *  stroke color
      */
     stroke: PropTypes.string,
 
@@ -779,6 +694,29 @@ The stroke under effect could be achieved
      */
     className: PropTypes.string,
 
+    /**
+     *  Transformation to apply to the element 
+     */
+    transform: PropTypes.string,
+
+    /**
+     *  CSS style to apply to the element 
+     */
+    style: PropTypes.oneOfType([
+        PropTypes.oneOf(['React.CSSProperties']),
+        PropTypes.bool
+     ]),
+
+    /**
+     *  x position
+     */
+    x: PropTypes.string,
+
+    /**
+     *  y position
+     */
+    y: PropTypes.string,
+
 
     /**
      * Object that holds the loading state object coming from dash-renderer
@@ -804,4 +742,4 @@ The stroke under effect could be achieved
     'setProps': PropTypes.func
 };
 
-export default Ellipse;
+export default Ellipse;
