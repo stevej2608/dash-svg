@@ -13,7 +13,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "type": "pwa-node"
+      "type": "node"
     },
     {
       "name": "1b. extract-elements",
@@ -23,7 +23,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "type": "pwa-node"
+      "type": "node"
     },
     {
       "name": "1c. generate-components",
@@ -34,7 +34,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "type": "pwa-node"
+      "type": "node"
     },
 
     {
@@ -45,7 +45,7 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "type": "pwa-node"
+      "type": "node"
     },
 
     {
