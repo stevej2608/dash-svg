@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * FeFuncB is a wrapper for the <feFuncB> SVG element.
+ * FeFuncB is a wrapper for the <feFuncB> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feFuncB
  */
-const FeFuncB = (props) => {
+const FeFuncB = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const FeFuncB = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </feFuncB>
+        </feFuncB>
     );
 };
 
-FeFuncB.defaultProps = {
+FeFuncB.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-FeFuncB.propTypes = {
+FeFuncB.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -146,10 +146,7 @@ FeFuncB.propTypes = {
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOfType([
-        PropTypes.oneOf(['React.CSSProperties']),
-        PropTypes.bool
-     ]),
+    style: PropTypes.oneOf([React.CSSProperties]),
 
     /**
      *  x position
@@ -186,4 +183,4 @@ FeFuncB.propTypes = {
     'setProps': PropTypes.func
 };
 
-export default FeFuncB;
+export default FeFuncB;

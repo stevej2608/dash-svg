@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * FeTile is a wrapper for the <feTile> SVG element.
+ * FeTile is a wrapper for the <feTile> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feTile
  */
-const FeTile = (props) => {
+const FeTile = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const FeTile = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </feTile>
+        </feTile>
     );
 };
 
-FeTile.defaultProps = {
+FeTile.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-FeTile.propTypes = {
+FeTile.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -108,10 +108,7 @@ FeTile.propTypes = {
      *  view data.Last modified: May 13, 2022, by MDN contributors
      * 
      */
-    colorInterpolationFilters: PropTypes.oneOfType([
-        PropTypes.oneOf(['"auto"|"inherit"|"linearRGB"|"sRGB"']),
-        PropTypes.bool
-     ]),
+    colorInterpolationFilters: PropTypes.oneOf(["auto", "inherit", "linearRGB", "sRGB"]),
 
     /**
      *  width
@@ -222,10 +219,7 @@ FeTile.propTypes = {
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOfType([
-        PropTypes.oneOf(['React.CSSProperties']),
-        PropTypes.bool
-     ]),
+    style: PropTypes.oneOf([React.CSSProperties]),
 
     /**
      *  x position
@@ -262,4 +256,4 @@ FeTile.propTypes = {
     'setProps': PropTypes.func
 };
 
-export default FeTile;
+export default FeTile;

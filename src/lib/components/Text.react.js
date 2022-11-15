@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * Text is a wrapper for the <text> SVG element.
+ * Text is a wrapper for the <text> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/text
  */
-const Text = (props) => {
+const Text = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const Text = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </text>
+        </text>
     );
 };
 
-Text.defaultProps = {
+Text.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-Text.propTypes = {
+Text.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -398,10 +398,7 @@ Text.propTypes = {
      *  to view data.Last modified: May 13, 2022, by MDN contributors
      * 
      */
-    fillRule: PropTypes.oneOfType([
-        PropTypes.oneOf(['"evenodd"|"inherit"|"nonzero"']),
-        PropTypes.bool
-     ]),
+    fillRule: PropTypes.oneOf(["evenodd", "inherit", "nonzero"]),
 
     /**
      *  The font-family attribute indicates which font family will be
@@ -971,10 +968,7 @@ The stroke under effect could be achieved
      *  to view data.Last modified: May 13, 2022, by MDN contributors
      * 
      */
-    strokeLinecap: PropTypes.oneOfType([
-        PropTypes.oneOf(['"butt"|"inherit"|"round"|"square"']),
-        PropTypes.bool
-     ]),
+    strokeLinecap: PropTypes.oneOf(["butt", "inherit", "round", "square"]),
 
     /**
      *  The stroke-linejoin attribute is a presentation attribute defining
@@ -1010,10 +1004,7 @@ The stroke under effect could be achieved
      *  with JavaScript enabled. Enable JavaScript to view data.Last
      *  modified: May 13, 2022, by MDN contributors
      */
-    strokeLinejoin: PropTypes.oneOfType([
-        PropTypes.oneOf(['"bevel"|"inherit"|"miter"|"round"']),
-        PropTypes.bool
-     ]),
+    strokeLinejoin: PropTypes.oneOf(["bevel", "inherit", "miter", "round"]),
 
     /**
      *  The stroke-miterlimit attribute is a presentation attribute defining
@@ -1475,10 +1466,7 @@ For example, a miter
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOfType([
-        PropTypes.oneOf(['React.CSSProperties']),
-        PropTypes.bool
-     ]),
+    style: PropTypes.oneOf([React.CSSProperties]),
 
     /**
      *  x position
@@ -1515,4 +1503,4 @@ For example, a miter
     'setProps': PropTypes.func
 };
 
-export default Text;
+export default Text;

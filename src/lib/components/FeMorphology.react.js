@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * FeMorphology is a wrapper for the <feMorphology> SVG element.
+ * FeMorphology is a wrapper for the <feMorphology> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feMorphology
  */
-const FeMorphology = (props) => {
+const FeMorphology = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const FeMorphology = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </feMorphology>
+        </feMorphology>
     );
 };
 
-FeMorphology.defaultProps = {
+FeMorphology.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-FeMorphology.propTypes = {
+FeMorphology.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -108,10 +108,7 @@ FeMorphology.propTypes = {
      *  view data.Last modified: May 13, 2022, by MDN contributors
      * 
      */
-    colorInterpolationFilters: PropTypes.oneOfType([
-        PropTypes.oneOf(['"auto"|"inherit"|"linearRGB"|"sRGB"']),
-        PropTypes.bool
-     ]),
+    colorInterpolationFilters: PropTypes.oneOf(["auto", "inherit", "linearRGB", "sRGB"]),
 
     /**
      *  width
@@ -283,10 +280,7 @@ FeMorphology.propTypes = {
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOfType([
-        PropTypes.oneOf(['React.CSSProperties']),
-        PropTypes.bool
-     ]),
+    style: PropTypes.oneOf([React.CSSProperties]),
 
     /**
      *  x position
@@ -323,4 +317,4 @@ FeMorphology.propTypes = {
     'setProps': PropTypes.func
 };
 
-export default FeMorphology;
+export default FeMorphology;

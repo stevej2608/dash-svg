@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * Polygon is a wrapper for the <polygon> SVG element.
+ * Polygon is a wrapper for the <polygon> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/polygon
  */
-const Polygon = (props) => {
+const Polygon = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const Polygon = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </polygon>
+        </polygon>
     );
 };
 
-Polygon.defaultProps = {
+Polygon.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-Polygon.propTypes = {
+Polygon.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -181,10 +181,7 @@ Polygon.propTypes = {
      *  to view data.Last modified: May 13, 2022, by MDN contributors
      * 
      */
-    fillRule: PropTypes.oneOfType([
-        PropTypes.oneOf(['"evenodd"|"inherit"|"nonzero"']),
-        PropTypes.bool
-     ]),
+    fillRule: PropTypes.oneOf(["evenodd", "inherit", "nonzero"]),
 
     /**
      *  The marker-end attribute defines the arrowhead or polymarker
@@ -582,10 +579,7 @@ The stroke under effect could be achieved
      *  with JavaScript enabled. Enable JavaScript to view data.Last
      *  modified: May 13, 2022, by MDN contributors
      */
-    strokeLinejoin: PropTypes.oneOfType([
-        PropTypes.oneOf(['"bevel"|"inherit"|"miter"|"round"']),
-        PropTypes.bool
-     ]),
+    strokeLinejoin: PropTypes.oneOf(["bevel", "inherit", "miter", "round"]),
 
     /**
      *  The stroke-miterlimit attribute is a presentation attribute defining
@@ -824,10 +818,7 @@ For example, a miter
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOfType([
-        PropTypes.oneOf(['React.CSSProperties']),
-        PropTypes.bool
-     ]),
+    style: PropTypes.oneOf([React.CSSProperties]),
 
     /**
      *  x position
@@ -864,4 +855,4 @@ For example, a miter
     'setProps': PropTypes.func
 };
 
-export default Polygon;
+export default Polygon;

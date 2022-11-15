@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * ForeignObject is a wrapper for the <foreignObject> SVG element.
+ * ForeignObject is a wrapper for the <foreignObject> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/foreignObject
  */
-const ForeignObject = (props) => {
+const ForeignObject = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const ForeignObject = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </foreignObject>
+        </foreignObject>
     );
 };
 
-ForeignObject.defaultProps = {
+ForeignObject.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-ForeignObject.propTypes = {
+ForeignObject.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -469,10 +469,7 @@ ForeignObject.propTypes = {
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOfType([
-        PropTypes.oneOf(['React.CSSProperties']),
-        PropTypes.bool
-     ]),
+    style: PropTypes.oneOf([React.CSSProperties]),
 
     /**
      *  x position
@@ -509,4 +506,4 @@ ForeignObject.propTypes = {
     'setProps': PropTypes.func
 };
 
-export default ForeignObject;
+export default ForeignObject;

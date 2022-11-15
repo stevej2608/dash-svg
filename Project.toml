@@ -2,7 +2,7 @@
 name = "DashSvg"
 uuid = "1b08a953-4be3-4667-9a23-bfa8ae6050c3"
 authors = ["Steve Jones <jonesst2608@gmail.com>"]
-version = "0.0.10"
+version = "0.0.11"
 
 [deps]
 Dash = "1b08a953-4be3-4667-9a23-3db579824955"

@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * FePointLight is a wrapper for the <fePointLight> SVG element.
+ * FePointLight is a wrapper for the <fePointLight> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/fePointLight
  */
-const FePointLight = (props) => {
+const FePointLight = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const FePointLight = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </fePointLight>
+        </fePointLight>
     );
 };
 
-FePointLight.defaultProps = {
+FePointLight.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-FePointLight.propTypes = {
+FePointLight.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -123,10 +123,7 @@ FePointLight.propTypes = {
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOfType([
-        PropTypes.oneOf(['React.CSSProperties']),
-        PropTypes.bool
-     ]),
+    style: PropTypes.oneOf([React.CSSProperties]),
 
     /**
      *  x position
@@ -163,4 +160,4 @@ FePointLight.propTypes = {
     'setProps': PropTypes.func
 };
 
-export default FePointLight;
+export default FePointLight;

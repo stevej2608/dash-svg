@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * FeConvolveMatrix is a wrapper for the <feConvolveMatrix> SVG element.
+ * FeConvolveMatrix is a wrapper for the <feConvolveMatrix> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feConvolveMatrix
  */
-const FeConvolveMatrix = (props) => {
+const FeConvolveMatrix = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const FeConvolveMatrix = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </feConvolveMatrix>
+        </feConvolveMatrix>
     );
 };
 
-FeConvolveMatrix.defaultProps = {
+FeConvolveMatrix.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-FeConvolveMatrix.propTypes = {
+FeConvolveMatrix.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -123,10 +123,7 @@ FeConvolveMatrix.propTypes = {
      *  view data.Last modified: May 13, 2022, by MDN contributors
      * 
      */
-    colorInterpolationFilters: PropTypes.oneOfType([
-        PropTypes.oneOf(['"auto"|"inherit"|"linearRGB"|"sRGB"']),
-        PropTypes.bool
-     ]),
+    colorInterpolationFilters: PropTypes.oneOf(["auto", "inherit", "linearRGB", "sRGB"]),
 
     /**
      *  The divisor attribute specifies the value by which the resulting
@@ -334,10 +331,7 @@ FeConvolveMatrix.propTypes = {
      *  view data.Last modified: Jun 12, 2022, by MDN contributors
      * 
      */
-    order: PropTypes.oneOfType([
-        PropTypes.oneOf(['"no"|"yes"']),
-        PropTypes.bool
-     ]),
+    order: PropTypes.oneOf(["no", "yes"]),
 
     /**
      *  the preserveAlpha attribute indicates how a <feConvolveMatrix>
@@ -352,10 +346,7 @@ FeConvolveMatrix.propTypes = {
      *  view data.Last modified: May 13, 2022, by MDN contributors
      * 
      */
-    preserveAlpha: PropTypes.oneOfType([
-        PropTypes.oneOf(['Booleanish']),
-        PropTypes.bool
-     ]),
+    preserveAlpha: PropTypes.oneOf(['true', 'false']),
 
     /**
      *  The result attribute defines the assigned name for this filter
@@ -437,10 +428,7 @@ FeConvolveMatrix.propTypes = {
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOfType([
-        PropTypes.oneOf(['React.CSSProperties']),
-        PropTypes.bool
-     ]),
+    style: PropTypes.oneOf([React.CSSProperties]),
 
     /**
      *  x position
@@ -477,4 +465,4 @@ FeConvolveMatrix.propTypes = {
     'setProps': PropTypes.func
 };
 
-export default FeConvolveMatrix;
+export default FeConvolveMatrix;

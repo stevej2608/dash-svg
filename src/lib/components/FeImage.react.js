@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * FeImage is a wrapper for the <feImage> SVG element.
+ * FeImage is a wrapper for the <feImage> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feImage
  */
-const FeImage = (props) => {
+const FeImage = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const FeImage = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </feImage>
+        </feImage>
     );
 };
 
-FeImage.defaultProps = {
+FeImage.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-FeImage.propTypes = {
+FeImage.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -108,10 +108,7 @@ FeImage.propTypes = {
      *  view data.Last modified: May 13, 2022, by MDN contributors
      * 
      */
-    colorInterpolationFilters: PropTypes.oneOfType([
-        PropTypes.oneOf(['"auto"|"inherit"|"linearRGB"|"sRGB"']),
-        PropTypes.bool
-     ]),
+    colorInterpolationFilters: PropTypes.oneOf(["auto", "inherit", "linearRGB", "sRGB"]),
 
     /**
      *  width
@@ -203,10 +200,7 @@ FeImage.propTypes = {
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOfType([
-        PropTypes.oneOf(['React.CSSProperties']),
-        PropTypes.bool
-     ]),
+    style: PropTypes.oneOf([React.CSSProperties]),
 
     /**
      *  x position
@@ -243,4 +237,4 @@ FeImage.propTypes = {
     'setProps': PropTypes.func
 };
 
-export default FeImage;
+export default FeImage;

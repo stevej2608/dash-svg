@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * Circle is a wrapper for the <circle> SVG element.
+ * Circle is a wrapper for the <circle> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/circle
  */
-const Circle = (props) => {
+const Circle = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const Circle = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </circle>
+        </circle>
     );
 };
 
-Circle.defaultProps = {
+Circle.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-Circle.propTypes = {
+Circle.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -710,10 +710,7 @@ The stroke under effect could be achieved
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOfType([
-        PropTypes.oneOf(['React.CSSProperties']),
-        PropTypes.bool
-     ]),
+    style: PropTypes.oneOf([React.CSSProperties]),
 
     /**
      *  x position
@@ -750,4 +747,4 @@ The stroke under effect could be achieved
     'setProps': PropTypes.func
 };
 
-export default Circle;
+export default Circle;

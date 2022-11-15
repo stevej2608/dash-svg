@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * FeTurbulence is a wrapper for the <feTurbulence> SVG element.
+ * FeTurbulence is a wrapper for the <feTurbulence> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feTurbulence
  */
-const FeTurbulence = (props) => {
+const FeTurbulence = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const FeTurbulence = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </feTurbulence>
+        </feTurbulence>
     );
 };
 
-FeTurbulence.defaultProps = {
+FeTurbulence.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-FeTurbulence.propTypes = {
+FeTurbulence.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -123,10 +123,7 @@ FeTurbulence.propTypes = {
      *  view data.Last modified: May 13, 2022, by MDN contributors
      * 
      */
-    colorInterpolationFilters: PropTypes.oneOfType([
-        PropTypes.oneOf(['"auto"|"inherit"|"linearRGB"|"sRGB"']),
-        PropTypes.bool
-     ]),
+    colorInterpolationFilters: PropTypes.oneOf(["auto", "inherit", "linearRGB", "sRGB"]),
 
     /**
      *  width
@@ -231,10 +228,7 @@ You can
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOfType([
-        PropTypes.oneOf(['React.CSSProperties']),
-        PropTypes.bool
-     ]),
+    style: PropTypes.oneOf([React.CSSProperties]),
 
     /**
      *  x position
@@ -271,4 +265,4 @@ You can
     'setProps': PropTypes.func
 };
 
-export default FeTurbulence;
+export default FeTurbulence;

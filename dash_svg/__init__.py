@@ -67,12 +67,13 @@ _js_dist.extend(
     [
         {
             'relative_package_path': 'dash_svg.min.js',
-    
+            'dev_package_path': 'dash_svg.dev.js',
             'namespace': package_name
         },
         {
             'relative_package_path': 'dash_svg.min.js.map',
-    
+            'dev_package_path': 'dash_svg.dev.js.map',
+
             'namespace': package_name,
             'dynamic': True
         }

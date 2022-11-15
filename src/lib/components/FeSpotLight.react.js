@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * FeSpotLight is a wrapper for the <feSpotLight> SVG element.
+ * FeSpotLight is a wrapper for the <feSpotLight> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/feSpotLight
  */
-const FeSpotLight = (props) => {
+const FeSpotLight = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const FeSpotLight = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </feSpotLight>
+        </feSpotLight>
     );
 };
 
-FeSpotLight.defaultProps = {
+FeSpotLight.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-FeSpotLight.propTypes = {
+FeSpotLight.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -108,10 +108,7 @@ FeSpotLight.propTypes = {
      *  view data.Last modified: May 13, 2022, by MDN contributors
      * 
      */
-    colorInterpolationFilters: PropTypes.oneOfType([
-        PropTypes.oneOf(['"auto"|"inherit"|"linearRGB"|"sRGB"']),
-        PropTypes.bool
-     ]),
+    colorInterpolationFilters: PropTypes.oneOf(["auto", "inherit", "linearRGB", "sRGB"]),
 
     /**
      *  The limitingConeAngle attribute represents the angle in degrees
@@ -218,10 +215,7 @@ FeSpotLight.propTypes = {
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOfType([
-        PropTypes.oneOf(['React.CSSProperties']),
-        PropTypes.bool
-     ]),
+    style: PropTypes.oneOf([React.CSSProperties]),
 
     /**
      *  x position
@@ -258,4 +252,4 @@ FeSpotLight.propTypes = {
     'setProps': PropTypes.func
 };
 
-export default FeSpotLight;
+export default FeSpotLight;

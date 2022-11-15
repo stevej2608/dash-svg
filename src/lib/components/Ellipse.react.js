@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * Ellipse is a wrapper for the <ellipse> SVG element.
+ * Ellipse is a wrapper for the <ellipse> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/ellipse
  */
-const Ellipse = (props) => {
+const Ellipse = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const Ellipse = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </ellipse>
+        </ellipse>
     );
 };
 
-Ellipse.defaultProps = {
+Ellipse.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-Ellipse.propTypes = {
+Ellipse.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -702,10 +702,7 @@ The stroke under effect could be achieved
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOfType([
-        PropTypes.oneOf(['React.CSSProperties']),
-        PropTypes.bool
-     ]),
+    style: PropTypes.oneOf([React.CSSProperties]),
 
     /**
      *  x position
@@ -742,4 +739,4 @@ The stroke under effect could be achieved
     'setProps': PropTypes.func
 };
 
-export default Ellipse;
+export default Ellipse;

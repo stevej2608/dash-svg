@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * Rect is a wrapper for the <rect> SVG element.
+ * Rect is a wrapper for the <rect> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/rect
  */
-const Rect = (props) => {
+const Rect = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const Rect = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </rect>
+        </rect>
     );
 };
 
-Rect.defaultProps = {
+Rect.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-Rect.propTypes = {
+Rect.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -546,10 +546,7 @@ The stroke under effect could be achieved
      *  with JavaScript enabled. Enable JavaScript to view data.Last
      *  modified: May 13, 2022, by MDN contributors
      */
-    strokeLinejoin: PropTypes.oneOfType([
-        PropTypes.oneOf(['"bevel"|"inherit"|"miter"|"round"']),
-        PropTypes.bool
-     ]),
+    strokeLinejoin: PropTypes.oneOf(["bevel", "inherit", "miter", "round"]),
 
     /**
      *  The stroke-miterlimit attribute is a presentation attribute defining
@@ -803,10 +800,7 @@ For example, a miter
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOfType([
-        PropTypes.oneOf(['React.CSSProperties']),
-        PropTypes.bool
-     ]),
+    style: PropTypes.oneOf([React.CSSProperties]),
 
     /**
      *  x position
@@ -873,4 +867,4 @@ For example, a miter
     'setProps': PropTypes.func
 };
 
-export default Rect;
+export default Rect;

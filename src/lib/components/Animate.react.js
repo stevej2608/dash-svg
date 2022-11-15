@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import {omit} from 'ramda';
 
 /**
- * Animate is a wrapper for the <animate> SVG element.
+ * Animate is a wrapper for the <animate> SVG element.
  * For detailed attribute info see:
  * https://developer.mozilla.org/en-US/docs/Web/SVG/Element/animate
  */
-const Animate = (props) => {
+const Animate = (props) => {
     const dataAttributes = {};
     if(props.loading_state && props.loading_state.is_loading) {
         dataAttributes['data-dash-is-loading'] = true;
@@ -24,16 +24,16 @@ const Animate = (props) => {
             {...dataAttributes}
         >
             {props.children}
-        </animate>
+        </animate>
     );
 };
 
-Animate.defaultProps = {
+Animate.defaultProps = {
     n_clicks: 0,
     n_clicks_timestamp: -1,
 };
 
-Animate.propTypes = {
+Animate.propTypes = {
     /**
      * The ID of this component, used to identify dash components
      * in callbacks. The ID needs to be unique across all of the
@@ -98,10 +98,7 @@ Animate.propTypes = {
      *  attribute.Last modified: May 13, 2022, by MDN contributors
      * 
      */
-    accumulate: PropTypes.oneOfType([
-        PropTypes.oneOf(['"none"|"sum"']),
-        PropTypes.bool
-     ]),
+    accumulate: PropTypes.oneOf(["none", "sum"]),
 
     /**
      *  The additive attribute controls whether or not an animation is
@@ -118,10 +115,7 @@ Animate.propTypes = {
      *  How from, to and by attributes affect additive behavior.Last
      *  modified: May 13, 2022, by MDN contributors
      */
-    additive: PropTypes.oneOfType([
-        PropTypes.oneOf(['"replace"|"sum"']),
-        PropTypes.bool
-     ]),
+    additive: PropTypes.oneOf(["replace", "sum"]),
 
     /**
      *  The attributeName attribute indicates the name of the CSS property
@@ -736,10 +730,7 @@ Animate.propTypes = {
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOfType([
-        PropTypes.oneOf(['React.CSSProperties']),
-        PropTypes.bool
-     ]),
+    style: PropTypes.oneOf([React.CSSProperties]),
 
     /**
      *  x position
@@ -776,4 +767,4 @@ Animate.propTypes = {
     'setProps': PropTypes.func
 };
 
-export default Animate;
+export default Animate;
