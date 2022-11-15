@@ -1,5 +1,7 @@
 include dash_svg/dash_svg.min.js
 include dash_svg/dash_svg.min.js.map
+include dash_svg/dash_svg.dev.js
+include dash_svg/dash_svg.dev.js.map
 include dash_svg/async-*.js
 include dash_svg/async-*.js.map
 include dash_svg/*-shared.js
