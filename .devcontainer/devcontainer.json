@@ -3,7 +3,7 @@
 {
 	"name": "${localWorkspaceFolderBasename}",
 	"build": {
-		"dockerfile": "Dockerfile",
+		"dockerfile": "Dockerfile"
 	},
 
 	// Set *default* container specific settings.json values on container create.
@@ -26,28 +26,34 @@
 
   "runArgs": [
     "--name=${localWorkspaceFolderBasename}",
-    "--add-host=default:10.0.2.15",
+    "--add-host=vscode-dev:10.0.2.15",
     "--add-host=debian-server:192.168.2.196",
+    "--network=stj-bridge",
     "--env-file",".devcontainer/devcontainer.env"
 ],
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
+    "arturock.gitstash",
+    "dbaeumer.vscode-eslint",
+    "gruntfuggly.todo-tree",
     "ms-python.python",
     "ms-python.vscode-pylance",
-    "dbaeumer.vscode-eslint",
+    "njpwerner.autodocstring",
+    "rioj7.command-variable",
     "ritwickdey.liveserver",
-    "streetsidesoftware.code-spell-checker"
+    "streetsidesoftware.code-spell-checker",
+    "Tyriar.sort-lines"
 	],
 
   // appPort, The LHS port must match the value of $HOSTPORT defined
   // in .devcontainer/devcontainer.env
 
-  "appPort": "6002:5000",
+  "appPort": "6012:5000",
 
   "postCreateCommand": "chmod +x .devcontainer/init.sh && .devcontainer/init.sh",
 
   "workspaceFolder": "/${localWorkspaceFolderBasename}",
-	"workspaceMount": "source=/workspaces/github/${localWorkspaceFolderBasename},target=/${localWorkspaceFolderBasename},type=bind,consistency=cached",
+	"workspaceMount": "source=/workspaces/${localWorkspaceFolderBasename},target=/${localWorkspaceFolderBasename},type=bind,consistency=cached",
 
 }
