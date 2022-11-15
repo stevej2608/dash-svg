@@ -157,11 +157,8 @@ function nameComponent(elementName) {
         PROP_TYPE += 'oneOfType([PropTypes.string, PropTypes.number])'
       }
       else {
-        PROP_TYPE +=
-          'oneOfType([\n' +
-          `        PropTypes.oneOf(['${type}']),\n` +
-          '        PropTypes.bool\n' +
-          '     ])'
+        const _type = type.replace(/Booleanish/, "'true', 'false'")
+        PROP_TYPE += `oneOf([${_type.replace(/\|/g, ', ')}])`
       }
 
     if (attribute.isRequired) {
