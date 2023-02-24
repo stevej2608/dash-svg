@@ -234,7 +234,7 @@ Svg.propTypes = {
     /**
      *  width
      */
-    height: PropTypes.string,
+    height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  The mask attribute is a presentation attribute mainly used to
@@ -549,17 +549,17 @@ Svg.propTypes = {
     /**
      *  width
      */
-    width: PropTypes.string,
+    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  x position
      */
-    x: PropTypes.string,
+    x: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  y position
      */
-    y: PropTypes.string,
+    y: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  Deprecated: This feature is no longer recommended. Though some
@@ -582,11 +582,6 @@ Svg.propTypes = {
      *  2022, by MDN contributors
      */
     zoomAndPan: PropTypes.string,
-
-    /**
-     *  fill color
-     */
-    fill: PropTypes.string,
 
     /**
      *  stroke color
@@ -631,17 +626,25 @@ Svg.propTypes = {
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOf([React.CSSProperties]),
+    style: PropTypes.PropTypes.objectOf(PropTypes.oneOfType([
+                        PropTypes.string,
+                        PropTypes.number,
+                    ])),
 
     /**
      *  x position
      */
-    x: PropTypes.string,
+    x: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  y position
      */
-    y: PropTypes.string,
+    y: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /**
+     *  fill color
+     */
+    fill: PropTypes.string,
 
     /**
      *  Alternative text in case an image can't be displayed.
@@ -656,12 +659,12 @@ Svg.propTypes = {
     /**
      *  width
      */
-    width: PropTypes.string,
+    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  width
      */
-    height: PropTypes.string,
+    height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
 
     /**

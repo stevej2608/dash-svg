@@ -113,7 +113,7 @@ FeDisplacementMap.propTypes = {
     /**
      *  width
      */
-    height: PropTypes.string,
+    height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  The in attribute identifies input for the given filter primitive.The
@@ -221,12 +221,12 @@ FeDisplacementMap.propTypes = {
     /**
      *  width
      */
-    width: PropTypes.string,
+    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  x position
      */
-    x: PropTypes.string,
+    x: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  The xChannelSelector attribute indicates which color channel
@@ -253,7 +253,7 @@ FeDisplacementMap.propTypes = {
     /**
      *  y position
      */
-    y: PropTypes.string,
+    y: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  The yChannelSelector attribute indicates which color channel
@@ -291,17 +291,25 @@ FeDisplacementMap.propTypes = {
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOf([React.CSSProperties]),
+    style: PropTypes.PropTypes.objectOf(PropTypes.oneOfType([
+                        PropTypes.string,
+                        PropTypes.number,
+                    ])),
 
     /**
      *  x position
      */
-    x: PropTypes.string,
+    x: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  y position
      */
-    y: PropTypes.string,
+    y: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /**
+     *  fill color
+     */
+    fill: PropTypes.string,
 
 
     /**

@@ -212,7 +212,7 @@ Pattern.propTypes = {
     /**
      *  width
      */
-    height: PropTypes.string,
+    height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  The mask attribute is a presentation attribute mainly used to
@@ -549,17 +549,17 @@ Pattern.propTypes = {
     /**
      *  width
      */
-    width: PropTypes.string,
+    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  x position
      */
-    x: PropTypes.string,
+    x: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  y position
      */
-    y: PropTypes.string,
+    y: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  Often used with CSS to style elements with common properties.
@@ -575,17 +575,25 @@ Pattern.propTypes = {
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOf([React.CSSProperties]),
+    style: PropTypes.PropTypes.objectOf(PropTypes.oneOfType([
+                        PropTypes.string,
+                        PropTypes.number,
+                    ])),
 
     /**
      *  x position
      */
-    x: PropTypes.string,
+    x: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  y position
      */
-    y: PropTypes.string,
+    y: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /**
+     *  fill color
+     */
+    fill: PropTypes.string,
 
 
     /**
