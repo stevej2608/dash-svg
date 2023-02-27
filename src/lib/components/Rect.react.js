@@ -158,7 +158,7 @@ Rect.propTypes = {
     /**
      *  width
      */
-    height: PropTypes.string,
+    height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  The marker-end attribute defines the arrowhead or polymarker
@@ -441,12 +441,12 @@ The stroke under effect could be achieved
     /**
      *  x border radius
      */
-    rx: PropTypes.string,
+    rx: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  y border radius
      */
-    ry: PropTypes.string,
+    ry: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  The shape-rendering attribute provides hints to the renderer
@@ -774,17 +774,17 @@ For example, a miter
     /**
      *  width
      */
-    width: PropTypes.string,
+    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  x position
      */
-    x: PropTypes.string,
+    x: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  y position
      */
-    y: PropTypes.string,
+    y: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  Often used with CSS to style elements with common properties.
@@ -800,37 +800,45 @@ For example, a miter
     /**
      *  CSS style to apply to the element 
      */
-    style: PropTypes.oneOf([React.CSSProperties]),
+    style: PropTypes.PropTypes.objectOf(PropTypes.oneOfType([
+                        PropTypes.string,
+                        PropTypes.number,
+                    ])),
 
     /**
      *  x position
      */
-    x: PropTypes.string,
+    x: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  y position
      */
-    y: PropTypes.string,
+    y: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+    /**
+     *  fill color
+     */
+    fill: PropTypes.string,
 
     /**
      *  width
      */
-    width: PropTypes.string,
+    width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  width
      */
-    height: PropTypes.string,
+    height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  x border radius
      */
-    rx: PropTypes.string,
+    rx: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  y border radius
      */
-    ry: PropTypes.string,
+    ry: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
     /**
      *  fill color

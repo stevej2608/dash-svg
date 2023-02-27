@@ -12,10 +12,10 @@ const attributesPath = './data/attributes.json';
 
 const GLOBAL_ATTRIBUTES = {
   	"className": {
-    		"description": "Often used with CSS to style elements with common properties.",
-    		"isRequired": false,
-    		"type": "string",
-    	},
+        "description": "Often used with CSS to style elements with common properties.",
+    	"isRequired": false,
+    	"type": "string",
+    },
 	"transform": {
 		"description": "Transformation to apply to the element ",
 		"isRequired": false,
@@ -24,39 +24,44 @@ const GLOBAL_ATTRIBUTES = {
 	"style": {
 		"description": "CSS style to apply to the element ",
 		"isRequired": false,
-		"type": "React.CSSProperties",
+		"type": "css",
 	},
 	"x": {
 		"description": "x position",
 		"isRequired": false,
-		"type": "string",
+		"type": "number|string",
 	},
 	"y": {
 		"description": "y position",
 		"isRequired": false,
-		"type": "string",
+		"type": "number|string",
 	},
+    "fill": {
+        "description": "fill color",
+        "isRequired": false,
+        "type": "string",
+    },
 }
 const RECT_ADDITIONAL_ATTRIBUTES = {
 	"width": {
 		"description": "width",
 		"isRequired": false,
-		"type": "string",
+		"type": "number|string",
 	},
 	"height": {
 		"description": "width",
 		"isRequired": false,
-		"type": "string",
+		"type": "number|string",
 	},
 	"rx": {
 		"description": "x border radius",
 		"isRequired": false,
-		"type": "string",
+		"type": "number|string",
 	},
 	"ry": {
 		"description": "y border radius",
 		"isRequired": false,
-		"type": "string",
+		"type": "number|string",
 	},
 	"fill": {
 		"description": "fill color",
@@ -84,12 +89,12 @@ const SVG_ADDITIONAL_ATTRIBUTES = {
   "width": {
     "description": "SVG width",
     "isRequired": false,
-    "type": "string",
+    "type": "number|string",
     },
   "height": {
     "description": "SVG height",
     "isRequired": false,
-    "type": "string",
+    "type": "number|string",
     },
 }
 
@@ -152,14 +157,21 @@ function nameComponent(elementName) {
 
     if (type === 'string') {
       PROP_TYPE += 'string';
-    } else
-      if (type === 'number|string') {
-        PROP_TYPE += 'oneOfType([PropTypes.string, PropTypes.number])'
-      }
-      else {
+    }
+    else if (type === 'number|string') {
+      PROP_TYPE += 'oneOfType([PropTypes.string, PropTypes.number])'
+    }
+    else if (type === 'css'){
+      PROP_TYPE += `PropTypes.objectOf(PropTypes.oneOfType([
+                        PropTypes.string,
+                        PropTypes.number,
+                    ]))`
+    }
+    else {
         const _type = type.replace(/Booleanish/, "'true', 'false'")
         PROP_TYPE += `oneOf([${_type.replace(/\|/g, ', ')}])`
-      }
+    }
+
 
     if (attribute.isRequired) {
       PROP_TYPE += '.isRequired'
@@ -183,8 +195,9 @@ function nameComponent(elementName) {
 
 function generatePropTypes(element, attributes) {
 
+  element = element.trim()
+
   const allAttributes = {...attributes.attributes, ...GLOBAL_ATTRIBUTES, ...SVG_ADDITIONAL_ATTRIBUTES, ...RECT_ADDITIONAL_ATTRIBUTES}
-	element = element.trim()
 
   // Create a list of attributes for this element. It's the
   // aggregate of the attributes scraped from developer.mozilla.org
@@ -294,6 +307,7 @@ function generatePropTypes(element, attributes) {
 
 function generateComponent(Component, element, attributes) {
   const propTypes = generatePropTypes(element, attributes);
+  Component = Component.trim()
 
   return `
 import React from 'react';
@@ -347,8 +361,8 @@ export default ${Component};
  */
 function generateComponents(componentList, attributes) {
   return componentList.reduce((componentMap, element) => {
-    const componentName = nameComponent(element);
-    const Component = generateComponent(componentName, element, attributes);
+    const componentName = nameComponent(element).trim();
+    const Component = generateComponent(componentName, element.trim(), attributes);
 
     componentMap[componentName] = Component;
 
@@ -392,9 +406,6 @@ const attributes = JSON.parse(fs.readFileSync(attributesPath, 'utf-8'));
 // The attribute/element pages on developer.mozilla.org are
 // incomplete. Add a few omissions
 
-attributes.elements.g.push('fill')
-
-attributes.elements.svg.push('fill')
 attributes.elements.svg.push('stroke')
 attributes.elements.svg.push('viewBox')
 
